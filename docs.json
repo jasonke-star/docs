@@ -4,8 +4,8 @@
   "name": "PartGenie",
   "colors": {
     "primary": "#22808D",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#22808D",
+    "dark": "#1C6973"
   },
   "favicon": "/favicon.png",
   "navigation": {
@@ -96,13 +96,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@partgenie.ai"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Log in",
+      "href": "https://partgenie.ai/"
     }
   },
   "contextual": {
@@ -119,9 +119,10 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/PartGenie",
+      "linkedin": "https://www.linkedin.com/company/partgenie/?viewAsMember=true",
+      "youtube": "https://www.youtube.com/@partgenie",
+      "discord": "https://discord.gg/6UgXFWT3UW"
     }
   }
 }
