@@ -9,9 +9,9 @@
   },
   "favicon": "/favicon.png",
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Guides",
+        "language": "en",
         "groups": [
           {
             "group": "Getting started",
@@ -37,50 +37,96 @@
               "essentials/reusable-snippets"
             ]
           }
-        ]
-      }
-    ],
-    "languages": [
-      {
-        "code": "en",
-        "name": "English"
+        ],
+        "global": { 
+          "anchors": [
+            {
+              "anchor": "Community",
+              "href": "https://discord.gg/6UgXFWT3UW",
+              "icon": "discord"
+            },
+            {
+              "anchor": "Blog",
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            }
+          ]
+        },
+        "navbar": {
+          "links": [
+            {
+              "label": "Support",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Log in",
+            "href": "https://partgenie.ai/"
+          }
+        }
       },
       {
-        "code": "zh-Hans",
-        "name": "简体中文"
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Community",
-          "href": "https://discord.gg/6UgXFWT3UW",
-          "icon": "discord"
+        "language": "zh-Hans",
+        "groups": [
+          {
+            "group": "入门指南",
+            "pages": [
+              "zh-Hans/index",
+              "zh-Hans/quickstart",
+              "zh-Hans/development"
+            ]
+          },
+          {
+            "group": "自定义",
+            "pages": [
+              "zh-Hans/essentials/settings",
+              "zh-Hans/essentials/navigation"
+            ]
+          },
+          {
+            "group": "编写内容",
+            "pages": [
+              "zh-Hans/essentials/markdown",
+              "zh-Hans/essentials/code",
+              "zh-Hans/essentials/images",
+              "zh-Hans/essentials/reusable-snippets"
+            ]
+          }
+        ],
+        "global": { 
+          "anchors": [
+            {
+              "anchor": "社区", 
+              "href": "https://discord.gg/6UgXFWT3UW",
+              "icon": "discord"
+            },
+            {
+              "anchor": "博客", 
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            }
+          ]
         },
-        {
-          "anchor": "Blog",
-          "href": "https://partgenie.ai/",
-          "icon": "newspaper"
+        "navbar": {
+          "links": [
+            {
+              "label": "支持",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "登录",
+            "href": "https://partgenie.ai/"
+          }
         }
-      ]
-    }
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@partgenie.ai"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Log in",
-      "href": "https://partgenie.ai/"
-    }
   },
   "contextual": {
     "options": [
