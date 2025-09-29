@@ -36,29 +36,21 @@
               "essentials/images",
               "essentials/reusable-snippets"
             ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
           }
         ]
       }
     ],
-  "languages": [
-    {
-      "code": "en",
-      "name": "English"
-    },
-    {
-      "code": "zh-Hans",
-      "name": "简体中文"
-    }
-  ],
-  "global": {
+    "languages": [
+      {
+        "code": "en",
+        "name": "English"
+      },
+      {
+        "code": "zh-Hans",
+        "name": "简体中文"
+      }
+    ],
+    "global": {
       "anchors": [
         {
           "anchor": "Community",
@@ -92,15 +84,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
