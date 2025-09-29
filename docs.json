@@ -48,7 +48,17 @@
         ]
       }
     ],
-    "global": {
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "zh-Hans",
+      "name": "简体中文"
+    }
+  ],
+  "global": {
       "anchors": [
         {
           "anchor": "Community",
