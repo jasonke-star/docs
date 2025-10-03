@@ -70,27 +70,50 @@
         "language": "zh-Hans",
         "groups": [
           {
-            "group": "入门指南",
+            "group": "快速入门",
             "pages": [
               "zh-Hans/index",
               "zh-Hans/quickstart",
-              "zh-Hans/development"
+              "zh-Hans/what-is-partgenie",
+              "zh-Hans/getting-started",
+              "zh-Hans/first-ai-search",
+              "zh-Hans/bom-management-quickstart",
+              "zh-Hans/feature-examples"
             ]
           },
           {
-            "group": "自定义",
+            "group": "核心功能指南",
             "pages": [
-              "zh-Hans/essentials/settings",
-              "zh-Hans/essentials/navigation"
+              "zh-Hans/ai-search",
+              "zh-Hans/product-comparison",
+              "zh-Hans/bom-management",
+              "zh-Hans/specification-chat",
+              "zh-Hans/favorites"
             ]
           },
           {
-            "group": "编写内容",
+            "group": "账户与订阅",
             "pages": [
-              "zh-Hans/essentials/markdown",
-              "zh-Hans/essentials/code",
-              "zh-Hans/essentials/images",
-              "zh-Hans/essentials/reusable-snippets"
+              "zh-Hans/privacy-security/privacy-policy",
+              "zh-Hans/privacy-security/user-agreement",
+              "zh-Hans/membership-pricing",
+              "zh-Hans/account-management"
+            ]
+          },
+          {
+            "group": "常见问题与排查",
+            "pages": [
+              "zh-Hans/faq",
+              "zh-Hans/troubleshooting",
+              "zh-Hans/account-troubleshooting"
+            ]
+          },
+          {
+            "group": "社区与资源",
+            "pages": [
+              "zh-Hans/community-forum",
+              "zh-Hans/blog-updates",
+              "zh-Hans/case-studies"
             ]
           }
         ],
