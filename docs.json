@@ -74,9 +74,8 @@
             "pages": [
               "zh-Hans/what-is-partgenie",
               "zh-Hans/getting-started",
-              "zh-Hans/first-ai-search",
-              "zh-Hans/bom-management-quickstart",
-              "zh-Hans/feature-examples"
+              "zh-Hans/feature-examples",
+              "zh-Hans/faq"
             ]
           },
           {
@@ -92,17 +91,8 @@
           {
             "group": "账户与订阅",
             "pages": [
-              "zh-Hans/privacy-security/privacy-policy",
-              "zh-Hans/privacy-security/user-agreement",
               "zh-Hans/membership-pricing",
               "zh-Hans/account-management"
-            ]
-          },
-          {
-            "group": "常见问题与排查",
-            "pages": [
-              "zh-Hans/faq",
-              "zh-Hans/troubleshooting"
             ]
           },
           {
