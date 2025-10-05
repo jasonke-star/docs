@@ -72,8 +72,6 @@
           {
             "group": "快速入门",
             "pages": [
-              "zh-Hans/index",
-              "zh-Hans/quickstart",
               "zh-Hans/what-is-partgenie",
               "zh-Hans/getting-started",
               "zh-Hans/first-ai-search",
@@ -104,30 +102,30 @@
             "group": "常见问题与排查",
             "pages": [
               "zh-Hans/faq",
-              "zh-Hans/troubleshooting",
-              "zh-Hans/account-troubleshooting"
+              "zh-Hans/troubleshooting"
             ]
           },
           {
-            "group": "社区与资源",
+            "group": "最佳实践",
             "pages": [
-              "zh-Hans/community-forum",
-              "zh-Hans/blog-updates",
-              "zh-Hans/case-studies"
+              "zh-Hans/ai-query-writing",
+              "zh-Hans/fuzzy-to-precise",
+              "zh-Hans/search-optimization",
+              "zh-Hans/effective-bom-management"
             ]
           }
         ],
         "global": { 
           "anchors": [
             {
-              "anchor": "社区", 
-              "href": "https://discord.gg/6UgXFWT3UW",
-              "icon": "discord"
-            },
-            {
               "anchor": "博客", 
               "href": "https://partgenie.ai/",
               "icon": "newspaper"
+            },
+            {
+              "anchor": "社区", 
+              "href": "https://discord.gg/6UgXFWT3UW",
+              "icon": "discord"
             }
           ]
         },
