@@ -1,0 +1,242 @@
+---
+title: "BOM管理快速上手"
+description: "学习如何在 PartGenie 中创建和管理物料清单（BOM），提高您的项目管理效率"
+---
+
+## 什么是 BOM 管理？
+
+BOM（Bill of Materials，物料清单）是电子项目中所有元器件的详细列表。PartGenie 的 BOM 管理功能帮助您：
+
+- 📋 **创建清单**：快速创建项目物料清单
+- 👥 **团队协作**：与团队成员共享 BOM
+- 📊 **成本分析**：实时计算项目成本
+- 📦 **采购管理**：生成采购清单
+
+## 创建您的第一个 BOM
+
+<Steps>
+<Step title="进入 BOM 管理">
+  点击左侧导航栏的"BOM 服务"按钮
+  
+  <Info>
+  首次使用会看到空白的 BOM 列表
+  </Info>
+</Step>
+
+<Step title="创建新 BOM">
+  点击"新建 BOM"按钮，填写基本信息： - **BOM 名称**：如"Arduino 项目 V1.0" -
+  **项目描述**：简要描述项目用途 - **版本号**：如"1.0.0" - **创建者**：您的姓名
+</Step>
+
+<Step title="添加元器件">
+  通过以下方式添加元器件： - **搜索添加**：搜索并选择元器件 -
+  **手动添加**：直接输入型号和参数 - **导入 BOM**：从文件导入现有 BOM -
+  **从收藏添加**：从收藏夹选择
+</Step>
+
+<Step title="设置数量">
+  为每个元器件设置： - **需求量**：项目需要的数量 - **安全库存**：建议的备货数量
+  - **备注**：特殊说明或要求
+</Step>
+
+<Step title="保存 BOM">
+  点击"保存"按钮完成 BOM 创建
+  
+  <Check>
+  BOM 已成功创建，您可以随时编辑和更新
+  </Check>
+</Step>
+</Steps>
+
+## BOM 界面介绍
+
+### 主界面布局
+
+<Frame>
+  <img src="/images/bom-interface.png" alt="BOM 管理界面" />
+</Frame>
+
+**主要区域说明：**
+
+1. **BOM 列表**：显示所有 BOM 项目
+2. **元器件列表**：当前 BOM 的元器件清单
+3. **操作工具栏**：添加、编辑、删除等操作
+4. **统计信息**：总成本、元器件数量等
+
+### 元器件信息卡片
+
+每个元器件显示以下信息：
+
+<CardGroup cols={2}>
+<Card title="基本信息" icon="info-circle">
+  - 元器件型号
+  - 制造商
+  - 描述
+  - 封装信息
+</Card>
+
+<Card title="数量信息" icon="calculator">
+  - 需求量 - 安全库存 - 总数量 - 单位成本
+</Card>
+
+<Card title="商业信息" icon="dollar-sign">
+  - 参考价格 - 供应商 - 库存状态 - 交期
+</Card>
+
+<Card title="操作选项" icon="tools">
+  - 编辑数量
+  - 查看详情
+  - 替换元器件
+  - 删除项目
+</Card>
+</CardGroup>
+
+## 添加元器件的方法
+
+### 方法 1：搜索添加
+
+<Steps>
+<Step title="打开搜索">
+  在 BOM 页面点击"添加元器件" → "搜索添加"
+</Step>
+
+<Step title="搜索元器件">使用 AI 搜索找到需要的元器件</Step>
+
+<Step title="选择产品">点击产品卡片上的"添加到 BOM"按钮</Step>
+
+<Step title="设置数量">
+  在弹出的对话框中设置数量和备注
+</Step>
+</Steps>
+
+### 方法 2：手动添加
+
+<Steps>
+<Step title="选择手动添加">
+  点击"添加元器件" → "手动添加"
+</Step>
+
+<Step title="填写信息">
+  手动输入元器件信息： - 型号 - 制造商 - 描述 - 封装 - 参数
+</Step>
+
+<Step title="设置数量">设置需求量和安全库存</Step>
+
+<Step title="保存添加">
+  点击"添加"完成操作
+</Step>
+</Steps>
+
+### 方法 3：从收藏添加
+
+<Steps>
+<Step title="打开收藏">
+  点击"添加元器件" → "从收藏添加"
+</Step>
+
+<Step title="选择产品">从收藏夹中选择需要的元器件</Step>
+
+<Step title="批量添加">
+  可以一次选择多个产品批量添加
+</Step>
+</Steps>
+
+## BOM 管理功能
+
+### 团队协作
+
+<Steps>
+<Step title="邀请成员">
+  点击"团队管理" → "邀请成员"
+</Step>
+
+<Step title="设置权限">
+  为不同成员设置不同的权限： - **查看权限**：只能查看 BOM -
+  **编辑权限**：可以修改 BOM - **管理权限**：可以管理团队和权限
+</Step>
+
+<Step title="共享 BOM">
+  通过链接或邮件分享 BOM 给团队成员
+</Step>
+</Steps>
+
+### 导入导出
+
+<Steps>
+<Step title="导出 BOM">
+  支持多种格式导出：
+  
+  - Excel 文件（.xlsx）
+  - CSV 文件（.csv）
+  - PDF 报告（.pdf）
+  - Altium Designer 格式
+</Step>
+
+<Step title="导入 BOM">
+  从外部文件导入 BOM：
+  
+  - 支持 Excel 和 CSV 格式
+  - 自动识别列标题
+  - 数据验证和错误提示
+</Step>
+</Steps>
+
+## 最佳实践
+
+### BOM 命名规范
+
+<CodeGroup>
+```text 推荐命名格式
+项目名称_版本号_日期
+例如：Arduino_Project_V1.0_20241201
+```
+
+```text 元器件编号
+R1, R2, R3... (电阻)
+C1, C2, C3... (电容)
+U1, U2, U3... (集成电路)
+Q1, Q2, Q3... (晶体管)
+```
+
+</CodeGroup>
+
+### 数量管理
+
+<Tip>
+  **需求量**：项目实际需要的数量 **安全库存**：建议的备货数量（通常为需求量的
+  10-20%） **总数量**：需求量 + 安全库存
+</Tip>
+
+## 常见问题
+
+<AccordionGroup>
+<Accordion title="如何批量修改元器件数量？">
+  选择多个元器件，使用批量编辑功能统一修改数量
+</Accordion>
+
+<Accordion title="如何比较两个 BOM 的差异？">
+  使用版本对比功能，选择两个版本进行详细对比
+</Accordion>
+
+<Accordion title="如何设置 BOM 的访问权限？">
+  在团队管理中为不同成员设置不同的访问权限
+</Accordion>
+
+<Accordion title="如何导出特定格式的 BOM？">
+  在导出选项中选择需要的格式如CSV、TXT，系统会生成相应的文件
+</Accordion>
+</AccordionGroup>
+
+## 需要帮助？
+
+如果您在使用 BOM 管理功能时遇到问题：
+
+- 📖 **详细文档**：查看完整的 BOM 管理指南
+- 💬 **在线客服**：实时获得技术支持
+- 📧 **邮件支持**：support@partgenie.ai
+- 👥 **社区论坛**：与其他用户交流经验
+
+<Warning>
+  **重要提示**：建议在正式项目中使用 BOM
+  管理功能前，先在测试项目中熟悉各项功能。
+</Warning>

@@ -1,0 +1,172 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "palm",
+  "name": "PartGenie",
+  "colors": {
+    "primary": "#22808D",
+    "light": "#22808D",
+    "dark": "#1C6973"
+  },
+  "favicon": "/favicon.png",
+  "navigation": {
+    "languages": [
+      {
+        "language": "en",
+        "groups": [
+          {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "quickstart",
+              "development"
+            ]
+          },
+          {
+            "group": "Customization",
+            "pages": [
+              "essentials/settings",
+              "essentials/navigation"
+            ]
+          },
+          {
+            "group": "Writing content",
+            "pages": [
+              "essentials/markdown",
+              "essentials/code",
+              "essentials/images",
+              "essentials/reusable-snippets"
+            ]
+          }
+        ],
+        "global": { 
+          "anchors": [
+            {
+              "anchor": "Community",
+              "href": "https://discord.gg/6UgXFWT3UW",
+              "icon": "discord"
+            },
+            {
+              "anchor": "Blog",
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            }
+          ]
+        },
+        "navbar": {
+          "links": [
+            {
+              "label": "Support",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Log in",
+            "href": "https://partgenie.ai/"
+          }
+        }
+      },
+      {
+        "language": "zh-Hans",
+        "groups": [
+          {
+            "group": "快速入门",
+            "pages": [
+              "zh-Hans/what-is-partgenie",
+              "zh-Hans/getting-started",
+              "zh-Hans/first-ai-search",
+              "zh-Hans/bom-management-quickstart",
+              "zh-Hans/feature-examples"
+            ]
+          },
+          {
+            "group": "核心功能指南",
+            "pages": [
+              "zh-Hans/ai-search",
+              "zh-Hans/product-comparison",
+              "zh-Hans/bom-management",
+              "zh-Hans/specification-chat",
+              "zh-Hans/favorites"
+            ]
+          },
+          {
+            "group": "账户与订阅",
+            "pages": [
+              "zh-Hans/privacy-security/privacy-policy",
+              "zh-Hans/privacy-security/user-agreement",
+              "zh-Hans/membership-pricing",
+              "zh-Hans/account-management"
+            ]
+          },
+          {
+            "group": "常见问题与排查",
+            "pages": [
+              "zh-Hans/faq",
+              "zh-Hans/troubleshooting"
+            ]
+          },
+          {
+            "group": "最佳实践",
+            "pages": [
+              "zh-Hans/ai-query-writing",
+              "zh-Hans/fuzzy-to-precise",
+              "zh-Hans/search-optimization",
+              "zh-Hans/effective-bom-management"
+            ]
+          }
+        ],
+        "global": { 
+          "anchors": [
+            {
+              "anchor": "博客", 
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            },
+            {
+              "anchor": "社区", 
+              "href": "https://discord.gg/6UgXFWT3UW",
+              "icon": "discord"
+            }
+          ]
+        },
+        "navbar": {
+          "links": [
+            {
+              "label": "支持",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "登录",
+            "href": "https://partgenie.ai/"
+          }
+        }
+      }
+    ]
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/PartGenie",
+      "linkedin": "https://www.linkedin.com/company/partgenie/?viewAsMember=true",
+      "youtube": "https://www.youtube.com/@partgenie",
+      "discord": "https://discord.gg/6UgXFWT3UW"
+    }
+  }
+}
