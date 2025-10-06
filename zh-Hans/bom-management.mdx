@@ -1,0 +1,571 @@
+---
+title: "BOM 管理"
+description: "深入学习 PartGenie 的 BOM 管理功能，掌握高级物料清单管理技巧和团队协作"
+---
+
+## BOM 管理概述
+
+BOM（Bill of Materials，物料清单）管理是电子项目开发中的核心环节。PartGenie 提供强大的 BOM 管理功能，帮助您高效管理项目物料。
+
+## 什么是 BOM 管理？
+
+BOM（Bill of Materials，物料清单）是电子项目中所有元器件的详细列表。PartGenie 的 BOM 管理功能帮助您：
+
+- 📋 **创建清单**：快速创建项目物料清单
+- 📊 **成本分析**：实时计算项目成本
+- 📦 **采购管理**：生成采购清单
+- 💾 **数据导出**：支持多种格式导出
+
+## 创建您的第一个 BOM
+
+<Steps>
+<Step title="进入 BOM 管理">
+  点击左侧导航栏的"BOM 服务"按钮
+  
+  <Info>
+  首次使用会看到空白的 BOM 列表
+  </Info>
+</Step>
+
+<Step title="创建新 BOM">
+  点击"新建 BOM"按钮，填写基本信息： - **BOM 名称**：如"Arduino 项目 V1.0" -
+  **项目描述**：简要描述项目用途 - **版本号**：如"1.0.0" - **创建者**：您的姓名
+</Step>
+
+<Step title="添加元器件">
+  通过以下方式添加元器件： - **搜索添加**：搜索并选择元器件 -
+  **手动添加**：直接输入型号和参数 - **导入 BOM**：从文件导入现有 BOM -
+  **从收藏添加**：从收藏夹选择
+</Step>
+
+<Step title="设置数量">
+  为每个元器件设置： - **需求量**：项目需要的数量 - **安全库存**：建议的备货数量
+  - **备注**：特殊说明或要求
+</Step>
+
+<Step title="保存 BOM">
+  点击"保存"按钮完成 BOM 创建
+  
+  <Check>
+  BOM 已成功创建，您可以随时编辑和更新
+  </Check>
+</Step>
+</Steps>
+
+## 核心功能
+
+<CardGroup cols={2}>
+<Card title="清单创建" icon="plus-circle">
+  快速创建和管理物料清单
+</Card>
+
+<Card title="版本控制" icon="code-branch">
+  完整的版本历史和变更跟踪
+</Card>
+
+<Card title="数据导出" icon="download">
+  支持多种格式导出BOM数据
+</Card>
+
+<Card title="成本分析" icon="calculator">
+  实时成本计算和趋势分析
+</Card>
+</CardGroup>
+
+## BOM 界面介绍
+
+### 主界面布局
+
+<Frame>
+  <img src="/images/bom-interface.png" alt="BOM 管理界面" />
+</Frame>
+
+### BOM 创建流程
+
+<Frame>
+  <img src="/images/bom-creation-flow.png" alt="BOM 创建流程图" />
+</Frame>
+
+**主要区域说明：**
+
+1. **BOM 列表**：显示所有 BOM 项目
+2. **元器件列表**：当前 BOM 的元器件清单
+3. **操作工具栏**：添加、编辑、删除等操作
+4. **统计信息**：总成本、元器件数量等
+
+### 元器件信息卡片
+
+每个元器件显示以下信息：
+
+<CardGroup cols={2}>
+<Card title="基本信息" icon="info-circle">
+  - 元器件型号
+  - 制造商
+  - 描述
+  - 封装信息
+</Card>
+
+<Card title="数量信息" icon="calculator">
+  - 需求量 - 安全库存 - 总数量 - 单位成本
+</Card>
+
+<Card title="商业信息" icon="dollar-sign">
+  - 参考价格 - 供应商 - 库存状态 - 交期
+</Card>
+
+<Card title="操作选项" icon="tools">
+  - 编辑数量
+  - 查看详情
+  - 替换元器件
+  - 删除项目
+</Card>
+</CardGroup>
+
+## 创建和管理 BOM
+
+### 创建新 BOM
+
+**填写基本信息：**
+
+- **BOM 名称**：清晰描述项目名称
+- **项目描述**：详细说明项目用途
+- **版本号**：遵循版本命名规范
+- **创建者**：负责人信息
+
+**选择创建方式：**
+
+- **空白 BOM**：从零开始创建
+- **模板创建**：使用现有模板
+- **导入创建**：从文件导入
+- **复制创建**：基于现有 BOM
+
+**设置访问权限：**
+
+- **私有**：仅创建者可访问
+- **团队**：团队成员可访问
+- **公开**：所有人可查看
+- **自定义**：自定义权限设置
+
+### BOM 结构设计
+
+<Info>良好的 BOM 结构有助于提高管理效率和团队协作</Info>
+
+#### 标准 BOM 结构
+
+<Table>
+  | 层级 | 分类 | 说明 | 示例 | |------|------|------|------| | 1 | 主控芯片 |
+  微控制器、处理器 | STM32F103C8T6 | | 2 | 电源管理 | 稳压器、电源芯片 |
+  AMS1117-3.3 | | 3 | 传感器 | 各种传感器 | SHT30 | | 4 | 通信模块 |
+  WiFi、蓝牙等 | ESP8266 | | 5 | 显示模块 | LCD、LED 等 | LCD1602 | | 6 |
+  被动元件 | 电阻、电容、电感 | 10kΩ 电阻 | | 7 | 连接器 | 各种连接器 | USB-C |
+  | 8 | 机械件 | 外壳、螺丝等 | 塑料外壳 |
+</Table>
+
+#### 元器件编号规范
+
+<CodeGroup>
+```text 推荐编号格式
+R1, R2, R3... (电阻)
+C1, C2, C3... (电容)
+L1, L2, L3... (电感)
+U1, U2, U3... (集成电路)
+Q1, Q2, Q3... (晶体管)
+D1, D2, D3... (二极管)
+J1, J2, J3... (连接器)
+```
+
+```text 编号规则
+- 按功能分组编号
+- 同一功能按位置编号
+- 预留扩展空间
+- 保持编号连续性
+```
+
+</CodeGroup>
+
+## 添加元器件的方法
+
+### 方法 1：搜索添加
+
+<Steps>
+<Step title="打开搜索">
+  在 BOM 页面点击"添加元器件" → "搜索添加"
+</Step>
+
+<Step title="搜索元器件">使用 AI 搜索找到需要的元器件</Step>
+
+<Step title="选择产品">点击产品卡片上的"添加到 BOM"按钮</Step>
+
+<Step title="设置数量">
+  在弹出的对话框中设置数量和备注
+</Step>
+</Steps>
+
+### 方法 2：手动添加
+
+<Steps>
+<Step title="选择手动添加">
+  点击"添加元器件" → "手动添加"
+</Step>
+
+<Step title="填写信息">
+  手动输入元器件信息： - 型号 - 制造商 - 描述 - 封装 - 参数
+</Step>
+
+<Step title="设置数量">设置需求量和安全库存</Step>
+
+<Step title="保存添加">
+  点击"添加"完成操作
+</Step>
+</Steps>
+
+### 方法 3：从收藏添加
+
+<Steps>
+<Step title="打开收藏">
+  点击"添加元器件" → "从收藏添加"
+</Step>
+
+<Step title="选择产品">从收藏夹中选择需要的元器件</Step>
+
+<Step title="批量添加">
+  可以一次选择多个产品批量添加
+</Step>
+</Steps>
+
+## 版本控制
+
+### 版本管理策略
+
+<Info>版本控制是 BOM 管理的重要组成部分，确保变更的可追溯性</Info>
+
+#### 版本号规范
+
+<CodeGroup>
+```text 语义化版本
+主版本.次版本.修订版本
+例如：1.0.0, 1.1.0, 1.1.1
+
+主版本：重大功能变更
+次版本：新功能添加
+修订版本：错误修复
+
+````
+
+```text 项目版本
+项目名称_版本号_日期
+例如：Arduino_Project_V1.0_20241201
+````
+
+</CodeGroup>
+
+#### 版本创建规则
+
+<Table>
+  | 变更类型 | 版本规则 | 示例 | 说明 | |----------|----------|------|------| |
+  重大变更 | 主版本+1 | 1.0.0 → 2.0.0 | 架构变更、核心功能修改 | | 功能添加 |
+  次版本+1 | 1.0.0 → 1.1.0 | 新增元器件、功能增强 | | 错误修复 | 修订版本+1 |
+  1.0.0 → 1.0.1 | 参数修正、数量调整 | | 文档更新 | 修订版本+1 | 1.0.0 → 1.0.1 |
+  描述更新、备注修改 |
+</Table>
+
+### 版本对比功能
+
+<Steps>
+<Step title="选择版本">
+  在版本历史中选择要对比的版本
+</Step>
+
+<Step title="开始对比">点击"版本对比"按钮</Step>
+
+<Step title="查看差异">查看两个版本之间的差异</Step>
+
+<Step title="分析变更">
+  分析变更原因和影响
+</Step>
+</Steps>
+
+### 版本回滚
+
+<Warning>版本回滚会丢失当前版本之后的所有变更，请谨慎操作</Warning>
+
+<Steps>
+<Step title="选择目标版本">
+  选择要回滚到的版本
+</Step>
+
+<Step title="确认回滚">确认回滚操作</Step>
+
+<Step title="备份当前版本">系统会自动备份当前版本</Step>
+
+<Step title="完成回滚">
+  回滚到指定版本
+</Step>
+</Steps>
+
+## 数据管理
+
+### 版本控制
+
+<Info>版本控制是 BOM 管理的重要组成部分，确保变更的可追溯性</Info>
+
+**版本管理功能：**
+
+- **版本历史**：查看所有版本变更记录
+- **版本对比**：对比不同版本的差异
+- **版本回滚**：回滚到指定版本
+- **变更日志**：详细的变更说明
+
+## 成本分析
+
+### 成本计算
+
+<Info>PartGenie 提供实时成本计算和趋势分析功能</Info>
+
+#### 成本组成
+
+<Table>
+  | 成本类型 | 说明 | 计算方式 | 示例 | |----------|------|----------|------| |
+  元器件成本 | 元器件采购成本 | 单价 × 数量 | ¥25 × 10 = ¥250 | | 加工成本 |
+  组装和测试成本 | 固定费用 | ¥50 | | 运输成本 | 物流和运输费用 | 按重量或价值 |
+  ¥20 | | 其他成本 | 包装、认证等 | 按需计算 | ¥30 | | **总成本** |
+  **所有成本之和** | **求和** | **¥350** |
+</Table>
+
+#### 成本分析功能
+
+<CardGroup cols={2}>
+<Card title="实时计算" icon="calculator">
+  根据当前价格实时计算总成本
+</Card>
+
+<Card title="成本趋势" icon="chart-line">
+  显示成本变化趋势
+</Card>
+
+<Card title="成本分解" icon="pie-chart">
+  按类别分解成本构成
+</Card>
+
+<Card title="预算对比" icon="balance-scale">
+  与实际预算对比
+</Card>
+</CardGroup>
+
+### 成本优化
+
+#### 优化策略
+
+<AccordionGroup>
+<Accordion title="元器件优化">
+  - 寻找替代产品
+  - 批量采购折扣
+  - 供应商谈判
+  - 库存优化
+</Accordion>
+
+<Accordion title="设计优化">
+  - 简化设计 - 减少元器件数量 - 选择标准件 - 优化布局
+</Accordion>
+
+<Accordion title="采购优化">
+  - 集中采购
+  - 长期合同
+  - 供应商管理
+  - 交期优化
+</Accordion>
+</AccordionGroup>
+
+#### 成本分析报告
+
+<Steps>
+<Step title="生成报告">
+  点击"成本分析" → "生成报告"
+</Step>
+
+<Step title="选择内容">选择要包含的分析内容</Step>
+
+<Step title="设置格式">选择报告格式和样式</Step>
+
+<Step title="导出报告">
+  导出为 PDF 或 Excel 格式
+</Step>
+</Steps>
+
+## 高级功能
+
+### BOM 模板
+
+<CardGroup cols={2}>
+<Card title="创建模板" icon="plus">
+  将常用 BOM 保存为模板
+</Card>
+
+<Card title="使用模板" icon="copy">
+  从模板快速创建新 BOM
+</Card>
+
+<Card title="模板管理" icon="folder">
+  管理模板库
+</Card>
+
+<Card title="模板分享" icon="share">
+  与团队分享模板
+</Card>
+</CardGroup>
+
+### 导入导出
+
+#### 支持格式
+
+<Table>
+  | 格式 | 用途 | 特点 | |------|------|------| | Excel (.xlsx) | 详细编辑 |
+  功能完整，支持复杂格式 | | CSV (.csv) | 数据交换 | 简单格式，兼容性好 | | PDF
+  (.pdf) | 报告分享 | 格式固定，便于打印 | | Altium Designer | EDA 集成 |
+  与设计工具集成 |
+</Table>
+
+#### 导入流程
+
+<Steps>
+<Step title="准备文件">
+  准备符合格式要求的文件
+</Step>
+
+<Step title="选择导入">选择"导入 BOM"功能</Step>
+
+<Step title="映射字段">将文件字段映射到 BOM 字段</Step>
+
+<Step title="验证数据">检查导入数据的准确性</Step>
+
+<Step title="完成导入">
+  确认后完成导入
+</Step>
+</Steps>
+
+### 集成功能
+
+<CardGroup cols={2}>
+<Card title="EDA 集成" icon="microchip">
+  与 Altium Designer 等 EDA 工具集成
+</Card>
+
+<Card title="ERP 集成" icon="database">
+  与企业 ERP 系统集成
+</Card>
+
+<Card title="API 接口" icon="code">
+  提供 API 接口供第三方集成
+</Card>
+
+<Card title="Webhook" icon="webhook">
+  支持 Webhook 事件通知
+</Card>
+</CardGroup>
+
+## 最佳实践
+
+### BOM 设计原则
+
+<CardGroup cols={2}>
+<Card title="结构清晰" icon="sitemap">
+  按功能模块组织元器件
+</Card>
+
+<Card title="信息完整" icon="info-circle">
+  包含所有必要的信息
+</Card>
+
+<Card title="易于维护" icon="wrench">
+  便于更新和维护
+</Card>
+
+<Card title="团队友好" icon="users">
+  便于团队协作
+</Card>
+</CardGroup>
+
+### 版本管理最佳实践
+
+<Steps>
+<Step title="及时提交">
+  及时提交变更，避免长时间未提交
+</Step>
+
+<Step title="清晰描述">为每次变更提供清晰的描述</Step>
+
+<Step title="定期备份">定期备份重要版本</Step>
+
+<Step title="文档同步">
+  保持文档与 BOM 同步
+</Step>
+</Steps>
+
+### 数据管理最佳实践
+
+<Steps>
+<Step title="及时保存">
+  及时保存BOM变更，避免数据丢失
+</Step>
+
+<Step title="版本命名">使用清晰的版本命名规范</Step>
+
+<Step title="定期备份">定期备份重要的BOM数据</Step>
+
+<Step title="文档同步">
+  保持BOM与设计文档同步
+</Step>
+</Steps>
+
+## 常见问题
+
+<AccordionGroup>
+<Accordion title="如何批量修改元器件数量？">
+  选择多个元器件，使用批量编辑功能统一修改数量
+</Accordion>
+
+<Accordion title="如何比较两个 BOM 的差异？">
+  使用版本对比功能，选择两个版本进行详细对比
+</Accordion>
+
+<Accordion title="如何导出特定格式的 BOM？">
+  在导出选项中选择需要的格式，系统会生成相应的文件
+</Accordion>
+
+<Accordion title="如何恢复误删的 BOM？">
+  在回收站中可以找到最近删除的 BOM，可以恢复
+</Accordion>
+</AccordionGroup>
+
+## 下一步学习
+
+<CardGroup cols={2}>
+<Card title="采购管理" icon="shopping-cart" href="/zh-Hans/faq">
+  学习采购管理流程
+</Card>
+
+<Card title="成本分析" icon="chart-bar" href="/zh-Hans/feature-examples">
+  掌握成本分析工具
+</Card>
+
+<Card title="数据导出" icon="download" href="/zh-Hans/ai-search">
+  了解数据导出功能
+</Card>
+
+<Card title="高级技巧" icon="graduation-cap" href="/zh-Hans/faq">
+  学习更多高级技巧
+</Card>
+</CardGroup>
+
+## 需要帮助？
+
+如果您在使用 BOM 管理功能时遇到问题：
+
+- 📖 **详细文档**：查看完整的 BOM 管理指南
+- 💬 **在线客服**：实时获得技术支持
+- 📧 **邮件支持**：support@partgenie.ai
+- 👥 **社区论坛**：与其他用户交流经验
+
+<Tip>
+  **提示**：BOM 管理是项目成功的关键，建议在项目初期就建立良好的 BOM 管理流程。
+</Tip>
