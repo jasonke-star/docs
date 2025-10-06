@@ -14,27 +14,32 @@
         "language": "en",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "what-is-partgenie",
+              "quickstart"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Core Features",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "ai-search",
+              "bom-management",
+              "specification-chat"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Account & Support",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "account-management",
+              "faq"
+            ]
+          },
+          {
+            "group": "Product Info",
+            "pages": [
+              "changelog"
             ]
           }
         ],
