@@ -97,10 +97,6 @@
         "global": { 
           "anchors": [
             {
-              "anchor": "更新日志",
-              "href": "/zh-Hans/changelog"
-            },
-            {
               "anchor": "博客", 
               "href": "https://partgenie.ai/",
               "icon": "newspaper"
