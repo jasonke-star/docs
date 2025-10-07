@@ -18,15 +18,7 @@
             "pages": [
               "index",
               "what-is-partgenie",
-              "quickstart"
-            ]
-          },
-          {
-            "group": "Core Features",
-            "pages": [
-              "ai-search",
-              "bom-management",
-              "specification-chat"
+              "getting-started"
             ]
           },
           {
@@ -38,16 +30,10 @@
             ]
           },
           {
-            "group": "Account & Support",
+            "group": "Account & Membership",
             "pages": [
               "account-management",
-              "faq"
-            ]
-          },
-          {
-            "group": "Product Info",
-            "pages": [
-              "changelog"
+              "membership-pricing"
             ]
           }
         ],
@@ -87,7 +73,8 @@
             "pages": [
               "zh-Hans/what-is-partgenie",
               "zh-Hans/getting-started",
-              "zh-Hans/faq"
+              "zh-Hans/faq",
+              "zh-Hans/changelog"
             ]
           },
           {

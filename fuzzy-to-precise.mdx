@@ -51,17 +51,20 @@ Smart Home Controller Technical Specifications:
 **Selection Process:**
 
 1. **Define Performance Requirements**
+
    - Clock speed needed
    - Memory requirements (Flash/RAM)
    - Real-time processing needs
 
 2. **Identify Required Interfaces**
+
    - Communication interfaces (UART, SPI, I2C, USB)
    - Analog interfaces (ADC, DAC)
    - Digital I/O requirements
    - Special interfaces (CAN, Ethernet, WiFi)
 
 3. **Consider Power Constraints**
+
    - Active power consumption
    - Sleep mode power consumption
    - Power management features
@@ -76,11 +79,13 @@ Smart Home Controller Technical Specifications:
 **Power Analysis Steps:**
 
 1. **Calculate Total Power Budget**
+
    ```
    Total Power = Processor + Sensors + Communication + Actuators + Overhead
    ```
 
 2. **Select Power Topology**
+
    - Linear regulators for low power
    - Switching regulators for high efficiency
    - Battery management for portable devices
@@ -93,25 +98,27 @@ Smart Home Controller Technical Specifications:
 
 **Example Power Budget:**
 
-| Component | Voltage | Current | Power |
-|-----------|---------|---------|-------|
-| MCU | 3.3V | 50mA | 165mW |
-| WiFi Module | 3.3V | 200mA | 660mW |
-| Sensors | 3.3V | 10mA | 33mW |
-| Relays | 12V | 100mA | 1.2W |
-| **Total** | | | **2.06W** |
+| Component   | Voltage | Current | Power     |
+| ----------- | ------- | ------- | --------- |
+| MCU         | 3.3V    | 50mA    | 165mW     |
+| WiFi Module | 3.3V    | 200mA   | 660mW     |
+| Sensors     | 3.3V    | 10mA    | 33mW      |
+| Relays      | 12V     | 100mA   | 1.2W      |
+| **Total**   |         |         | **2.06W** |
 
 ### 3. Sensor Selection Strategy
 
 **Sensor Selection Process:**
 
 1. **Define Measurement Requirements**
+
    - Physical quantities to measure
    - Accuracy and resolution needed
    - Sampling rate requirements
    - Environmental conditions
 
 2. **Choose Sensor Types**
+
    - Analog vs digital sensors
    - Interface requirements (I2C, SPI, analog)
    - Package and mounting considerations
@@ -124,24 +131,26 @@ Smart Home Controller Technical Specifications:
 
 **Common Sensor Categories:**
 
-| Category | Examples | Interface | Typical Use |
-|----------|----------|-----------|-------------|
-| Temperature | DS18B20, SHT30 | Digital | Environmental monitoring |
-| Humidity | SHT30, DHT22 | Digital | HVAC control |
-| Light | TSL2561, BH1750 | I2C | Smart lighting |
-| Motion | PIR, Accelerometer | Digital | Security systems |
-| Pressure | BMP280, MS5611 | I2C/SPI | Weather stations |
+| Category    | Examples           | Interface | Typical Use              |
+| ----------- | ------------------ | --------- | ------------------------ |
+| Temperature | DS18B20, SHT30     | Digital   | Environmental monitoring |
+| Humidity    | SHT30, DHT22       | Digital   | HVAC control             |
+| Light       | TSL2561, BH1750    | I2C       | Smart lighting           |
+| Motion      | PIR, Accelerometer | Digital   | Security systems         |
+| Pressure    | BMP280, MS5611     | I2C/SPI   | Weather stations         |
 
 ### 4. Communication Module Selection
 
 **Communication Requirements Analysis:**
 
 1. **Range Requirements**
+
    - Local communication (Bluetooth, WiFi)
    - Long-range communication (Cellular, LoRa)
    - Internet connectivity needs
 
 2. **Data Rate Requirements**
+
    - Real-time data streaming
    - Periodic data upload
    - Command and control
@@ -153,13 +162,13 @@ Smart Home Controller Technical Specifications:
 
 **Communication Module Comparison:**
 
-| Technology | Range | Data Rate | Power | Cost | Use Case |
-|------------|-------|-----------|-------|------|----------|
-| WiFi | 100m | High | Medium | Low | Local network |
-| Bluetooth | 10m | Medium | Low | Low | Short range |
-| Cellular | Global | High | High | High | Remote monitoring |
-| LoRa | 10km | Low | Very Low | Medium | IoT sensors |
-| Zigbee | 100m | Low | Low | Medium | Home automation |
+| Technology | Range  | Data Rate | Power    | Cost   | Use Case          |
+| ---------- | ------ | --------- | -------- | ------ | ----------------- |
+| WiFi       | 100m   | High      | Medium   | Low    | Local network     |
+| Bluetooth  | 10m    | Medium    | Low      | Low    | Short range       |
+| Cellular   | Global | High      | High     | High   | Remote monitoring |
+| LoRa       | 10km   | Low       | Very Low | Medium | IoT sensors       |
+| Zigbee     | 100m   | Low       | Low      | Medium | Home automation   |
 
 ## Practical Selection Examples
 
@@ -170,12 +179,14 @@ Smart Home Controller Technical Specifications:
 **Step-by-Step Process:**
 
 1. **Define Requirements**
+
    - Measure temperature, humidity, pressure
    - Display data on LCD
    - Log data to SD card
    - Battery powered for 1 week
 
 2. **Select Components**
+
    ```
    Microcontroller: Arduino Uno (ATmega328P)
    Temperature/Humidity: DHT22
@@ -202,6 +213,7 @@ Smart Home Controller Technical Specifications:
 **Step-by-Step Process:**
 
 1. **Define Requirements**
+
    - Control 4 LED strips
    - WiFi connectivity
    - Mobile app control
@@ -209,6 +221,7 @@ Smart Home Controller Technical Specifications:
    - Dimming capability
 
 2. **Select Components**
+
    ```
    Microcontroller: ESP32-WROOM-32
    Power Supply: 12V 5A adapter
@@ -233,6 +246,7 @@ Smart Home Controller Technical Specifications:
 **Weighted Scoring Method:**
 
 1. **Define Criteria and Weights**
+
    - Performance: 30%
    - Cost: 25%
    - Availability: 20%
