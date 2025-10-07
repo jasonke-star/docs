@@ -16,26 +16,26 @@
           {
             "group": "Getting Started",
             "pages": [
-              "what-is-partgenie",
-              "getting-started",
-              "faq",
-              "changelog"
+              "en-US/what-is-partgenie",
+              "en-US/getting-started",
+              "en-US/faq",
+              "en-US/changelog"
             ]
           },
           {
             "group": "Best Practices",
             "pages": [
-              "ai-query-writing",
-              "fuzzy-to-precise",
-              "search-optimization",
-              "effective-bom-management"
+              "en-US/ai-query-writing",
+              "en-US/fuzzy-to-precise",
+              "en-US/search-optimization",
+              "en-US/effective-bom-management"
             ]
           },
           {
             "group": "Account & Membership",
             "pages": [
-              "account-management",
-              "membership-pricing"
+              "en-US/account-management",
+              "en-US/membership-pricing"
             ]
           }
         ],
