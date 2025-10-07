@@ -30,6 +30,14 @@
             ]
           },
           {
+            "group": "Best Practices",
+            "pages": [
+              "ai-query-writing",
+              "fuzzy-to-precise",
+              "search-optimization"
+            ]
+          },
+          {
             "group": "Account & Support",
             "pages": [
               "account-management",
