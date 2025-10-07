@@ -16,9 +16,10 @@
           {
             "group": "Getting Started",
             "pages": [
-              "index",
               "what-is-partgenie",
-              "getting-started"
+              "getting-started",
+              "faq",
+              "changelog"
             ]
           },
           {
@@ -26,7 +27,8 @@
             "pages": [
               "ai-query-writing",
               "fuzzy-to-precise",
-              "search-optimization"
+              "search-optimization",
+              "effective-bom-management"
             ]
           },
           {
