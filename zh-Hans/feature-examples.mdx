@@ -1,0 +1,331 @@
+---
+title: "功能示例"
+description: "通过实际案例了解 PartGenie 的各项功能，学习如何在实际项目中应用这些工具"
+---
+
+## 功能示例概览
+
+通过真实的使用场景，展示 PartGenie 如何帮助您解决实际的元器件管理问题。
+
+## 案例 1：Arduino 项目开发
+
+### 项目背景
+
+<Info>
+  **项目描述**：开发一个基于 Arduino 的智能温湿度监控系统 **项目周期**：2 个月
+  **团队规模**：3 人（硬件工程师、软件工程师、项目经理）
+</Info>
+
+### 使用 PartGenie 的完整流程
+
+<Steps>
+<Step title="需求分析">
+  **硬件需求分析：**
+  
+  - 主控芯片：Arduino 兼容的微控制器
+  - 传感器：温湿度传感器
+  - 显示：LCD 显示屏
+  - 通信：WiFi 模块
+  - 电源：稳压器和电池管理
+  - 其他：电阻、电容、连接器等
+  
+  <Tip>
+  使用 PartGenie 的 AI 搜索，用自然语言描述每个需求
+  </Tip>
+</Step>
+
+<Step title="元器件搜索">
+  **搜索示例：** ``` 搜索词： - "Arduino 兼容微控制器，WiFi 功能" -
+  "温湿度传感器，I2C 接口，高精度" - "LCD 显示屏，16x2，I2C 接口" - "WiFi
+  模块，ESP8266 或 ESP32" - "3.3V 稳压器，1A 输出，低噪声" ``` **搜索结果：** -
+  ESP32-WROOM-32（主控） - SHT30（温湿度传感器） - LCD1602 I2C（显示屏） -
+  AMS1117-3.3（稳压器）
+</Step>
+
+<Step title="产品对比">
+  **对比分析：**
+  <Table>
+    | 参数 | ESP32-WROOM-32 | Arduino Uno | 优势 |
+    |------|----------------|-------------|------| | 处理器 | 双核 240MHz |
+    16MHz | 性能更强 | | WiFi | 内置 | 需外接模块 | 集成度高 | | 内存 | 520KB
+    SRAM | 2KB | 内存更大 | | 价格 | ¥25-35 | ¥15-25 | 性价比高 | | 开发难度 |
+    中等 | 简单 | 学习成本 |
+  </Table>
+  **最终选择：** ESP32-WROOM-32（集成度高，功能完整）
+</Step>
+
+<Step title="BOM 创建">
+  **创建项目 BOM：** ``` BOM 名称：Arduino_温湿度监控_V1.0 创建日期：2024-12-01
+  项目描述：基于 ESP32 的智能温湿度监控系统 元器件清单： - ESP32-WROOM-32 × 1 -
+  SHT30 温湿度传感器 × 1 - LCD1602 I2C 显示屏 × 1 - AMS1117-3.3 稳压器 × 1 -
+  电阻 10kΩ × 5 - 电容 100uF × 3 - 面包板 × 1 - 杜邦线 × 1 包 ```
+</Step>
+
+<Step title="成本分析">
+  **成本统计：**
+  <CardGroup cols={2}>
+    <Card title="元器件成本" icon="calculator">
+      总成本：¥85.50 平均单价：¥9.50
+    </Card>
+
+    <Card title="成本分布" icon="pie-chart">
+      - 主控芯片：40% - 传感器：25% - 显示模块：20% - 其他：15%
+    </Card>
+
+  </CardGroup>
+</Step>
+</Steps>
+
+### 项目成果
+
+<Check>
+  **项目成功完成：** - 开发周期：1.5 个月（提前完成） - 成本控制：比预算节省 15%
+  - 功能实现：100% 达到设计要求 - 团队协作：效率提升 30%
+</Check>
+
+## 案例 2：工业控制板设计
+
+### 项目背景
+
+<Info>
+  **项目描述**：设计一个工业级电机控制板
+  **技术要求**：高可靠性、宽温度范围、抗干扰 **项目周期**：6 个月
+  **团队规模**：5 人（硬件、软件、测试、采购、项目经理）
+</Info>
+
+### 关键挑战
+
+<AccordionGroup>
+<Accordion title="元器件选型">
+  **挑战：** 需要选择工业级元器件，满足严苛的环境要求
+  
+  **解决方案：**
+  - 使用 PartGenie 筛选工业级产品
+  - 对比不同供应商的可靠性数据
+  - 分析温度范围和寿命参数
+</Accordion>
+
+<Accordion title="成本控制">
+  **挑战：** 在保证质量的前提下控制成本 **解决方案：** - 使用 PartGenie
+  的价格对比功能 - 分析不同供应商的性价比 - 考虑批量采购的折扣
+</Accordion>
+
+<Accordion title="供应链管理">
+  **挑战：** 确保元器件供应的稳定性和及时性
+  
+  **解决方案：**
+  - 建立多供应商备选方案
+  - 使用 PartGenie 跟踪库存状态
+  - 提前规划采购计划
+</Accordion>
+</AccordionGroup>
+
+### PartGenie 应用场景
+
+#### 1. 主控芯片选择
+
+<Steps>
+<Step title="需求定义">
+  ```
+  技术要求：
+  - ARM Cortex-M4 内核
+  - 工作频率 ≥ 100MHz
+  - Flash ≥ 512KB
+  - RAM ≥ 128KB
+  - 工作温度：-40°C 到 +85°C
+  - 工业级认证
+  ```
+</Step>
+
+<Step title="AI 搜索">
+  ``` 搜索词："ARM Cortex-M4 微控制器，工业级，512KB Flash，-40°C到+85°C" ```
+</Step>
+
+<Step title="结果筛选">
+  使用筛选器： - 工作温度：-40°C 到 +85°C - 认证：工业级 - 供应商：ST、NXP、TI
+</Step>
+
+<Step title="详细对比">
+  对比 STM32F4、Kinetis K60、Tiva C 系列
+</Step>
+</Steps>
+
+#### 2. 功率器件选择
+
+<Steps>
+<Step title="需求分析">
+  ```
+  功率要求：
+  - 电压：24V 系统
+  - 电流：10A 连续
+  - 开关频率：20kHz
+  - 封装：TO-220 或 TO-247
+  - 热阻：< 1°C/W
+  ```
+</Step>
+
+<Step title="搜索对比">搜索 MOSFET 和 IGBT，对比性能参数</Step>
+
+<Step title="热分析">
+  使用 PartGenie 的热阻数据进行热设计
+</Step>
+</Steps>
+
+#### 3. BOM 管理
+
+<CardGroup cols={2}>
+<Card title="版本控制" icon="code-branch">
+  - V1.0：初始设计
+  - V1.1：优化布局
+  - V1.2：降低成本
+  - V2.0：功能升级
+</Card>
+
+<Card title="成本跟踪" icon="chart-line">
+  - 实时成本：¥1,250
+  - 目标成本：¥1,200
+  - 成本优化：¥50
+</Card>
+</CardGroup>
+
+## 案例 3：消费电子产品
+
+### 项目背景
+
+<Info>
+  **产品类型**：智能手环 **目标市场**：消费电子
+  **关键要求**：低成本、小尺寸、低功耗 **项目周期**：4 个月
+</Info>
+
+### 设计约束
+
+<Table>
+| 约束条件 | 要求 | PartGenie 解决方案 |
+|----------|------|-------------------|
+| 成本控制 | BOM 成本 < ¥50 | 价格筛选和对比 |
+| 尺寸限制 | PCB 尺寸 < 20×30mm | 封装筛选 |
+| 功耗要求 | 待机 < 10μA | 低功耗器件搜索 |
+| 交期要求 | 4 周内完成 | 库存状态筛选 |
+</Table>
+
+### 关键元器件选择
+
+#### 主控芯片
+
+<Steps>
+<Step title="需求分析">
+  ```
+  关键参数：
+  - 低功耗：待机 < 5μA
+  - 小封装：QFN 或 BGA
+  - 集成度高：内置 ADC、RTC、蓝牙
+  - 成本：< ¥15
+  ```
+</Step>
+
+<Step title="搜索筛选">使用 PartGenie 搜索低功耗 MCU</Step>
+
+<Step title="对比分析">
+  对比 Nordic、Dialog、ST 等厂商产品
+</Step>
+</Steps>
+
+#### 传感器选择
+
+<AccordionGroup>
+<Accordion title="加速度计">
+  **需求：** 3 轴加速度计，低功耗，小封装
+  
+  **选择：** LIS2DH12（STMicroelectronics）
+  - 功耗：< 1μA
+  - 封装：2×2×1mm
+  - 成本：¥3.50
+</Accordion>
+
+<Accordion title="心率传感器">
+  **需求：** 光学心率传感器，集成度高
+  
+  **选择：** MAX30102（Maxim Integrated）
+  - 集成 LED 和光电二极管
+  - 数字输出
+  - 成本：¥8.00
+</Accordion>
+</AccordionGroup>
+
+### 成本优化策略
+
+<Steps>
+<Step title="批量采购">
+  使用 PartGenie 分析批量采购折扣
+</Step>
+
+<Step title="替代方案">寻找功能相似但成本更低的替代品</Step>
+
+<Step title="供应商谈判">
+  基于 PartGenie 的价格数据与供应商谈判
+</Step>
+</Steps>
+
+## 最佳实践总结
+
+### 搜索技巧
+
+<CardGroup cols={2}>
+<Card title="关键词选择" icon="search">
+  - 使用具体的技术参数
+  - 结合应用场景描述
+  - 包含封装和认证要求
+</Card>
+
+<Card title="筛选策略" icon="filter">
+  - 先宽后窄的搜索策略
+  - 使用多个筛选条件
+  - 对比不同供应商
+</Card>
+</CardGroup>
+
+### BOM 管理
+
+<CardGroup cols={2}>
+<Card title="版本控制" icon="code-branch">
+  - 及时记录变更原因
+  - 保留重要版本历史
+  - 使用清晰的命名规范
+</Card>
+
+<Card title="团队协作" icon="users">
+  - 设置合适的权限级别
+  - 及时沟通变更信息
+  - 建立审核流程
+</Card>
+</CardGroup>
+
+### 成本控制
+
+<CardGroup cols={2}>
+<Card title="实时跟踪" icon="chart-line">
+  - 定期更新价格信息
+  - 监控成本变化趋势
+  - 设置成本预警
+</Card>
+
+<Card title="优化策略" icon="lightbulb">
+  - 寻找替代方案
+  - 考虑批量采购
+  - 评估供应商选择
+</Card>
+</CardGroup>
+
+## 需要帮助？
+
+如果您在项目中使用 PartGenie 时遇到问题：
+
+- 📖 **详细文档**：查看完整的功能指南
+- 💬 **在线客服**：实时获得技术支持
+- 📧 **邮件支持**：support@partgenie.ai
+- 👥 **社区论坛**：与其他用户交流经验
+
+<Tip>
+  **提示**：建议在实际项目中使用 PartGenie
+  前，先在测试项目中熟悉各项功能，这样可以提高工作效率并避免错误。
+</Tip>

@@ -1,0 +1,479 @@
+---
+title: "商品对比"
+description: "学习如何使用 PartGenie 的商品对比功能，高效比较多个元器件的参数、价格和性能"
+---
+
+## 商品对比功能概述
+
+PartGenie 的商品对比功能让您能够同时比较多个元器件，帮助您做出最佳选择。
+
+## 核心特性
+
+<CardGroup cols={2}>
+<Card title="多产品对比" icon="balance-scale">
+  同时对比最多 5 个产品
+</Card>
+
+<Card title="参数对比" icon="sliders">
+  直观显示关键参数差异
+</Card>
+
+<Card title="价格对比" icon="dollar-sign">
+  实时价格和供应商信息
+</Card>
+
+<Card title="智能推荐" icon="lightbulb">
+  基于对比结果提供建议
+</Card>
+</CardGroup>
+
+## 如何开始对比
+
+### 方法 1：从搜索结果添加
+
+<Steps>
+<Step title="搜索产品">
+  使用 AI 搜索找到您需要的产品类型
+</Step>
+
+<Step title="选择产品">在搜索结果中勾选要对比的产品</Step>
+
+<Step title="打开对比">
+  点击"对比"按钮进入对比页面
+</Step>
+</Steps>
+
+### 方法 2：从产品详情页添加
+
+<Steps>
+<Step title="查看产品详情">
+  点击产品卡片查看详细信息
+</Step>
+
+<Step title="添加到对比">点击"加入对比"按钮</Step>
+
+<Step title="继续添加">重复上述步骤添加更多产品</Step>
+
+<Step title="开始对比">
+  点击对比栏中的"开始对比"按钮
+</Step>
+</Steps>
+
+### 方法 3：从收藏夹添加
+
+<Steps>
+<Step title="打开收藏夹">
+  点击导航栏中的"收藏"
+</Step>
+
+<Step title="选择产品">勾选要对比的产品</Step>
+
+<Step title="批量对比">
+  点击"批量对比"按钮
+</Step>
+</Steps>
+
+## 对比界面详解
+
+### 对比页面布局
+
+<Frame>
+  <img src="/images/comparison-interface.png" alt="商品对比界面" />
+</Frame>
+
+**主要区域说明：**
+
+1. **产品选择区**：显示已选择的产品
+2. **参数对比表**：详细参数对比
+3. **价格对比区**：价格和供应商信息
+4. **操作工具栏**：导出、分享等操作
+
+### 产品选择区
+
+<Info>在对比页面顶部显示已选择的产品，可以随时添加或删除产品</Info>
+
+**功能说明：**
+
+- **产品卡片**：显示产品缩略图和基本信息
+- **删除按钮**：移除不需要的产品
+- **添加按钮**：继续添加更多产品
+- **产品数量**：显示当前对比的产品数量
+
+## 参数对比详解
+
+### 对比表格结构
+
+<Table>
+  | 参数类别 | 说明 | 示例 | |----------|------|------| | 基本信息 |
+  型号、制造商、描述 | STM32F103C8T6, STMicroelectronics | | 电气参数 |
+  电压、电流、功耗等 | 3.3V, 72MHz, 36mA | | 封装信息 | 封装类型、引脚数 |
+  LQFP48, 48-pin | | 工作条件 | 温度范围、湿度等 | -40°C to +85°C | | 接口特性 |
+  通信接口、I/O 数量 | UART, SPI, I2C, 37 GPIO |
+</Table>
+
+### 参数对比显示
+
+<AccordionGroup>
+<Accordion title="数值参数">
+  **显示方式：**
+  - 数值对比：直接显示数值
+  - 范围对比：显示最小值和最大值
+  - 单位统一：自动转换单位便于对比
+</Accordion>
+
+<Accordion title="文本参数">
+  **显示方式：** - 直接显示：如封装类型 - 高亮差异：突出显示不同之处 -
+  分类显示：按类别组织参数
+</Accordion>
+
+<Accordion title="布尔参数">
+  **显示方式：**
+  - 是/否：支持/不支持
+  - 图标显示：✓ 或 ✗
+  - 颜色区分：绿色支持，红色不支持
+</Accordion>
+</AccordionGroup>
+
+### 参数重要性标识
+
+<CardGroup cols={2}>
+<Card title="关键参数" icon="star">
+  最重要的参数，用星号标识
+</Card>
+
+<Card title="重要参数" icon="exclamation-triangle">
+  比较重要的参数，用感叹号标识
+</Card>
+
+<Card title="一般参数" icon="info-circle">
+  一般性参数，用信息图标标识
+</Card>
+
+<Card title="可选参数" icon="question-circle">
+  可选参数，用问号标识
+</Card>
+</CardGroup>
+
+## 价格对比功能
+
+### 价格信息展示
+
+<Frame>
+  <img src="/images/price-comparison.png" alt="价格对比示例" />
+</Frame>
+
+**价格信息包括：**
+
+- **参考价格**：当前市场价格
+- **供应商价格**：不同供应商的价格
+- **批量价格**：不同数量的价格
+- **价格趋势**：历史价格变化
+
+### 价格对比分析
+
+<Steps>
+<Step title="价格排序">
+  按价格从低到高排序显示
+</Step>
+
+<Step title="价格差异">计算价格差异百分比</Step>
+
+<Step title="性价比分析">结合性能参数分析性价比</Step>
+
+<Step title="推荐选择">
+  基于价格和性能提供建议
+</Step>
+</Steps>
+
+### 供应商信息对比
+
+<Table>
+  | 供应商 | 价格 | 库存 | 交期 | 评分 | 备注 |
+  |--------|------|------|------|------|------| | 供应商A | ¥25.50 | 有现货 |
+  1-2天 | ⭐⭐⭐⭐⭐ | 官方授权 | | 供应商B | ¥23.80 | 有现货 | 3-5天 | ⭐⭐⭐⭐
+  | 价格优势 | | 供应商C | ¥26.20 | 缺货 | 2-3周 | ⭐⭐⭐ | 交期较长 |
+</Table>
+
+## 高级对比功能
+
+### 自定义对比参数
+
+<Steps>
+<Step title="选择参数">
+  在对比页面选择要对比的参数
+</Step>
+
+<Step title="调整顺序">拖拽调整参数显示顺序</Step>
+
+<Step title="保存配置">
+  保存自定义的对比配置
+</Step>
+</Steps>
+
+### 对比结果导出
+
+<CardGroup cols={2}>
+<Card title="PDF 报告" icon="file-pdf">
+  生成详细的对比报告
+  包含图表和分析
+</Card>
+
+<Card title="Excel 表格" icon="file-excel">
+  导出为 Excel 格式 便于进一步分析
+</Card>
+
+<Card title="图片分享" icon="image">
+  生成对比图片 便于分享和讨论
+</Card>
+
+<Card title="链接分享" icon="link">
+  生成分享链接
+  与他人共享对比结果
+</Card>
+</CardGroup>
+
+### 智能推荐
+
+<Info>基于对比结果，系统会智能推荐最适合的产品</Info>
+
+**推荐依据：**
+
+- **参数匹配度**：与您需求的匹配程度
+- **性价比**：性能与价格的平衡
+- **供应商可靠性**：供应商的信用评级
+- **库存状态**：是否有现货供应
+
+## 对比策略和技巧
+
+### 对比前准备
+
+<Steps>
+<Step title="明确需求">
+  清楚定义您的需求：
+  - 必须满足的参数
+  - 可以妥协的参数
+  - 预算范围
+  - 交期要求
+</Step>
+
+<Step title="选择对比产品">
+  选择有代表性的产品：
+  - 不同价格档次
+  - 不同供应商
+  - 不同性能水平
+</Step>
+</Steps>
+
+### 对比过程
+
+<Steps>
+<Step title="参数对比">
+  重点关注关键参数：
+  - 是否满足基本要求
+  - 性能差异是否重要
+  - 是否有明显优势
+</Step>
+
+<Step title="价格分析">
+  分析价格因素： - 价格是否合理 - 性价比如何 - 批量采购优势
+</Step>
+
+<Step title="供应商评估">
+  评估供应商：
+  - 可靠性评级
+  - 技术支持能力
+  - 交期稳定性
+</Step>
+</Steps>
+
+### 决策考虑因素
+
+<AccordionGroup>
+<Accordion title="技术因素">
+  - 参数是否满足要求
+  - 性能是否足够
+  - 兼容性如何
+  - 技术支持是否完善
+</Accordion>
+
+<Accordion title="商业因素">
+  - 价格是否合理 - 供应商是否可靠 - 交期是否满足 - 批量采购优势
+</Accordion>
+
+<Accordion title="风险因素">
+  - 供应商稳定性
+  - 产品生命周期
+  - 替代方案可用性
+  - 认证和合规性
+</Accordion>
+</AccordionGroup>
+
+## 实际应用案例
+
+### 案例 1：微控制器选择
+
+<Steps>
+<Step title="需求定义">
+  ```
+  项目需求：
+  - ARM Cortex-M4 内核
+  - Flash ≥ 256KB
+  - RAM ≥ 64KB
+  - 工作电压 3.3V
+  - 工作温度 -40°C to +85°C
+  - 预算 < ¥50
+  ```
+</Step>
+
+<Step title="候选产品">
+  选择 4 个候选产品： - STM32F407VGT6 - Kinetis K60FN1M0VMD12 - Tiva
+  TM4C123GH6PMI - LPC4088FET208
+</Step>
+
+<Step title="对比分析">
+  <Table>
+    | 产品 | Flash | RAM | 价格 | 优势 | 劣势 |
+    |------|-------|-----|------|------|------| | STM32F407 | 1MB | 192KB | ¥45
+    | 性能强 | 功耗较高 | | K60 | 1MB | 128KB | ¥38 | 价格低 | 生态较少 | |
+    TM4C123 | 256KB | 32KB | ¥25 | 价格最低 | 资源较少 | | LPC4088 | 512KB |
+    96KB | ¥42 | 平衡性好 | 供应商少 |
+  </Table>
+</Step>
+
+<Step title="最终选择">
+  **选择 STM32F407VGT6**
+  
+  **理由：**
+  - 性能完全满足要求
+  - 生态完善，开发资源丰富
+  - 价格在预算范围内
+  - 供应商稳定可靠
+</Step>
+</Steps>
+
+### 案例 2：电源管理芯片选择
+
+<Steps>
+<Step title="需求分析">
+  ```
+  电源需求：
+  - 输入：5V
+  - 输出：3.3V
+  - 电流：1A
+  - 效率：> 85%
+  - 封装：SOT-23 或类似
+  - 成本：< ¥10
+  ```
+</Step>
+
+<Step title="对比结果">
+  <Table>
+    | 型号 | 效率 | 价格 | 封装 | 优势 | 劣势 |
+    |------|------|------|------|------|------| | AMS1117-3.3 | 80% | ¥2.5 |
+    SOT-223 | 价格低 | 效率一般 | | TPS7A3301 | 90% | ¥8.5 | SOT-23 | 效率高 |
+    价格较高 | | LM1117-3.3 | 85% | ¥3.2 | SOT-223 | 平衡性好 | 效率中等 | |
+    MCP1825S | 88% | ¥6.8 | SOT-23 | 效率高 | 价格中等 |
+  </Table>
+</Step>
+
+<Step title="决策分析">
+  **选择 TPS7A3301**
+  
+  **理由：**
+  - 效率最高，符合要求
+  - 封装小，适合紧凑设计
+  - 价格在可接受范围内
+  - TI 品牌，质量可靠
+</Step>
+</Steps>
+
+## 常见问题
+
+<AccordionGroup>
+<Accordion title="如何添加更多产品到对比？">
+  在对比页面点击"添加产品"按钮，然后搜索或选择要添加的产品
+</Accordion>
+
+<Accordion title="可以对比多少个产品？">
+  最多可以同时对比 5 个产品，超过限制需要先删除一些产品
+</Accordion>
+
+<Accordion title="如何保存对比结果？">
+  可以导出为 PDF、Excel 或生成分享链接保存对比结果
+</Accordion>
+
+<Accordion title="对比结果不准确怎么办？">
+  如果发现参数有误，请反馈给我们，我们会及时更新产品信息
+</Accordion>
+</AccordionGroup>
+
+## 最佳实践
+
+### 对比前准备
+
+<CardGroup cols={2}>
+<Card title="明确需求" icon="target">
+  清楚定义技术要求和商业要求
+</Card>
+
+<Card title="选择产品" icon="list">
+  选择有代表性的候选产品
+</Card>
+</CardGroup>
+
+### 对比过程
+
+<CardGroup cols={2}>
+<Card title="重点关注" icon="star">
+  重点关注关键参数和差异
+</Card>
+
+<Card title="全面分析" icon="search">
+  从技术、商业、风险多角度分析
+</Card>
+</CardGroup>
+
+### 决策后处理
+
+<CardGroup cols={2}>
+<Card title="记录决策" icon="file-text">
+  记录选择理由和关键信息
+</Card>
+
+<Card title="跟踪结果" icon="chart-line">
+  跟踪使用效果，积累经验
+</Card>
+</CardGroup>
+
+## 下一步学习
+
+<CardGroup cols={2}>
+<Card title="BOM 管理" icon="list-check" href="/zh-Hans/bom-management">
+  将对比结果添加到 BOM
+</Card>
+
+<Card title="收藏功能" icon="heart" href="/zh-Hans/favorites">
+  保存感兴趣的产品
+</Card>
+
+<Card title="采购管理" icon="shopping-cart" href="/zh-Hans/faq">
+  学习采购管理流程
+</Card>
+
+<Card title="团队协作" icon="users" href="/zh-Hans/account-management">
+  与团队分享对比结果
+</Card>
+</CardGroup>
+
+## 需要帮助？
+
+如果您在使用商品对比功能时遇到问题：
+
+- 📖 **对比指南**：查看详细的对比技巧
+- 💬 **在线客服**：实时获得帮助
+- 📧 **邮件支持**：support@partgenie.ai
+- 👥 **社区论坛**：与其他用户交流经验
+
+<Tip>
+  **提示**：商品对比功能会不断优化，您的使用反馈有助于我们提供更好的服务。
+</Tip>
