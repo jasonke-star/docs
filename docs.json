@@ -14,27 +14,28 @@
         "language": "en",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "en-US/index",
+              "en-US/getting-started",
+              "en-US/faq",
+              "en-US/changelog"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Best Practices",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "en-US/ai-query-writing",
+              "en-US/fuzzy-to-precise",
+              "en-US/search-optimization",
+              "en-US/effective-bom-management"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Account & Membership",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "en-US/account-management",
+              "en-US/membership-pricing"
             ]
           }
         ],
@@ -74,18 +75,9 @@
             "pages": [
               "zh-Hans/what-is-partgenie",
               "zh-Hans/getting-started",
-              "zh-Hans/feature-examples",
-              "zh-Hans/faq"
-            ]
-          },
-          {
-            "group": "核心功能指南",
-            "pages": [
-              "zh-Hans/ai-search",
-              "zh-Hans/product-comparison",
-              "zh-Hans/bom-management",
-              "zh-Hans/specification-chat",
-              "zh-Hans/favorites"
+              "zh-Hans/contact-us",
+              "zh-Hans/faq",
+              "zh-Hans/changelog"
             ]
           },
           {

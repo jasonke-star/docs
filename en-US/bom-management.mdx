@@ -1,0 +1,367 @@
+---
+title: "BOM Management"
+description: "Master PartGenie's BOM management features and advanced material list management techniques"
+---
+
+## BOM Management Overview
+
+BOM (Bill of Materials) management is a core aspect of electronic project development. PartGenie provides powerful BOM management features to help you efficiently manage project materials.
+
+## What is BOM Management?
+
+BOM (Bill of Materials) is a detailed list of all components in an electronic project. PartGenie's BOM management helps you:
+
+- 📋 **Create Lists**: Quickly create project material lists
+- 📊 **Cost Analysis**: Real-time project cost calculation
+- 📦 **Procurement Management**: Generate procurement lists
+- 💾 **Data Export**: Support multiple export formats
+
+## Create Your First BOM
+
+<Steps>
+<Step title="Enter BOM Management">
+  Click the "BOM Service" button in the left navigation bar
+  
+  <Info>
+  First-time users will see an empty BOM list
+  </Info>
+</Step>
+
+<Step title="Create New BOM">
+  Click "New BOM" button and fill in basic information: - **BOM Name**: e.g.,
+  "Arduino Project V1.0" - **Project Description**: Briefly describe project
+  purpose - **Version Number**: e.g., "1.0.0" - **Creator**: Your name
+</Step>
+
+<Step title="Add Components">
+  Add components through the following methods: - **Search & Add**: Search and
+  select components - **Manual Add**: Directly input model and parameters -
+  **Import BOM**: Import existing BOM from file - **Add from Favorites**: Select
+  from favorites
+</Step>
+
+<Step title="Set Quantities">
+  For each component, set: - **Required Quantity**: Project needs - **Safety
+  Stock**: Recommended backup quantity - **Notes**: Special instructions or
+  requirements
+</Step>
+
+<Step title="Save BOM">
+  Click "Save" button to complete BOM creation
+  
+  <Check>
+  BOM successfully created, you can edit and update anytime
+  </Check>
+</Step>
+</Steps>
+
+## Core Features
+
+<CardGroup cols={2}>
+<Card title="List Creation" icon="plus-circle">
+  Quickly create and manage material lists
+</Card>
+
+<Card title="Version Control" icon="code-branch">
+  Complete version history and change tracking
+</Card>
+
+<Card title="Data Export" icon="download">
+  Support multiple format BOM data export
+</Card>
+
+<Card title="Cost Analysis" icon="calculator">
+  Real-time cost calculation and trend analysis
+</Card>
+</CardGroup>
+
+## BOM Interface Introduction
+
+### Main Interface Layout
+
+<Frame>
+  <img src="/images/bom-interface.png" alt="BOM Management Interface" />
+</Frame>
+
+### BOM Creation Process
+
+<Frame>
+  <img src="/images/bom-creation-flow.png" alt="BOM Creation Flow Chart" />
+</Frame>
+
+**Main Area Description:**
+
+1. **BOM List**: Display all BOM projects
+2. **Component List**: Current BOM's component list
+3. **Action Toolbar**: Add, edit, delete operations
+4. **Statistics**: Total cost, component count, etc.
+
+### Component Information Cards
+
+Each component displays the following information:
+
+<CardGroup cols={2}>
+<Card title="Basic Information" icon="info-circle">
+  - Component model
+  - Manufacturer
+  - Description
+  - Package information
+</Card>
+
+<Card title="Quantity Information" icon="calculator">
+  - Required quantity - Safety stock - Total quantity - Unit cost
+</Card>
+
+<Card title="Commercial Information" icon="dollar-sign">
+  - Reference price - Supplier - Stock status - Lead time
+</Card>
+
+<Card title="Action Options" icon="tools">
+  - Edit quantity
+  - View details
+  - Replace component
+  - Delete item
+</Card>
+</CardGroup>
+
+## Create and Manage BOM
+
+### Create New BOM
+
+**Fill in Basic Information:**
+
+- **BOM Name**: Clearly describe project name
+- **Project Description**: Detailed project purpose
+- **Version Number**: Follow version naming conventions
+- **Creator**: Responsible person information
+
+**Choose Creation Method:**
+
+- **Blank BOM**: Create from scratch
+- **Template Creation**: Use existing templates
+- **Import Creation**: Import from file
+- **Copy Creation**: Based on existing BOM
+
+**Set Access Permissions:**
+
+- **Private**: Only creator can access
+- **Team**: Team members can access
+- **Public**: Everyone can view
+- **Custom**: Custom permission settings
+
+### BOM Structure Design
+
+<Info>
+  Good BOM structure helps improve management efficiency and team collaboration
+</Info>
+
+#### Standard BOM Structure
+
+<Table>
+  | Level | Category | Description | Example |
+  |-------|----------|-------------|---------| | 1 | Main Control Chip |
+  Microcontrollers, processors | STM32F103C8T6 | | 2 | Power Management |
+  Voltage regulators, power chips | AMS1117-3.3 | | 3 | Sensors | Various
+  sensors | SHT30 | | 4 | Communication Modules | WiFi, Bluetooth, etc. |
+  ESP8266 | | 5 | Display Modules | LCD, LED, etc. | LCD1602 | | 6 | Passive
+  Components | Resistors, capacitors, inductors | 10kΩ resistor | | 7 |
+  Connectors | Various connectors | USB-C | | 8 | Mechanical Parts | Enclosures,
+  screws, etc. | Plastic enclosure |
+</Table>
+
+#### Component Numbering Standards
+
+<CodeGroup>
+```text Recommended Numbering Format
+R1, R2, R3... (resistors)
+C1, C2, C3... (capacitors)
+L1, L2, L3... (inductors)
+U1, U2, U3... (integrated circuits)
+Q1, Q2, Q3... (transistors)
+D1, D2, D3... (diodes)
+J1, J2, J3... (connectors)
+```
+
+```text Numbering Rules
+- Number by function group
+- Number by position within same function
+- Reserve expansion space
+- Maintain numbering continuity
+```
+
+</CodeGroup>
+
+## Methods to Add Components
+
+### Method 1: Search and Add
+
+<Steps>
+<Step title="Open Search">
+  In BOM page, click "Add Component" → "Search and Add"
+</Step>
+
+<Step title="Search Component">Use AI search to find needed components</Step>
+
+<Step title="Select Product">Click "Add to BOM" button on product card</Step>
+
+<Step title="Set Quantity">
+  Set quantity and notes in the popup dialog
+</Step>
+</Steps>
+
+### Method 2: Manual Add
+
+<Steps>
+<Step title="Select Manual Add">
+  Click "Add Component" → "Manual Add"
+</Step>
+
+<Step title="Fill Information">
+  Manually input component information: - Model - Manufacturer - Description -
+  Package - Parameters
+</Step>
+
+<Step title="Set Quantity">Set required quantity and safety stock</Step>
+
+<Step title="Save Add">
+  Click "Add" to complete operation
+</Step>
+</Steps>
+
+### Method 3: Add from Favorites
+
+<Steps>
+<Step title="Open Favorites">
+  Click "Add Component" → "Add from Favorites"
+</Step>
+
+<Step title="Select Product">Choose needed components from favorites</Step>
+
+<Step title="Batch Add">
+  Can select multiple products for batch addition
+</Step>
+</Steps>
+
+## Version Control
+
+### Version Management Strategy
+
+<Info>
+  Version control is an important part of BOM management, ensuring traceability
+  of changes
+</Info>
+
+#### Version Number Standards
+
+<CodeGroup>
+```text Semantic Versioning
+Major.Minor.Patch
+Example: 1.0.0, 1.1.0, 1.1.1
+
+Major: Major feature changes
+Minor: New features, backward compatible
+Patch: Bug fixes, backward compatible
+
+````
+
+```text Version Naming
+- Use clear, descriptive names
+- Include date if needed
+- Document changes in each version
+- Maintain version history
+````
+
+</CodeGroup>
+
+## Cost Analysis
+
+### Real-time Cost Calculation
+
+PartGenie provides comprehensive cost analysis tools:
+
+<CardGroup cols={2}>
+<Card title="Total Cost" icon="calculator">
+  Real-time calculation of total BOM cost
+</Card>
+
+<Card title="Cost Breakdown" icon="pie-chart">
+  Detailed cost breakdown by category
+</Card>
+
+<Card title="Price Trends" icon="trending-up">
+  Track price changes over time
+</Card>
+
+<Card title="Cost Optimization" icon="target">
+  Suggestions for cost reduction
+</Card>
+</CardGroup>
+
+## Data Export
+
+### Export Formats
+
+<Steps>
+<Step title="Select Export Content">
+  Choose components and data to export
+</Step>
+
+<Step title="Choose Format">
+  Select from available formats: - Excel (.xlsx) - CSV (.csv) - PDF (.pdf)
+</Step>
+
+<Step title="Download File">
+  Download the generated file
+</Step>
+</Steps>
+
+## Best Practices
+
+### BOM Organization
+
+<AccordionGroup>
+<Accordion title="Naming Conventions">
+- Use clear, descriptive names
+- Include version information
+- Follow company standards
+- Avoid special characters
+</Accordion>
+
+<Accordion title="Component Management">
+  - Keep component information up-to-date - Use consistent part numbers -
+  Document all changes - Maintain backup copies
+</Accordion>
+
+<Accordion title="Version Control">
+- Create versions for major changes
+- Document all modifications
+- Keep change history
+- Use meaningful version names
+</Accordion>
+</AccordionGroup>
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+<Accordion title="How to import existing BOM?">
+You can import BOM from Excel or CSV files:
+1. Click "Import BOM" button
+2. Select file format
+3. Upload your file
+4. Map columns correctly
+5. Review and confirm import
+</Accordion>
+
+<Accordion title="Can I share BOM with team members?">
+  Yes, you can set different access levels: - View only - Edit permissions -
+  Admin access - Custom permissions
+</Accordion>
+
+<Accordion title="How to track BOM changes?">
+PartGenie automatically tracks all changes:
+- Version history
+- Change logs
+- User activity
+- Timestamp records
+</Accordion>
+</AccordionGroup>

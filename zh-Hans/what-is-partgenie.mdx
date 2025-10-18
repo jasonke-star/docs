@@ -1,17 +1,21 @@
 ---
 title: "介绍"
-description: "了解 PartGenie 的核心功能和价值，为您的元器件采购和管理提供智能解决方案"
+description: "了解元器精灵的核心功能和价值，为您的硬件开发之旅提供智能解决方案"
 ---
 
 ## 元器精灵是什么？
 
 元器精灵是一款专为工程师、研发团队及采购专业人士打造的 AI 驱动平台。我们的使命是，将繁琐耗时的元器件选型工作流，转化为一个智能、高效的一站式流程。我们不只是一个搜索引擎，更是您的专属 AI 电子工程师助手，能够将一个复杂的技术问题，转化为一个完整且可执行的解决方案。
 
+<Frame>
+  <img src="/images/partgenie-overview.png" alt="元器精灵平台概览" />
+</Frame>
+
 ## 核心价值
 
 <CardGroup cols={2}>
 <Card title="AI 智能搜索" icon="search">
-  使用自然语言描述您的需求，AI 帮您找到最匹配的元器件
+  使用自然语言描述您的需求，AI 帮您找到最匹配的元器件或推荐替代方案
 </Card>
 
 <Card title="智能对比" icon="scale">
@@ -22,31 +26,52 @@ description: "了解 PartGenie 的核心功能和价值，为您的元器件采�
   轻松管理您的物料清单，支持版本控制和协作，支持导出结果
 </Card>
 
-<Card title="规格书对话" icon="message-circle">
+<Card title="规格书对话" icon="message-square-dot">
   直接与元器件规格书对话，快速获取关键信息
 </Card>
 </CardGroup>
 
 ## 适用场景
-
 <AccordionGroup>
-<Accordion title="电子设计工程师">
-- 快速找到符合设计要求的元器件
-- 对比不同供应商的产品规格
-- 管理项目中的物料清单
-- 获取元器件技术支持和建议
+<Accordion title="硬件研发工程师 / 设计工程师">
+- 快速准确地查找、比较元器件
+- 验证设计方案的可行性
+- 获取规格书的深度解读
+- 寻找替代品以优化设计或规避风险
+- 早期方案设计阶段的器件选型
+- 现有产品迭代时的器件升级/替代
+- 解决设计中的兼容性或性能问题
 </Accordion>
 
-<Accordion title="采购人员">
-  - 寻找性价比最高的元器件 - 对比不同供应商的价格和交期 -
-  管理采购清单和供应商信息 - 跟踪元器件价格变化
+<Accordion title="电子采购经理 / 供应链管理人员">
+- 管理 BOM
+- 获取实时的价格和库存信息
+- 监控元器件的生命周期（EOL/NRND）
+- 寻找成本更优或供货更稳定的替代品
+- 进行供应商评估
+- BOM 成本分析和优化
+- 供应链风险预警与管理
+- 制定采购策略
+- 协助供应商谈判
 </Accordion>
 
-<Accordion title="项目经理">
-- 监控项目物料成本
-- 协调设计团队和采购团队
-- 管理项目 BOM 和变更
-- 确保物料供应及时性
+<Accordion title="FAE / 销售工程师">
+- 快速响应客户的技术咨询
+- 提供解决方案或产品推荐
+- 进行竞品分析和自家产品优势阐述
+- 获取最新的技术资料和应用案例
+- 客户拜访前的技术准备
+- 现场为客户解答技术难题
+- 提供定制化的解决方案
+</Accordion>
+
+<Accordion title="硬件创业者 / 学生 / 业余爱好者">
+- 快速学习元器件知识
+- 寻找低成本、易获取的元器件进行原型开发
+- 进行基本的 BOM 管理
+- 产品原型设计
+- 学习电子知识
+- 项目材料清单管理
 </Accordion>
 </AccordionGroup>
 
@@ -54,7 +79,7 @@ description: "了解 PartGenie 的核心功能和价值，为您的元器件采�
 
 <Steps>
 <Step title="注册账户">
-  访问 [partgenie.ai](https://partgenie.ai) 注册您的账户
+  电脑端访问 [partgenie.ai](https://partgenie.ai) 使用手机号或微信扫码注册您的账户
 </Step>
 
 <Step title="完善资料">填写您的专业领域和兴趣偏好，获得更精准的推荐</Step>
@@ -70,21 +95,18 @@ description: "了解 PartGenie 的核心功能和价值，为您的元器件采�
 
 ## 快速链接
 
-<Columns cols={2}>
-  <Card title="核心功能概览" icon="book" href="/zh-Hans/development">
-    深入了解AI智能搜索、BOM管理和规格书对话等核心功能
-  </Card>
-  <Card title="账户与订阅" icon="user" href="/zh-Hans/essentials/settings">
-    了解您的账户状态、了解元器精灵Pro版服务
+<Columns cols={3}>
+  <Card title="账户与订阅" icon="user" href="/zh-Hans/membership-pricing">
+    了解您的账户状态与会员服务
   </Card>
   <Card
     title="常见问题解答"
     icon="badge-info"
-    href="/zh-Hans/essentials/navigation"
+    href="/zh-Hans/faq"
   >
-    快速查找常见问题 (FAQ)与故障排查解决方案
+    快速查找常见问题 (FAQ)
   </Card>
-  <Card title="最佳实践" icon="star" href="/zh-Hans/api-reference/introduction">
-    了解电子工程师、采购专业人士在项目中常用的最佳实践。
+  <Card title="最佳实践" icon="star" href="/zh-Hans/ai-query-writing">
+    了解电子专业人士在项目中常用的最佳实践
   </Card>
 </Columns>

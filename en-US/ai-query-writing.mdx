@@ -1,0 +1,274 @@
+---
+title: "How to Write AI-Understandable Queries"
+---
+
+## Overview
+
+In PartGenie, writing high-quality queries is key to getting precise component recommendations. This guide will teach you how to construct query statements that AI can accurately understand and process.
+
+## Query Structure Elements
+
+### 1. Clearly Specify Component Type
+
+**❌ Vague Query:**
+
+```
+I need an electronic component
+```
+
+**✅ Precise Query:**
+
+```
+I need an N-channel MOSFET transistor for power management, TO-220 package
+```
+
+### 2. Include Key Electrical Parameters
+
+**Example Parameters:**
+
+- Voltage rating (e.g., 12V, 24V, 400V)
+- Current capacity (e.g., 1A, 5A, 20A)
+- Power rating (e.g., 1W, 5W, 100W)
+- Frequency range (e.g., 1MHz, 100MHz, 1GHz)
+- Operating temperature (e.g., -40°C to +85°C)
+
+**❌ Incomplete Query:**
+
+```
+I need a voltage regulator
+```
+
+**✅ Complete Query:**
+
+```
+I need a 3.3V LDO voltage regulator, 1A output current, SOT-23 package, for Arduino project
+```
+
+### 3. Describe Application Context
+
+**Application Context Elements:**
+
+- **Project Type**: Arduino, Raspberry Pi, industrial control, automotive
+- **Function**: Power supply, signal processing, communication, sensing
+- **Environment**: Indoor, outdoor, high temperature, low power
+- **Performance Requirements**: High speed, low noise, low power consumption
+
+**Example:**
+
+```
+I need a temperature sensor for an Arduino weather station project, measuring outdoor temperature from -20°C to +60°C, I2C interface, low power consumption
+```
+
+## Query Writing Best Practices
+
+### 1. Use Natural Language
+
+**Good Examples:**
+
+- "I need a microcontroller for IoT projects with WiFi capability"
+- "Looking for a power MOSFET that can handle 20A at 12V"
+- "Need a low-noise operational amplifier for audio applications"
+
+### 2. Be Specific About Requirements
+
+**Include:**
+
+- Exact specifications when known
+- Tolerance requirements
+- Package preferences
+- Brand preferences (if any)
+- Cost constraints
+
+### 3. Use Technical Terminology
+
+**Preferred Terms:**
+
+- "microcontroller" instead of "chip"
+- "voltage regulator" instead of "power component"
+- "operational amplifier" instead of "amp"
+
+## Common Query Patterns
+
+### Pattern 1: Function + Parameters
+
+```
+[Component Type] + [Key Parameters] + [Package/Interface]
+```
+
+**Example:**
+
+```
+STM32F103C8T6 microcontroller, 72MHz ARM Cortex-M3, 64KB Flash, LQFP48 package
+```
+
+### Pattern 2: Application + Requirements
+
+```
+[Application] + [Performance Requirements] + [Interface/Communication]
+```
+
+**Example:**
+
+```
+Temperature sensor for industrial monitoring, -40°C to +125°C range, 4-20mA output, DIN rail mounting
+```
+
+### Pattern 3: Replacement/Alternative
+
+```
+[Original Part] + [Replacement Requirements] + [Constraints]
+```
+
+**Example:**
+
+```
+Alternative to LM358 op-amp, same pinout, better noise performance, automotive grade
+```
+
+## Advanced Query Techniques
+
+### 1. Comparative Queries
+
+```
+Compare STM32F103 vs STM32F407 microcontrollers for motor control applications
+```
+
+### 2. Optimization Queries
+
+```
+Find the most cost-effective 3.3V LDO regulator with lowest dropout voltage
+```
+
+### 3. Compatibility Queries
+
+```
+What components are compatible with Arduino Uno for I2C communication?
+```
+
+## Query Examples by Category
+
+### Microcontrollers
+
+**Good Query:**
+
+```
+I need a 32-bit ARM microcontroller for a robotics project, 100+ MHz, 256KB+ Flash, CAN bus support, QFP package
+```
+
+**Poor Query:**
+
+```
+I need a microcontroller
+```
+
+### Power Management
+
+**Good Query:**
+
+```
+Looking for a buck converter IC, input 12V, output 5V 2A, 90%+ efficiency, SOT-23 package
+```
+
+**Poor Query:**
+
+```
+I need a power supply chip
+```
+
+### Sensors
+
+**Good Query:**
+
+```
+Need a digital humidity sensor for greenhouse monitoring, I2C interface, 0-100% RH range, ±2% accuracy
+```
+
+**Poor Query:**
+
+```
+I need a humidity sensor
+```
+
+### Communication
+
+**Good Query:**
+
+```
+Looking for a WiFi module for ESP32, 802.11 b/g/n, integrated antenna, SPI interface, low power mode
+```
+
+**Poor Query:**
+
+```
+I need a WiFi chip
+```
+
+## Troubleshooting Query Issues
+
+### If Results Are Too Broad
+
+**Problem:** Too many results, not specific enough
+**Solution:** Add more specific parameters or constraints
+
+### If No Results Found
+
+**Problem:** Query too specific or using wrong terminology
+**Solution:** Try broader terms or alternative descriptions
+
+### If Results Don't Match Needs
+
+**Problem:** Missing key requirements in query
+**Solution:** Include more context about application and constraints
+
+## Tips for Better Results
+
+1. **Start Broad, Then Narrow Down**
+
+   - Begin with general component type
+   - Add specific parameters gradually
+   - Use filters to refine results
+
+2. **Use Multiple Search Attempts**
+
+   - Try different keyword combinations
+   - Use synonyms and alternative terms
+   - Search by different aspects (function, parameters, application)
+
+3. **Learn from Search Results**
+
+   - Analyze what terms appear in good results
+   - Note common parameter formats
+   - Build vocabulary from successful searches
+
+4. **Save Successful Queries**
+   - Keep track of queries that work well
+   - Build a personal query library
+   - Share effective patterns with team
+
+## Common Mistakes to Avoid
+
+### 1. Too Vague
+
+❌ "I need a chip"
+✅ "I need a 16-bit ADC for sensor reading"
+
+### 2. Missing Units
+
+❌ "I need a 3.3 regulator"
+✅ "I need a 3.3V voltage regulator"
+
+### 3. Wrong Terminology
+
+❌ "I need a computer chip"
+✅ "I need a microcontroller"
+
+### 4. Too Many Requirements
+
+❌ "I need a perfect microcontroller that does everything"
+✅ "I need a microcontroller with specific features for my project"
+
+## Conclusion
+
+Writing effective queries for PartGenie's AI requires a balance of specificity and clarity. By following these guidelines and practicing with different query patterns, you'll be able to get more accurate and relevant component recommendations for your projects.
+
+Remember: The AI learns from your queries, so the more precise and well-structured your queries are, the better the results will be.

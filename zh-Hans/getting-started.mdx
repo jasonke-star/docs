@@ -7,23 +7,24 @@ description: "本指南将帮助您快速上手元器精灵，从注册账户到
 
 <Steps>
 <Step title="注册账户">
-  访问 [partgenie.ai](https://partgenie.ai) 并点击"注册"按钮
-  
+  电脑端访问 [partgenie.cn](https://partgenie.cn) 并点击"登录"按钮
+
+{" "}
+<Frame>
+  <img src="/images/login.png" alt="PartGenie 登陆界面" />
+</Frame>
+
   <Info>
-  您可以使用邮箱注册，或使用 Google、LinkedIn 等第三方账户快速登录
+  您可以使用手机号验证、微信扫码或绑定邮箱注册登录
   </Info>
 </Step>
 
 <Step title="完善个人资料">
-  登录后，请完善您的个人资料信息： - **职位信息**：填选择您的主要职责 - -
-  **专业领域**：选择您的主要工作领域（如：消费电子、汽车电子、工业控制等）-
-  <Tip>完善资料有助于我们为您提供更精准的元器件推荐</Tip>
-</Step>
+  登录后，请完善您的个人资料信息：
+  - **职位信息**：填选择您的主要角色（如：工程师、分销商、采购人员、创客等）
+  - **专业领域**：选择您的主要工作领域（如：消费电子、汽车电子、工业控制等）
 
-<Step title="探索界面">
-  熟悉 PartGenie 的主要界面： - **搜索栏**：位于页面顶部，支持自然语言搜索 -
-  **筛选器**：帮助您精确筛选搜索结果 - **结果列表**：显示匹配的元器件信息 -
-  **对比功能**：选择多个产品进行对比
+<Tip>完善资料有助于我们为您提供更精准的推荐回答</Tip>
 </Step>
 
 <Step title="进行第一次搜索">
@@ -35,38 +36,68 @@ description: "本指南将帮助您快速上手元器精灵，从注册账户到
   - "100uF 16V 电解电容"
   - "LM358 运算放大器"
   ```
+  <Frame>
+  <img src="/images/recommend-query.png" alt="PartGenie 推荐查询" />
+  </Frame>
+
+  <Tip>你也可以选择输入框下方推荐的搜索查询，并进行修改</Tip>
 </Step>
 </Steps>
 
 ## 界面介绍
 
-### 主搜索界面
-
-<Frame>
-  <img src="/images/search-interface.png" alt="PartGenie 主搜索界面" />
-</Frame>
-
-**主要区域说明：**
-
-1. **搜索栏**：输入您的搜索需求
-2. **筛选面板**：按参数、价格、供应商等筛选
-3. **结果列表**：显示匹配的元器件
-4. **对比栏**：管理选中的对比产品
-
 ### 导航菜单
 
 <AccordionGroup>
   <Accordion title="首页">智能搜索元器件，支持自然语言查询</Accordion>
-  <Accordion title="BOM服务">创建和管理您的物料清单</Accordion>
   <Accordion title="收藏">保存您感兴趣的搜索记录、元器件或厂商</Accordion>
+  <Accordion title="BOM服务">创建和管理您的物料清单</Accordion>
   <Accordion title="历史">查看您的搜索历史</Accordion>
 </AccordionGroup>
+
+### 主搜索界面
+
+**主要区域说明：**
+
+1. **搜索栏**：输入您的搜索需求，支持上传图片/文件
+   <Frame caption="搜索栏">
+     <img src="/images/file-upload.png" alt="文件上传界面" />
+   </Frame>
+
+2. **概览**：筛选后的推荐商品+AI 总结推荐
+   <Frame caption="回答概览页">
+     <img src="/images/partgenie-overview.png" alt="PartGenie 主搜索界面" />
+   </Frame>
+
+3. **AI 分析任务**：AI 推理过程
+   <Frame caption="AI推理界面">
+     <img src="/images/reason-page.png" alt="AI推理界面" />
+   </Frame>
+
+4. **元器件标签页**：从数据库中召回的元器件列表与参数筛选器
+   <Frame caption="元器件召回界面">
+     <img src="/images/retrieve-page.png" alt="元器件召回界面" />
+   </Frame>
+
+### 元器件详情页
+你可以点击元器件卡片或者元器件列表查看元器件详情：
+
+  <Frame caption="元器件详情页">
+     <img src="/images/product-detail.png" alt="元器件详情页" />
+   </Frame>
+
+### 品牌制造商详情页
+你可以点击元器件列表查看对应的品牌制造商详情：
+
+  <Frame caption="品牌制造商详情页">
+     <img src="/images/manufacturer-detail.png" alt="品牌制造商详情页" />
+   </Frame>
 
 ## 搜索技巧
 
 ### 自然语言搜索
 
-您可以使用日常语言描述您的需求：
+元器精灵支持多种电子行业任务查询，您可以使用日常语言描述您的需求：
 
 <CodeGroup>
 ```text 精准搜索
@@ -85,15 +116,69 @@ description: "本指南将帮助您快速上手元器精灵，从注册账户到
 "用于电机控制的 MOSFET，N 沟道，60V 以上"
 ```
 
+```text 替代品查找
+"STM32F103C8T6的国产替代品/替代料"
+```
+
+```text 交叉对比/参考
+"查询MMBT3904 SOT23与对标厂商型号规格等多个器件"
+```
+
+```text 技术问答
+"AEC-Q100标准包含哪些测试？可靠性试验标准包含哪些？"
+```
 </CodeGroup>
 
+### 参数筛选
+
+你可以在搜索元器件标签页使用参数筛选器进一步调整搜索范围：
+
+   <Frame caption="参数筛选">
+     <img src="/images/parameter-filter.png" alt="参数筛选" />
+   </Frame>
+
+### 文件/图片搜索
+
+你可以在搜索框中上传文件或图片，适用于器件型号反查、规格书阅读等场景：
+
+   <Frame caption="文件搜索">
+     <img src="/images/file-upload-2.png" alt="文件搜索" />
+   </Frame>
+
+  <Frame caption="图片搜索">
+     <img src="/images/file-upload-1.png" alt="图片搜索" />
+   </Frame>
+
+### 追问
+
+你可以在搜索结果页进一步追问，进一步澄清疑惑：
+
+   <Frame caption="追问">
+     <img src="/images/follow-up.png" alt="追问" />
+   </Frame>
+
 ## 常用功能
+
+### 收藏功能
+你可以收藏查询到的元器件商品、品牌制造商和搜索记录，便于后续访问。
+   <Frame caption="收藏界面">
+     <img src="/images/bookmark-all.png" alt="收藏界面" />
+   </Frame>
+
+   <Frame caption="元器件收藏">
+     <img src="/images/bookmark-semiconductor.png" alt="元器件收藏界面" />
+   </Frame>
+<Info>点击产品卡片上的"收藏"图标或点击元器件详情页进行收藏，即可将产品保存到您的收藏夹中</Info>
 
 ### 产品对比
 
 <Steps>
 <Step title="选择产品">
-  在搜索结果中勾选要对比的产品
+  在元器件搜索列表结果中勾选要对比的产品
+
+   <Frame caption="勾选后对比">
+     <img src="/images/select-compare.png" alt="勾选后对比" />
+   </Frame>
 </Step>
 
 <Step title="打开对比">点击"对比"按钮查看详细对比</Step>
@@ -103,40 +188,38 @@ description: "本指南将帮助您快速上手元器精灵，从注册账户到
 </Step>
 </Steps>
 
-### 收藏功能
+### 规格书对话
+你可以在元器件详情页或元器件列表点击规格书，进入规格书对话界面。
+   <Frame caption="规格书对话界面">
+     <img src="/images/chat-with-datasheet.png" alt="规格书对话界面" />
+   </Frame>
 
-<Info>点击产品卡片上的"收藏"按钮，将产品保存到您的收藏夹中</Info>
+<Info>规格书对话支持自然语言对话，支持参数查询、功能特性、应用场景、技术对比等。</Info>
 
 ### BOM 管理
 
 <Steps>
 <Step title="创建 BOM">
   点击"BOM 服务" → "新建 BOM"
+
+  <Frame caption="新建BOM">
+     <img src="/images/new-bom.png" alt="新建BOM" />
+  </Frame>
 </Step>
 
-<Step title="添加产品">从搜索结果中添加产品到 BOM</Step>
+<Step title="添加产品">
+  你可以从搜索结果中添加产品到 BOM，也可以直接在BOM进行复制粘贴添加
+
+  <Frame caption="添加产品到BOM">
+     <img src="/images/add-to-bom.png" alt="添加产品到BOM" />
+  </Frame>
+</Step>
 
 <Step title="管理清单">
-  编辑数量、备注等信息
+  编辑数量、备注等信息，调整BOM层级等
+
+  <Frame caption="管理BOM清单">
+     <img src="/images/bom-detail.png" alt="编辑BOM" />
+  </Frame>
 </Step>
 </Steps>
-
-## 下一步
-
-<CardGroup cols={2}>
-<Card title="AI 智能搜索" icon="search" href="/zh-Hans/ai-search">
-  深入了解 AI 搜索的强大功能
-</Card>
-
-<Card title="BOM 管理" icon="list-check" href="/zh-Hans/bom-management">
-  学习如何高效管理物料清单
-</Card>
-
-<Card title="产品对比" icon="balance-scale" href="/zh-Hans/product-comparison">
-  掌握产品对比的技巧
-</Card>
-
-<Card title="常见问题" icon="question-circle" href="/zh-Hans/faq">
-  查看常见问题解答
-</Card>
-</CardGroup>
