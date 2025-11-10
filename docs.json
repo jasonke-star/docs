@@ -23,19 +23,19 @@
             ]
           },
           {
+            "group": "Account & Membership",
+            "pages": [
+              "en-US/account-management",
+              "en-US/membership-pricing"
+            ]
+          },
+          {
             "group": "Best Practices",
             "pages": [
               "en-US/ai-query-writing",
               "en-US/fuzzy-to-precise",
               "en-US/search-optimization",
               "en-US/effective-bom-management"
-            ]
-          },
-          {
-            "group": "Account & Membership",
-            "pages": [
-              "en-US/account-management",
-              "en-US/membership-pricing"
             ]
           }
         ],
