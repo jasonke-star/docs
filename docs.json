@@ -43,8 +43,8 @@
           "anchors": [
             {
               "anchor": "Community",
-              "href": "https://discord.gg/6UgXFWT3UW",
-              "icon": "discord"
+              "href": "https://wa.me/17342391845",
+              "icon": "whatsapp"
             },
             {
               "anchor": "Home",
@@ -106,8 +106,8 @@
             },
             {
               "anchor": "社区", 
-              "href": "https://discord.gg/6UgXFWT3UW",
-              "icon": "discord"
+              "href": "https://wa.me/17342391845",
+              "icon": "whatsapp"
             }
           ]
         },
@@ -148,7 +148,7 @@
       "x": "https://x.com/PartGenie",
       "linkedin": "https://www.linkedin.com/company/partgenie/?viewAsMember=true",
       "youtube": "https://www.youtube.com/@partgenie",
-      "discord": "https://discord.gg/6UgXFWT3UW"
+      "whatsapp": "https://wa.me/17342391845"
     }
   }
 }
