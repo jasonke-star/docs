@@ -3,6 +3,28 @@ title: 更新日志
 description: 查看 PartGenie 的最新功能更新和版本发布信息
 ---
 
+<Update label="2026-07-31-notifications" tags={["通知", "数据补全", "体验优化"]} description="通知中心重构">
+  <Frame>
+    <img
+      alt="通知设置：邮件与站内信开关，完成提示音与音色选择"
+      src="/images/notifications-settings.png"
+    />
+  </Frame>
+
+  <Frame>
+    <img
+      alt="通知 Activity：替代料分析等 enrichment 任务进度"
+      src="/images/notifications-activity.png"
+    />
+  </Frame>
+
+  **通知中心重构：**
+
+  1. **搜索任务完成提醒** — 回答完成时可播放声音，并支持 **tone 切换** 与试听。
+  2. **智能 enrichment** — 遇到 catalog 中暂无的 MPN 或 alternatives 时，自动触发补全任务，并在**完成后通知你**。当前需求较多，平均完成时间约数十分钟；我们正加紧推进，目标尽快在 **24 小时内**处理完成。
+  3. **站内信 + 邮件** — 可在 **设置 → Notifications** 分别开关分析结果、小贴士等通知渠道。
+</Update>
+
 <Update label="2026-07-31-component-detail" tags={["元器件详情", "分享", "体验优化"]} description="参数更清晰，支持分享器件页">
   <Frame>
     <img
