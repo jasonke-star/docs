@@ -3,6 +3,28 @@ title: 更新日志
 description: 查看 PartGenie 的最新功能更新和版本发布信息
 ---
 
+<Update label="2026-08-12" tags={["BOM", "风险", "替代料"]} description="BOM 健康报告优化 — 器件分布、风险分析与批量替代料">
+  <Frame>
+    <img
+      alt="BOM 器件分布环形图，按类别显示数量占比及各类风险数量"
+      src="/images/bom-health-distribution.png"
+    />
+  </Frame>
+
+  <Frame>
+    <img
+      alt="BOM 风险拆解：NRND、零库存、无采购数据、缺失厂商，及 9 条有替代料建议的 BOM 行"
+      src="/images/bom-health-risks.png"
+    />
+  </Frame>
+
+  BOM 健康报告全面升级，上传 BOM 后即可获得：
+
+  - **器件分布** — 按类别（IC、无源器件、分立半导体等）查看 BOM 组成，每类别风险数量一眼可见
+  - **风险分析** — EOL/NRND、零库存、无采购数据、厂商信息缺失，按严重程度标记，优先处理高风险项
+  - **批量替代料建议** — 对存在供应风险的 BOM 行，PartGenie 自动扫描并推荐功能替代料，一键查看、快速换料
+</Update>
+
 <Update label="2026-08-11" tags={["关税", "合规", "Beta"]} description="关税查询 — MPN 级美国进口关税（Beta）">
   <Frame>
     <img
