@@ -28,6 +28,7 @@
             "pages": [
               "en-US/ai-search",
               "en-US/alternatives",
+              "en-US/product-comparison",
               "en-US/datasheet-citations",
               "en-US/specification-chat"
             ]
@@ -53,6 +54,7 @@
             "group": "Collaboration & Apps",
             "pages": [
               "en-US/share",
+              "en-US/favorites",
               "en-US/mobile-app"
             ]
           },
@@ -60,12 +62,14 @@
             "group": "Account & Membership",
             "pages": [
               "en-US/account-management",
-              "en-US/membership-pricing"
+              "en-US/membership-pricing",
+              "en-US/account-troubleshooting"
             ]
           },
           {
             "group": "Best Practices",
             "pages": [
+              "en-US/feature-examples",
               "en-US/ai-query-writing",
               "en-US/fuzzy-to-precise",
               "en-US/search-optimization",
@@ -119,6 +123,7 @@
             "pages": [
               "zh-Hans/ai-search",
               "zh-Hans/alternatives",
+              "zh-Hans/product-comparison",
               "zh-Hans/datasheet-citations",
               "zh-Hans/specification-chat"
             ]
@@ -144,6 +149,7 @@
             "group": "协作与 App",
             "pages": [
               "zh-Hans/share",
+              "zh-Hans/favorites",
               "zh-Hans/mobile-app"
             ]
           },
@@ -151,12 +157,14 @@
             "group": "账户与订阅",
             "pages": [
               "zh-Hans/membership-pricing",
-              "zh-Hans/account-management"
+              "zh-Hans/account-management",
+              "zh-Hans/account-troubleshooting"
             ]
           },
           {
             "group": "最佳实践",
             "pages": [
+              "zh-Hans/feature-examples",
               "zh-Hans/ai-query-writing",
               "zh-Hans/fuzzy-to-precise",
               "zh-Hans/search-optimization",
