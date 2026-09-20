@@ -1,0 +1,41 @@
+---
+title: "实时采购"
+description: "分销商实时价格与库存——开关数据源，一键跳转采购"
+---
+
+PartGenie 将多家分销商的**实时价格与库存**接入器件详情、BOM、对比视图，以及搜索/替代料结果。
+
+## 已支持的实时数据源
+
+可在 **设置 → Distributors** 中开关，当前包括：
+
+- DigiKey、LCSC、TME、Unikeyic、OnlineComponents、WinSource、Arrow
+
+尚未实时接入的来源可能以 Catalog snapshot 展示。
+
+<Frame>
+  <img alt="Distributors 设置中的 Live pricing 列表" src="/images/sourcing-lcsc-arrow.png" />
+</Frame>
+
+## 在哪里查看
+
+- **器件 Procurement 页签** — 价格阶梯、封装、更新时间
+- **BOM / Compare** — 库存与价格列
+- **搜索与替代料** — 实时采购行（含置信度与来源）
+
+## 一键采购
+
+在 Procurement 页签点击 **Purchase**，直达对应分销商产品页下单。
+
+<Frame>
+  <img alt="DigiKey 采购卡片与 Purchase 链接" src="/images/procurement-purchase-jump.png" />
+</Frame>
+
+## 偏好设置
+
+分销商开关在所有视图中同步生效。若有希望接入的数据源，欢迎告诉我们。厂商合作 Program 也在推进中。
+
+## 相关文档
+
+- [OpenELAB 模组](/zh-Hans/openelab-modules)
+- [BOM 管理](/zh-Hans/bom-management)

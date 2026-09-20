@@ -1,112 +1,65 @@
 ---
 title: "介绍"
-description: "了解元器精灵的核心功能和价值，为您的硬件开发之旅提供智能解决方案"
+description: "了解 PartGenie 核心能力——AI 搜索、Work、BOM、Design、实时采购等"
 ---
 
-## 元器精灵是什么？
+## 什么是 PartGenie？
 
-元器精灵是一款专为工程师、研发团队及采购专业人士打造的 AI 驱动平台。我们的使命是，将繁琐耗时的元器件选型工作流，转化为一个智能、高效的一站式流程。我们不只是一个搜索引擎，更是您的专属 AI 电子工程师助手，能够将一个复杂的技术问题，转化为一个完整且可执行的解决方案。
+PartGenie 是面向工程师、采购与硬件团队的 AI 电子助手。用可验证的回答搜索器件，管理 BOM 与 Design 项目，查看分销商实时数据，在一个平台里从提问走到执行。
 
-<Frame>
-  <img src="/images/zh-Hans/partgenie-overview.png" alt="元器精灵平台概览" />
-</Frame>
-
-## 核心价值
+## 核心能力
 
 <CardGroup cols={2}>
-<Card title="AI 智能搜索" icon="search">
-  使用自然语言描述您的需求，AI 帮您找到最匹配的元器件或推荐替代方案
-</Card>
-
-<Card title="智能对比" icon="scale">
-  一键对比多个元器件的规格、价格和供应商信息，支持导出结果
-</Card>
-
-<Card title="BOM 管理" icon="list">
-  轻松管理您的物料清单，支持版本控制和协作，支持导出结果
-</Card>
-
-<Card title="规格书对话" icon="message-square-dot">
-  直接与元器件规格书对话，快速获取关键信息
-</Card>
+  <Card title="AI 搜索" icon="search" href="/zh-Hans/ai-search">
+    自然语言、语音、MPN 引用、规格书页码证据
+  </Card>
+  <Card title="替代料" icon="shuffle" href="/zh-Hans/alternatives">
+    项目上下文替代、对比、导出 Alternative Report
+  </Card>
+  <Card title="PartGenie Work" icon="briefcase" href="/zh-Hans/partgenie-work">
+    在主对话中分析并执行 BOM/Design 项目
+  </Card>
+  <Card title="BOM" icon="list" href="/zh-Hans/bom-management">
+    健康报告、工程 Diff、预估价格、Adopt、分享
+  </Card>
+  <Card title="Design" icon="microchip" href="/zh-Hans/design-mode">
+    概念设计、架构、初始 BOM（Beta）
+  </Card>
+  <Card title="实时采购" icon="truck" href="/zh-Hans/live-sourcing">
+    多分销商实时价库与一键采购
+  </Card>
+  <Card title="Knowledge" icon="books" href="/zh-Hans/knowledge">
+    个人硬件知识库与 AI 生成产物
+  </Card>
+  <Card title="移动端" icon="mobile" href="/zh-Hans/mobile-app">
+    Android App——拍照识件、扫 PCB；iOS 即将上线
+  </Card>
 </CardGroup>
 
-## 适用场景
+## 适合谁
+
 <AccordionGroup>
-<Accordion title="硬件研发工程师 / 设计工程师">
-- 快速准确地查找、比较元器件
-- 验证设计方案的可行性
-- 获取规格书的深度解读
-- 寻找替代品以优化设计或规避风险
-- 早期方案设计阶段的器件选型
-- 现有产品迭代时的器件升级/替代
-- 解决设计中的兼容性或性能问题
-</Accordion>
-
-<Accordion title="电子采购经理 / 供应链管理人员">
-- 管理 BOM
-- 获取实时的价格和库存信息
-- 监控元器件的生命周期（EOL/NRND）
-- 寻找成本更优或供货更稳定的替代品
-- 进行供应商评估
-- BOM 成本分析和优化
-- 供应链风险预警与管理
-- 制定采购策略
-- 协助供应商谈判
-</Accordion>
-
-<Accordion title="FAE / 销售工程师">
-- 快速响应客户的技术咨询
-- 提供解决方案或产品推荐
-- 进行竞品分析和自家产品优势阐述
-- 获取最新的技术资料和应用案例
-- 客户拜访前的技术准备
-- 现场为客户解答技术难题
-- 提供定制化的解决方案
-</Accordion>
-
-<Accordion title="硬件创业者 / 学生 / 业余爱好者">
-- 快速学习元器件知识
-- 寻找低成本、易获取的元器件进行原型开发
-- 进行基本的 BOM 管理
-- 产品原型设计
-- 学习电子知识
-- 项目材料清单管理
-</Accordion>
+  <Accordion title="硬件 / 设计工程师">
+    选型、带引用核验规格、找替代、从对话进入 Design
+  </Accordion>
+  <Accordion title="采购与供应链">
+    实时库存价格、BOM 风险与成本估算、关税查询（Beta）、分享 BOM
+  </Accordion>
+  <Accordion title="FAE / 应用支持">
+    有证据的快速应答、Alternative Report、规格书问答
+  </Accordion>
+  <Accordion title="创客与学生">
+    更快学习、通过 OpenELAB 找模组原型、Free 与教育计划
+  </Accordion>
 </AccordionGroup>
 
-## 开始使用
+## 下一步
 
-<Steps>
-<Step title="注册账户">
-  电脑端访问 [partgenie.ai](https://partgenie.ai) 使用手机号或微信扫码注册您的账户
-</Step>
-
-<Step title="完善资料">填写您的专业领域和兴趣偏好，获得更精准的推荐</Step>
-
-<Step title="开始搜索">
-  尝试搜索您需要的元器件，体验 AI 智能搜索的强大功能
-</Step>
-</Steps>
-
-<Card title="立即开始" icon="play" href="https://partgenie.ai">
-  开始您的元器之旅，体验智能元器件管理的便利
-</Card>
-
-## 快速链接
-
-<Columns cols={3}>
-  <Card title="账户与订阅" icon="user" href="/zh-Hans/membership-pricing">
-    了解您的账户状态与会员服务
+<CardGroup cols={2}>
+  <Card title="如何开始使用" icon="rocket" href="/zh-Hans/getting-started">
+    注册、第一次搜索、第一个 BOM
   </Card>
-  <Card
-    title="常见问题解答"
-    icon="badge-info"
-    href="/zh-Hans/faq"
-  >
-    快速查找常见问题 (FAQ)
+  <Card title="会员与 Credits" icon="credit-card" href="/zh-Hans/membership-pricing">
+    套餐、Credits、Pro 试用
   </Card>
-  <Card title="最佳实践" icon="star" href="/zh-Hans/ai-query-writing">
-    了解电子专业人士在项目中常用的最佳实践
-  </Card>
-</Columns>
+</CardGroup>

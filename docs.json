@@ -19,7 +19,41 @@
               "en-US/index",
               "en-US/getting-started",
               "en-US/faq",
-              "en-US/changelog"
+              "en-US/changelog",
+              "en-US/contact-us"
+            ]
+          },
+          {
+            "group": "Search & Answers",
+            "pages": [
+              "en-US/ai-search",
+              "en-US/alternatives",
+              "en-US/datasheet-citations",
+              "en-US/specification-chat"
+            ]
+          },
+          {
+            "group": "Projects & BOM",
+            "pages": [
+              "en-US/partgenie-work",
+              "en-US/bom-management",
+              "en-US/design-mode",
+              "en-US/knowledge"
+            ]
+          },
+          {
+            "group": "Sourcing & Compliance",
+            "pages": [
+              "en-US/live-sourcing",
+              "en-US/tariff-lookup",
+              "en-US/openelab-modules"
+            ]
+          },
+          {
+            "group": "Collaboration & Apps",
+            "pages": [
+              "en-US/share",
+              "en-US/mobile-app"
             ]
           },
           {
@@ -39,7 +73,7 @@
             ]
           }
         ],
-        "global": { 
+        "global": {
           "anchors": [
             {
               "anchor": "Community",
@@ -75,9 +109,42 @@
             "pages": [
               "zh-Hans/what-is-partgenie",
               "zh-Hans/getting-started",
-              "zh-Hans/contact-us",
               "zh-Hans/faq",
-              "zh-Hans/changelog"
+              "zh-Hans/changelog",
+              "zh-Hans/contact-us"
+            ]
+          },
+          {
+            "group": "搜索与回答",
+            "pages": [
+              "zh-Hans/ai-search",
+              "zh-Hans/alternatives",
+              "zh-Hans/datasheet-citations",
+              "zh-Hans/specification-chat"
+            ]
+          },
+          {
+            "group": "项目与 BOM",
+            "pages": [
+              "zh-Hans/partgenie-work",
+              "zh-Hans/bom-management",
+              "zh-Hans/design-mode",
+              "zh-Hans/knowledge"
+            ]
+          },
+          {
+            "group": "采购与合规",
+            "pages": [
+              "zh-Hans/live-sourcing",
+              "zh-Hans/tariff-lookup",
+              "zh-Hans/openelab-modules"
+            ]
+          },
+          {
+            "group": "协作与 App",
+            "pages": [
+              "zh-Hans/share",
+              "zh-Hans/mobile-app"
             ]
           },
           {
@@ -97,15 +164,15 @@
             ]
           }
         ],
-        "global": { 
+        "global": {
           "anchors": [
             {
-              "anchor": "博客", 
+              "anchor": "博客",
               "href": "https://partgenie.ai/",
               "icon": "newspaper"
             },
             {
-              "anchor": "社区", 
+              "anchor": "社区",
               "href": "https://wa.me/17342391845",
               "icon": "whatsapp"
             }

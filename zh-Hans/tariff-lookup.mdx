@@ -1,0 +1,30 @@
+---
+title: "关税查询"
+description: "按原产国估算具体 MPN 的美国进口关税（Beta）"
+---
+
+**关税查询（Beta）** 可按原产国估算某颗 MPN 的美国进口关税——在贸易政策与产地选择影响成本与合规时特别有用。
+
+## 为什么重要
+
+电子元器件型号多、HTS 归类难、附加税多层叠加。估算偏差会影响选料与成本模型。
+
+## 使用方式
+
+1. 首页选择 **Tariff lookup**，或在对话中询问（如 *Check tariff for \<MPN\> made in China entering the US*）
+2. 选择**原产国**（或比较常见产地 / 仅看基础税率）
+3. 查看拆解：HTS 分类（含置信度）、基础税率、适用附加税（如 301 条款）、**合计估算**
+
+<Frame>
+  <img alt="关税查询原产国选择" src="/images/tariff-country-select.png" />
+</Frame>
+
+<Frame>
+  <img alt="关税结果卡片" src="/images/tariff-result.png" />
+</Frame>
+
+<Warning>
+  仅为估算，不构成正式海关裁定。正式申报前请咨询持牌报关行。
+</Warning>
+
+目前支持**进口美国**。更多目的国即将支持，欢迎反馈需求。

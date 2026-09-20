@@ -1,0 +1,39 @@
+---
+title: "替代料"
+description: "结合项目上下文找更合适的替代方案，对比 MPN，并导出 Alternative Report"
+---
+
+PartGenie 的替代料搜索不止于参数相近。引擎会追问**项目上下文**（功耗、散热、封装、应用），再推荐升级路径与功能替代。
+
+## 更智能的替代搜索
+
+当你查找替换（例如 *alternative to BQ24195*）时，系统可能弹出约束确认。确认或跳过；已确认的上下文会用于推荐。
+
+<Frame>
+  <img alt="替代料约束澄清提问" src="/images/alt-search-clarify.png" />
+</Frame>
+
+结果会标明关系类型（升级路径 / 功能替代）、是否 drop-in，以及关键规格。
+
+## 对比 MPN
+
+在 BOM 或搜索结果中多选 MPN，点击 **Compare**，横向对比价格、库存、MOQ、交期与封装。
+
+<Frame>
+  <img alt="多个 MPN 的 Compare Products 面板" src="/images/bom-compare-panel.png" />
+</Frame>
+
+## Alternative Report（导出）
+
+在器件的 **Alternative Parts** 区域：
+
+1. 点击 **View report** 查看结构化短名单（目标器件、摘要、设计/采购建议、候选料风险与置信度）
+2. 导出为 **PDF** 或 **Word**，方便同步 FAE、采购或设计评审
+
+<Frame>
+  <img alt="Alternative report 与 PDF/Word 导出" src="/images/alt-report-export.png" />
+</Frame>
+
+## Adopt 进项目
+
+在 [PartGenie Work](/zh-Hans/partgenie-work) 或 BOM 分析中，可将推荐替代料直接 **Adopt** 进项目。Adopt 记录见 [BOM 管理](/zh-Hans/bom-management) 中的工程 Diff。
