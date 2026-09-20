@@ -1,0 +1,103 @@
+{
+  "$schema": "./screenshot-assets.schema.json",
+  "notes": "Prefer reusing changelog screenshots. Use capture recipes only when a fresh shot is needed.",
+  "baseUrl": "https://app.partgenie.ai",
+  "assets": [
+    {
+      "id": "ai-search-voice",
+      "file": "images/search-voice-recording.png",
+      "usedBy": ["en-US/ai-search", "zh-Hans/ai-search"],
+      "source": "reuse",
+      "capture": null
+    },
+    {
+      "id": "citation-badges",
+      "file": "images/citation-badges.png",
+      "usedBy": ["en-US/ai-search", "zh-Hans/ai-search"],
+      "source": "reuse",
+      "capture": null
+    },
+    {
+      "id": "alt-clarify",
+      "file": "images/alt-search-clarify.png",
+      "usedBy": ["en-US/alternatives", "zh-Hans/alternatives"],
+      "source": "reuse",
+      "capture": {
+        "path": "/app/chat",
+        "prompt": "alternative to BQ24195",
+        "waitForText": "constraints",
+        "description": "Alternative clarification card"
+      }
+    },
+    {
+      "id": "work-input",
+      "file": "images/partgenie-work-input.png",
+      "usedBy": ["en-US/partgenie-work", "zh-Hans/partgenie-work"],
+      "source": "reuse",
+      "capture": {
+        "path": "/app/chat",
+        "description": "Homepage Work mode with BOM attached"
+      }
+    },
+    {
+      "id": "bom-diff",
+      "file": "images/bom-diff-estimate.png",
+      "usedBy": ["en-US/bom-management", "zh-Hans/bom-management"],
+      "source": "reuse",
+      "capture": {
+        "path": "/app/projects",
+        "description": "BOM toolbar Changes + Est. price"
+      }
+    },
+    {
+      "id": "live-sourcing-settings",
+      "file": "images/sourcing-lcsc-arrow.png",
+      "usedBy": ["en-US/live-sourcing", "zh-Hans/live-sourcing"],
+      "source": "reuse",
+      "capture": {
+        "path": "/app/settings",
+        "description": "Distributors live pricing toggles"
+      }
+    },
+    {
+      "id": "tariff-select",
+      "file": "images/tariff-country-select.png",
+      "usedBy": ["en-US/tariff-lookup", "zh-Hans/tariff-lookup"],
+      "source": "reuse",
+      "capture": {
+        "path": "/app/chat",
+        "description": "Tariff country of origin selector"
+      }
+    },
+    {
+      "id": "share-dialog",
+      "file": "images/share-chat-bom.png",
+      "usedBy": ["en-US/share", "zh-Hans/share"],
+      "source": "reuse",
+      "capture": {
+        "path": "/app/chat",
+        "description": "Share dialog"
+      }
+    },
+    {
+      "id": "credits-panel",
+      "file": "images/usage-credits.png",
+      "usedBy": ["en-US/membership-pricing", "zh-Hans/membership-pricing"],
+      "source": "reuse",
+      "capture": {
+        "path": "/app/chat",
+        "description": "Credits popover in header"
+      }
+    },
+    {
+      "id": "homepage-public",
+      "file": "images/auto/homepage.png",
+      "usedBy": ["en-US/getting-started", "zh-Hans/getting-started"],
+      "source": "capture",
+      "capture": {
+        "url": "https://app.partgenie.ai/app/chat",
+        "description": "Logged-in or login homepage for getting started"
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+
+# Playwright auth for screenshot capture
+scripts/.auth.json
+node_modules/
+
