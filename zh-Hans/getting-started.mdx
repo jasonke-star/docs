@@ -1,6 +1,6 @@
 ---
 title: "如何开始使用"
-description: "本指南将帮助您快速上手元器精灵，从注册账户到完成第一次搜索再到创建 BOM"
+description: "注册、完成第一次搜索，再试 Work、BOM 与实时采购"
 ---
 
 ## 快速开始
@@ -10,241 +10,78 @@ description: "本指南将帮助您快速上手元器精灵，从注册账户到
 </Frame>
 
 <Steps>
-<Step title="注册账户">
-  电脑端访问 [partgenie.cn](https://partgenie.cn) 并点击"登录"按钮
+  <Step title="注册账户">
+    打开 [app.partgenie.ai](https://app.partgenie.ai) 或 [partgenie.cn](https://partgenie.cn)，使用邮箱 / Google / LinkedIn（国内也可手机号、微信）登录。
 
-{" "}
+    <Frame>
+      <img src="/images/zh-Hans/login.png" alt="PartGenie 登录界面" />
+    </Frame>
+  </Step>
+  <Step title="完善资料">
+    填写角色与行业，便于更贴合的推荐。
+  </Step>
+  <Step title="第一次搜索">
+    保持 **Search**，输入 MPN 或自然语言：
+
+    ```
+    STM32F103C8T6 工作电压
+    BQ24195 替代料
+    100uF 16V 电解电容
+    ```
+
+    也可用**语音**、附加文件/图片，或点选推荐提示。
+  </Step>
+</Steps>
+
+## 首页模式
+
+| 控件 | 用途 |
+| --- | --- |
+| **Search** | 器件问答、替代料、引用核验 |
+| **Work** | 对已附加 BOM/Design 分析并执行 |
+| **Optimize BOM** | 进入 BOM 健康 / 风险流程 |
+| **Design Hardware** | 启动 Design（Beta） |
+| **Tariff lookup** | 按原产国估算美国进口关税 |
+
+详见：[AI 智能搜索](/zh-Hans/ai-search) · [PartGenie Work](/zh-Hans/partgenie-work)
+
+## 第一次回答之后
+
+1. 点击 **MPN / 页码引用角标** 核验来源 — [规格书页码溯源](/zh-Hans/datasheet-citations)
+2. 打开器件抽屉 → **Procurement** 看实时价库 — [实时采购](/zh-Hans/live-sourcing)
+3. 继续追问，或从对话进入 **Design** — [Design 模式](/zh-Hans/design-mode)
+
 <Frame>
-  <img src="/images/zh-Hans/login.png" alt="PartGenie 登陆界面" />
+  <img alt="回答中的引用角标" src="/images/citation-badges.png" />
 </Frame>
 
-  <Info>
-  您可以使用手机号验证、微信扫码或绑定邮箱注册登录
-  </Info>
-</Step>
+## 几分钟内做第一个 BOM
 
-<Step title="完善个人资料">
-  登录后，请完善您的个人资料信息：
-  - **职位信息**：填选择您的主要角色（如：工程师、分销商、采购人员、创客等）
-  - **专业领域**：选择您的主要工作领域（如：消费电子、汽车电子、工业控制等）
+1. 切换到 **Work**（或 Optimize BOM），上传 CSV/Excel / 粘贴 part list
+2. 提问：`Analyze top risks from this BOM`
+3. 查看健康报告、Adopt 替代料，检查 **Changes** 与 **Est. price**
 
-<Tip>完善资料有助于我们为您提供更精准的推荐回答</Tip>
-</Step>
+文档：[BOM 管理](/zh-Hans/bom-management) · [功能示例](/zh-Hans/feature-examples)
 
-<Step title="进行第一次搜索">
-  尝试搜索一个您熟悉的元器件：
-  
-  ```
-  示例搜索词：
-  - "STM32F103C8T6 微控制器"
-  - "100uF 16V 电解电容"
-  - "LM358 运算放大器"
-  ```
-  <Frame>
-  <img src="/images/zh-Hans/recommend-query.png" alt="PartGenie 推荐查询" />
-  </Frame>
+<Frame>
+  <img alt="Work 模式已附加 BOM" src="/images/partgenie-work-input.png" />
+</Frame>
 
-  <Tip>你也可以选择输入框下方推荐的搜索查询，并进行修改</Tip>
-</Step>
-</Steps>
+## 侧边栏常用入口
 
-## 界面介绍
+- **Projects** — BOM 与 Design 工作区
+- **Knowledge** — 文件与 AI 产物
+- **Collection** — 收藏器件
+- 顶部 **Credits** — 余额、Top up、套餐 — [会员与定价](/zh-Hans/membership-pricing)
 
-### 主模式与导航
+## 建议尽早打开的设置
 
-<AccordionGroup>
-  <Accordion title="Search 与 Work">
-    **Search** — 器件问答、替代料、关税等。**Work** — 针对已附加的 BOM 或 Design 项目分析并执行。详见 [AI 智能搜索](/zh-Hans/ai-search) 与 [PartGenie Work](/zh-Hans/partgenie-work)。
-  </Accordion>
-  <Accordion title="Projects">
-    BOM 与 Design 的硬件项目工作区，可打开或新建项目。
-  </Accordion>
-  <Accordion title="Knowledge">
-    个人文件库（规格书、参考设计、AI 产物）。见 [Knowledge](/zh-Hans/knowledge)。
-  </Accordion>
-  <Accordion title="收藏 / 历史">
-    在侧边栏收藏器件，并回顾近期对话。
-  </Accordion>
-</AccordionGroup>
+- **Language** — Auto 或指定语言
+- **Distributors** — 开关实时数据源
+- 通知 — 邮件 / 站内偏好
 
-### 接下来可以试
+## 接下来读
 
-完成第一次搜索后，可继续了解：[实时采购](/zh-Hans/live-sourcing)、[BOM 健康与 Diff](/zh-Hans/bom-management)、[Design](/zh-Hans/design-mode)、[Android App](/zh-Hans/mobile-app)。
-
-### 导航菜单（补充）
-
-<AccordionGroup>
-  <Accordion title="首页">智能搜索元器件，支持自然语言查询</Accordion>
-  <Accordion title="收藏">保存您感兴趣的搜索记录、元器件或厂商</Accordion>
-  <Accordion title="BOM服务">创建和管理您的物料清单</Accordion>
-  <Accordion title="历史">查看您的搜索历史</Accordion>
-</AccordionGroup>
-
-### 主搜索界面
-
-**主要区域说明：**
-
-1. **搜索栏**：输入您的搜索需求，支持上传图片/文件
-   <Frame caption="搜索栏">
-     <img src="/images/zh-Hans/file-upload.png" alt="文件上传界面" />
-   </Frame>
-
-2. **概览**：筛选后的推荐商品+AI 总结推荐
-   <Frame caption="回答概览页">
-     <img src="/images/zh-Hans/partgenie-overview.png" alt="PartGenie 主搜索界面" />
-   </Frame>
-
-3. **AI 分析任务**：AI 推理过程
-   <Frame caption="AI推理界面">
-     <img src="/images/zh-Hans/reason-page.png" alt="AI推理界面" />
-   </Frame>
-
-4. **元器件标签页**：从数据库中召回的元器件列表与参数筛选器
-   <Frame caption="元器件召回界面">
-     <img src="/images/zh-Hans/retrieve-page.png" alt="元器件召回界面" />
-   </Frame>
-
-### 元器件详情页
-你可以点击元器件卡片或者元器件列表查看元器件详情：
-
-  <Frame caption="元器件详情页">
-     <img src="/images/zh-Hans/product-detail.png" alt="元器件详情页" />
-   </Frame>
-
-### 品牌制造商详情页
-你可以点击元器件列表查看对应的品牌制造商详情：
-
-  <Frame caption="品牌制造商详情页">
-     <img src="/images/zh-Hans/manufacturer-detail.png" alt="品牌制造商详情页" />
-   </Frame>
-
-## 搜索技巧
-
-### 自然语言搜索
-
-元器精灵支持多种电子行业任务查询，您可以使用日常语言描述您的需求：
-
-<CodeGroup>
-```text 精准搜索
-"LM7805CT"
-```
-
-```text 基础搜索
-"需要一颗 3.3V 的 LDO 稳压器"
-```
-
-```text 参数搜索
-"STM32 系列微控制器，ARM Cortex-M4，至少 512KB Flash"
-```
-
-```text 应用搜索
-"用于电机控制的 MOSFET，N 沟道，60V 以上"
-```
-
-```text 替代品查找
-"STM32F103C8T6的国产替代品/替代料"
-```
-
-```text 交叉对比/参考
-"查询MMBT3904 SOT23与对标厂商型号规格等多个器件"
-```
-
-```text 技术问答
-"AEC-Q100标准包含哪些测试？可靠性试验标准包含哪些？"
-```
-</CodeGroup>
-
-### 参数筛选
-
-你可以在搜索元器件标签页使用参数筛选器进一步调整搜索范围：
-
-   <Frame caption="参数筛选">
-     <img src="/images/zh-Hans/parameter-filter.png" alt="参数筛选" />
-   </Frame>
-
-### 文件/图片搜索
-
-你可以在搜索框中上传文件或图片，适用于器件型号反查、规格书阅读等场景：
-
-   <Frame caption="文件搜索">
-     <img src="/images/zh-Hans/file-upload-2.png" alt="文件搜索" />
-   </Frame>
-
-  <Frame caption="图片搜索">
-     <img src="/images/zh-Hans/file-upload-1.png" alt="图片搜索" />
-   </Frame>
-
-### 追问
-
-你可以在搜索结果页进一步追问，进一步澄清疑惑：
-
-   <Frame caption="追问">
-     <img src="/images/zh-Hans/follow-up.png" alt="追问" />
-   </Frame>
-
-## 常用功能
-
-### 收藏功能
-你可以收藏查询到的元器件商品、品牌制造商和搜索记录，便于后续访问。
-   <Frame caption="收藏界面">
-     <img src="/images/zh-Hans/bookmark-all.png" alt="收藏界面" />
-   </Frame>
-
-   <Frame caption="元器件收藏">
-     <img src="/images/zh-Hans/bookmark-semiconductor.png" alt="元器件收藏界面" />
-   </Frame>
-<Info>点击产品卡片上的"收藏"图标或点击元器件详情页进行收藏，即可将产品保存到您的收藏夹中</Info>
-
-### 产品对比
-
-<Steps>
-<Step title="选择产品">
-  在元器件搜索列表结果中勾选要对比的产品
-
-   <Frame caption="勾选后对比">
-     <img src="/images/zh-Hans/select-compare.png" alt="勾选后对比" />
-   </Frame>
-</Step>
-
-<Step title="打开对比">点击"对比"按钮查看详细对比</Step>
-
-<Step title="分析结果">
-  查看参数、价格、供应商等对比信息
-</Step>
-</Steps>
-
-### 规格书对话
-你可以在元器件详情页或元器件列表点击规格书，进入规格书对话界面。
-   <Frame caption="规格书对话界面">
-     <img src="/images/zh-Hans/chat-with-datasheet.png" alt="规格书对话界面" />
-   </Frame>
-
-<Info>规格书对话支持自然语言对话，支持参数查询、功能特性、应用场景、技术对比等。</Info>
-
-### BOM 管理
-
-<Steps>
-<Step title="创建 BOM">
-  点击"BOM 服务" → "新建 BOM"
-
-  <Frame caption="新建BOM">
-     <img src="/images/zh-Hans/new-bom.png" alt="新建BOM" />
-  </Frame>
-</Step>
-
-<Step title="添加产品">
-  你可以从搜索结果中添加产品到 BOM，也可以直接在BOM进行复制粘贴添加
-
-  <Frame caption="添加产品到BOM">
-     <img src="/images/zh-Hans/add-to-bom.png" alt="添加产品到BOM" />
-  </Frame>
-</Step>
-
-<Step title="管理清单">
-  编辑数量、备注等信息，调整BOM层级等
-
-  <Frame caption="管理BOM清单">
-     <img src="/images/zh-Hans/bom-detail.png" alt="编辑BOM" />
-  </Frame>
-</Step>
-</Steps>
+- [功能示例](/zh-Hans/feature-examples)
+- [分享](/zh-Hans/share) · [移动端 App](/zh-Hans/mobile-app)
+- [常见问题](/zh-Hans/faq)
