@@ -3,6 +3,26 @@ title: 更新日志
 description: 查看 PartGenie 的最新功能更新和版本发布信息
 ---
 
+<Update label="2026-09-23" tags={["KiCad", "ECAD", "Beta"]} description="支持生成可验证的 KiCad 库（Beta）">
+  <Frame>
+    <img
+      alt="为 RC0603FR-071KL 生成 KiCad 库：Symbol、Footprint、3D 预览及 Download"
+      src="/images/kicad-library-generate.png"
+    />
+  </Frame>
+
+  <Frame>
+    <img
+      alt="生成结果的 Evidence summary：引脚映射、封装尺寸等来自规格书的多维度校验"
+      src="/images/kicad-library-evidence.png"
+    />
+  </Frame>
+
+  **KiCad 库生成现已开放 Beta。** 输入 MPN 即可生成 **Symbol、Footprint、STEP 3D**，并支持工程级 KiCad 文件导出，直接用于你的设计工程。
+
+  生成文件会基于 PartGenie 官方器件库与规格书做多维度校验（引脚映射、视觉审计、带页码的 Evidence summary 等）。仍为 Beta——量产使用前请核对 pitch、焊盘、Pin 1 与 3D 模型。欢迎反馈，我们会持续优化精度。
+</Update>
+
 <Update label="2026-09-21" tags={["数据", "器件库", "覆盖"]} description="新增 2500 万条器件数据">
   <Frame>
     <img
