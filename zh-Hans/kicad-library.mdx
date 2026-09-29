@@ -1,0 +1,82 @@
+---
+title: "KiCad 库生成"
+description: "按 MPN 生成经过校验的 KiCad Symbol、Footprint 与 STEP 3D，并下载工程文件（Beta）"
+---
+
+**KiCad 库生成（Beta）** 基于 PartGenie 器件库和规格书，为指定型号生成 **Symbol、Footprint、STEP 3D**，并附上可核对的证据表。
+
+这和器件页上直接下载目录模型不是同一条路。目录里已有的封装 / 符号在器件 **CAD Models** 页签——见 [ECAD 与封装库](/zh-Hans/ecad-models)。需要带引脚、焊盘和视觉校验的 KiCad 工程文件时，用生成。
+
+## 生成库
+
+<Steps>
+  <Step title="从 Search 开始">
+    打开 [app.partgenie.ai](https://app.partgenie.ai)，保持在 **Search**（不要切到 Work）。
+  </Step>
+  <Step title="用型号发起生成">
+    在提问里写上 MPN 和封装：
+
+    ```
+    generate verified KiCAD for RC0603FR-071KL
+    ```
+
+    也可以直接说为某个型号生成 symbol、footprint 和 3D，例如 `STM32F103RET6`、`OPA810IDBVR`。
+  </Step>
+  <Step title="等待任务完成">
+    生成可能需要几分钟。PartGenie 会说明任务已开始，完成后通过**站内通知和邮件**告知。你可以离开当前对话，之后从 **Recents** 或 **⌘K** 找回。
+  </Step>
+  <Step title="查看 Symbol、Footprint、3D">
+    完成后卡片分三块预览：
+
+    - **Symbol** — 原理图符号与引脚号
+    - **Footprint** — 焊盘（例如 0603 的 1、2 脚）
+    - **3D Model** — STEP 外形
+
+    校验通过时会看到 **KiCad native import**、**Pin mapping**、**Visual audit**。
+  </Step>
+  <Step title="打开 Evidence summary">
+    展开 **Evidence summary**。每一行是一个字段（引脚数、pitch、本体尺寸、焊盘尺寸）、采用的数值、对应**规格书页码**，以及状态：
+
+    - **Calculated** — 由规格书或封装数据算出
+    - **Assumed** — 引擎补上的默认值（pitch 较常见）
+
+    **Assumed** 的行必须人工确认。
+  </Step>
+  <Step title="下载">
+    在器件卡片上点 **Download**，把文件导入 KiCad 工程库。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="生成的 KiCad 卡片：Symbol、Footprint、3D 与 Download"
+    src="/images/kicad-library-generate.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Evidence summary：规格书页码，以及 Calculated / Assumed 状态"
+    src="/images/kicad-library-evidence.png"
+  />
+</Frame>
+
+## 投板前
+
+<Warning>
+  库仍是 **Beta**。使用前请对照规格书核对 pitch、焊盘、Pin 1 和 3D。缩略图看起来正常，不代表假定的间距一定正确。
+</Warning>
+
+- 从证据表打开被引用的规格书页（见 [规格书页码溯源](/zh-Hans/datasheet-citations)）
+- 同时核对符号和封装上的 Pin 1
+- 不对就在同一条对话里指出，也欢迎把问题反馈给我们
+
+## 文件之后在哪
+
+下载的库由你导入 KiCad。生成它的对话留在 **Recents**。相关产物也可能进入 [Knowledge](/zh-Hans/knowledge)。
+
+## 相关文档
+
+- [ECAD 与封装库](/zh-Hans/ecad-models)
+- [Design 模式](/zh-Hans/design-mode)
+- [AI 智能搜索](/zh-Hans/ai-search)

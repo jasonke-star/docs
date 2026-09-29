@@ -1,25 +1,79 @@
 ---
 title: "Design 模式"
-description: "硬件设计 Beta——概念设计、架构、初始 BOM，以及从对话一键进入设计"
+description: "从 Brief 走到 Plan、Architecture、BOM 和多视图图片的硬件概念流程"
 ---
 
-**Design 模式（Beta）** 帮助你在 PartGenie 内从想法走到结构化硬件交付物。
+**Design** 把一个硬件想法收成可评审的材料：Brief、可选方案的 Plan、Architecture、初始 BOM、图片。仍是 Beta。
 
-## 能做什么
+## 开始一次设计
 
-- 从首页 Design 入口或 Projects 创建 **Design 项目**
-- 生成**概念设计**、架构图、初始 BOM、技术方案
-- 从对话触发：AI 回答某器件后，使用 **Design** 追问建议，以该器件为上下文进入硬件设计
+<Steps>
+  <Step title="进入 Design">
+    在首页点 **Design Hardware**，或切到 **Work** 后描述产品。也可以在某颗料的回答下面点 **Design** 追问，从那颗料开始。
+  </Step>
+  <Step title="描述产品">
+    说明它是什么、硬性约束、给谁用。例如：有高度限制、带 LiDAR、定位中端价位的扫地机器人。
+  </Step>
+  <Step title="按阶段往下走">
+    画布上的阶段是 **Brief → Plan → Architecture → BOM → Image**。绿色勾表示该阶段已完成。点某一阶段即可打开。
+  </Step>
+</Steps>
 
 <Frame>
-  <img alt="对话追问中的 Design 快捷入口" src="/images/chat-design-followup.png" />
+  <img
+    alt="Design 阶段：Brief、Plan、Architecture、BOM、Image 均已完成"
+    src="/images/design-plan-steps.png"
+  />
 </Frame>
 
-## 配额与库
+<Frame>
+  <img
+    alt="从器件回答一键进入硬件设计的追问"
+    src="/images/chat-design-followup.png"
+  />
+</Frame>
 
-Design 消耗计划中的 **Credits**。硬件包、Agent 改板、ECAD 库等能力因套餐而异，详见 [会员与定价](/zh-Hans/membership-pricing)。
+## 评审 Plan
+
+**Plan** 用来在后面的材料被当成定稿之前选定方向。
+
+这一页包括：
+
+- **Goals** — 硬件必须做到什么
+- **Metrics** — 高度、吸力、电池、充电电流等数字
+- **Constraints** — 认证、成本、环境、电源、尺寸
+- **Schemes** — 不止一套架构，其中一套标为 **Active**
+
+方案上的说明是：选定一个方向；想改选项，就在对话里说。
+
+顶部有阶段页签（**Plan**，以及架构 / BOM / 图片的数量）。**Use** 采用当前选择，**Export** 导出这套材料。
+
+<Frame>
+  <img
+    alt="Plan 评审：目标、指标、约束，以及当前激活的架构方案"
+    src="/images/design-plan-review.png"
+  />
+</Frame>
+
+## 图片
+
+**Image** 阶段可以有多个视角。大图是当前视图（常标为 **Hero**），下面的缩略图切换角度。点缩略图查看该视角。
+
+<Frame>
+  <img
+    alt="Hero 主图与其他视角缩略图"
+    src="/images/design-image-multiview.jpg"
+  />
+</Frame>
+
+## 材料出来之后
+
+- Design 给出的初始 BOM 可以像普通 BOM 一样看健康度、实时库存和替代料。见 [BOM 管理](/zh-Hans/bom-management)。
+- 要画板的料需要另外拿 ECAD：器件页 **CAD Models** 里的目录文件，或生成的 KiCad 库。见 [ECAD 与封装库](/zh-Hans/ecad-models)、[KiCad 库生成](/zh-Hans/kicad-library)。
+- Design 消耗 **Credits**。见 [会员与定价](/zh-Hans/membership-pricing)。
 
 ## 相关文档
 
 - [PartGenie Work](/zh-Hans/partgenie-work)
+- [KiCad 库生成](/zh-Hans/kicad-library)
 - [Knowledge](/zh-Hans/knowledge)

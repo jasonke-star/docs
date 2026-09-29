@@ -39,6 +39,8 @@
               "en-US/partgenie-work",
               "en-US/bom-management",
               "en-US/design-mode",
+              "en-US/kicad-library",
+              "en-US/ecad-models",
               "en-US/knowledge"
             ]
           },
@@ -134,6 +136,8 @@
               "zh-Hans/partgenie-work",
               "zh-Hans/bom-management",
               "zh-Hans/design-mode",
+              "zh-Hans/kicad-library",
+              "zh-Hans/ecad-models",
               "zh-Hans/knowledge"
             ]
           },

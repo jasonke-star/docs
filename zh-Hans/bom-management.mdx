@@ -7,11 +7,31 @@ PartGenie 把 BOM 当作持续演进的工程文档——匹配行、标风险�
 
 ## 创建或上传
 
-- 从首页、Projects 或 Work 上传 **CSV / Excel**（或粘贴 part list）
-- 行会匹配到 MPN，状态如 Full Match
-- 在 BOM 表中编辑、筛选，并刷新实时库存
+<Steps>
+  <Step title="附上 BOM">
+    首页点 **Optimize BOM**，或把输入框切到 **Work**，再上传 **CSV / Excel** 或粘贴 part list。已有 BOM 从 **Projects** 打开。
+  </Step>
+  <Step title="看工具栏">
+    BOM 顶部：
 
-项目统一在 **Projects**（BOM 与 Design 工作区）。
+    - **Refreshing live stock** — 已刷新价格的行数
+    - **Files & Rules** — 项目文件和项目指令（会覆盖账号里的个性化指令）
+    - **Changes** — Adopt 记录和版本 Diff
+    - **Health** — 当前 BOM 健康分
+    - **Est.** — 成本估算区间，以及已计价行数
+    - **Export** / **Share**
+  </Step>
+  <Step title="处理表格">
+    每一行有原始料号、**Match**（例如 Full Match）、**Stock / Source** 上的分销商标记、品牌。用 **Level** 和 **Match** 筛选。**Add Data Row** 加一行。行上的操作可以复制、重复或删除。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM 工具栏：实时库存刷新、Changes、Health、预估价格、Export、Share"
+    src="/images/bom-diff-estimate.png"
+  />
+</Frame>
 
 ## 健康报告
 

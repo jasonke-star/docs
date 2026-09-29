@@ -1,0 +1,62 @@
+---
+title: "ECAD 与封装库"
+description: "在器件 CAD Models 页签下载目录里的封装与符号；没有现成库时再生成 KiCad"
+---
+
+拿到 ECAD 有两条路，按你要的东西选。
+
+| 你要的 | 入口 |
+| --- | --- |
+| 目录里已有的 footprint / symbol / 3D | 器件抽屉 → **CAD Models** |
+| 对照规格书生成并校验过的 KiCad 库 | [KiCad 库生成](/zh-Hans/kicad-library) |
+
+## 下载目录模型
+
+<Steps>
+  <Step title="打开器件">
+    搜索 MPN，点击回答里的 **MPN 角标**或器件卡片，打开器件抽屉。
+  </Step>
+  <Step title="切到 CAD Models">
+    抽屉页签是 **Product**、**Procurement**、**CAD Models**。Procurement 是实时价格和库存。**CAD Models** 是这颗料的封装库。
+  </Step>
+  <Step title="下载列出的文件">
+    如果这颗料有库文件，就在这个页签下载 footprint、symbol 或 3D，再导入你的 EDA。
+
+    不是每颗 MPN 都有目录模型。页签是空的，就去生成，不要拿一个通用 0603 顶上。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="器件抽屉页签：Product、Procurement、CAD Models"
+    src="/images/procurement-purchase-jump.png"
+  />
+</Frame>
+
+上图停在 **Procurement**（价格阶梯和 **Purchase**）。**CAD Models** 是它右边的页签。
+
+## 什么时候改为生成
+
+下面情况用 KiCad 生成：
+
+- CAD Models 里没有这颗精确 MPN 和封装的文件
+- 你要 Symbol、Footprint、STEP 一起给，并且每项能对上规格书页码（引脚数、本体、焊盘、pitch）
+- 你要在摆进原理图之前看到 **KiCad native import** 一类校验
+
+在 Search 里输入：
+
+```
+generate verified KiCAD for RC0603FR-071KL
+```
+
+完整步骤见 [KiCad 库生成](/zh-Hans/kicad-library)。
+
+<Warning>
+  目录封装和生成库可能在焊盘或 Pin 1 上不一致。要投板的料，以规格书对应页为准，不要只拿两个文件互相比较。
+</Warning>
+
+## 相关文档
+
+- [KiCad 库生成](/zh-Hans/kicad-library)
+- [实时采购](/zh-Hans/live-sourcing) — CAD Models 旁边的 Procurement 页签
+- [规格书页码溯源](/zh-Hans/datasheet-citations)

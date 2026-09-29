@@ -1,28 +1,79 @@
 ---
 title: "Design mode"
-description: "Hardware design Beta—concept design, architecture, initial BOM, and design from chat"
+description: "Walk a hardware concept from Brief through Plan, Architecture, BOM, and multi-view images"
 ---
 
-**Design mode (Beta)** helps you move from idea to structured hardware deliverables inside PartGenie.
+**Design** turns a hardware idea into a reviewable pack: brief, plan (with schemes you pick), architecture, an initial BOM, and images. It is still Beta.
 
-## What you can do
+## Start a design
 
-- Start a **Design project** from the homepage chip or Projects
-- Generate **concept design**, architecture diagrams, initial BOM, and technical proposals
-- Trigger design from chat: after an AI answer on a part, use the **Design** follow-up to jump into hardware design with that part as context
+<Steps>
+  <Step title="Open Design">
+    On the homepage, click **Design Hardware**, or choose **Work** and describe the product. You can also use a **Design** follow-up under a component answer to start from that part.
+  </Step>
+  <Step title="Describe the product">
+    Say what it is, the constraints that matter, and who it is for. Example: a robot vacuum with a height limit, LiDAR, and a mid-range cost target.
+  </Step>
+  <Step title="Follow the stages">
+    The canvas lists the stages as they finish: **Brief → Plan → Architecture → BOM → Image**. A green check means that stage is complete. Click a stage to open it.
+  </Step>
+</Steps>
 
 <Frame>
   <img
-    alt="Chat follow-up suggestion to start hardware design from a component"
+    alt="Design stages Brief, Plan, Architecture, BOM, and Image marked complete"
+    src="/images/design-plan-steps.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Chat follow-up that starts hardware design from a component"
     src="/images/chat-design-followup.png"
   />
 </Frame>
 
-## Quotas & libraries
+## Review the plan
 
-Design uses your plan **credits**. Hardware packs, agent-assisted edits, and ECAD library support may vary by plan—check [Membership & pricing](/en-US/membership-pricing).
+**Plan** is where you choose a direction before the rest of the pack is treated as final.
+
+The plan page shows:
+
+- **Goals** — what the hardware must do
+- **Metrics** — numbers such as height, suction, battery, charge current
+- **Constraints** — certification, cost, environment, power source, size
+- **Schemes** — more than one architecture. One is marked **Active**
+
+The note on schemes: *Pick a scheme as the direction. Ask in chat to change the options.*
+
+Use the stage tabs at the top (**Plan**, and the counts next to architecture / BOM / images). **Use** applies the selection. **Export** downloads the pack.
+
+<Frame>
+  <img
+    alt="Plan review with goals, metrics, constraints, and an active architecture scheme"
+    src="/images/design-plan-review.png"
+  />
+</Frame>
+
+## Images
+
+The **Image** stage can show more than one view. The large frame is the current view (often labeled **Hero**). Thumbnails underneath switch angle. Click a thumbnail to review that view.
+
+<Frame>
+  <img
+    alt="Hero product image with additional view thumbnails"
+    src="/images/design-image-multiview.jpg"
+  />
+</Frame>
+
+## After the pack exists
+
+- The initial BOM from Design can be opened and checked like any other BOM: health, live stock, alternatives. See [BOM management](/en-US/bom-management).
+- Parts you will layout need ECAD separately: catalog files on **CAD Models**, or a generated library. See [ECAD & footprints](/en-US/ecad-models) and [KiCad library generation](/en-US/kicad-library).
+- Design spends **credits**. See [Membership & pricing](/en-US/membership-pricing).
 
 ## Related
 
-- [PartGenie Work](/en-US/partgenie-work) — Design projects in Work mode
-- [Knowledge](/en-US/knowledge) — store reference designs and AI-generated artifacts
+- [PartGenie Work](/en-US/partgenie-work)
+- [KiCad library generation](/en-US/kicad-library)
+- [Knowledge](/en-US/knowledge)

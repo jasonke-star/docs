@@ -7,11 +7,31 @@ PartGenie treats a BOM as a living engineering document—match lines, flag risk
 
 ## Create or upload
 
-- Upload **CSV / Excel** (or paste a part list) from the homepage, Projects, or Work mode
-- Lines are matched to MPNs with status such as Full Match
-- Open the BOM table for editing, filters, and live stock refresh
+<Steps>
+  <Step title="Attach the BOM">
+    On the homepage, click **Optimize BOM** or switch the input to **Work**, then upload **CSV / Excel** or paste a part list. You can also open an existing BOM from **Projects**.
+  </Step>
+  <Step title="Read the toolbar">
+    Across the top of the BOM:
 
-Projects live under **Projects** (BOM and Design workspaces).
+    - **Refreshing live stock** — how many lines have been priced
+    - **Files & Rules** — project files and instructions (these override your account custom instructions)
+    - **Changes** — Adopt history and version diff
+    - **Health** — score for the current BOM
+    - **Est.** — estimated cost range and how many lines are priced
+    - **Export** / **Share**
+  </Step>
+  <Step title="Work the table">
+    Each row shows the original part number, **Match** (for example Full Match), **Stock / Source** distributor marks, and brand. Filter with **Level** and **Match**. **Add Data Row** inserts a line. Row actions copy, duplicate, or delete.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM toolbar with live stock refresh, Changes, Health, estimated price, Export, and Share"
+    src="/images/bom-diff-estimate.png"
+  />
+</Frame>
 
 ## Health report
 
