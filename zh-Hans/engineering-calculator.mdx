@@ -18,13 +18,13 @@ Search 可以在回答里直接做**工程计算**，不用切到单独的计算
 
 | 面板 | 算什么 | 常见检查 | 主要输入 |
 | --- | --- | --- | --- |
-| **Resistor power rating**（电阻功率校核） | 功耗 \(P = V^2/R\)、\(P = VI\)、\(P = I^2R\) 及相对额定功率的 **margin** | 电气 — 额定功率是否够用 | 电压、阻值（或电流）、额定功率 (W) |
-| **Power dissipation & junction temperature**（LDO 功耗与结温） | 压差功耗 \(P_d \approx (V_{in}-V_{out}) \times I_{out}\)（必要时含 \(I_q\)），**\(T_j = T_a + P_d \times \theta_{JA}\)** 对比 \(T_{j(max)}\) | **Electrical** · Pass/Fail，**Thermal** · Pass/Fail | \(V_{in}\)、\(V_{out}\)、\(I_{out}\)、\(T_a\)、\(\theta_{JA}\)、结温上限 |
+| **Resistor power rating**（电阻功率校核） | 功耗 **P = V²/R**、**P = VI**、**P = I²R** 及相对额定功率的 **margin** | 电气 — 额定功率是否够用 | 电压、阻值（或电流）、额定功率 (W) |
+| **Power dissipation & junction temperature**（LDO 功耗与结温） | 压差功耗 **Pd ≈ (Vin − Vout) × Iout**（必要时含静态电流），**Tj = Ta + Pd × θJA** 对比 Tj(max) | **Electrical** · Pass/Fail，**Thermal** · Pass/Fail | Vin、Vout、Iout、Ta、θJA、结温上限 |
 
-若问题里缺参数，PartGenie 可能采用**合理默认值**（例如 \(T_a=25°C\) 或典型 \(\theta_{JA}\)）并在回答中说明；也可能在标称负载之上做**应力估算**（例如问 200mA 却按 400mA 算），方便看到最坏情况。
+若问题里缺参数，PartGenie 可能采用**合理默认值**（例如 Ta=25°C 或典型 θJA）并在回答中说明；也可能在标称负载之上做**应力估算**（例如问 200mA 却按 400mA 算），方便看到最坏情况。
 
 <Tip>
-  尽量写上型号，或从规格书粘贴 \(\theta_{JA}\)、\(T_{j(max)}\)。有 datasheet 时 PartGenie 会尽量用厂商极限；只有数字的泛化校核也可以直接问。
+  尽量写上型号，或从规格书粘贴 **θJA**、**Tj(max)**。有 datasheet 时 PartGenie 会尽量用厂商极限；只有数字的泛化校核也可以直接问。
 </Tip>
 
 ## 可以怎么问（示例 query）
@@ -90,15 +90,15 @@ TPS7A3301 SOT-23，5V 转 3.3V 300mA，估算 Pd 和 Tj
 文字回答下方：
 
 1. 展开 **Resistor power rating audit** 或 **Power dissipation & junction temperature** 等面板。
-2. 在 **Try different inputs (recalculates here only)** 里拖滑条或改电压、电流、阻值、额定功率、\(\theta_{JA}\) 等。
-3. **margin**、**Pass/Fail** 标签和图表（如预测 \(T_j\) vs 上限）会在浏览器里**即时更新**。
+2. 在 **Try different inputs (recalculates here only)** 里拖滑条或改电压、电流、阻值、额定功率、θJA 等。
+3. **margin**、**Pass/Fail** 标签和图表（如预测 Tj vs 上限）会在浏览器里**即时更新**。
 
-本地重算**不另占** Search 额度。适合扫参：更高环境温度、更差 \(\theta_{JA}\)、下一档标准电阻功率等。
+本地重算**不另占** Search 额度。适合扫参：更高环境温度、更差 θJA、下一档标准电阻功率等。
 
 ## 使用注意
 
 - 公式会在回答里展示，量产前请与规格书、应用笔记核对。
-- 线性热模型是**估算**；实际器件可能限流、热关断，早于简单 \(T_j\) 曲线失效。
+- 线性热模型是**估算**；实际器件可能限流、热关断，早于简单 Tj 估算失效。
 - 采购与签核请以**规格书原文**或 [规格书对话](/zh-Hans/specification-chat) 为准。
 
 ## 相关
