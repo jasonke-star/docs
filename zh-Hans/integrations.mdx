@@ -1,0 +1,55 @@
+---
+title: "集成"
+description: "把 PartGenie 接到浏览器、EDA 工具与移动端"
+---
+
+PartGenie 出现在你本来就在用的地方：**网页**做完整项目，**Chrome** 在分销商商品页旁，**手机**在工位，**ECAD** 下载或 KiCad 生成进 layout。
+
+本页用表格帮你选对集成方式；分步教程见各链接。
+
+## 选对集成方式
+
+| 集成 | 如何连接 | 能做什么 | 要不要开着 EDA / 浏览器 |
+| --- | --- | --- | --- |
+| [PartGenie 网页](/zh-Hans/getting-started) | 登录 [app.partgenie.ai](https://app.partgenie.ai) | Search、Work、BOM、Design、Knowledge、KiCad 生成、实时采购 | 用网页时保持浏览器即可 |
+| [Chrome 扩展](/zh-Hans/chrome-extension) | 从 [Chrome 网上应用店](https://chromewebstore.google.com/detail/partgenie/djhpmidamklapnaidbhljfpbnnlninmk) 安装，用 PartGenie 账号登录 | 在 DigiKey、Mouser、LCSC 等支持页面识别 MPN；对话、带依据的替代料、ECAD、比价 | 保持支持站点的商品页打开；侧边栏贴在页面旁 |
+| [移动端 App](/zh-Hans/mobile-app) | App Store / Google Play 安装 **PartGenie** | 拍照识件、扫 PCB、SMD code、移动搜索 | 离开工位时用 |
+| [ECAD 目录下载](/zh-Hans/eda-integration#download-catalog-models) | 网页或 Chrome → 打开器件 → **CAD Models** | 下载 symbol、footprint、STEP（该 MPN 有库时），格式可覆盖 Altium、KiCad、Eagle、OrCAD、Allegro 等 | 在 EDA 里导入文件 |
+| [KiCad 库生成](/zh-Hans/eda-integration#kicad-import) | 网页或 Chrome → Search 或 **CAD models** → 生成 → **Download** | KiCad 8 的 `.kicad_sym`、`.kicad_mod`、3D，带证据与导入校验（Beta） | 打开 **KiCad 8** 把库加进工程 |
+
+<Info>
+  PartGenie 不替代你的 EDA 授权。目录下载与 KiCad 生成文件都是**导入**到现有 Altium、KiCad、Eagle、OrCAD、Allegro 流程里。量产前务必对照规格书核对 pitch、Pin 1 与焊盘。
+</Info>
+
+## 常见路径
+
+**采购 → 设计**
+
+1. 在 DigiKey / Mouser 用 [Chrome 扩展](/zh-Hans/chrome-extension) 看料。
+2. 查替代料，点 **CAD models** 或生成 KiCad。
+3. 按 [EDA 集成](/zh-Hans/eda-integration) 导入你的工具。
+
+**提问 → 封装**
+
+1. 在网页 [Search](/zh-Hans/ai-search) 搜 MPN。
+2. 打开器件抽屉 → **CAD Models**，或走 [KiCad 库生成](/zh-Hans/kicad-library)。
+3. 按 [EDA 集成](/zh-Hans/eda-integration) 导入。
+
+**工位 → 桌面**
+
+1. [移动端](/zh-Hans/mobile-app) 识别 marking。
+2. 同一 MPN 在网页 Search 或 Chrome 分销商页继续查。
+
+## 账号与 Credits
+
+Chrome、网页、移动端共用同一 PartGenie 账号与 **Credits**。KiCad 生成与部分 ECAD 下载按套餐计费，见 [会员与定价](/zh-Hans/membership-pricing)。
+
+## 支持站点上的隐私
+
+Chrome 扩展只在支持的分销商 / 原厂页面启用，并使用识别器件所需的页面信息。见 [Chrome 扩展](/zh-Hans/chrome-extension#隐私与权限)。
+
+## 相关
+
+- [ECAD 与封装库](/zh-Hans/ecad-models)
+- [实时采购](/zh-Hans/live-sourcing)
+- [联系我们](/zh-Hans/contact-us) — 企业 API / PLM

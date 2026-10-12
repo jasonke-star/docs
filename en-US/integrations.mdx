@@ -1,0 +1,55 @@
+---
+title: "Integrations"
+description: "Connect PartGenie to your browser, EDA tools, and mobile apps"
+---
+
+PartGenie meets you where you already work: the web app for full projects, **Chrome** on distributor pages, **mobile** at the bench, and **ECAD** downloads or KiCad generation for layout.
+
+Use this page to pick the right connection. Step-by-step guides are linked in the table.
+
+## Choose the right integration
+
+| Integration | How it connects | What you can do | EDA / browser open? |
+| --- | --- | --- | --- |
+| [PartGenie web](/en-US/getting-started) | Sign in at [app.partgenie.ai](https://app.partgenie.ai) | Search, Work, BOM, Design, Knowledge, KiCad generation, live sourcing | Use while you work in the browser |
+| [Chrome extension](/en-US/chrome-extension) | Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/partgenie/djhpmidamklapnaidbhljfpbnnlninmk), sign in with your PartGenie account | Recognize MPNs on DigiKey, Mouser, LCSC, and other supported pages; chat, alternatives with evidence, ECAD, compare prices | Keep a supported product tab open; sidebar stays beside the listing |
+| [Mobile app](/en-US/mobile-app) | Install **PartGenie** from the App Store or Google Play | Snap parts, scan PCBs, SMD code lookup, search on the go | Use when you are away from your desk |
+| [ECAD catalog download](/en-US/eda-integration#download-catalog-models) | Web or Chrome → open the part → **CAD Models** | Download symbol, footprint, and STEP in formats for Altium, KiCad, Eagle, OrCAD, Allegro, and more (when listed for that MPN) | Open your EDA tool to import the files |
+| [KiCad library generation](/en-US/eda-integration#kicad-import) | Web or Chrome → Search or **CAD models** → generate → **Download** | KiCad 8 `.kicad_sym`, `.kicad_mod`, and 3D with evidence and import checks (Beta) | Open **KiCad 8** to add the library to your project |
+
+<Info>
+  PartGenie does not replace your EDA license. Catalog downloads and generated KiCad files are imported **into** your existing Altium, KiCad, Eagle, OrCAD, or Allegro workflow. Always verify pitch, pin 1, and pads against the datasheet before fabrication.
+</Info>
+
+## Typical flows
+
+**Sourcing → design**
+
+1. Browse a part on DigiKey or Mouser with the [Chrome extension](/en-US/chrome-extension).
+2. Review alternatives and open **CAD models** or generate KiCad.
+3. Import into your EDA tool — [EDA integration](/en-US/eda-integration).
+
+**Question → footprint**
+
+1. [Search](/en-US/ai-search) the MPN in the web app.
+2. Open the component drawer → **CAD Models**, or run [KiCad library generation](/en-US/kicad-library).
+3. Follow [EDA integration](/en-US/eda-integration) for your tool.
+
+**Bench → desk**
+
+1. Identify a marking with the [mobile app](/en-US/mobile-app).
+2. Continue the same MPN in Search on web or in Chrome on a distributor page.
+
+## Account and credits
+
+Chrome, web, and mobile share the same PartGenie account and **credits** model. KiCad generation and some ECAD downloads use credits or add-on billing as shown on [Membership & pricing](/en-US/membership-pricing).
+
+## Privacy on supported sites
+
+The Chrome extension activates only on supported distributor and manufacturer pages. It uses the information on that page to identify the component you are viewing. See [Chrome extension](/en-US/chrome-extension#privacy-and-permissions).
+
+## Related
+
+- [ECAD & footprints](/en-US/ecad-models) — catalog vs generated libraries
+- [Live sourcing](/en-US/live-sourcing) — price and stock in web and Chrome
+- [Contact us](/en-US/contact-us) — enterprise API / PLM options

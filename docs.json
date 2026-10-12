@@ -53,6 +53,14 @@
             ]
           },
           {
+            "group": "Integrations",
+            "pages": [
+              "en-US/integrations",
+              "en-US/chrome-extension",
+              "en-US/eda-integration"
+            ]
+          },
+          {
             "group": "Collaboration & Apps",
             "pages": [
               "en-US/share",
@@ -147,6 +155,14 @@
               "zh-Hans/live-sourcing",
               "zh-Hans/tariff-lookup",
               "zh-Hans/openelab-modules"
+            ]
+          },
+          {
+            "group": "集成",
+            "pages": [
+              "zh-Hans/integrations",
+              "zh-Hans/chrome-extension",
+              "zh-Hans/eda-integration"
             ]
           },
           {
