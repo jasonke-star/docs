@@ -3,6 +3,33 @@ title: "Changelog"
 description: "View PartGenie's latest feature updates and version release information"
 ---
 
+<Update label="2026-10-12" tags={["Datasheet", "Translation", "Beta"]} description="Translate datasheets in the PDF viewer (Beta)">
+  <Frame>
+    <img
+      alt="Datasheet PDF with layout parsing in progress before translated view"
+      src="/images/datasheet-translate-layout-parsing.png"
+    />
+  </Frame>
+
+  <Frame>
+    <img
+      alt="Datasheet viewer with Original and Traditional Chinese toggle and Translate datasheet control"
+      src="/images/datasheet-translate-original-vs-translated.png"
+    />
+  </Frame>
+
+  **Datasheet translation is in Beta.** In the PDF viewer, translate a datasheet into the language you set under **Settings → Language**—your working language, not a one-off pick each time.
+
+  Choose how you want to read it:
+
+  - **Preserve layout** — keep the page structure while text is translated (layout parsing runs first)
+  - **Text reading** — a reading-focused view when you want to scan long sections quickly
+
+  Long datasheets can take a while—especially in layout mode. You can leave and come back; translation continues in the background and the document will be ready when you reopen it.
+
+  For engineering decisions, still verify critical numbers and limits on the **original** pages or in [datasheet chat](/en-US/specification-chat).
+</Update>
+
 <Update label="2026-10-08" tags={["Chrome", "Extension", "Sourcing"]} description="PartGenie for Chrome — research beside the part">
   <Frame>
     <img
