@@ -1,0 +1,108 @@
+---
+title: "工程计算器"
+description: "Search 内置功率与热校核，Intelligent UI 滑条本地调参"
+---
+
+Search 可以在回答里直接做**工程计算**，不用切到单独的计算器页面。PartGenie 会根据问题匹配对应的 **Audit** 面板，展示公式、在有限值时给出 **Pass / Fail** 检查，并附上可在本地调参的 **Intelligent UI**。
+
+<Frame>
+  <img
+    alt="电阻功率校核：电压、阻值、额定功率滑条"
+    src="/images/engineering-calc-resistor-sliders.png"
+  />
+</Frame>
+
+## 目前有哪些计算器
+
+问题不同，出现的面板不同；能力会持续增加。当前主要两类：
+
+| 面板 | 算什么 | 常见检查 | 主要输入 |
+| --- | --- | --- | --- |
+| **Resistor power rating**（电阻功率校核） | 功耗 \(P = V^2/R\)、\(P = VI\)、\(P = I^2R\) 及相对额定功率的 **margin** | 电气 — 额定功率是否够用 | 电压、阻值（或电流）、额定功率 (W) |
+| **Power dissipation & junction temperature**（LDO 功耗与结温） | 压差功耗 \(P_d \approx (V_{in}-V_{out}) \times I_{out}\)（必要时含 \(I_q\)），**\(T_j = T_a + P_d \times \theta_{JA}\)** 对比 \(T_{j(max)}\) | **Electrical** · Pass/Fail，**Thermal** · Pass/Fail | \(V_{in}\)、\(V_{out}\)、\(I_{out}\)、\(T_a\)、\(\theta_{JA}\)、结温上限 |
+
+若问题里缺参数，PartGenie 可能采用**合理默认值**（例如 \(T_a=25°C\) 或典型 \(\theta_{JA}\)）并在回答中说明；也可能在标称负载之上做**应力估算**（例如问 200mA 却按 400mA 算），方便看到最坏情况。
+
+<Tip>
+  尽量写上型号，或从规格书粘贴 \(\theta_{JA}\)、\(T_{j(max)}\)。有 datasheet 时 PartGenie 会尽量用厂商极限；只有数字的泛化校核也可以直接问。
+</Tip>
+
+## 可以怎么问（示例 query）
+
+保持在 **Search**，用自然语言，带上**数值和单位**，不需要特殊指令。
+
+### 电阻功率与额定值
+
+```
+100Ω resistor at 12V — is 0.25W rating enough?
+```
+
+```
+10Ω 电阻 500mA 功耗多少？相对 0.125W 的 margin？
+```
+
+```
+3.3V 经 330Ω，1206 0.1W 够不够？
+```
+
+### LDO / 线性稳压热分析
+
+```
+Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?
+```
+
+```
+12V 转 3.3V LDO，400mA，Ta 25°C，θJA 50°C/W，Tj 会超过 125°C 吗？
+```
+
+```
+MIC29302：3.3V 入 2.5V 出 1.5A，75°C 环境下热校核
+```
+
+### 结合器件型号
+
+```
+TPS7A3301 SOT-23，5V 转 3.3V 300mA，估算 Pd 和 Tj
+```
+
+```
+分压 12V，Rtop 10k、Rbot 3.3k，0.25W 和 0.5W 哪个够？
+```
+
+问题含糊时，先看文字回答，再用面板里的 **Try different inputs** 调参，不必重发 Search。
+
+## Intelligent UI — 本地调参
+
+<Frame>
+  <img
+    alt="LDO 回答：Electrical Pass、Thermal Fail"
+    src="/images/engineering-calc-ldo-checks.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="结温面板：预测 Tj 与上限"
+    src="/images/engineering-calc-thermal-panel.png"
+  />
+</Frame>
+
+文字回答下方：
+
+1. 展开 **Resistor power rating audit** 或 **Power dissipation & junction temperature** 等面板。
+2. 在 **Try different inputs (recalculates here only)** 里拖滑条或改电压、电流、阻值、额定功率、\(\theta_{JA}\) 等。
+3. **margin**、**Pass/Fail** 标签和图表（如预测 \(T_j\) vs 上限）会在浏览器里**即时更新**。
+
+本地重算**不另占** Search 额度。适合扫参：更高环境温度、更差 \(\theta_{JA}\)、下一档标准电阻功率等。
+
+## 使用注意
+
+- 公式会在回答里展示，量产前请与规格书、应用笔记核对。
+- 线性热模型是**估算**；实际器件可能限流、热关断，早于简单 \(T_j\) 曲线失效。
+- 采购与签核请以**规格书原文**或 [规格书对话](/zh-Hans/specification-chat) 为准。
+
+## 相关
+
+- [AI 智能搜索](/zh-Hans/ai-search)
+- [如何撰写 AI 能理解的查询](/zh-Hans/ai-query-writing)
+- [更新日志 — 工程计算器](/zh-Hans/changelog)

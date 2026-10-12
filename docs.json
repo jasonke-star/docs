@@ -27,6 +27,7 @@
             "group": "Search & Answers",
             "pages": [
               "en-US/ai-search",
+              "en-US/engineering-calculator",
               "en-US/alternatives",
               "en-US/product-comparison",
               "en-US/datasheet-citations",
@@ -132,6 +133,7 @@
             "group": "搜索与回答",
             "pages": [
               "zh-Hans/ai-search",
+              "zh-Hans/engineering-calculator",
               "zh-Hans/alternatives",
               "zh-Hans/product-comparison",
               "zh-Hans/datasheet-citations",

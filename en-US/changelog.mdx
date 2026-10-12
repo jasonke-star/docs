@@ -25,11 +25,20 @@ description: "View PartGenie's latest feature updates and version release inform
     />
   </Frame>
 
-  **Search now includes a built-in engineering calculator.** Ask in plain language—resistor wattage at a given voltage, LDO drop and heat, margins against a rating—and PartGenie runs the math, shows the steps, and flags **Pass / Fail** checks (electrical, thermal, and similar) when limits apply.
+  **Search now includes a built-in engineering calculator.** PartGenie matches your question to an audit panel, shows the formulas, and flags **Pass / Fail** checks when limits apply.
 
-  **Intelligent UI** panels sit in the answer: live numbers, limit lines, and **Try different inputs** controls. Drag sliders or edit voltage, current, resistance, θJA, and related parameters—the panel **recalculates locally** without sending a new search.
+  **Calculators shipping now:**
 
-  PartGenie can also **tune inputs on its own** when the question is underspecified (for example stress-testing above nominal load) so you see worst-case dissipation and junction temperature, not just the headline ask.
+  | Panel | Use it for |
+  | --- | --- |
+  | **Resistor power rating audit** | \(P = V^2/R\) (or \(VI\) / \(I^2R\)), margin vs rated wattage |
+  | **Power dissipation & junction temperature** | LDO drop power, \(T_j = T_a + P_d \times \theta_{JA}\) vs max—**Electrical** and **Thermal** checks |
+
+  **Example queries:** `100Ω resistor at 12V — is 0.25W rating enough?` · `Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?` · `12V to 3.3V at 400mA, θJA 50°C/W — thermal pass or fail?`
+
+  More examples: [Engineering calculator](/en-US/engineering-calculator).
+
+  **Intelligent UI** panels sit in the answer: live numbers, limit lines, and **Try different inputs** controls. Drag sliders—the panel **recalculates locally** without a new search. PartGenie can also **tune inputs on its own** when the ask is underspecified (for example stress above nominal load).
 </Update>
 
 <Update label="2026-10-12" tags={["Datasheet", "Translation", "Beta"]} description="Translate datasheets in the PDF viewer (Beta)">

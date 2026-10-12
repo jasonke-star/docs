@@ -1,0 +1,108 @@
+---
+title: "Engineering calculator"
+description: "Built-in power and thermal checks in Search, with Intelligent UI sliders for local what-if tuning"
+---
+
+Search can run **engineering calculations** inside the answer—not a separate calculator app. PartGenie picks the audit that fits your question, shows the formulas, runs **Pass / Fail** checks when limits apply, and attaches an **Intelligent UI** panel you can tune without a new search.
+
+<Frame>
+  <img
+    alt="Resistor power rating audit with sliders for voltage, resistance, and watt rating"
+    src="/images/engineering-calc-resistor-sliders.png"
+  />
+</Frame>
+
+## Which calculators appear today
+
+PartGenie maps your question to an audit panel. The set grows over time; these are the main ones shipping now:
+
+| Audit panel | What it calculates | Typical checks | Key inputs |
+| --- | --- | --- | --- |
+| **Resistor power rating** | Dissipation \(P = V^2/R\), \(P = VI\), or \(P = I^2R\) and **margin** vs rated wattage | Electrical — is rated power enough? | Voltage, resistance (or current), resistor rating (W) |
+| **LDO power dissipation & junction temperature** | Drop power \(P_d \approx (V_{in}-V_{out}) \times I_{out}\) (plus \(I_q\) when relevant), **\(T_j = T_a + P_d \times \theta_{JA}\)** vs \(T_{j(max)}\) | **Electrical** · Pass/Fail, **Thermal** · Pass/Fail | \(V_{in}\), \(V_{out}\), \(I_{out}\), \(T_a\), \(\theta_{JA}\), junction limit |
+
+When a limit is missing, PartGenie may **assume reasonable defaults** (for example ambient 25°C or a typical \(\theta_{JA}\)) and say so in the answer—or **stress-test above your stated load** (e.g. 400mA when you asked 200mA) so you see headroom, not only nominal.
+
+<Tip>
+  Name the part or paste \(\theta_{JA}\) / \(T_{j(max)}\) from the datasheet when you have them. PartGenie can ground limits in manufacturer data; generic audits still work with numbers you provide in the question.
+</Tip>
+
+## How to ask (example queries)
+
+Stay in **Search**. Use natural language with **numbers and units**. You do not need a special command.
+
+### Resistor power & rating
+
+```
+100Ω resistor at 12V — is 0.25W rating enough?
+```
+
+```
+What power does a 10Ω resistor dissipate at 500mA? Margin vs 0.125W?
+```
+
+```
+1206 0.1W at 3.3V through 330Ω — pass or fail?
+```
+
+### LDO / linear regulator thermal
+
+```
+Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?
+```
+
+```
+12V to 3.3V LDO at 400mA, Ta 25°C, θJA 50°C/W — will Tj exceed 125°C?
+```
+
+```
+MIC29302: 3.3V in, 2.5V out, 1.5A — thermal check at 75°C ambient
+```
+
+### Mixing part context with the calc
+
+```
+For TPS7A3301 in SOT-23, 5V to 3.3V at 300mA — Pd and Tj estimate
+```
+
+```
+Compare 0.25W vs 0.5W for this divider: 12V, Rtop 10k, Rbot 3.3k
+```
+
+If the question is ambiguous, answer in chat first—then use **Try different inputs** in the panel instead of re-searching.
+
+## Intelligent UI — tune parameters locally
+
+<Frame>
+  <img
+    alt="LDO answer with Electrical Pass and Thermal Fail checks"
+    src="/images/engineering-calc-ldo-checks.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Expanded thermal panel with predicted Tj versus limit"
+    src="/images/engineering-calc-thermal-panel.png"
+  />
+</Frame>
+
+After the written answer:
+
+1. Open the audit panel (for example **Resistor power rating audit** or **Power dissipation & junction temperature**).
+2. Use **Try different inputs (recalculates here only)** — sliders or fields for voltage, current, resistance, rating, \(\theta_{JA}\), etc.
+3. Watch **margin**, **Pass/Fail** chips, and charts (such as predicted \(T_j\) vs limit) update **instantly** in the browser.
+
+That local recalc does **not** spend another search credit. Use it for sweeps: higher ambient, worse \(\theta_{JA}\), or the next standard resistor wattage.
+
+## What to trust
+
+- Calculators use standard EE formulas shown in the answer—verify against your datasheet and application notes.
+- Linear thermal models are **estimates**; real parts may current-limit, fold back, or hit thermal shutdown earlier than a simple \(T_j\) line predicts.
+- For procurement and sign-off, cross-check critical limits on the **original datasheet** or [specification chat](/en-US/specification-chat).
+
+## Related
+
+- [AI Search](/en-US/ai-search)
+- [How to write AI-understandable queries](/en-US/ai-query-writing)
+- [Changelog — engineering calculator](/en-US/changelog)

@@ -3,6 +3,44 @@ title: 更新日志
 description: 查看 PartGenie 的最新功能更新和版本发布信息
 ---
 
+<Update label="2026-10-13" tags={["搜索", "工程计算", "体验优化"]} description="内置工程计算器与 Intelligent UI">
+  <Frame>
+    <img
+      alt="电阻功率校核：公式与电压、阻值、额定功率滑条，本地重算 margin"
+      src="/images/engineering-calc-resistor-sliders.png"
+    />
+  </Frame>
+
+  <Frame>
+    <img
+      alt="LDO 功耗回答：Electrical Pass、Thermal Fail 检查与公式推导"
+      src="/images/engineering-calc-ldo-checks.png"
+    />
+  </Frame>
+
+  <Frame>
+    <img
+      alt="Intelligent UI：功耗与结温面板，预测 Tj 与上限对比"
+      src="/images/engineering-calc-thermal-panel.png"
+    />
+  </Frame>
+
+  **Search 现已内置工程计算器。** PartGenie 会根据问题匹配 Audit 面板、展示公式，并在有明确极限时给出 **Pass / Fail** 检查。
+
+  **当前已上线的计算器：**
+
+  | 面板 | 用途 |
+  | --- | --- |
+  | **Resistor power rating audit** | \(P = V^2/R\)（或 \(VI\) / \(I^2R\)），相对额定功率的 margin |
+  | **Power dissipation & junction temperature** | LDO 功耗、\(T_j = T_a + P_d \times \theta_{JA}\) 对比上限——**Electrical** / **Thermal** 检查 |
+
+  **示例 query：** `100Ω resistor at 12V — is 0.25W rating enough?` · `Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?` · `12V 转 3.3V 400mA，θJA 50°C/W，热校核过不过？`
+
+  更多问法见 [工程计算器](/zh-Hans/engineering-calculator)。
+
+  回答里附带 **Intelligent UI**：**Try different inputs** 滑条**本地重算**，不另占 Search。问题不完整时也会**自主调参**（例如在标称电流之上做应力估算）。
+</Update>
+
 <Update label="2026-10-12" tags={["规格书", "翻译", "Beta"]} description="规格书 PDF 支持翻译（Beta）">
   <Frame>
     <img
