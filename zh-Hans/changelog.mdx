@@ -3,6 +3,44 @@ title: 更新日志
 description: 查看 PartGenie 的最新功能更新和版本发布信息
 ---
 
+<Update label="2026-10-14" tags={["KiCad", "插件", "BOM"]} description="PartGenie KiCad 插件">
+  <Frame>
+    <img
+      alt="KiCad 插件 part inspect：JST 连接器 Product 参数、Add to BOM、View on PartGenie"
+      src="/images/kicad-plugin-part-inspect.png"
+    />
+  </Frame>
+
+  <Frame>
+    <img
+      alt="KiCad 插件 CAD Models：Generate KiCad、符号与封装 Request"
+      src="/images/kicad-plugin-cad-models.png"
+    />
+  </Frame>
+
+  **Part inspect（器件检视）。** 在 KiCad 里选中封装，PartGenie 面板在板子旁边打开——**Product** 参数、**Alternatives**、**Procurement**（市场价与库存）、**CAD Models**，以及跳转网页完整器件页与规格书能力。可在 PCB 编辑器内申请或生成 KiCad symbol / footprint。
+
+  <Frame>
+    <img
+      alt="KiCad 插件 Work：Sync project BOM，原理图同步 93 行"
+      src="/images/kicad-plugin-work-bom-sync.png"
+    />
+  </Frame>
+
+  <Frame>
+    <img
+      alt="KiCad 插件 BOM health：综合分、匹配行、预估价格、风险"
+      src="/images/kicad-plugin-bom-health.png"
+    />
+  </Frame>
+
+  **Work — BOM 同步与健康度。** **Sync project BOM** 一键把原理图行同步到 PartGenie，再打开 **BOM health** 看匹配率、预估成本、未匹配 MPN 与风险——与网页 BOM 能力一致。
+
+  **安装：** [app.partgenie.ai](https://app.partgenie.ai) → **设置 → 集成 → KiCad**。教程：[KiCad 插件](/zh-Hans/kicad-plugin)。
+
+  **即将支持：** 板级可视化 ECAD 拖拽替换。
+</Update>
+
 <Update label="2026-10-13" tags={["搜索", "工程计算", "体验优化"]} description="内置工程计算器与 Intelligent UI">
   <Frame>
     <img

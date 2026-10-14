@@ -58,7 +58,8 @@
             "pages": [
               "en-US/integrations",
               "en-US/chrome-extension",
-              "en-US/eda-integration"
+              "en-US/eda-integration",
+              "en-US/kicad-plugin"
             ]
           },
           {
@@ -164,7 +165,8 @@
             "pages": [
               "zh-Hans/integrations",
               "zh-Hans/chrome-extension",
-              "zh-Hans/eda-integration"
+              "zh-Hans/eda-integration",
+              "zh-Hans/kicad-plugin"
             ]
           },
           {

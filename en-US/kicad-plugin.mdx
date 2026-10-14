@@ -1,0 +1,91 @@
+---
+title: "KiCad plugin"
+description: "Inspect parts, sync BOM health, and request ECAD from inside KiCad"
+---
+
+The **PartGenie KiCad plugin** brings component intelligence into KiCad PCB Editor—without leaving your board file.
+
+Download and install from **[app.partgenie.ai](https://app.partgenie.ai) → Settings → Integrations → KiCad**.
+
+## Install
+
+<Steps>
+  <Step title="Open Integrations">
+    Sign in at [app.partgenie.ai](https://app.partgenie.ai). Open **Settings → Integrations**.
+  </Step>
+  <Step title="Download KiCad">
+    Choose **KiCad**, download the plugin package, and follow the on-screen install steps for your OS and KiCad version.
+  </Step>
+  <Step title="Sign in inside KiCad">
+    Open the PartGenie panel in KiCad and sign in with the same PartGenie account you use on the web.
+  </Step>
+</Steps>
+
+## Part inspect
+
+Select a footprint or symbol in KiCad, then use **Inspect selection** (or open the PartGenie panel for that reference).
+
+<Frame>
+  <img
+    alt="PartGenie KiCad plugin showing Product tab for SM04B-SRSS-TB: parameters, Add to BOM, View on PartGenie"
+    src="/images/kicad-plugin-part-inspect.png"
+  />
+</Frame>
+
+From the part panel you can:
+
+| Tab | What you get |
+| --- | --- |
+| **Product** | Detailed parameters, lifecycle status, description |
+| **Alternatives** | Substitutes with evidence (same workflow as web Search) |
+| **Procurement** | Live market price and stock where available |
+| **CAD Models** | Catalog ECAD or **Generate KiCad** for symbol and footprint |
+
+<Frame>
+  <img
+    alt="CAD Models tab in KiCad plugin: Generate KiCad, schematic symbol and PCB footprint requests"
+    src="/images/kicad-plugin-cad-models.png"
+  />
+</Frame>
+
+Use **View on PartGenie** for the full component page, datasheet chat, and deeper research. **Add to BOM** sends the part into your PartGenie project BOM.
+
+## Work — project BOM sync & health
+
+Switch the plugin to **Work** to act on the open KiCad project.
+
+<Frame>
+  <img
+    alt="PartGenie Work in KiCad: Project BOM StickHub synced 93 lines, Inspect selection and Sync project BOM"
+    src="/images/kicad-plugin-work-bom-sync.png"
+  />
+</Frame>
+
+<Steps>
+  <Step title="Sync project BOM">
+    Click **Sync project BOM**. PartGenie reads lines from your KiCad schematic and opens or updates the matching BOM in your account (for example “BOM synced (93 lines)”).
+  </Step>
+  <Step title="Open BOM health">
+    From the sync confirmation or Work chat, open **BOM health** to review match rate, risks, and estimated cost.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM health in KiCad plugin: 86% composite score, matched vs unmatched, est price, risks"
+    src="/images/kicad-plugin-bom-health.png"
+  />
+</Frame>
+
+BOM health includes composite score, matched / unmatched lines, estimated price range, category mix, and flagged risks (such as unmatched MPN). Continue analysis in the web app with the same project.
+
+## Coming soon
+
+Visual **ECAD drag-and-drop replacement** in the board view—swap symbols and footprints with PartGenie-backed alternatives without manual library hunting.
+
+## Related
+
+- [Integrations overview](/en-US/integrations)
+- [EDA integration](/en-US/eda-integration)
+- [BOM management](/en-US/bom-management)
+- [KiCad library generation](/en-US/kicad-library)
