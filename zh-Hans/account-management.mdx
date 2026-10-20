@@ -22,6 +22,10 @@ description: "个人资料、安全、语言、分销商、Credits 与通知设�
 
 **设置 → Language**：选择语言或 **Auto**（跟随浏览器）。支持 English、Deutsch、日本語、한국어、繁體中文、Français、Español (México) 等。
 
+## 集成（Chrome、KiCad）
+
+**设置 → 集成**：安装 **PartGenie for Chrome** 或 **KiCad 插件**，并管理已连接工具。见 [集成总览](/zh-Hans/integrations)、[KiCad 插件](/zh-Hans/kicad-plugin)。
+
 ## 分销商（实时采购）
 
 **设置 → Distributors**：开关 DigiKey、LCSC、TME、Unikeyic、OnlineComponents、WinSource、Arrow 等。偏好在器件详情、BOM、对比中同步生效。见 [实时采购](/zh-Hans/live-sourcing)。
@@ -33,7 +37,40 @@ description: "个人资料、安全、语言、分销商、Credits 与通知设�
 
 ## 通知
 
-可配置邮件 / 站内通知及完成提示音（通知中心 / 设置）。
+点页头 **铃铛** 打开通知中心，或在 **设置 → Notifications** 里配置渠道与提示音。
+
+<Frame>
+  <img
+    alt="通知中心：Updates 产品动态、Activity 账户活动"
+    src="/images/notifications-center.png"
+  />
+</Frame>
+
+| 区域 | 内容 |
+| --- | --- |
+| **Updates** | 产品动态与功能公告 |
+| **Activity** | 与你账号相关的任务——数据补全、分析、**FootprintKu ECAD 申请**、KiCad 生成完成等耗时任务 |
+
+<Frame>
+  <img
+    alt="Activity 页签：进行中与已完成的 enrichment 任务"
+    src="/images/notifications-activity.png"
+  />
+</Frame>
+
+**设置 → Notifications**
+
+<Frame>
+  <img
+    alt="通知设置：邮件与站内开关、Search 完成提示音与音色"
+    src="/images/notifications-settings.png"
+  />
+</Frame>
+
+- **邮件 / 站内** — 分析结果、提示、任务完成（含专业 ECAD 就绪）可分别开关。
+- **Search 完成提示音** — 回答结束时可播放提示音；在设置里试听并选择音色。
+
+FootprintKu **Request**、KiCad 库生成、目录补全等任务常在后台运行。可以离开页面；收到 **Activity** 或邮件提醒后，回到 **CAD Models** 或原对话下载即可。
 
 ## 分享与隐私
 
