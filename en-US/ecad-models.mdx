@@ -3,11 +3,12 @@ title: "ECAD & footprints"
 description: "Open a part's CAD Models tab for catalog footprints and symbols, or generate a KiCad library when you need one built"
 ---
 
-PartGenie has two ways to get ECAD for a part. Use the one that matches what you need.
+PartGenie has three ways to get ECAD for a part. Use the one that matches what you need.
 
 | You need | Where |
 | --- | --- |
-| A footprint / symbol / 3D already in the catalog | Component drawer → **CAD Models** |
+| **Professional** symbol, footprint, and 3D for Altium, Cadence, OrCAD, PADS, and more | Component drawer → **CAD Models** → choose format → **Request** (via [FootprintKu](https://footprintku.com/) partnership) |
+| Catalog assets already on file | Same **CAD Models** tab when files are listed for download |
 | A KiCad library generated and checked against the datasheet | [KiCad library generation](/en-US/kicad-library) |
 
 ## Get a catalog model
@@ -19,21 +20,22 @@ PartGenie has two ways to get ECAD for a part. Use the one that matches what you
   <Step title="Switch to CAD Models">
     The drawer tabs are **Product**, **Procurement**, and **CAD Models**. Procurement is live price and stock. **CAD Models** is the footprint library for that part.
   </Step>
-  <Step title="Download what is listed">
-    If the part has a library asset, download the footprint, symbol, or 3D from this tab and import it into your EDA tool.
+  <Step title="Pick your EDA format">
+    Use the format dropdown (for example **Altium 18**, **Cadence**, **OrCAD**, **PADS**, or **KiCad** when listed).
+  </Step>
+  <Step title="Request or download">
+    Click **Request** for schematic symbol, PCB footprint, or STEP 3D when FootprintKu fulfills professional models for that MPN. Download directly when a catalog file is already available.
 
-    Not every MPN has a catalog model. If the tab is empty, generate one instead of guessing a generic 0603.
+    Not every MPN has every format. If nothing is listed, use [KiCad generation](/en-US/kicad-library) instead of guessing a generic 0603.
   </Step>
 </Steps>
 
 <Frame>
   <img
-    alt="Component drawer tabs: Product, Procurement, and CAD Models"
-    src="/images/procurement-purchase-jump.png"
+    alt="CAD Models: Altium format, Request schematic symbol, footprint, and STEP 3D"
+    src="/images/footprintku-ecad-cad-models.png"
   />
 </Frame>
-
-The screenshot above is the **Procurement** tab (price tiers and **Purchase**). **CAD Models** is the tab immediately to its right.
 
 ## When to generate instead
 

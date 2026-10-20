@@ -3,11 +3,12 @@ title: "ECAD 与封装库"
 description: "在器件 CAD Models 页签下载目录里的封装与符号；没有现成库时再生成 KiCad"
 ---
 
-拿到 ECAD 有两条路，按你要的东西选。
+拿到 ECAD 有三条路，按你要的东西选。
 
 | 你要的 | 入口 |
 | --- | --- |
-| 目录里已有的 footprint / symbol / 3D | 器件抽屉 → **CAD Models** |
+| **专业级** symbol、footprint、3D（Altium、Cadence、OrCAD、PADS 等） | 器件抽屉 → **CAD Models** → 选格式 → **Request**（与 [FootprintKu](https://footprintku.com/) 合作） |
+| 目录里已有、可直接下载的文件 | 同一 **CAD Models** 页签 |
 | 对照规格书生成并校验过的 KiCad 库 | [KiCad 库生成](/zh-Hans/kicad-library) |
 
 ## 下载目录模型
@@ -19,21 +20,22 @@ description: "在器件 CAD Models 页签下载目录里的封装与符号；没
   <Step title="切到 CAD Models">
     抽屉页签是 **Product**、**Procurement**、**CAD Models**。Procurement 是实时价格和库存。**CAD Models** 是这颗料的封装库。
   </Step>
-  <Step title="下载列出的文件">
-    如果这颗料有库文件，就在这个页签下载 footprint、symbol 或 3D，再导入你的 EDA。
+  <Step title="选择 EDA 格式">
+    在格式下拉里选 **Altium 18**、**Cadence**、**OrCAD**、**PADS** 或列出的 **KiCad** 等。
+  </Step>
+  <Step title="Request 或下载">
+    对 schematic symbol、PCB footprint、STEP 3D 点 **Request**，由 FootprintKu 交付该 MPN 的专业模型；若目录里已有文件则直接下载。
 
-    不是每颗 MPN 都有目录模型。页签是空的，就去生成，不要拿一个通用 0603 顶上。
+    不是每颗 MPN 都有全部格式。若为空，请走 [KiCad 生成](/zh-Hans/kicad-library)，不要用通用 0603 凑合。
   </Step>
 </Steps>
 
 <Frame>
   <img
-    alt="器件抽屉页签：Product、Procurement、CAD Models"
-    src="/images/procurement-purchase-jump.png"
+    alt="CAD Models：Altium 格式，Request 符号、封装与 STEP 3D"
+    src="/images/footprintku-ecad-cad-models.png"
   />
 </Frame>
-
-上图停在 **Procurement**（价格阶梯和 **Purchase**）。**CAD Models** 是它右边的页签。
 
 ## 什么时候改为生成
 
