@@ -1,19 +1,18 @@
 ---
-title: "Tariff lookup"
-description: "Estimate US import tariff for a specific MPN by country of origin (Beta)"
+title: "요금 검색"
+description: "출처 국가별 특정 MPN 에 대한 미국 수입 관세 추정 (베타)"
 ---
+** 관세 조사 (베타)** 는 원산지 국가별로 특정 MPN 에 대한 미국 수입세를 추정합니다. 무역 정책과 원산지 선택이 비용과 규정 준수에 영향을 미칠 때 유용합니다。
 
-**Tariff Lookup (Beta)** estimates US import duty for a specific MPN by country of origin—useful when trade policy and origin choice affect cost and compliance.
+## 중요한 이유
 
-## Why it matters
+전자제품에는 많은 부품 번호， 모호한 HTS 분류， 그리고 계층화된 추가 비용이 있습니다. 예상치를 잘못 계산하면 조달 및 비용 모델에 영향을 미칩니다。
 
-Electronics have many part numbers, ambiguous HTS classifications, and layered surcharges. Getting the estimate wrong affects sourcing and cost models.
+## 사용 방법
 
-## How to use
-
-1. On the homepage, choose **Tariff lookup** (or ask in chat: *Check tariff for \<MPN\> made in China entering the US*)
-2. Select **country of origin** (or compare common origins / skip for base rate only)
-3. Review the breakdown: HTS classification (with confidence), base rate, applicable surcharges (e.g. Section 301), and **estimated total**
+1. 홈페이지에서 ** 요금 검색 ** 을 선택하세요 (또는 채팅에서 문의하세요: * 중국에서 만들어져 미국으로 들어가는 \<MPN\>의 요금을 확인하세요 *)
+2. ** 출신 국가 ** 선택 (또는 일반적인 출신지 비교/기본 요금만 건너뛰기)
+3. 분석을 검토합니다: HTS 분류 (자신 있게), 기본 요금， 적용 가능한 추가 요금 (예: 섹션 301), 그리고 ** 추정 총액 **
 
 <Frame>
   <img
@@ -29,8 +28,8 @@ Electronics have many part numbers, ambiguous HTS classifications, and layered s
   />
 </Frame>
 
-<Warning>
-  Estimates only—not a binding customs determination. Verify with a licensed customs broker before filing.
-</Warning>
+<경고>
+추정만 - 구속력 있는 관세 결정이 아닙니다. 신청하기 전에 허가된 관세 중개인과 확인하십시오。
+</경고>
 
-Currently supports **US import**. More destination countries are planned—tell us which you need.
+현재 **US import** 를 지원합니다. 더 많은 목적지 국가가 계획되어 있습니다. 어떤 국가가 필요한지 알려주세요。
