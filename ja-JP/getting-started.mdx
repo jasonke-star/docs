@@ -1,84 +1,86 @@
 ---
 title: "はじめに"
-description: "登録し、最初の検索を実行してから、作業、BOM、およびライブソーシングを試してください"
+description: "登録し、最初の検索を実行してから、Work、BOM、ライブソーシングを試してください"
 ---
-#＃クイックスタート
+## クイックスタート
 
 <Frame>
   <img src="/images/auto/homepage.png" alt="PartGenie homepage with Search, Work, Optimize BOM, Design, and Tariff lookup" />
 </Frame>
 
-<Steps>
-  <Step title="Register">
-    Open [app.partgenie.ai](https://app.partgenie.ai) and sign in with email, Google, or LinkedIn.
+<ステップ>
+<ステップタイトル=「登録」>
+app.partgenie.ai(https://app.partgenie.ai) を開き、メール、Google、または LinkedIn でサインインします。
 
-    <Frame>
+<Frame>
       <img src="/images/ja-JP/login.png" alt="PartGenie Login Interface" />
     </Frame>
-  </ステップ>
-  <Step title="Complete your profile">
-    Set role and industry so recommendations fit your work.
-  </Step>
-  <Step title="First search">
-    Stay on **Search** and try an MPN or natural-language ask:
+</ステップ>
+<ステップタイトル=「プロフィールを完了する」>
+役割と業界を設定して、仕事に合わせた推奨事項を作成します。
+</ステップ>
+<Step title=「最初の検索」>
+**Search** に留まり、MPN または自然言語の質問を試してください：
 
-    
-__P0__
+```
+    STM32F103C8T6 operating voltage
+    alternative to BQ24195
+    100uF 16V electrolytic capacitor
+    ```
 
-
-    Use **voice**, file/image attach, or suggested prompts under the box.
-  </Step>
+ボックスの下にある **voice**、ファイル/画像添付、または提案されたプロンプトを使用します。
+</Step>
 </Steps>
 
-##ホームページモード
+## ホームページモード
 
-/制御|のためにそれを使用してください/
-| --- | --- |
-|**検索**/コンポーネントQ&A,代替,引用|
-|**作業**/分析|添付のBOMまたは設計プロジェクトに基づいて行動/
-|**BOMの最適化**|BOMの健全性にジャンプ/リスクフロー|
-|**デザインハードウェア*|/デザイン開始（ベータ版）|
-|**関税ルックアップ**/原産地別米国輸入関税見積もり|
+| コントロール | 使用目的 |
+| ---| ---|
+| ** 検索 ** | コンポーネント Q&A、代替、引用 |
+| **Work** | 添付された BOM またはデザインプロジェクトを分析/行動する |
+| **BOM の最適化 ** | BOM の健全性/リスクフローへのジャンプ |
+| ** デザインハードウェア ** | デザイン開始 (ベータ) |
+| ** 料金検索 ** | 米国輸入料金の原産地別見積もり |
 
-詳細:[AI Search](/ja-JP/ai-search)·[PartGenie Work](/ja-JP/partgenie-work)
+詳細:[AI Search](/ja-JP/ai-search) ·[PartGenie Work](/ja-JP/partgenie-work)
 
-#＃あなたの最初の答えの後
+## 最初の回答後
 
-1. **MPN/page citation badges**をクリックしてソースを確認します-[Datasheet citations](/ja-JP/datasheet-citations)
-2. コンポーネントドロワーを開く→**調達**ライブ在庫/価格のために-[ライブ調達](/ja-JP/ライブ調達)
-3. フォローアップ、またはチャットから**デザイン**を試してみてください-[デザインモード]（/ja-JP/design-mode）
+1. **MPN/ページ引用バッジ ** をクリックしてソースを確認します— [データシート引用](/ja-JP/datasheet-citations)
+2.コンポーネントドロワーを開く→ ** 調達 ** のライブストック/価格 – [ライブソーシング](/ja-JP/live-sourcing)
+3. フォローアップを試すか、チャットから **Design** — [Design mode](/ja-JP/design-mode)
 
 <Frame>
   <img alt="Citation badges in an AI answer" src="/images/citation-badges.png" />
 </Frame>
 
-##分で最初のBOM
+## 数分で最初の爆発
 
-1. **Work**に切り替え（または最適化BOMを使用）、CSV/Excelをアップロード/部品リストを貼り付けます
-2. アスク: `Analyze top risks from this BOM`
-3. 健康を確認し、代替案を採用し、**変更**と**Estをチェックします。 価格**
+1. **Work** に切り替え (または BOM の最適化を使用)、CSV/Excel をアップロード/部品リストを貼り付ける
+2. 質問：`Analyze top risks from this BOM`
+3. 健全性を確認し、代替手段を採用し、**Changes** と **East price** をチェックする
 
-ガイド:[BOM管理](/ja-JP/bom-management)·[機能例](/ja-JP/feature-examples)
+ガイド:[BOM 管理](/ja-JP/bom-management) ·[機能例](/ja-JP/feature-examples)
 
 <Frame>
   <img alt="Work mode with BOM attached" src="/images/partgenie-work-input.png" />
 </Frame>
 
-##サイドバーの必需品
+## サイドバーの基本
 
--**プロジェクト**—BOM＆デザインワークスペース
--**知識*—-あなたのファイル+AIアーティファクト
--**コレクション**-保存されたパーツ
--**クレジット**（ヘッダー）-バランス、トップアップ、プラン—[会員]（/ja-JP/会員-価格設定）
+- ** プロジェクト ** – BOM およびデザインワークスペース
+- ** 知識 ** – ファイル + AI アーティファクト
+- ** コレクション ** — 保存済みパーツ
+- ** クレジット **(ヘッダー)- 残高、トップアップ、プラン- [メンバーシップ](/ja-JP/membership-pricing)
 
-#＃設定は早めに開く価値があります
+## 早めに開く価値のある設定
 
--**言語**-自動または特定のロケール
--**配信者**—どのライブソースが表示されますか
--通知-電子メール/アプリ内の環境設定
+- ** 言語 ** - 自動または特定のロケール
+- ** ディストリビューター** -ライブソースが表示される
+- 通知 - メール/アプリ内設定
 
-##次の読書
+## 次の読み物
 
--[機能例](/ja-JP/feature-examples)
--[Share](/ja-JP/share)·[モバイルアプリ](/ja-JP/mobile-app)
--[よくある質問](/ja-JP/faq)
+- [機能例](/ja-JP/feature-examples)
+- [Share](/ja-JP/share) · [Mobile app](/ja-JP/mobile-app)
+- [FAQ](/ja-JP/faq)
