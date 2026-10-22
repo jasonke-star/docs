@@ -5,6 +5,7 @@ This directory contains rules and guidelines for the Cursor AI assistant when wo
 ## Rules Files
 
 ### Core Rules
+- **[help-center-harness.md](./help-center-harness.md)** - Public Help Center URLs (`help.partgenie.ai`), notice CTAs, and locale paths
 - **[mintlify-writing-rules.md](./mintlify-writing-rules.md)** - Comprehensive Mintlify technical writing standards and component reference
 - **[documentation-standards.md](./documentation-standards.md)** - General documentation quality and organization standards
 - **[code-examples.md](./code-examples.md)** - Standards for code examples, testing, and security
