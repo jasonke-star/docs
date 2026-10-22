@@ -1,0 +1,78 @@
+---
+title: "Gestión de listas de materiales"
+description: "Cargue listas de materiales, informes de estado, diferencias de ingeniería, costos estimados, compare y comparta"
+---
+PartGenie trata una lista de materiales como un documento de ingeniería vivo: haga coincidir líneas, marque riesgos, adopte alternativas, realice un seguimiento de los cambios y calcule el costo.
+
+## Crear o cargar
+
+<Steps>
+  <Step title="Attach the BOM">
+    On the homepage, click **Optimize BOM** or switch the input to **Work**, then upload **CSV / Excel** or paste a part list. You can also open an existing BOM from **Projects**.
+  </Step>
+  <Step title="Read the toolbar">
+    Across the top of the BOM:
+
+    - **Refreshing live stock** — how many lines have been priced
+    - **Files & Rules** — project files and instructions (these override your account custom instructions)
+    - **Changes** — Adopt history and version diff
+    - **Health** — score for the current BOM
+    - **Est.** — estimated cost range and how many lines are priced
+    - **Export** / **Share**
+  </Step>
+  <Step title="Work the table">
+    Each row shows the original part number, **Match** (for example Full Match), **Stock / Source** distributor marks, and brand. Filter with **Level** and **Match**. **Add Data Row** inserts a line. Row actions copy, duplicate, or delete.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM toolbar with live stock refresh, Changes, Health, estimated price, Export, and Share"
+    src="/images/bom-diff-estimate.png"
+  />
+</Frame>
+
+## Informe de salud
+
+Después de cargar, abra la descripción general del estado para:
+
+- **Distribución de componentes** por categoría (con recuentos de riesgos)
+- **Lista de riesgos * * - NRND/ EOL, cero existencias, sin datos de abastecimiento, falta el fabricante
+- **Alternativas a granel* * - escanee líneas coincidentes y reemplazos funcionales de superficie
+
+<Frame>
+  <img
+    alt="BOM component distribution and risk counts"
+    src="/images/bom-health-distribution.png"
+  />
+</Frame>
+
+## Diferencia de ingeniería y precio estimado
+
+En la barra de herramientas de la lista de materiales:
+
+- **Cambios* — - Adopte el historial y el historial de versiones (qué reemplazó qué, cuándo cambiaron las líneas)
+- **Est. precio**: Estimación de costos a nivel de lista de materiales a partir del abastecimiento en vivo (por ejemplo, rango + precio de cuántas líneas)
+— ** Salud * * - puntuación general de salud
+
+<Frame>
+  <img
+    alt="BOM toolbar with Changes, Health, and estimated price"
+    src="/images/bom-diff-estimate.png"
+  />
+</Frame>
+
+## Comparar y contexto de chat
+
+- Seleccione filas → * * Comparar* * para el abastecimiento en paralelo
+- Seleccione múltiples líneas de lista de materiales y haga referencia a ellas en el chat del agente para tomar decisiones de abastecimiento
+
+## Compartir
+
+Comparta una lista de materiales con sus compañeros de equipo por correo electrónico o enlace. Consulte [Compartir] (/en-US / compartir).
+
+## Relacionado
+
+- [Trabajo de PartGenie] (/es-MX/partgenie-work)
+- [Abastecimiento en vivo] (/en-US / live-sourcing)
+- [Gestión efectiva de listas de materiales] (/en-US / effective-bom-management)

@@ -32,6 +32,16 @@ View your local preview at `http://localhost:3000`.
 
 Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
 
+### i18n (8 locales)
+
+Before merging Help Center changes:
+
+1. `npm run locales:check` — every nav page exists on disk
+2. `mintlify broken-links` (or `mint broken-links`)
+3. Update **en-US** and **zh-Hans** for product changes; refresh other locales via [`scripts/I18N_WORKFLOW.md`](scripts/I18N_WORKFLOW.md)
+
+Regenerate Mintlify language blocks after editing [`scripts/locales.json`](scripts/locales.json): `npm run locales:sync`
+
 ## Need help?
 
 ### Troubleshooting

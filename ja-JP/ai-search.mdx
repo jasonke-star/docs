@@ -1,0 +1,88 @@
+---
+title: "AI 検索"
+description: "自然言語、音声、引用、検証可能な回答を使用してコンポーネントを検索する"
+---
+PartGenie 検索は、一般的なチャットではなく、ハードウェアエンジニア向けに構築されています。コンポーネントデータ、データシート、およびライブソースに基づいて、** 検証可能な回答 ** が得られます。
+
+## 質問できること
+
+- **MPN 検索 ** – 正確な部品番号、近似一致、メーカーの提案
+- ** 仕様とアプリケーション ** - 電圧、パッケージ、ユースケース主導の選択
+- **Alternatives** - プロジェクトコンテキストに基づく置き換え (「Alternatives」を参照)
+- ** エンジニアリング数学 ** – 抵抗電力、LDO 熱、パス/フェイルチェック、インテリジェント UI スライダー(「エンジニアリング計算機」を参照)
+- ** モジュール&キット ** – OpenELAB 経由の開発ボードとロボティクス部品 (/ja-JP/openelab-modules 参照)
+
+```
+Examples:
+- "STM32F103C8T6 operating voltage"
+- "alternative to BQ24195 for 4.5A USB charging"
+- "100uF 16V electrolytic, automotive grade"
+```
+
+## 検索方法
+
+<Steps>
+  <Step title="Open the homepage">
+    Go to [app.partgenie.ai](https://app.partgenie.ai). Use **Search** mode for component Q&A, or **Work** when you're acting on a BOM/Design project.
+  </Step>
+  <Step title="Enter a query">
+    Type naturally, paste an MPN, upload a datasheet/image, or use **voice input** (microphone in the search bar).
+  </Step>
+  <Step title="Review the answer">
+    Answers include structured part cards, tables, and **citation badges**. Gray MPN badges open the component drawer; green = OEM, orange = distributor, purple = community.
+  </Step>
+  <Step title="Follow up">
+    Use suggested follow-ups—including one-click **Design** when you want to start hardware design from a part.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Voice input in the PartGenie search bar"
+    src="/images/search-voice-recording.png"
+  />
+</Frame>
+
+## 検証可能な回答
+
+ほとんどの AI ツールはテキストを提供します。PartGenie は ** 正確な MPN** と **Web ソース ** を引用しているため、設計する前に確認できます：
+
+- MPN バッジをクリック→コンポーネントドロワー(仕様、在庫、価格)
+- ディストリビューターバッジをクリック → ソースリストにジャンプ
+- データシートのクレームには、** ページレベルの引用 ** を含めることができます ([データシート引用](/ja-JP/datasheet-citations) を参照)。
+
+<Frame>
+  <img
+    alt="Citation badges for MPN and distributor sources in an AI answer"
+    src="/images/citation-badges.png"
+  />
+</Frame>
+
+## 表とエクスポート
+
+回答の比較表と代替表は、**export** (Pro) をサポートしています。ダウンロードする表の右上にポインターを合わせます。
+
+## 回答に表示される内容
+
+| 画面上 | 何をするか |
+| ---| ---|
+| ** 概要 ** タブ | 書かれた回答、表、次のステップの箇条書きを読む |
+| グレー**MPN** バッジ | コンポーネントドロワーを開く (仕様、調達、CAD) |
+| 緑/オレンジ/紫のバッジ | OEM サイト、ディストリビューター、またはコミュニティソース |
+| ページ番号バッジ | そのページのデータシート PDF を開く |
+| ** コンポーネント ** タブ | この回答の一致した部品リスト |
+| **Sources** タブ | 要求が抽出された場所 |
+| マイク | 音声入力;聴いている間に波形が表示されます |
+| ボックス内の **+** | ファイルまたは画像の添付 |
+| フォローアップチップ | **Design** を含む次の質問の提案 |
+
+**Search** と **Work** は、入力内の 2 つのチップです。Search は質問用です。Work は、添付した BOM またはデザインプロジェクト用です。[PartGenie Work](/ja-JP/partgenie-work) をご覧ください。
+
+適切な MPN を取得した後にフットプリントを取得するには、抽出しを開き、**CAD Models** を使用するか、KiCad ライブラリを要求します。[ECAD & footprints](/ja-JP/ecad-models) を参照してください。
+
+## 関連
+
+- [Alternatives](/ja-JP/alternatives) - よりスマートな代替検索とレポート
+- [Live sourcing](/ja-JP/live-sourcing) - 結果の株価と価格
+- [KiCad ライブラリジェネレーション](/ja-JP/kicad-library)
+- [AI 理解可能なクエリの記述方法](/ja-JP/ai-query-writing)

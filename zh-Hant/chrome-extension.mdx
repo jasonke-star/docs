@@ -1,0 +1,96 @@
+---
+title: "Chrome 擴展"
+description: "在 DigiKey、Mouser、LCSC 等商品頁旁做器件研究，無需反覆複製料號"
+---
+
+**PartGenie for Chrome** 在支持的分銷商或原廠**商品頁**上識別 MPN。替代料、規格書對話、ECAD、比價都在側邊欄完成，不用新開標籤去搜。
+
+安裝：[Chrome 網上應用店](https://chromewebstore.google.com/detail/partgenie/djhpmidamklapnaidbhljfpbnnlninmk)。
+
+## 安裝與登錄
+
+<Steps>
+  <Step title="安裝擴展">
+    打開 [Chrome 網上應用店中的 PartGenie](https://chromewebstore.google.com/detail/partgenie/djhpmidamklapnaidbhljfpbnnlninmk)，點 **添加至 Chrome**。常用的話把 PartGenie 圖標固定在工具欄。
+  </Step>
+  <Step title="登錄">
+    點 PartGenie 圖標，或在支持的商品頁打開側邊欄。使用與 [app.partgenie.ai](https://app.partgenie.ai) 相同的賬號登錄。
+  </Step>
+  <Step title="打開支持的商品頁">
+    進入支持站點（例如 **DigiKey**、**Mouser**、**LCSC**）的**產品詳情頁**。PartGenie 從頁面讀取 MPN 並加載該料的研究結果。
+  </Step>
+</Steps>
+
+<Warning>
+  擴展只在**支持**的頁面上提供器件助手，不會注入到無關網站。
+</Warning>
+
+## 使用側邊欄
+
+<Frame>
+  <img
+    alt="Chrome 擴展在 DigiKey 商品頁：替代料表、CAD models、Find alternatives、Compare prices、Ask about this part"
+    src="/images/chrome-extension-digikey-sidebar.png"
+  />
+</Frame>
+
+商品頁打開側邊欄後：
+
+| 控件 | 作用 |
+| --- | --- |
+| 標題（MPN + 來源） | 確認 PartGenie 匹配到的料號 |
+| 回答區 | 摘要、規格、帶依據的替代料對比表 |
+| **CAD models** | 打開目錄 ECAD，或為本 MPN 發起 KiCad 生成 |
+| **Find alternatives** | 基於規格書與項目上下文的替代料深挖 |
+| **Compare prices** | 跨分銷商比價與庫存（與網頁實時採購同源） |
+| **Ask about this part** | 針對當前器件對話——引腳、極限、替換 |
+
+替代料會附帶可核對的依據，不只是參數表對錶。量產換料前請先看引用來源。
+
+## 懸浮工具欄
+
+<Frame>
+  <img
+    alt="分銷商頁面 PartGenie 懸浮工具欄：器件詳情、替代料、比價快捷入口"
+    src="/images/chrome-extension-floating-toolbar.png"
+  />
+</Frame>
+
+部分頁面邊緣會出現緊湊的**懸浮工具欄**，可快速打開器件詳情、替代料或比價。不需要時點 **×** 收起。
+
+## 從擴展拿 ECAD
+
+在側邊欄 **CAD models** 中：
+
+1. 若 **CAD Models** 有文件，直接下載 symbol、footprint 或 3D。
+2. 或發起 **KiCad 庫生成**（Beta），完成後下載。
+
+導入 EDA 的步驟見 [EDA 集成](/zh-Hant/eda-integration)。
+
+## 打開完整網頁
+
+側邊欄裡的鏈接可進入 **PartGenie 完整器件頁**，或在 Search 裡繼續用 Projects、BOM、Design、Knowledge。
+
+## 支持的站點
+
+目前已覆蓋 **DigiKey**、**Mouser**、**LCSC** 等主要分銷商，以及 PartGenie 可識別的更多原廠 / 分銷頁面。覆蓋會持續增加；若你常用的頁面尚未支持，請聯繫 [support@partgenie.ai](mailto:support@partgenie.ai)。
+
+## 隱私與權限
+
+擴展需要訪問支持的商品頁，才能讀取 MPN 與識別器件所需的頁面上下文。擴展不會代替你在分銷商登錄，也不會替你下單——**Purchase** 鏈接觸發的是分銷商自己的購買流程。
+
+## 故障排查
+
+| 現象 | 建議 |
+| --- | --- |
+| 側邊欄空白或料號不對 | 刷新商品頁；確認是 SKU 詳情 URL，不是搜索結果列表 |
+| 登錄循環 | 允許 PartGenie 第三方 Cookie，或先在 app.partgenie.ai 登錄再刷新頁面 |
+| 某分銷站沒有擴展 | 可能尚未支持——改用 [Search](/zh-Hant/ai-search) 輸入 MPN |
+
+更多賬號問題：[賬戶故障排查](/zh-Hant/account-troubleshooting)。
+
+## 相關
+
+- [集成總覽](/zh-Hant/integrations)
+- [EDA 集成](/zh-Hant/eda-integration)
+- [更新日誌 — PartGenie for Chrome](/zh-Hant/changelog)

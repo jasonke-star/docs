@@ -1,0 +1,78 @@
+---
+title: "BOM 管理"
+description: "BOM のアップロード、ヘルスレポート、エンジニアリングの差異、推定コスト、比較、共有"
+---
+PartGenie は、BOM を生きたエンジニアリングドキュメントとして扱います。このドキュメントでは、ラインのマッチング、リスクのフラグ付け、代替案の採用、トラックの変更、コストの見積もりが行われます。
+
+## 作成またはアップロード
+
+<Steps>
+  <Step title="Attach the BOM">
+    On the homepage, click **Optimize BOM** or switch the input to **Work**, then upload **CSV / Excel** or paste a part list. You can also open an existing BOM from **Projects**.
+  </Step>
+  <Step title="Read the toolbar">
+    Across the top of the BOM:
+
+    - **Refreshing live stock** — how many lines have been priced
+    - **Files & Rules** — project files and instructions (these override your account custom instructions)
+    - **Changes** — Adopt history and version diff
+    - **Health** — score for the current BOM
+    - **Est.** — estimated cost range and how many lines are priced
+    - **Export** / **Share**
+  </Step>
+  <Step title="Work the table">
+    Each row shows the original part number, **Match** (for example Full Match), **Stock / Source** distributor marks, and brand. Filter with **Level** and **Match**. **Add Data Row** inserts a line. Row actions copy, duplicate, or delete.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM toolbar with live stock refresh, Changes, Health, estimated price, Export, and Share"
+    src="/images/bom-diff-estimate.png"
+  />
+</Frame>
+
+## 健康レポート
+
+アップロード後、ヘルスの概要を開いて以下を行います：
+
+- ** カテゴリ別のコンポーネント分布 ** (リスクカウントを含む)
+- ** リスクリスト ** - NRND/EOL、在庫ゼロ、ソーシングデータなし、製造元不明
+- ** 大量の代替品 ** – スキャンに一致する線と表面機能の置き換え
+
+<Frame>
+  <img
+    alt="BOM component distribution and risk counts"
+    src="/images/bom-health-distribution.png"
+  />
+</Frame>
+
+## エンジニアリング差と推定価格
+
+BOM ツールバーで：
+
+- ** 変更 **—採用履歴とバージョン履歴 (何が何を置き換えたか、行が変更された場合)
+- ** 東部価格 ** -ライブソーシングからの BOM レベルのコスト見積もり (例：範囲 + 価格設定されたライン数)
+- **Health** – 全体的なヘルススコア
+
+<Frame>
+  <img
+    alt="BOM toolbar with Changes, Health, and estimated price"
+    src="/images/bom-diff-estimate.png"
+  />
+</Frame>
+
+## 比較とチャットのコンテキスト
+
+- 行を選択→ ** 並列ソーシングのための比較 **
+- BOM 行を複数選択し、エージェントチャットで参照してソーシング決定を行う
+
+## 共有
+
+メールまたはリンクでチームメイトと BOM を共有します。「[Share]」を参照してください。
+
+## 関連
+
+- [PartGenie Work](/ja-JP/partgenie-work)
+- [Live ソーシング](/ja-JP/live-sourcing)
+- [Effective BOM management](/ja-JP/effective-bom-management)

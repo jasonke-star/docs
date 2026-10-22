@@ -1,0 +1,87 @@
+---
+title: "Generación de bibliotecas KiCad"
+description: "Genere un símbolo de KiCad verificado, huella y STEP 3D para una MPN, luego descargue la biblioteca (Beta)"
+---
+** Generación de bibliotecas KiCad (Beta) * * construye una biblioteca de piezas a partir de la base de datos de componentes de PartGenie y la hoja de datos: **Símbolo**, **Huella** y **PASO 3D**, además de un resumen de evidencia que puede verificar antes de colocarlo en un tablero.
+
+Esto es diferente a descargar un modelo de catálogo en la página de piezas. Los activos del catálogo se encuentran activos en la pestaña componente * * Modelos CAD*—; consulte [ECAD y huellas] (/en-US / ecad-models). Utilice la generación cuando necesite una biblioteca nativa de KiCad con comprobaciones visuales, de pin y pad adjuntas.
+
+## Generar una biblioteca
+
+<Steps>
+  <Step title="Start from Search">
+    Open [app.partgenie.ai](https://app.partgenie.ai) and stay on **Search** (not Work).
+  </Step>
+  <Step title="Ask for a verified library">
+    Use the MPN and package in the prompt:
+
+    
+__P0__
+
+
+    You can also say *symbol, footprint, and 3D model* for a specific MPN such as 
+__P1__
+ or 
+__P2__
+.
+  </Step>
+  <Step title="Wait for the job">
+    Generation can take a few minutes. PartGenie tells you it has started and notifies you **in the app and by email** when the library is ready. You can leave the chat and come back from **Recents** or **⌘K**.
+  </Step>
+  <Step title="Review Symbol, Footprint, and 3D">
+    The finished card shows three previews:
+
+    - **Symbol** — schematic symbol and pin numbers
+    - **Footprint** — pad layout (for example 0603 pads 1 and 2)
+    - **3D Model** — STEP body
+
+    Status chips on a finished library include **KiCad native import**, **Pin mapping**, and **Visual audit**.
+  </Step>
+  <Step title="Open the evidence summary">
+    Expand **Evidence summary**. Each row is a field (pin count, pitch, body size, pad size), the value used, the **datasheet page** it came from, and a status:
+
+    - **Calculated** — derived from datasheet or package data
+    - **Assumed** — a default the engine filled in (pitch is a common one)
+
+    Treat **Assumed** rows as items you must confirm.
+  </Step>
+  <Step title="Download">
+    Click **Download** on the part card and import the files into your KiCad project libraries.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Generated KiCad card with Symbol, Footprint, 3D Model, and Download"
+    src="/images/kicad-library-generate.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Evidence summary table with datasheet page and Calculated or Assumed status"
+    src="/images/kicad-library-evidence.png"
+  />
+</Frame>
+
+## Before you fabrication-lanzamiento
+
+< Advertencia>
+  Las bibliotecas son**Beta**. Antes de usar uno, verifique el tono, las almohadillas, el pin 1 y el modelo 3D con la hoja de datos. Un tono supuesto o una marca incorrecta de pin-1 no serán capturados solo por una miniatura visual.
+< / Advertencia>
+
+- Abra la página de la hoja de datos citada desde la tabla de evidencia (consulte [Citas de la hoja de datos] (/en-US / datasheet-citations))
+- Confirme el pin 1 tanto en el símbolo como en la huella
+- Si algo anda mal, responda en el mismo chat con la corrección — y envíe comentarios para que el generador pueda mejorar
+
+## A dónde van los archivos después
+
+Las bibliotecas descargadas son suyas para importarlas a KiCad. El chat que los produjo permanece en **Recientes**. Los informes y archivos relacionados también pueden aparecer en [Knowledge] (/en-US / knowledge) cuando PartGenie guarde el artefacto.
+
+## Relacionado
+
+- [Integración EDA](/es-MX/eda — integration) - importar a KiCad 8 y otras herramientas
+- [Integraciones] (/es-US / integraciones)
+- [ECAD & footprints] (/en-US / ecad-models) - modelos de catálogo ya en la pieza
+- [Modo de diseño](/es-MX/design — mode) - arquitectura y lista de materiales antes de dibujar el tablero
+- [Búsqueda de IA] (/en-US / búsqueda de ia)

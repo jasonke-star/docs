@@ -1,0 +1,127 @@
+---
+title: "EDA統合"
+description: "Altium、KiCad、Eagle、OrCAD、およびAllegro用のECADをダウンロードするか、検証済みのKICADライブラリを生成します"
+---
+PartGenieは、CADシートを交換するのではなく、**ダウンロード可能なライブラリ**を介してEDAワークフローに接続します。 二つの道:
+
+-**カタログモデル**-シンボル、フットプリント、およびステップは、すでに多くのMpnのためのPartGenieで。
+—**KiCad generation(Beta)**-証拠とインポートチェックを使用してデータシートからKiCad8ライブラリを構築します。
+
+から始めることができます[app.partgenie.ai](https://app.partgenie.ai)、[Chrome拡張機能](/ja-JP/chrome-extension)、または[Chrome拡張機能]のパブリックパーツページpartgenie.ai](https://www.partgenie.ai/）。
+
+#＃パスを選ぶ
+
+/あなたが必要|使用|
+| --- | --- |
+|MPNのカタログに既にあるファイル|[カタログモデルのダウンロード](#download-catalog-models)/
+|Kicad8シンボル+フットプリント+証拠付き3D|[KiCad import](#kicad-import)/
+/Altium/Eagle/OrCAD|Allegro/**CADモデル**に記載されている形式をダウンロードし、ツールにインポートします|
+
+カタログと生成されたライブラリの詳細:[ECAD&footprints](/ja-JP/ecad-models)。 完全な生成ウォークスルー:[KiCadライブラリ生成](/ja-US/kicad-library)。
+
+#＃カタログモデルのダウンロード
+
+<Steps>
+  <Step title="Open the part">
+    In Search, click the **MPN** badge or part card. In Chrome, open **CAD models** from the sidebar on a supported distributor page.
+  </Step>
+  <Step title="Open CAD Models">
+    In the component drawer, tabs are **Product**, **Procurement**, and **CAD Models**. **Procurement** is live price and stock; **CAD Models** is the footprint library.
+  </Step>
+  <Step title="Choose format and download">
+    Download the symbol, footprint, and/or 3D files offered for your EDA (Altium, KiCad, Eagle, OrCAD, Allegro, and others when listed). Not every MPN has every format—if the tab is empty, [generate KiCad](#kicad-import) or contact support.
+  </Step>
+  <Step title="Import into your EDA">
+    Follow your vendor’s import steps for the file type you downloaded. Confirm pin 1, pitch, and courtyard against the datasheet before you release the library to the team.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Component drawer Procurement tab; CAD Models is the next tab for footprint downloads"
+    src="/images/procurement-purchase-jump.png"
+  />
+</Frame>
+
+＜ヒント＞
+  カタログのフットプリントと生成されたKiCadライブラリは、パッドのサイズまたはピン1 あなたが製造するものについては、一般的な0603ではなく、**データシートページ**を信頼してください。
+</Tip>
+
+###Altium Designer
+
+1. **CADモデル**から**Altium**（またはニュートラルPCBフットプリント/ステップ）アセットをダウンロードします。
+2. Altiumで、プロジェクトライブラリにインポートまたはコピーします(**。PcbLib**/**.SchLib**またはチームが使用する統合ライブラリフロー）。
+3. 回路図シンボルにフットプリントと3Dモデルを割り当て、通常のDRCを実行します。
+
+Kicadネイティブファイルのみがある場合は、AltiumのKicad importerを使用するか、[KiCadライブラリ生成](/ja-US/kicad-library)で再生成し、チームの承認された移行プロセスで変換します。
+
+###Eagle/Fusion Electronics
+
+**CADモデル**に記載されている場合は、Eagle互換または汎用フットプリントアセットをダウンロードし、EagleのライブラリエディタまたはFusion Electronics library managementから追加します。
+
+###OrCAD/Allegro
+
+PartGenieがMpn用にOrCADまたはAllegro形式をリストしたときにダウンロードし、Cadenceライブラリパスを介してインポートします。 ステップモデルは、フローがサポートする3D衝突チェック用にアタッチします。
+
+##KiCadインポート
+
+生成はPartGenie（webまたはChrome）で発生します。 **KiCad8**はターゲット形式です。
+
+<Steps>
+  <Step title="Generate the library">
+    In **Search** (not Work), ask for example:
+
+    
+__P0__
+
+
+    Or use **CAD models** → generate from the part page. Wait for the in-app notice and email—generation can take a few minutes.
+  </Step>
+  <Step title="Review evidence">
+    Open the finished card: **Symbol**, **Footprint**, **3D Model**, and **Evidence summary** (Calculated vs Assumed). Check **KiCad native import**, **Pin mapping**, and **Visual audit** before you download.
+  </Step>
+  <Step title="Download">
+    Click **Download** on the library card. You receive KiCad 8 
+__P1__
+, 
+__P2__
+, and 3D files PartGenie already checked with a machine import pass.
+  </Step>
+  <Step title="Add to your KiCad project">
+    In KiCad 8:
+
+    1. Place symbol and footprint files in your project or global library folders (or paths your team standardizes on).
+    2. Update **sym-lib-table** and **fp-lib-table** so KiCad resolves the new library names.
+    3. Reload libraries in the Symbol or Footprint editor, place the part on the schematic, and associate the footprint.
+    4. Open the 3D viewer and compare body height and pin 1 to the datasheet.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Generated KiCad library with Symbol, Footprint, 3D Model previews and Download"
+    src="/images/kicad-library-generate.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Evidence summary for generated KiCad assets with datasheet page references"
+    src="/images/kicad-library-evidence.png"
+  />
+</Frame>
+
+<警告>
+  KiCadの生成は**ベータ**です。 生産前に、ピッチ、パッド、ピン1、および3Dをデータシートと照合してください。 パッケージの適用範囲は、サポートされているファミリ(SO、QFN、BGA、受動部品、共通コネクタなど)に制限されています—[KiCad generator](https://www.partgenie.ai/kicad-generator）現在のリストのページ。
+</警告>
+
+##クレジットと請求
+
+KiCadの生成は**クレジット**を使用します。 カタログ**ECADモデルのダウンロード**は、プランによっては別途請求される場合があります—[メンバーシップと価格](/ja-JP/membership-pricing)を参照してください。
+
+##関連
+
+-[統合の概要](/ja-JP/integrations)
+-[Chrome拡張機能](/ja-JP/chrome-extension)
+-[KiCadライブラリ生成](/ja-US/kicad-library)
+-[ECAD&footprints](/ja-JP/ecad-models)

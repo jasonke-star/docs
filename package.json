@@ -1,1 +1,15 @@
-{"name":"partgenie-help-center","private":true,"type":"module","devDependencies":{"playwright":"^1.55.0"}}
+{
+  "name": "partgenie-help-center",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "locales:sync": "node scripts/sync-docs-json-languages.mjs --write",
+    "locales:check": "node scripts/check-locale-parity.mjs",
+    "locales:zh-hant": "node scripts/convert-zh-hant.mjs",
+    "locales:translate": "node scripts/run-translations.mjs"
+  },
+  "devDependencies": {
+    "opencc-js": "^1.0.5",
+    "playwright": "^1.55.0"
+  }
+}

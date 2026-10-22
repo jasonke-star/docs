@@ -1,0 +1,90 @@
+---
+title: "KiCadプラグイン"
+description: "部品の検査、BOMの正常性の同期、およびKICAD内からのECADの要求"
+---
+**PartGenie KiCadプラグイン**は、ボードファイルを離れることなく、kicad PCBエディタにコンポーネントインテリジェンスをもたらします。
+
+からダウンロードしてインストールする**[app.partgenie.ai](https://app.partgenie.ai）→設定→統合→KiCad**。
+
+##インストール
+
+<Steps>
+  <Step title="Open Integrations">
+    Sign in at [app.partgenie.ai](https://app.partgenie.ai). Open **Settings → Integrations**.
+  </Step>
+  <Step title="Download KiCad">
+    Choose **KiCad**, download the plugin package, and follow the on-screen install steps for your OS and KiCad version.
+  </Step>
+  <Step title="Sign in inside KiCad">
+    Open the PartGenie panel in KiCad and sign in with the same PartGenie account you use on the web.
+  </Step>
+</Steps>
+
+##部品検査
+
+Kicadでフットプリントまたはシンボルを選択し、**Inspect selection**を使用します（またはその参照のPartGenieパネルを開きます）。
+
+<Frame>
+  <img
+    alt="PartGenie KiCad plugin showing Product tab for SM04B-SRSS-TB: parameters, Add to BOM, View on PartGenie"
+    src="/images/kicad-plugin-part-inspect.png"
+  />
+</Frame>
+
+部品パネルから次のことができます:
+
+/タブ|あなたが得るもの|
+| --- | --- |
+/**製品*|/詳細なパラメータ、ライフサイクルステータス、説明|
+|**Alternatives**/証拠のある代替物（web検索と同じワークフロー）|
+/**調達*||ライブ市場価格と利用可能な場合の株式/
+/**CADモデル**|カタログECADまたは**KiCadを生成**シンボルとフットプリント用|
+
+<Frame>
+  <img
+    alt="CAD Models tab in KiCad plugin: Generate KiCad, schematic symbol and PCB footprint requests"
+    src="/images/kicad-plugin-cad-models.png"
+  />
+</Frame>
+
+フルコンポーネントページ、データシートのチャット、およびより深い研究のためのPartGenie**上の**ビューを使用します。 **BOMに追加**PartGenieプロジェクトBOMに部品を送信します。
+
+##仕事-プロジェクトBOM同期と健康
+
+プラグインを**Work**に切り替えて、オープンKiCadプロジェクトに基づいて動作します。
+
+<Frame>
+  <img
+    alt="PartGenie Work in KiCad: Project BOM StickHub synced 93 lines, Inspect selection and Sync project BOM"
+    src="/images/kicad-plugin-work-bom-sync.png"
+  />
+</Frame>
+
+<Steps>
+  <Step title="Sync project BOM">
+    Click **Sync project BOM**. PartGenie reads lines from your KiCad schematic and opens or updates the matching BOM in your account (for example “BOM synced (93 lines)”).
+  </Step>
+  <Step title="Open BOM health">
+    From the sync confirmation or Work chat, open **BOM health** to review match rate, risks, and estimated cost.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM health in KiCad plugin: 86% composite score, matched vs unmatched, est price, risks"
+    src="/images/kicad-plugin-bom-health.png"
+  />
+</Frame>
+
+BOMの正常性には、複合スコア、一致/一致しないライン、推定価格帯、カテゴリミックス、フラグ付きリスク(一致しないMPNなど)が含まれます。 同じプロジェクトを使用してwebアプリで分析を続行します。
+
+##Coming soon
+
+ビジュアル**ECADドラッグアンドドロップ交換**ボードビューで-手動ライブラリ狩りなしでPartGenie-backed代替とシンボルとフットプリントを交換します。
+
+##関連
+
+-[統合の概要](/ja-JP/integrations)
+-[EDA統合](/ja-JP/eda-integration)
+-[BOM管理](/ja-JP/bom管理)
+-[KiCadライブラリ生成](/ja-US/kicad-library)

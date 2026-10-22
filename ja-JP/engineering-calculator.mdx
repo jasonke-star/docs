@@ -1,0 +1,107 @@
+---
+title: "エンジニアリング電卓"
+description: "ローカルwhat-ifチューニングのためのインテリジェントなUIスライダーと検索で内蔵の電力と熱チェック"
+---
+検索は、答えの中で**エンジニアリング計算**を実行することができます-別の電卓アプリではありません。 PartGenieは、あなたの質問に合った監査を選択し、式を示し、制限が適用されたときに**合格/不合格**チェックを実行し、新しい検索なしで調整できる**インテリジェントUI**パネルを添付します。
+
+<Frame>
+  <img
+    alt="Resistor power rating audit with sliders for voltage, resistance, and watt rating"
+    src="/images/engineering-calc-resistor-sliders.png"
+  />
+</Frame>
+
+##今日表示される電卓はどれですか
+
+PartGenieはあなたの質問を監査パネルにマッピングします。 これらは現在出荷されている主なものです:
+
+/監査パネル|それが計算するもの|典型的なチェック|キー入力|
+| --- | --- | --- | --- |
+/**抵抗定格電力**/散逸**P=V2/R**、**P=VI**、または**P=I2R**および**マージン**対定格ワット数/電気-定格電力は十分ですか？ /電圧、抵抗（または電流）、抵抗定格（W）|
+/**LDO消費電力とジャンクション温度**|ドロップ電力**Pd≤(Vin−Vout)×Iout**(関連する場合は静止電流をプラス),**Tj=Ta+Pd×θ ja**対Tj(max)|**電気的**·パス/フェイル,**熱的**·パス/フェイル|Vin,Vout,Iout,Ta,θ ja,ジャンクション制限|
+
+限界がない場合、PartGenieは**合理的なデフォルト**（例えば、周囲25℃または典型的なθ ja）を仮定し、答えでそう言うかもしれません—または**あなたの述べた負荷**（例えば、400maを尋ねたときに200ma）ので、公称だけでなく、ヘッドルームを見ることができます。
+
+＜ヒント＞
+  部品に名前を付けるか、データシートから**θ ja**/**Tj(max)**を貼り付けます。 PartGenieは製造業者データの限界をひくことができる;一般的な監査はまだあなたが質問で提供する数を使用する。
+</Tip>
+
+#＃質問の仕方（クエリの例）
+
+**検索**に滞在します。 **数字と単位**で自然言語を使用してください。 特別なコマンドは必要ありません。
+
+###抵抗力及び評価
+
+```
+100Ω resistor at 12V — is 0.25W rating enough?
+```
+
+```
+What power does a 10Ω resistor dissipate at 500mA? Margin vs 0.125W?
+```
+
+```
+1206 0.1W at 3.3V through 330Ω — pass or fail?
+```
+
+###LDO/リニアレギュレータサーマル
+
+```
+Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?
+```
+
+```
+12V to 3.3V LDO at 400mA, Ta 25°C, θJA 50°C/W — will Tj exceed 125°C?
+```
+
+```
+MIC29302: 3.3V in, 2.5V out, 1.5A — thermal check at 75°C ambient
+```
+
+###パートコンテキストとcalcを混在させる
+
+```
+For TPS7A3301 in SOT-23, 5V to 3.3V at 300mA — Pd and Tj estimate
+```
+
+```
+Compare 0.25W vs 0.5W for this divider: 12V, Rtop 10k, Rbot 3.3k
+```
+
+質問があいまいな場合は、最初にチャットで答えます—その後、再検索の代わりにパネルで**異なる入力を試してみてください**を使用します。
+
+##インテリジェントUI-ローカルでパラメータを調整
+
+<Frame>
+  <img
+    alt="LDO answer with Electrical Pass and Thermal Fail checks"
+    src="/images/engineering-calc-ldo-checks.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Expanded thermal panel with predicted Tj versus limit"
+    src="/images/engineering-calc-thermal-panel.png"
+  />
+</Frame>
+
+書かれた答えの後:
+
+1. 監査パネルを開きます(たとえば、**抵抗定格電力監査**または**消費電力とジャンクション温度**)。
+2. 使用**異なる入力を試してみてください（ここでのみ再計算します）**—電圧、電流、抵抗、定格、θ jaなどのスライダまたはフィールド。
+3. ウォッチ**マージン**、**パス/フェイル**チップ、およびチャート（このような予測Tj対制限など）は、ブラウザで**瞬時に**更新します。
+
+そのローカルrecalcは**ない**別の検索クレジットを費やしていません。 スイープのためにそれを使用してください：より高い周囲、より悪いθ ja、または次の標準抵抗ワット数。
+
+##何を信頼するか
+
+-計算機は答えに示されている標準的なEEの方式を使用する—あなたのデータ用紙および適用ノートに対して確認しなさい。
+-線形熱モデルは**推定値**であり、実際の部品は、単純なTj推定値が予測するよりも早く、電流制限、折り畳み、またはサーマルシャットダウンを打つことができ
+-調達およびサインオフについては、**元のデータシート**または[仕様チャット](/ja-JP/仕様チャット)の重要な制限をクロスチェックします。
+
+##関連
+
+-[AI検索](/ja-JP/ai-search)
+-[AI-理解できるクエリの書き方](/ja-JP/ai-query-writing)
+—[Changelog-エンジニアリング電卓](/ja-JP/changelog)

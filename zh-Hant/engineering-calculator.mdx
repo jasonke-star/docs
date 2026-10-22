@@ -1,0 +1,108 @@
+---
+title: "工程計算器"
+description: "Search 內置功率與熱校核，Intelligent UI 滑條本地調參"
+---
+
+Search 可以在回答裡直接做**工程計算**，不用切到單獨的計算器頁面。PartGenie 會根據問題匹配對應的 **Audit** 面板，展示公式、在有限值時給出 **Pass / Fail** 檢查，並附上可在本地調參的 **Intelligent UI**。
+
+<Frame>
+  <img
+    alt="電阻功率校核：電壓、阻值、額定功率滑條"
+    src="/images/engineering-calc-resistor-sliders.png"
+  />
+</Frame>
+
+## 目前有哪些計算器
+
+問題不同，出現的面板不同；能力會持續增加。當前主要兩類：
+
+| 面板 | 算什麼 | 常見檢查 | 主要輸入 |
+| --- | --- | --- | --- |
+| **Resistor power rating**（電阻功率校核） | 功耗 **P = V²/R**、**P = VI**、**P = I²R** 及相對額定功率的 **margin** | 電氣 — 額定功率是否夠用 | 電壓、阻值（或電流）、額定功率 (W) |
+| **Power dissipation & junction temperature**（LDO 功耗與結溫） | 壓差功耗 **Pd ≈ (Vin − Vout) × Iout**（必要時含靜態電流），**Tj = Ta + Pd × θJA** 對比 Tj(max) | **Electrical** · Pass/Fail，**Thermal** · Pass/Fail | Vin、Vout、Iout、Ta、θJA、結溫上限 |
+
+若問題裡缺參數，PartGenie 可能採用**合理默認值**（例如 Ta=25°C 或典型 θJA）並在回答中說明；也可能在標稱負載之上做**應力估算**（例如問 200mA 卻按 400mA 算），方便看到最壞情況。
+
+<Tip>
+  儘量寫上型號，或從規格書粘貼 **θJA**、**Tj(max)**。有 datasheet 時 PartGenie 會盡量用廠商極限；只有數字的泛化校核也可以直接問。
+</Tip>
+
+## 可以怎麼問（示例 query）
+
+保持在 **Search**，用自然語言，帶上**數值和單位**，不需要特殊指令。
+
+### 電阻功率與額定值
+
+```
+100Ω resistor at 12V — is 0.25W rating enough?
+```
+
+```
+10Ω 電阻 500mA 功耗多少？相對 0.125W 的 margin？
+```
+
+```
+3.3V 經 330Ω，1206 0.1W 夠不夠？
+```
+
+### LDO / 線性穩壓熱分析
+
+```
+Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?
+```
+
+```
+12V 轉 3.3V LDO，400mA，Ta 25°C，θJA 50°C/W，Tj 會超過 125°C 嗎？
+```
+
+```
+MIC29302：3.3V 入 2.5V 出 1.5A，75°C 環境下熱校核
+```
+
+### 結合器件型號
+
+```
+TPS7A3301 SOT-23，5V 轉 3.3V 300mA，估算 Pd 和 Tj
+```
+
+```
+分壓 12V，Rtop 10k、Rbot 3.3k，0.25W 和 0.5W 哪個夠？
+```
+
+問題含糊時，先看文字回答，再用面板裡的 **Try different inputs** 調參，不必重發 Search。
+
+## Intelligent UI — 本地調參
+
+<Frame>
+  <img
+    alt="LDO 回答：Electrical Pass、Thermal Fail"
+    src="/images/engineering-calc-ldo-checks.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="結溫面板：預測 Tj 與上限"
+    src="/images/engineering-calc-thermal-panel.png"
+  />
+</Frame>
+
+文字回答下方：
+
+1. 展開 **Resistor power rating audit** 或 **Power dissipation & junction temperature** 等面板。
+2. 在 **Try different inputs (recalculates here only)** 裡拖滑條或改電壓、電流、阻值、額定功率、θJA 等。
+3. **margin**、**Pass/Fail** 標籤和圖表（如預測 Tj vs 上限）會在瀏覽器裡**即時更新**。
+
+本地重算**不另佔** Search 額度。適合掃參：更高環境溫度、更差 θJA、下一檔標準電阻功率等。
+
+## 使用注意
+
+- 公式會在回答裡展示，量產前請與規格書、應用筆記核對。
+- 線性熱模型是**估算**；實際器件可能限流、熱關斷，早於簡單 Tj 估算失效。
+- 採購與籤核請以**規格書原文**或 [規格書對話](/zh-Hant/specification-chat) 為準。
+
+## 相關
+
+- [AI 智能搜索](/zh-Hant/ai-search)
+- [如何撰寫 AI 能理解的查詢](/zh-Hant/ai-query-writing)
+- [更新日誌 — 工程計算器](/zh-Hant/changelog)

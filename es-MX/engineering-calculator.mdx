@@ -1,0 +1,107 @@
+---
+title: "Calculadora de ingeniería"
+description: "Comprobaciones térmicas y de energía integradas en la búsqueda, con controles deslizantes inteligentes de la interfaz de usuario para el ajuste hipotético local"
+---
+La búsqueda puede ejecutar * * cálculos de ingeniería * * dentro de la respuesta, no una aplicación de calculadora separada. PartGenie elige la auditoría que se ajuste a su pregunta, muestra las fórmulas, ejecuta comprobaciones de * * Aprobado / Reprobado * * cuando se aplican límites y adjunta un panel de * * Interfaz de usuario inteligente * * que puede ajustar sin una nueva búsqueda.
+
+<Frame>
+  <img
+    alt="Resistor power rating audit with sliders for voltage, resistance, and watt rating"
+    src="/images/engineering-calc-resistor-sliders.png"
+  />
+</Frame>
+
+## Qué calculadoras aparecen hoy
+
+PartGenie asigna su pregunta a un panel de auditoría. El conjunto crece con el tiempo; estos son los principales que se envían ahora:
+
+/ Panel de auditoría / Qué calcula / Comprobaciones típicas / Entradas clave |
+| --- | --- | --- | --- |
+/ * * Potencia nominal de la resistencia * * / Disipación * * P = V2/ R**, * * P = VI**, o * * P = I2R** y * * margen * * frente a la potencia nominal / Eléctrica: ¿es suficiente la potencia nominal? / Voltaje, resistencia (o corriente), clasificación de resistencia (W) |
+/ * * Disipación de potencia LDO y temperatura de unión * * / Caída de potencia * * Pd ≈ (Vin − Vout) × Iout** (más corriente de reposo cuando corresponda), * * Tj = Ta + Pd × θJA * * vs Tj (máx | / * * Eléctrico * * * Pasa / Falla, * * Térmico * * * Pasa / Falla / Vin, Vout, Iout, Ta, θJA, límite de unión |
+
+Cuando falta un límite, PartGenie puede * * asumir valores predeterminados razonables** (por ejemplo, temperatura ambiente de 25°C o una θJA típica) y decirlo en la respuesta, o **prueba de esfuerzo por encima de su carga indicada** (por ejemplo, 400 Ma cuando solicitó 200 Ma) para que vea margen, no solo nominal.
+
+< Consejo>
+  Asigne un nombre a la pieza o pegue * * θJA* * / * * Tj (max) * * de la hoja de datos cuando los tenga. PartGenie puede establecer límites en los datos del fabricante; las auditorías genéricas aún funcionan con los números que proporcione en la pregunta.
+< / Sugerencia>
+
+## Cómo preguntar (consultas de ejemplo)
+
+Quédate en * * Buscar**. Usa lenguaje natural con * * números y unidades**. No necesitas un comando especial.
+
+### Potencia y clasificación de la resistencia
+
+```
+100Ω resistor at 12V — is 0.25W rating enough?
+```
+
+```
+What power does a 10Ω resistor dissipate at 500mA? Margin vs 0.125W?
+```
+
+```
+1206 0.1W at 3.3V through 330Ω — pass or fail?
+```
+
+### LDO / regulador lineal térmico
+
+```
+Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?
+```
+
+```
+12V to 3.3V LDO at 400mA, Ta 25°C, θJA 50°C/W — will Tj exceed 125°C?
+```
+
+```
+MIC29302: 3.3V in, 2.5V out, 1.5A — thermal check at 75°C ambient
+```
+
+### Mezclando el contexto de la parte con el calc
+
+```
+For TPS7A3301 in SOT-23, 5V to 3.3V at 300mA — Pd and Tj estimate
+```
+
+```
+Compare 0.25W vs 0.5W for this divider: 12V, Rtop 10k, Rbot 3.3k
+```
+
+Si la pregunta es ambigua, responda primero en el chat; luego use * * Pruebe diferentes entradas** en el panel en lugar de volver a buscar.
+
+## Interfaz de usuario inteligente: ajuste los parámetros localmente
+
+<Frame>
+  <img
+    alt="LDO answer with Electrical Pass and Thermal Fail checks"
+    src="/images/engineering-calc-ldo-checks.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Expanded thermal panel with predicted Tj versus limit"
+    src="/images/engineering-calc-thermal-panel.png"
+  />
+</Frame>
+
+Después de la respuesta escrita:
+
+1. Abra el panel de auditoría (por ejemplo, * * Auditoría de clasificación de potencia de la resistencia* * o * * Disipación de potencia y temperatura de unión**).
+2. Use * * Pruebe diferentes entradas (solo se recalcula aquí)* — - controles deslizantes o campos para voltaje, corriente, resistencia, clasificación, θJA, etc.
+3. Observe cómo se actualizan** margen**,** Pasa/Falla * * fichas y gráficos (como el Tj pronosticado frente al límite) * * instantáneamente * * en el navegador.
+
+Ese recálculo local **no * * gasta otro crédito de búsqueda. Úselo para barridos: ambiente más alto, peor θJA o el siguiente vataje de resistencia estándar.
+
+## En qué confiar
+
+- Las calculadoras usan fórmulas EE estándar que se muestran en la respuesta-verifique con su hoja de datos y notas de la aplicación.
+- Los modelos térmicos lineales son * * estimaciones**; las piezas reales pueden limitar la corriente, retroceder o alcanzar el apagado térmico antes de lo que predice una simple estimación de Tj.
+- Para la adquisición y aprobación, verifique los límites críticos en la **hoja de datos original** o [chat de especificaciones] (/en-US / specification-chat).
+
+## Relacionado
+
+- [Búsqueda de IA] (/en-US / búsqueda de ia)
+- [Cómo escribir consultas comprensibles por IA] (/en-US / ai-query-writing)
+- [Calculadora de registro de cambios-ingeniería] (/en-US / registro de cambios)

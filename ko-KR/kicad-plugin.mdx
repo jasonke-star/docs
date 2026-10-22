@@ -1,0 +1,90 @@
+---
+title: "KiCad 플러그인"
+description: "KiCad 내부에서 부품 검사， BOM 상태 동기화 및 ECAD 요청"
+---
+**PartGenie KiCad 플러그인 ** 은 보드 파일을 남기지 않고 KiCad PCB 에디터에 구성 요소 인텔리전스를 도입합니다。
+
+**[app.partgenie.ai](https://app.partgenie.ai) → 설정 → 통합 → KiCad** 에서 다운로드하여 설치합니다。
+
+## 설치
+
+<Steps>
+<Step title=“Open Integrations”>
+[app.partgenie.ai](https://app.partgenie.ai) 에 로그인합니다. ** 설정 → 통합 ** 을 엽니다。
+</단계>
+<Step title=“KiCad 다운로드”>
+**KiCad** 를 선택하고 플러그인 패키지를 다운로드한 다음， 사용 중인 OS 및 KiCad 버전에 맞는 화면상의 설치 단계를 따르십시오。
+</단계>
+<Step title=“KiCad 내부에서 로그인”>
+KiCad 에서 PartGenie 패널을 열고 웹에서 사용하는 것과 동일한 PartGenie 계정으로 로그인합니다。
+</Step>
+</Steps>
+
+## 파트 검사
+
+KiCad 에서 발자국 또는 기호를 선택한 다음 ** 선택 항목 검사 ** 를 사용합니다 (또는 해당 참조를 위해 PartGenie 패널을 엽니다).
+
+<Frame>
+  <img
+    alt="PartGenie KiCad plugin showing Product tab for SM04B-SRSS-TB: parameters, Add to BOM, View on PartGenie"
+    src="/images/kicad-plugin-part-inspect.png"
+  />
+</Frame>
+
+부품 패널에서 다음을 수행할 수 있습니다：
+
+| 탭 | 얻을 수 있는 것 |
+| --- | --- |
+| **Product** | 상세 매개변수， 수명 주기 상태， 설명 |
+| ** 대안 ** | 증거로 대체 (웹 검색과 동일한 워크플로) |
+| **Procurement** | 라이브 시장 가격 및 사용 가능한 주식 |
+| **CAD 모델 ** | 기호 및 발자국을 위한 ECAD 카탈로그 또는 **KiCad 생성 ** |
+
+<Frame>
+  <img
+    alt="CAD Models tab in KiCad plugin: Generate KiCad, schematic symbol and PCB footprint requests"
+    src="/images/kicad-plugin-cad-models.png"
+  />
+</Frame>
+
+**View on PartGenie** 를 사용하여 전체 구성 요소 페이지， 데이터시트 채팅 및 심층 연구를 수행할 수 있습니다. **Add to BOM** 은 PartGenie 프로젝트 BOM 에 부품을 전송합니다。
+
+## 작업 – 프로젝트 BOM 동기화 및 상태
+
+열려 있는 KiCad 프로젝트에서 작업하려면 플러그인을 **Work** 로 전환합니다。
+
+<Frame>
+  <img
+    alt="PartGenie Work in KiCad: Project BOM StickHub synced 93 lines, Inspect selection and Sync project BOM"
+    src="/images/kicad-plugin-work-bom-sync.png"
+  />
+</Frame>
+
+<Steps>
+<단계 제목=“프로젝트 BOM 동기화”>
+** 프로젝트 BOM 동기화 ** 를 클릭합니다. PartGenie 는 KiCad 스키마에서 행을 읽고 계정의 일치하는 BOM 을 열거나 업데이트합니다 (예: “BOM 동기화 (93 행)”).
+</Step>
+<Step 제목=“BOM 상태 열기”>
+동기화 확인 또는 작업 채팅에서 **BOM 상태 ** 를 열어 일치율， 위험 및 예상 비용을 검토합니다。
+</단계>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM health in KiCad plugin: 86% composite score, matched vs unmatched, est price, risks"
+    src="/images/kicad-plugin-bom-health.png"
+  />
+</Frame>
+
+BOM 상태에는 복합 점수， 일치/불일치 선， 추정 가격 범위， 범주 혼합， 플래그 지정된 위험 (예: 불일치 MPN) 이 포함됩니다. 동일한 프로젝트로 웹 앱에서 분석을 계속하십시오。
+
+## 곧 제공됨
+
+보드 뷰에서 ECAD 드래그 앤 드롭 대체 ** 시각화 - 수동 라이브러리 검색 없이 PartGenie 지원 대안으로 기호와 발자국을 교체합니다。
+
+## 관련
+
+- [통합 개요](/ko-KR/integrations)
+- [EDA 통합](/ko-KR/eda-통합)
+- [BOM management](/ko-KR/bom-management)
+- [KiCad 라이브러리 생성](/ko-KR/kicad-library)

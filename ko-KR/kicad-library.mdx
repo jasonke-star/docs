@@ -1,0 +1,83 @@
+---
+title: "KiCad 라이브러리 생성"
+description: "MPN 에 대해 검증된 KiCad 기호， 풋프린트 및 STEP 3D 를 생성한 다음 라이브러리를 다운로드합니다 (베타)"
+---
+**KiCad 라이브러리 생성 (베타)** 은 PartGenie 의 구성 요소 데이터베이스 및 데이터시트: **Symbol**, **Footprint** 및 **STEP 3D** 에서 파트 라이브러리를 구축하며， 보드에 드롭하기 전에 확인할 수 있는 증거 요약을 추가합니다。
+
+이는 부품 페이지에서 카탈로그 모델을 다운로드하는 것과는 다릅니다. 카탈로그 자산은 구성 요소 **CAD 모델 ** 탭에서 실행됩니다 - [ECAD & footprints](/ko-KR/ecad-models) 를 참조하십시오. 핀， 패드 및 시각적 확인이 연결된 KiCad 네이티브 라이브러리가 필요한 경우 generation 을 사용하십시오。
+
+## 라이브러리 생성
+
+<Steps>
+<단계 제목=“검색에서 시작”>
+app.partgenie.ai(https://app.partgenie.ai) 를 열고 **Search**(작업 아님) 에 머물러 있습니다。
+</Step>
+<Step title=“검증된 라이브러리 요청”>
+프롬프트에서 MPN 및 패키지를 사용합니다：
+
+```
+    generate verified KiCAD for RC0603FR-071KL
+    ```
+
+다음과 같은 특정 MPN 에 대해 * 기호， 발자국 및 3D 모델 * 을 말할 수도 있습니다。`STM32F103RET6`또는`OPA810IDBVR`.
+</Step>
+<Step title=“작업 기다리기”>
+생성하는 데 몇 분 정도 걸릴 수 있습니다. PartGenie 는 생성이 시작되었음을 알려주고 라이브러리가 준비되면 앱 및 이메일로 알려줍니다. 채팅을 종료하고 ** 최근 ** 또는 **⌘K** 에서 다시 시작할 수 있습니다。
+</Step>
+<단계 제목=“검토 기호， 발자국 및 3D”>
+완성된 카드에는 세 가지 미리보기가 표시됩니다：
+
+- **Symbol** - 도식 기호 및 핀 번호
+- ** 풋프린트 ** - 패드 레이아웃 (예: 0603 패드 1 및 2)
+- **3D 모델 ** - STEP 본문
+
+완성된 라이브러리의 상태 칩에는 **KiCad 네이티브 가져오기 **, ** 핀 매핑 ** 및 ** 시각적 감사 ** 가 포함됩니다。
+</Step>
+<Step title=“증거 요약 열기”>
+증거 요약 ** 을 확장합니다. 각 행은 필드 (핀 수， 피치， 본문 크기， 패드 크기), 사용된 값， 출처인 데이터시트 페이지 ** 및 상태입니다：
+
+- ** 계산됨 ** - 데이터시트 또는 패키지 데이터에서 파생됨
+- **Assumed** - 엔진이 채우는 기본값 (피치는 일반적인 값)
+
+**Assumed** 행을 확인해야 하는 항목으로 취급합니다。
+</Step>
+<Step title=“Download”>
+부품 카드에서 **Download** 를 클릭하고 파일을 KiCad 프로젝트 라이브러리로 가져옵니다。
+</Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Generated KiCad card with Symbol, Footprint, 3D Model, and Download"
+    src="/images/kicad-library-generate.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Evidence summary table with datasheet page and Calculated or Assumed status"
+    src="/images/kicad-library-evidence.png"
+  />
+</Frame>
+
+## 제조 출시 전
+
+<경고>
+라이브러리는 **Beta** 입니다. 라이브러리를 사용하기 전에 피치， 패드， 핀 1 및 3D 모델을 데이터시트와 비교해 확인하십시오. 가정된 피치 또는 잘못된 핀-1 표시는 시각적 축소판만으로는 포착되지 않습니다。
+</경고>
+
+- 증거 테이블에서 인용된 데이터시트 페이지를 엽니다 ([데이터시트 인용](/ko-KR/datasheet-citations))
+- 기호와 족적 모두에서 핀 1 확인
+- 문제가 있는 경우 동일한 채팅에서 수정 사항으로 응답하고 - 생성기를 개선할 수 있도록 피드백을 보내세요
+
+## 파일이 나중에 이동하는 위치
+
+다운로드한 라이브러리는 KiCad 로 가져올 수 있습니다. 이를 생성한 채팅은 ** 최근 ** 에 유지됩니다. PartGenie 가 아티팩트를 저장할 때 관련 보고서와 파일도 [Knowledge](/ko-KR/knowledge) 에 저장될 수 있습니다。
+
+## 관련
+
+- [EDA integration](/ko-KR/eda-integration) - KiCad 8 및 기타 도구로 가져오기
+- [Integrations](/ko-KR/integrations)
+- [ECAD & footprints](/ko-KR/ecad-models) - 이미 부분에 있는 카탈로그 모델
+- [Design mode](/ko-KR/design-mode) - 보드를 그리기 전의 아키텍처와 BOM
+- [AI Search](/ko-KR/ai-search)

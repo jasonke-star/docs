@@ -1,0 +1,59 @@
+---
+title: "ライブ-ソーシング"
+description: "リアルタイムの販売代理店の価格と在庫-ワンクリックでソースと購入を切り替える"
+---
+PartGenieは、コンポーネントの詳細、BOMに主要な代理店から**ライブ価格と在庫**を引っ張り、ビューを比較し、検索/代替結果を比較します。
+
+#＃サポートされているライブソース
+
+現在のライブ価格ソースが含まれています（**設定→代理店**の下のいずれかを切り替えます）:
+
+-DigiKey、LCSC、TME、Unikeyic、OnlineComponents、WinSource、矢印
+
+カタログスナップショットは、ライブフィードがまだないソースの場合に表示される場合があります。
+
+<Frame>
+  <img
+    alt="Distributor settings with multiple live pricing sources enabled"
+    src="/images/sourcing-lcsc-arrow.png"
+  />
+</Frame>
+
+##あなたがそれを見る場所
+
+-**コンポーネント調達タブ*—-価格帯、包装、更新時間
+—**BOM/Compare**-在庫と価格の列
+—**検索＆代替**-自信とソースとライブ調達行
+
+# ワンクリック購入
+
+<Steps>
+  <Step title="Open the drawer">
+    Click an MPN badge in an answer, or a part row in the BOM.
+  </Step>
+  <Step title="Open Procurement">
+    The drawer tabs are **Product**, **Procurement**, and **CAD Models**. Stay on **Procurement** for price and stock. **CAD Models** is the footprint library — see [ECAD & footprints](/ja-JP/ecad-models).
+  </Step>
+  <Step title="Pick a package break">
+    Under the distributor name (DigiKey, TME, LCSC, and so on), switch Tape & Reel, Cut Tape, or the equivalent the distributor offers. The price grid updates by quantity.
+  </Step>
+  <Step title="Purchase">
+    Click **Purchase** to open that distributor's product page. The timestamp next to it is when PartGenie last refreshed the quote.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="DigiKey procurement card with Purchase link"
+    src="/images/procurement-purchase-jump.png"
+  />
+</Frame>
+
+##環境設定
+
+ディストリビュータの切り替えは、すべてのビューに適用されます。 別のソースが欲しいですか？ 教えてください-私たちは継続的に代理店を追加しています。 メーカープログラムのパートナーシップも拡大しています。
+
+##関連
+
+-[OpenELAB modules](/ja-JP/openelab—modules)-OpenELAB経由でモジュールとキットを購入する
+-[BOM管理](/ja-JP/bom—management)-ライブデータからの推定BOMコスト

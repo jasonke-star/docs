@@ -1,0 +1,64 @@
+---
+title: "ECAD 與封裝庫"
+description: "在器件 CAD Models 頁簽下載目錄裡的封裝與符號；沒有現成庫時再生成 KiCad"
+---
+
+拿到 ECAD 有三條路，按你要的東西選。
+
+| 你要的 | 入口 |
+| --- | --- |
+| **專業級** symbol、footprint、3D（Altium、Cadence、OrCAD、PADS 等） | 器件抽屜 → **CAD Models** → 選格式 → **Request**（與 [FootprintKu](https://footprintku.com/) 合作） |
+| 目錄裡已有、可直接下載的文件 | 同一 **CAD Models** 頁籤 |
+| 對照規格書生成並校驗過的 KiCad 庫 | [KiCad 庫生成](/zh-Hant/kicad-library) |
+
+## 下載目錄模型
+
+<Steps>
+  <Step title="打開器件">
+    搜索 MPN，點擊回答裡的 **MPN 角標**或器件卡片，打開器件抽屜。
+  </Step>
+  <Step title="切到 CAD Models">
+    抽屜頁籤是 **Product**、**Procurement**、**CAD Models**。Procurement 是實時價格和庫存。**CAD Models** 是這顆料的封裝庫。
+  </Step>
+  <Step title="選擇 EDA 格式">
+    在格式下拉里選 **Altium 18**、**Cadence**、**OrCAD**、**PADS** 或列出的 **KiCad** 等。
+  </Step>
+  <Step title="Request 或下載">
+    對 schematic symbol、PCB footprint、STEP 3D 點 **Request**，由 FootprintKu 交付該 MPN 的專業模型；若目錄裡已有文件則直接下載。
+
+    不是每顆 MPN 都有全部格式。若為空，請走 [KiCad 生成](/zh-Hant/kicad-library)，不要用通用 0603 湊合。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="CAD Models：Altium 格式，Request 符號、封裝與 STEP 3D"
+    src="/images/footprintku-ecad-cad-models.png"
+  />
+</Frame>
+
+## 什麼時候改為生成
+
+下面情況用 KiCad 生成：
+
+- CAD Models 裡沒有這顆精確 MPN 和封裝的文件
+- 你要 Symbol、Footprint、STEP 一起給，並且每項能對上規格書頁碼（引腳數、本體、焊盤、pitch）
+- 你要在擺進原理圖之前看到 **KiCad native import** 一類校驗
+
+在 Search 裡輸入：
+
+```
+generate verified KiCAD for RC0603FR-071KL
+```
+
+完整步驟見 [KiCad 庫生成](/zh-Hant/kicad-library)。
+
+<Warning>
+  目錄封裝和生成庫可能在焊盤或 Pin 1 上不一致。要投板的料，以規格書對應頁為準，不要只拿兩個文件互相比較。
+</Warning>
+
+## 相關文檔
+
+- [KiCad 庫生成](/zh-Hant/kicad-library)
+- [實時採購](/zh-Hant/live-sourcing) — CAD Models 旁邊的 Procurement 頁籤
+- [規格書頁碼溯源](/zh-Hant/datasheet-citations)

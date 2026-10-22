@@ -1,0 +1,60 @@
+---
+title: "AI が理解できるクエリの記述方法"
+description: "検索、代替手段、仕事、料金に関するより明確な PartGenie クエリを記述する"
+---
+優れたクエリでは、より良く、検証可能な回答が得られます。これらのパターンを **Search** または **Work** で使用してください。
+
+## コアパターン
+
+** タイプ + キーパラメーター+ 制約 + コンテキスト **
+
+```
+Need an N-channel MOSFET, ≥60V, ≥20A, TO-220, for 12V motor drive, industrial temp
+```
+
+## する/しない
+
+| 好む | 避ける |
+| ---| ---|
+| 正確な MPN を持っていれば (`STM32F103C8T6`) |「マイクロコントローラー」|
+| 単位を使用した数値 (`3.3V`,`1A`,`SOT-23`) |「小さくて安い」のみ |
+| アプリケーション制約 (`4.5A USB charge`、`automotive`) | 代替案を求める際の使用事例なし |
+| 質問ごとに 1 つの目標 | 関連のない 5 つの質問を混ぜ合わせる |
+
+## クエリーレシピ
+
+** 検索/仕様 **
+
+```
+STM32F103C8T6 operating voltage and absolute maximum ratings
+```
+
+** 代替 ** (制約についての説明を期待する)
+
+```
+Alternative to BQ24195 for 4.5A USB charging, VQFN preferred
+```
+
+** 仕事/BOM**
+
+```
+Analyze top risks from this BOM and suggest adopts for NRND lines
+```
+
+** 料金 **
+
+```
+Check tariff for 74HC595 made in China entering the US
+```
+
+## 回答の後
+
+- ** 引用バッジ ** をクリックして確認します
+- 置換の場合は、制約カードを確認またはスキップします—コンテキストにより適合性が向上します
+- 質問が *your* スキーマまたはアプリメモに依存する場合に知識ファイルを添付する
+
+## 関連
+
+- [AI Search](/ja-JP/ai-search)
+- [機能例](/ja-JP/feature-examples)
+- [あいまいな意図から正確な解決策へ](/ja-JP/fuzzy-to-precise)

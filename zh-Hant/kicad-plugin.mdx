@@ -1,0 +1,91 @@
+---
+title: "KiCad 插件"
+description: "在 KiCad 內查看器件、同步 BOM 健康度並獲取 ECAD"
+---
+
+**PartGenie KiCad 插件**把器件 intelligence 帶進 KiCad PCB 編輯器，不用離開當前工程。
+
+在 **[app.partgenie.ai](https://app.partgenie.ai) → 設置 → 集成 → KiCad** 下載並安裝。
+
+## 安裝
+
+<Steps>
+  <Step title="打開集成">
+    登錄 [app.partgenie.ai](https://app.partgenie.ai)，進入 **設置 → 集成**。
+  </Step>
+  <Step title="下載 KiCad 插件">
+    選擇 **KiCad**，下載插件包，並按頁面說明完成與你係統和 KiCad 版本對應的安裝。
+  </Step>
+  <Step title="在 KiCad 內登錄">
+    在 KiCad 中打開 PartGenie 面板，使用與網頁相同的 PartGenie 賬號登錄。
+  </Step>
+</Steps>
+
+## Part inspect（器件檢視）
+
+在 KiCad 裡選中封裝或符號，點 **Inspect selection**，或在 PartGenie 面板中打開該位號。
+
+<Frame>
+  <img
+    alt="KiCad 插件 Product 頁：SM04B-SRSS-TB 參數、Add to BOM、View on PartGenie"
+    src="/images/kicad-plugin-part-inspect.png"
+  />
+</Frame>
+
+器件面板頁籤：
+
+| 頁籤 | 內容 |
+| --- | --- |
+| **Product** | 詳細參數、生命週期狀態、簡介 |
+| **Alternatives** | 帶依據的替代料（與網頁 Search 同源） |
+| **Procurement** | 市場價格與庫存（有數據的分銷商） |
+| **CAD Models** | 目錄 ECAD，或 **Generate KiCad** 生成 symbol / footprint |
+
+<Frame>
+  <img
+    alt="CAD Models：Generate KiCad、原理圖符號與 PCB 封裝 Request"
+    src="/images/kicad-plugin-cad-models.png"
+  />
+</Frame>
+
+**View on PartGenie** 打開完整器件頁、規格書對話與更深的研究。**Add to BOM** 把料加入 PartGenie 項目 BOM。
+
+## Work — BOM 同步與健康度
+
+將插件切到 **Work**，針對當前 KiCad 工程操作。
+
+<Frame>
+  <img
+    alt="KiCad Work：StickHub 工程 BOM 已同步 93 行，Inspect selection 與 Sync project BOM"
+    src="/images/kicad-plugin-work-bom-sync.png"
+  />
+</Frame>
+
+<Steps>
+  <Step title="同步工程 BOM">
+    點擊 **Sync project BOM**。PartGenie 從 KiCad 原理圖讀取行並創建或更新賬號中的 BOM（例如 “BOM synced (93 lines)”）。
+  </Step>
+  <Step title="打開 BOM health">
+    在同步提示或 Work 對話裡進入 **BOM health**，查看匹配率、風險與預估成本。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM health：綜合分 86%、匹配/未匹配、預估價格、風險項"
+    src="/images/kicad-plugin-bom-health.png"
+  />
+</Frame>
+
+健康度包含綜合分、Matched / Unmatched、價格區間、品類分佈與風險（如 Unmatched MPN）。可在網頁端用同一項目繼續分析。
+
+## 即將支持
+
+板級可視化 **ECAD 拖拽替換**——在視圖裡直接換 symbol / footprint，用 PartGenie 推薦的替代料，減少手工找庫。
+
+## 相關
+
+- [集成總覽](/zh-Hant/integrations)
+- [EDA 集成](/zh-Hant/eda-integration)
+- [BOM 管理](/zh-Hant/bom-management)
+- [KiCad 庫生成](/zh-Hant/kicad-library)

@@ -1,0 +1,87 @@
+---
+title: "KiCadライブラリの生成"
+description: "Mpnの検証済みのkicadシンボル、フットプリント、およびステップ3Dを生成し、ライブラリ（ベータ版）をダウンロードします。"
+---
+**Kicadライブラリ生成(ベータ版)**PartGenieのコンポーネントデータベースとデータシートから部品ライブラリを構築します。**Symbol**、**Footprint**、および**STEP3D**、さらにボードにドロップする前に確認
+
+これは、部品ページでカタログモデルをダウンロードするのとは異なります。 カタログアセットは、コンポーネント**CADモデル**タブに表示されます-[ECADとフットプリント](/ja-JP/ecad-models)を参照してください。 ピン、パッド、および視覚的なチェックが添付されたKiCadネイティブライブラリが必要な場合は、generationを使用します。
+
+##ライブラリを生成する
+
+<Steps>
+  <Step title="Start from Search">
+    Open [app.partgenie.ai](https://app.partgenie.ai) and stay on **Search** (not Work).
+  </Step>
+  <Step title="Ask for a verified library">
+    Use the MPN and package in the prompt:
+
+    
+__P0__
+
+
+    You can also say *symbol, footprint, and 3D model* for a specific MPN such as 
+__P1__
+ or 
+__P2__
+.
+  </Step>
+  <Step title="Wait for the job">
+    Generation can take a few minutes. PartGenie tells you it has started and notifies you **in the app and by email** when the library is ready. You can leave the chat and come back from **Recents** or **⌘K**.
+  </Step>
+  <Step title="Review Symbol, Footprint, and 3D">
+    The finished card shows three previews:
+
+    - **Symbol** — schematic symbol and pin numbers
+    - **Footprint** — pad layout (for example 0603 pads 1 and 2)
+    - **3D Model** — STEP body
+
+    Status chips on a finished library include **KiCad native import**, **Pin mapping**, and **Visual audit**.
+  </Step>
+  <Step title="Open the evidence summary">
+    Expand **Evidence summary**. Each row is a field (pin count, pitch, body size, pad size), the value used, the **datasheet page** it came from, and a status:
+
+    - **Calculated** — derived from datasheet or package data
+    - **Assumed** — a default the engine filled in (pitch is a common one)
+
+    Treat **Assumed** rows as items you must confirm.
+  </Step>
+  <Step title="Download">
+    Click **Download** on the part card and import the files into your KiCad project libraries.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Generated KiCad card with Symbol, Footprint, 3D Model, and Download"
+    src="/images/kicad-library-generate.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Evidence summary table with datasheet page and Calculated or Assumed status"
+    src="/images/kicad-library-evidence.png"
+  />
+</Frame>
+
+##リリースする前に
+
+<警告>
+  ライブラリは**ベータ**です。 使用する前に、ピッチ、パッド、ピン1、および3Dモデルをデータシートに対して確認してください。 想定されるピッチまたは間違ったピン-1マークは、視覚的なサムネイルだけではキャッチされません。
+</警告>
+
+-証拠表から引用データシートのページを開きます([データシート引用](/ja-JP/データシート-引用)を参照)
+-シンボルとフットプリントの両方のピン1を確認する
+—何かが間違っている場合は、修正と同じチャットで返信-と発電機が改善できるようにフィードバックを送信します
+
+##ファイルはその後どこに行くのか
+
+ダウンロードしたライブラリは、kicadにインポートするためにあなたのものです。 それらを生成したチャットは**Recents**にとどまります。 関連するレポートやファイルは、PartGenieがアーティファクトを保存するときに[Knowledge](/ja-JP/knowledge)に配置することもできます。
+
+##関連
+
+-[EDA integration](/ja-JP/eda-integration)-KiCad8およびその他のツールへのインポート
+-[統合](/ja-JP/integrations)
+-[ECAD&footprints](/ja-JP/ecad-models)-カタログモデルはすでに一部にあります
+-[デザインモード](/ja-JP/design-mode)-ボードを描画する前のアーキテクチャとBOM
+-[AI検索](/ja-JP/ai-search)

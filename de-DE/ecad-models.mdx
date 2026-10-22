@@ -1,0 +1,63 @@
+---
+title: "ECAD & Fußabdrücke"
+description: "Öffnen Sie die Registerkarte CAD-Modelle eines Teils für Katalogfußabdrücke und Symbole oder generieren Sie eine KiCad-Bibliothek, wenn Sie eine erstellen möchten"
+---
+PartGenie hat drei Möglichkeiten, ECAD für ein Teil zu erhalten. Verwenden Sie diejenige, die Ihren Bedürfnissen entspricht.
+
+/ Du brauchst / Wo |
+| --- | --- |
+/ ** Professional ** Symbol, Footprint und 3D für Altium, Cadence, OrCAD, PADS und mehr / Komponentenschublade → ** CAD-Modelle ** → Format auswählen → ** Anfordern ** (über [FootprintKu] (https://footprintku.com /) partnerschaft) |
+/ Katalogelemente, die bereits gespeichert sind / Gleiche ** CAD-Modelle ** Registerkarte, wenn Dateien zum Herunterladen aufgelistet sind |
+/ Eine KiCad Bibliothek generiert und gegen das Datenblatt geprüft | [KiCad Bibliothek generation](/de-DE/kicad-library) |
+
+## Holen Sie sich ein Katalogmodell
+
+<Steps>
+  <Step title="Open the part">
+    Search the MPN, then click the **MPN badge** in the answer or the part card. That opens the component drawer.
+  </Step>
+  <Step title="Switch to CAD Models">
+    The drawer tabs are **Product**, **Procurement**, and **CAD Models**. Procurement is live price and stock. **CAD Models** is the footprint library for that part.
+  </Step>
+  <Step title="Pick your EDA format">
+    Use the format dropdown (for example **Altium 18**, **Cadence**, **OrCAD**, **PADS**, or **KiCad** when listed).
+  </Step>
+  <Step title="Request or download">
+    Click **Request** for schematic symbol, PCB footprint, or STEP 3D when FootprintKu fulfills professional models for that MPN. Download directly when a catalog file is already available.
+
+    Not every MPN has every format. If nothing is listed, use [KiCad generation](/de-DE/kicad-library) instead of guessing a generic 0603.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="CAD Models: Altium format, Request schematic symbol, footprint, and STEP 3D"
+    src="/images/footprintku-ecad-cad-models.png"
+  />
+</Frame>
+
+## Wann stattdessen generiert werden soll
+
+Erstellen Sie eine KiCad-Bibliothek, wenn:
+
+- CAD-Modelle haben keine Datei für genau diese MPN und dieses Paket
+- Sie benötigen Symbol + Footprint + SCHRITT zusammen mit einer Beweistabelle (Pinanzahl, Körper, Pad, Pitch), die an eine Datenblattseite gebunden ist
+- Sie möchten **KiCad nativen Import** Prüfungen, bevor Sie das Teil platzieren
+
+Fragen Sie auf der Suche:
+
+```
+generate verified KiCAD for RC0603FR-071KL
+```
+
+Vollständige Schritte: [Erzeugung der KiCad-Bibliothek](/de-DE/kicad-Bibliothek).
+
+<Warnung>
+  Ein Katalog-Footprint und eine generierte Bibliothek können in Bezug auf Pad-Größe oder Pin 1 nicht übereinstimmen. Für alles, was Sie herstellen werden, überprüfen Sie beide auf der Datenblattseite, nicht gegeneinander.
+</Warnung>
+
+## Zusammenhang
+
+- [Generierung der KiCad Bibliothek](/de-DE/kicad-bibliothek)
+- [Live-Beschaffung] —/de-DE /live-Beschaffung) - die Registerkarte Beschaffung neben CAD-Modellen
+- [Datenblattzitate](/de-US/Datenblattzitate)

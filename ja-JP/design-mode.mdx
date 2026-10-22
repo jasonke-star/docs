@@ -1,0 +1,78 @@
+---
+title: "デザインモード"
+description: "概要から計画、アーキテクチャ、BOM、およびマルチビュー画像まで、ハードウェアの概念を説明します"
+---
+**デザイン**レビュー可能なパックにハードウェアのアイデアをオンにします：簡単な、計画（あなたが選ぶスキームと）、アーキテクチャ、初期BOM、および画像。 それはまだベータ版です。
+
+##デザインを開始する
+
+<Steps>
+  <Step title="Open Design">
+    On the homepage, click **Design Hardware**, or choose **Work** and describe the product. You can also use a **Design** follow-up under a component answer to start from that part.
+  </Step>
+  <Step title="Describe the product">
+    Say what it is, the constraints that matter, and who it is for. Example: a robot vacuum with a height limit, LiDAR, and a mid-range cost target.
+  </Step>
+  <Step title="Follow the stages">
+    The canvas lists the stages as they finish: **Brief → Plan → Architecture → BOM → Image**. A green check means that stage is complete. Click a stage to open it.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Design stages Brief, Plan, Architecture, BOM, and Image marked complete"
+    src="/images/design-plan-steps.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Chat follow-up that starts hardware design from a component"
+    src="/images/chat-design-followup.png"
+  />
+</Frame>
+
+##計画を見直す
+
+**計画**は、パックの残りの部分が最終的なものとして扱われる前に方向を選択する場所です。
+
+プランページには次のように示されます:
+
+-**目標*—-ハードウェアが何をしなければならないか
+—**メトリック**-そのような高さ、吸引、バッテリー、充電電流などの数字
+—**制約**-認証、コスト、環境、電源、サイズ
+-**スキーム**-複数のアーキテクチャ。 1つは**アクティブとマークされています**
+
+スキームに関する注意：*方向としてスキームを選択します。 オプションを変更するには、チャットで確認してください。*
+
+上部にあるステージタブ（**計画**、およびアーキテクチャ/BOM/イメージの横にあるカウント）を使用します。 **使用**選択範囲を適用します。 **エクスポート**パックをダウンロードします。
+
+<Frame>
+  <img
+    alt="Plan review with goals, metrics, constraints, and an active architecture scheme"
+    src="/images/design-plan-review.png"
+  />
+</Frame>
+
+##画像
+
+**画像**ステージは複数のビューを表示できます。 大きなフレームは現在のビューです（多くの場合、**Hero**とラベル付けされています）。 スイッチの角度の下のサムネイル。 サムネイルをクリックして、そのビューを確認します。
+
+<Frame>
+  <img
+    alt="Hero product image with additional view thumbnails"
+    src="/images/design-image-multiview.jpg"
+  />
+</Frame>
+
+##パックが存在した後
+
+-デザインからの最初のBOMを開いて、他のBOMのようにチェックすることができます：健康、ライブ株式、選択肢。 [BOM管理](/ja-JP/bom-management)を参照してください。
+-あなたがレイアウトする部品は別にECADを必要とします：**CADモデル**上のカタログファイル、または生成されたライブラ [ECADとフットプリント](/ja-JP/ecad-models)および[kicadライブラリ生成](/ja-JP/kicad-library)を参照してください。
+-デザインは、**クレジット**を費やしています。 [メンバーシップと価格設定](/ja-JP/membership-pricing)を参照してください。
+
+##関連
+
+-[PartGenie Work](/ja-JP/partgenie-work)
+-[KiCadライブラリ生成](/ja-US/kicad-library)
+-[知識](/ja-JP/知識)

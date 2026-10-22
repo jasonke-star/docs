@@ -223,6 +223,648 @@
             "href": "https://partgenie.ai/"
           }
         }
+      },
+      {
+        "language": "zh-Hant",
+        "groups": [
+          {
+            "group": "快速入門",
+            "pages": [
+              "zh-Hant/index",
+              "zh-Hant/getting-started",
+              "zh-Hant/faq",
+              "zh-Hant/changelog",
+              "zh-Hant/contact-us"
+            ]
+          },
+          {
+            "group": "搜尋與回答",
+            "pages": [
+              "zh-Hant/ai-search",
+              "zh-Hant/engineering-calculator",
+              "zh-Hant/alternatives",
+              "zh-Hant/product-comparison",
+              "zh-Hant/datasheet-citations",
+              "zh-Hant/specification-chat"
+            ]
+          },
+          {
+            "group": "專案與 BOM",
+            "pages": [
+              "zh-Hant/partgenie-work",
+              "zh-Hant/bom-management",
+              "zh-Hant/design-mode",
+              "zh-Hant/kicad-library",
+              "zh-Hant/ecad-models",
+              "zh-Hant/knowledge"
+            ]
+          },
+          {
+            "group": "採購與合規",
+            "pages": [
+              "zh-Hant/live-sourcing",
+              "zh-Hant/tariff-lookup",
+              "zh-Hant/openelab-modules"
+            ]
+          },
+          {
+            "group": "整合",
+            "pages": [
+              "zh-Hant/integrations",
+              "zh-Hant/chrome-extension",
+              "zh-Hant/eda-integration",
+              "zh-Hant/kicad-plugin"
+            ]
+          },
+          {
+            "group": "協作與 App",
+            "pages": [
+              "zh-Hant/share",
+              "zh-Hant/favorites",
+              "zh-Hant/mobile-app"
+            ]
+          },
+          {
+            "group": "帳戶與訂閱",
+            "pages": [
+              "zh-Hant/account-management",
+              "zh-Hant/membership-pricing",
+              "zh-Hant/account-troubleshooting"
+            ]
+          },
+          {
+            "group": "最佳實務",
+            "pages": [
+              "zh-Hant/feature-examples",
+              "zh-Hant/ai-query-writing",
+              "zh-Hant/fuzzy-to-precise",
+              "zh-Hant/search-optimization",
+              "zh-Hant/effective-bom-management"
+            ]
+          }
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Community",
+              "href": "https://wa.me/17342391845",
+              "icon": "whatsapp"
+            },
+            {
+              "anchor": "Home",
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            }
+          ]
+        },
+        "navbar": {
+          "links": [
+            {
+              "label": "支援",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "登入",
+            "href": "https://partgenie.ai/"
+          }
+        }
+      },
+      {
+        "language": "de",
+        "groups": [
+          {
+            "group": "Erste Schritte",
+            "pages": [
+              "de-DE/index",
+              "de-DE/getting-started",
+              "de-DE/faq",
+              "de-DE/changelog",
+              "de-DE/contact-us"
+            ]
+          },
+          {
+            "group": "Suche & Antworten",
+            "pages": [
+              "de-DE/ai-search",
+              "de-DE/engineering-calculator",
+              "de-DE/alternatives",
+              "de-DE/product-comparison",
+              "de-DE/datasheet-citations",
+              "de-DE/specification-chat"
+            ]
+          },
+          {
+            "group": "Projekte & BOM",
+            "pages": [
+              "de-DE/partgenie-work",
+              "de-DE/bom-management",
+              "de-DE/design-mode",
+              "de-DE/kicad-library",
+              "de-DE/ecad-models",
+              "de-DE/knowledge"
+            ]
+          },
+          {
+            "group": "Beschaffung & Compliance",
+            "pages": [
+              "de-DE/live-sourcing",
+              "de-DE/tariff-lookup",
+              "de-DE/openelab-modules"
+            ]
+          },
+          {
+            "group": "Integrationen",
+            "pages": [
+              "de-DE/integrations",
+              "de-DE/chrome-extension",
+              "de-DE/eda-integration",
+              "de-DE/kicad-plugin"
+            ]
+          },
+          {
+            "group": "Zusammenarbeit & Apps",
+            "pages": [
+              "de-DE/share",
+              "de-DE/favorites",
+              "de-DE/mobile-app"
+            ]
+          },
+          {
+            "group": "Konto & Mitgliedschaft",
+            "pages": [
+              "de-DE/account-management",
+              "de-DE/membership-pricing",
+              "de-DE/account-troubleshooting"
+            ]
+          },
+          {
+            "group": "Best Practices",
+            "pages": [
+              "de-DE/feature-examples",
+              "de-DE/ai-query-writing",
+              "de-DE/fuzzy-to-precise",
+              "de-DE/search-optimization",
+              "de-DE/effective-bom-management"
+            ]
+          }
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Community",
+              "href": "https://wa.me/17342391845",
+              "icon": "whatsapp"
+            },
+            {
+              "anchor": "Home",
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            }
+          ]
+        },
+        "navbar": {
+          "links": [
+            {
+              "label": "Support",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Anmelden",
+            "href": "https://partgenie.ai/"
+          }
+        }
+      },
+      {
+        "language": "ja",
+        "groups": [
+          {
+            "group": "はじめに",
+            "pages": [
+              "ja-JP/index",
+              "ja-JP/getting-started",
+              "ja-JP/faq",
+              "ja-JP/changelog",
+              "ja-JP/contact-us"
+            ]
+          },
+          {
+            "group": "検索と回答",
+            "pages": [
+              "ja-JP/ai-search",
+              "ja-JP/engineering-calculator",
+              "ja-JP/alternatives",
+              "ja-JP/product-comparison",
+              "ja-JP/datasheet-citations",
+              "ja-JP/specification-chat"
+            ]
+          },
+          {
+            "group": "プロジェクトと BOM",
+            "pages": [
+              "ja-JP/partgenie-work",
+              "ja-JP/bom-management",
+              "ja-JP/design-mode",
+              "ja-JP/kicad-library",
+              "ja-JP/ecad-models",
+              "ja-JP/knowledge"
+            ]
+          },
+          {
+            "group": "調達とコンプライアンス",
+            "pages": [
+              "ja-JP/live-sourcing",
+              "ja-JP/tariff-lookup",
+              "ja-JP/openelab-modules"
+            ]
+          },
+          {
+            "group": "連携",
+            "pages": [
+              "ja-JP/integrations",
+              "ja-JP/chrome-extension",
+              "ja-JP/eda-integration",
+              "ja-JP/kicad-plugin"
+            ]
+          },
+          {
+            "group": "コラボレーションとアプリ",
+            "pages": [
+              "ja-JP/share",
+              "ja-JP/favorites",
+              "ja-JP/mobile-app"
+            ]
+          },
+          {
+            "group": "アカウントとメンバーシップ",
+            "pages": [
+              "ja-JP/account-management",
+              "ja-JP/membership-pricing",
+              "ja-JP/account-troubleshooting"
+            ]
+          },
+          {
+            "group": "ベストプラクティス",
+            "pages": [
+              "ja-JP/feature-examples",
+              "ja-JP/ai-query-writing",
+              "ja-JP/fuzzy-to-precise",
+              "ja-JP/search-optimization",
+              "ja-JP/effective-bom-management"
+            ]
+          }
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Community",
+              "href": "https://wa.me/17342391845",
+              "icon": "whatsapp"
+            },
+            {
+              "anchor": "Home",
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            }
+          ]
+        },
+        "navbar": {
+          "links": [
+            {
+              "label": "サポート",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "ログイン",
+            "href": "https://partgenie.ai/"
+          }
+        }
+      },
+      {
+        "language": "ko",
+        "groups": [
+          {
+            "group": "시작하기",
+            "pages": [
+              "ko-KR/index",
+              "ko-KR/getting-started",
+              "ko-KR/faq",
+              "ko-KR/changelog",
+              "ko-KR/contact-us"
+            ]
+          },
+          {
+            "group": "검색 및 답변",
+            "pages": [
+              "ko-KR/ai-search",
+              "ko-KR/engineering-calculator",
+              "ko-KR/alternatives",
+              "ko-KR/product-comparison",
+              "ko-KR/datasheet-citations",
+              "ko-KR/specification-chat"
+            ]
+          },
+          {
+            "group": "프로젝트 및 BOM",
+            "pages": [
+              "ko-KR/partgenie-work",
+              "ko-KR/bom-management",
+              "ko-KR/design-mode",
+              "ko-KR/kicad-library",
+              "ko-KR/ecad-models",
+              "ko-KR/knowledge"
+            ]
+          },
+          {
+            "group": "소싱 및 규정 준수",
+            "pages": [
+              "ko-KR/live-sourcing",
+              "ko-KR/tariff-lookup",
+              "ko-KR/openelab-modules"
+            ]
+          },
+          {
+            "group": "통합",
+            "pages": [
+              "ko-KR/integrations",
+              "ko-KR/chrome-extension",
+              "ko-KR/eda-integration",
+              "ko-KR/kicad-plugin"
+            ]
+          },
+          {
+            "group": "협업 및 앱",
+            "pages": [
+              "ko-KR/share",
+              "ko-KR/favorites",
+              "ko-KR/mobile-app"
+            ]
+          },
+          {
+            "group": "계정 및 멤버십",
+            "pages": [
+              "ko-KR/account-management",
+              "ko-KR/membership-pricing",
+              "ko-KR/account-troubleshooting"
+            ]
+          },
+          {
+            "group": "모범 사례",
+            "pages": [
+              "ko-KR/feature-examples",
+              "ko-KR/ai-query-writing",
+              "ko-KR/fuzzy-to-precise",
+              "ko-KR/search-optimization",
+              "ko-KR/effective-bom-management"
+            ]
+          }
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Community",
+              "href": "https://wa.me/17342391845",
+              "icon": "whatsapp"
+            },
+            {
+              "anchor": "Home",
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            }
+          ]
+        },
+        "navbar": {
+          "links": [
+            {
+              "label": "지원",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "로그인",
+            "href": "https://partgenie.ai/"
+          }
+        }
+      },
+      {
+        "language": "fr",
+        "groups": [
+          {
+            "group": "Premiers pas",
+            "pages": [
+              "fr-FR/index",
+              "fr-FR/getting-started",
+              "fr-FR/faq",
+              "fr-FR/changelog",
+              "fr-FR/contact-us"
+            ]
+          },
+          {
+            "group": "Recherche et réponses",
+            "pages": [
+              "fr-FR/ai-search",
+              "fr-FR/engineering-calculator",
+              "fr-FR/alternatives",
+              "fr-FR/product-comparison",
+              "fr-FR/datasheet-citations",
+              "fr-FR/specification-chat"
+            ]
+          },
+          {
+            "group": "Projets et BOM",
+            "pages": [
+              "fr-FR/partgenie-work",
+              "fr-FR/bom-management",
+              "fr-FR/design-mode",
+              "fr-FR/kicad-library",
+              "fr-FR/ecad-models",
+              "fr-FR/knowledge"
+            ]
+          },
+          {
+            "group": "Approvisionnement et conformité",
+            "pages": [
+              "fr-FR/live-sourcing",
+              "fr-FR/tariff-lookup",
+              "fr-FR/openelab-modules"
+            ]
+          },
+          {
+            "group": "Intégrations",
+            "pages": [
+              "fr-FR/integrations",
+              "fr-FR/chrome-extension",
+              "fr-FR/eda-integration",
+              "fr-FR/kicad-plugin"
+            ]
+          },
+          {
+            "group": "Collaboration et apps",
+            "pages": [
+              "fr-FR/share",
+              "fr-FR/favorites",
+              "fr-FR/mobile-app"
+            ]
+          },
+          {
+            "group": "Compte et abonnement",
+            "pages": [
+              "fr-FR/account-management",
+              "fr-FR/membership-pricing",
+              "fr-FR/account-troubleshooting"
+            ]
+          },
+          {
+            "group": "Bonnes pratiques",
+            "pages": [
+              "fr-FR/feature-examples",
+              "fr-FR/ai-query-writing",
+              "fr-FR/fuzzy-to-precise",
+              "fr-FR/search-optimization",
+              "fr-FR/effective-bom-management"
+            ]
+          }
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Community",
+              "href": "https://wa.me/17342391845",
+              "icon": "whatsapp"
+            },
+            {
+              "anchor": "Home",
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            }
+          ]
+        },
+        "navbar": {
+          "links": [
+            {
+              "label": "Assistance",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Se connecter",
+            "href": "https://partgenie.ai/"
+          }
+        }
+      },
+      {
+        "language": "es-MX",
+        "groups": [
+          {
+            "group": "Primeros pasos",
+            "pages": [
+              "es-MX/index",
+              "es-MX/getting-started",
+              "es-MX/faq",
+              "es-MX/changelog",
+              "es-MX/contact-us"
+            ]
+          },
+          {
+            "group": "Búsqueda y respuestas",
+            "pages": [
+              "es-MX/ai-search",
+              "es-MX/engineering-calculator",
+              "es-MX/alternatives",
+              "es-MX/product-comparison",
+              "es-MX/datasheet-citations",
+              "es-MX/specification-chat"
+            ]
+          },
+          {
+            "group": "Proyectos y BOM",
+            "pages": [
+              "es-MX/partgenie-work",
+              "es-MX/bom-management",
+              "es-MX/design-mode",
+              "es-MX/kicad-library",
+              "es-MX/ecad-models",
+              "es-MX/knowledge"
+            ]
+          },
+          {
+            "group": "Abastecimiento y cumplimiento",
+            "pages": [
+              "es-MX/live-sourcing",
+              "es-MX/tariff-lookup",
+              "es-MX/openelab-modules"
+            ]
+          },
+          {
+            "group": "Integraciones",
+            "pages": [
+              "es-MX/integrations",
+              "es-MX/chrome-extension",
+              "es-MX/eda-integration",
+              "es-MX/kicad-plugin"
+            ]
+          },
+          {
+            "group": "Colaboración y apps",
+            "pages": [
+              "es-MX/share",
+              "es-MX/favorites",
+              "es-MX/mobile-app"
+            ]
+          },
+          {
+            "group": "Cuenta y membresía",
+            "pages": [
+              "es-MX/account-management",
+              "es-MX/membership-pricing",
+              "es-MX/account-troubleshooting"
+            ]
+          },
+          {
+            "group": "Mejores prácticas",
+            "pages": [
+              "es-MX/feature-examples",
+              "es-MX/ai-query-writing",
+              "es-MX/fuzzy-to-precise",
+              "es-MX/search-optimization",
+              "es-MX/effective-bom-management"
+            ]
+          }
+        ],
+        "global": {
+          "anchors": [
+            {
+              "anchor": "Community",
+              "href": "https://wa.me/17342391845",
+              "icon": "whatsapp"
+            },
+            {
+              "anchor": "Home",
+              "href": "https://partgenie.ai/",
+              "icon": "newspaper"
+            }
+          ]
+        },
+        "navbar": {
+          "links": [
+            {
+              "label": "Soporte",
+              "href": "mailto:support@partgenie.ai"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Iniciar sesión",
+            "href": "https://partgenie.ai/"
+          }
+        }
       }
     ]
   },

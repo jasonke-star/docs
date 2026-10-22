@@ -1,0 +1,50 @@
+---
+title: "Trabajo de PartGenie"
+description: "Analice y actúe en la lista de materiales o diseñe proyectos directamente en el chat principal"
+---
+** Trabajo * * está en modo proyecto en la página de inicio. Cargue una lista de materiales, pegue una lista de piezas o abra un proyecto existente, luego analice los riesgos, obtenga alternativas y aplique cambios sin abandonar la conversación.
+
+## Cambiar al trabajo
+
+En la entrada de la página de inicio, seleccione * * Trabajo * * (vs * * Buscar**). Adjunte un archivo BOM o pegue una lista de piezas, luego pregunte algo como:
+
+```
+Analyze top risks from this BOM.
+```
+
+<Frame>
+  <img
+    alt="Work mode with BOM attached and risk analysis prompt"
+    src="/images/partgenie-work-input.png"
+  />
+</Frame>
+
+## Qué puede hacer el trabajo por los proyectos de la lista de materiales
+
+- **Análisis de riesgos * * - EOL/ NRND, cero existencias, datos de abastecimiento faltantes, fabricantes no reconocidos
+- **Informe de salud de la lista de materiales** — distribución de categorías, recuentos de riesgos, próximos pasos sugeridos
+- **Alternativas * * - recomendar reemplazos y * * Adoptarlos * * en el proyecto
+- **Chatear con contexto * * - haga referencia a las líneas de lista de materiales seleccionadas para que el agente tenga contexto de la cadena de suministro
+
+<Frame>
+  <img
+    alt="Work chat showing BOM risks and NRND flags"
+    src="/images/partgenie-work-risks.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="BOM overview with Adopt buttons for alternatives"
+    src="/images/partgenie-work-adopt.png"
+  />
+</Frame>
+
+## Proyectos de diseño
+
+En el trabajo, un diseño se ejecuta como etapas que puede abrir: * * Resumen**, * * Plan**, * * Arquitectura**, * * Lista de materiales**,**Imagen**. En el plan, elija un esquema (uno es * * Activo**), luego * * Use* * o * * Export**. La imagen admite más de una vista. Consulte [Modo de diseño] (/en-US / design-mode).
+
+## Consejos
+
+- Prefiera * * Trabajar * * cuando el objetivo es cambiar un proyecto; use * * Buscar * * para preguntas y respuestas abiertas sobre componentes
+- Después de adoptar, revise [Cambios en la lista de materiales / precio estimado] (/en-US / bom-management) antes de bloquear una revisión

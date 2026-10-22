@@ -1,0 +1,53 @@
+---
+title: "功能示例"
+description: "把 Search、Work、BOM、Design 與採購串起來的端到端場景"
+---
+
+以下是常見 PartGenie 工作流的簡短配方，可按項目改寫。
+
+## 1. 帶證據選型
+
+1. 在 **Search** 提問：*STM32F103C8T6 工作電壓*
+2. 點擊回答中的**頁碼引用**核對規格書表格
+3. 點擊 MPN 角標 → 器件抽屜 → 查看實時庫存/價格
+4. 需要複用時加入 Collection
+
+文檔：[AI 智能搜索](/zh-Hant/ai-search)、[規格書頁碼溯源](/zh-Hant/datasheet-citations)
+
+## 2. 替換 BOM 風險行
+
+1. 切換 **Work**，附加 BOM（CSV/Excel）
+2. 提問：*Analyze top risks from this BOM*
+3. 對 NRND 行打開替代料，按提示確認應用約束
+4. **Adopt** 候選料，再看 **Changes** 與 **Est. price**
+
+文檔：[PartGenie Work](/zh-Hant/partgenie-work)、[BOM 管理](/zh-Hant/bom-management)、[替代料](/zh-Hant/alternatives)
+
+## 3. 下單前做成本與產地核對
+
+1. 打開目標 MPN 的 Procurement，在設置中開關分銷商
+2. 點擊 **Purchase** 跳轉 DigiKey / LCSC / Arrow 等
+3. 如需，用 **Tariff lookup** 按原產國估算美國進口關稅
+
+文檔：[實時採購](/zh-Hant/live-sourcing)、[關稅查詢](/zh-Hant/tariff-lookup)
+
+## 4. 用模組套件做原型
+
+1. 搜索模組（如 *reCamera*）
+2. 打開產品抽屜 → Add to BOM，或經 **OpenELAB** 採購
+3. 把參考設計 ZIP 存進 **Knowledge**，並針對文件對話
+
+文檔：[OpenELAB 模組](/zh-Hant/openelab-modules)、[Knowledge](/zh-Hant/knowledge)
+
+## 5. 分享決策包
+
+1. 生成 **Alternative report**（PDF/Word）給相關方
+2. 用郵箱邀請 **Share** 對話或 BOM
+3. 同事收到郵件後按查看權限打開
+
+文檔：[替代料](/zh-Hant/alternatives)、[分享](/zh-Hant/share)
+
+## 相關文檔
+
+- [如何開始使用](/zh-Hant/getting-started)
+- [如何撰寫 AI 能理解的查詢](/zh-Hant/ai-query-writing)

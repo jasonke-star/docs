@@ -1,0 +1,60 @@
+---
+title: "AI 이해 가능한 쿼리 작성 방법"
+description: "검색， 대안， 작업 및 요금에 대한 더 명확한 PartGenie 쿼리 작성"
+---
+좋은 쿼리는 더 나은， 더 검증 가능한 답변을 얻습니다. **Search** 또는 **Work** 에서 이러한 패턴을 사용하십시오。
+
+## 핵심 패턴
+
+** 유형 + 키 매개변수 + 제약 + 컨텍스트 **
+
+```
+Need an N-channel MOSFET, ≥60V, ≥20A, TO-220, for 12V motor drive, industrial temp
+```
+
+## 하기/하지 말기
+
+| 선호하기 | 피하기 |
+| --- | --- |
+| 정확한 MPN 을 갖고 있을 때 (`STM32F103C8T6`) | “마이크로컨트롤러” |
+| 단위로 된 숫자 (`3.3V`,`1A`,`SOT-23`) | “small and cheap” 만 |
+| 애플리케이션 제약 (`4.5A USB charge`,`automotive`) | 대안을 요청할 때 사용 사례 없음 |
+| 질문당 하나의 목표 | 관련 없는 다섯 개의 질문을 혼합 |
+
+## 쿼리 레시피
+
+** 검색 / 사양 **
+
+```
+STM32F103C8T6 operating voltage and absolute maximum ratings
+```
+
+** 대안 ** (제약 조건에 대한 명확성 기대)
+
+```
+Alternative to BQ24195 for 4.5A USB charging, VQFN preferred
+```
+
+** 작업 / BOM**
+
+```
+Analyze top risks from this BOM and suggest adopts for NRND lines
+```
+
+** 요금 **
+
+```
+Check tariff for 74HC595 made in China entering the US
+```
+
+## 답변 후
+
+- 확인하려면 ** 인용 배지 ** 를 클릭합니다。
+- 대체 항목의 경우 제약 조건 카드를 확인하거나 건너뜁니다. - 컨텍스트가 적합성을 개선합니다。
+- 질문이 *your* 스키마 또는 앱 메모에 따라 달라질 때 지식 파일 첨부
+
+## 관련
+
+- [AI 검색](/ko-KR/ai-search)
+- [Feature examples](/ko-KR/feature-examples)
+- [모호한 의도에서 정확한 해결책까지](/ko-KR/fuzzy-to-precise)

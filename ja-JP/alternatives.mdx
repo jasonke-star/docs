@@ -1,0 +1,47 @@
+---
+title: "代替案"
+description: "プロジェクトのコンテキストにより適した代替品を見つけ、MPN を比較し、代替レポートをエクスポートする"
+---
+PartGenie での代替検索は、パラメトリックルックアライクを超えます。エンジンは ** プロジェクトコンテキスト **(電源、熱、パッケージ、アプリケーション) を要求し、アップグレードパスと機能的代替を推奨します。
+
+## スマートな代替検索
+
+置き換えを要求すると (例: BQ24195* の * 代替)、PartGenie によって制約を明確にするよう求められる場合があります。確認またはスキップ。確認済みのコンテキストが推奨事項で使用されます。
+
+<Frame>
+  <img
+    alt="Clarification prompt for alternative constraints"
+    src="/images/alt-search-clarify.png"
+  />
+</Frame>
+
+結果には、類似した数値だけでなく、関係の種類 (アップグレードパス/機能的な代替)、ドロップインノート、およびキースペックが表示されます。
+
+## MPN の比較
+
+BOM または検索結果で、複数の MPN を選択し、** 比較 ** をクリックして、価格、在庫、MOQ、リードタイム、およびパッケージを並べて表示します。
+
+<Frame>
+  <img
+    alt="Compare Products panel for multiple MPNs"
+    src="/images/bom-compare-panel.png"
+  />
+</Frame>
+
+## 代替レポート (エクスポート)
+
+コンポーネントの ** 代替部品 ** セクションから：
+
+1. 構造化されたショートリスト (ターゲット、要約、設計および調達ガイダンス、リスク/信頼度のある候補者) については、[レポートの表示] をクリックします。
+2. FAE、購入、またはデザインレビュー用に **PDF** または **Word** にエクスポート
+
+<Frame>
+  <img
+    alt="Alternative report with PDF and Word export"
+    src="/images/alt-report-export.png"
+  />
+</Frame>
+
+## プロジェクトに採用する
+
+[PartGenie Work](/ja-JP/partgenie-work) または BOM 分析では、推奨される代替手段はプロジェクトに直接 **Adopt**ed することができます。採用履歴は [BOM engineering diff](/ja-JP/bom-management) で追跡されます。

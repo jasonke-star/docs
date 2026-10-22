@@ -1,0 +1,95 @@
+---
+title: "Extensión de Chrome"
+description: "Busque partes en DigiKey, Mouser, LCSC y otras páginas compatibles sin salir de la lista"
+---
+** PartGenie para Chrome * * reconoce la MPN en la página de un distribuidor o fabricante compatible. Las alternativas, el chat de la hoja de datos, el ECAD y la comparación de precios permanecen en una barra lateral junto a la parte sin copiar y pegar en una nueva pestaña.
+
+Instalar desde [Chrome Web Store](https://chromewebstore.google.com/detail/partgenie/djhpmidamklapnaidbhljfpbnnlninmk).
+
+## Instalar e iniciar sesión
+
+<Steps>
+  <Step title="Install the extension">
+    Open the [PartGenie listing in the Chrome Web Store](https://chromewebstore.google.com/detail/partgenie/djhpmidamklapnaidbhljfpbnnlninmk) and click **Add to Chrome**. Pin the PartGenie icon in the toolbar if you use it often.
+  </Step>
+  <Step title="Sign in">
+    Click the PartGenie icon or open the sidebar on a supported product page. Sign in with the same account you use at [app.partgenie.ai](https://app.partgenie.ai).
+  </Step>
+  <Step title="Open a supported product page">
+    Navigate to a product detail page on a supported site (for example **DigiKey**, **Mouser**, or **LCSC**). PartGenie reads the MPN from the page and loads research for that exact part.
+  </Step>
+</Steps>
+
+< Advertencia>
+  La extensión solo ejecuta asistencia de componentes en páginas * * compatibles**. No se inyecta en sitios no relacionados.
+< / Advertencia>
+
+## Usa la barra lateral
+
+<Frame>
+  <img
+    alt="PartGenie Chrome extension on a DigiKey product page: alternatives table, CAD models, Find alternatives, Compare prices, and Ask about this part"
+    src="/images/chrome-extension-digikey-sidebar.png"
+  />
+</Frame>
+
+Cuando se abre la barra lateral en la página de un producto:
+
+/ Control |Finalidad / 
+| --- | --- |
+/ Encabezado (MPN + fuente) / Confirma qué parte de PartGenie coincide en esta página |
+| Área de respuestas / Resumen, especificaciones y tablas de comparación alternativas con evidencia que puede revisar |
+| ** Modelos CAD * * / Vaya al catálogo de ECAD o inicie la generación de KiCad para esta MPN |
+/ * * Encontrar alternativas* | / Búsqueda de sustitutos en profundidad basada en hojas de datos y contexto del proyecto |
+/ * * Comparar precios* | / Precio y stock de distribuidores cruzados (misma inteligencia que el abastecimiento web en vivo) |
+/ * * Pregunte por esta parte* | / Chatee sobre el componente abierto: pinout, límites, reemplazos |
+
+Las alternativas incluyen evidencia de respaldo, no solo tablas paramétricas. Utilice las fuentes citadas antes de intercambiar una pieza en producción.
+
+## Barra de herramientas flotante
+
+<Frame>
+  <img
+    alt="PartGenie floating toolbar on a distributor page: component details, alternatives, and price comparison shortcuts"
+    src="/images/chrome-extension-floating-toolbar.png"
+  />
+</Frame>
+
+En algunas páginas, aparece una barra de herramientas flotante compacta **en el borde de la ventana. Úselo para abrir detalles de componentes, alternativas o comparación de precios sin buscar el ícono de la extensión principal. Ciérrelo con * * × * * cuando desee una vista clara de la página del distribuidor.
+
+## ECAD de la extensión
+
+De * * Modelos CAD * * en la barra lateral:
+
+1. Descargue símbolos, huellas o 3D del catálogo cuando * * CAD Models * * tenga archivos para esta MPN.
+2. O inicie * * KiCad library generation** (Beta) y descárguelo cuando esté listo.
+
+Pasos de importación para su herramienta EDA: [Integración EDA] (/en-US / eda-integration).
+
+## Abra la aplicación web completa
+
+Use los enlaces en la barra lateral para abrir la * * página completa de componentes de PartGenie** o continúe buscando cuando necesite Proyectos, Lista de materiales, Diseño o Conocimientos.
+
+## Sitios compatibles
+
+Hoy en día incluye distribuidores importantes como * * DigiKey**, * * Mouser* * y * * LCSC**, además de páginas adicionales de fabricantes y distribuidores que PartGenie reconoce. La cobertura se expande con el tiempo; si falta una página en la que confía, infórmenos en [support@partgenie.ai] (mailto:support@partgenie.ai).
+
+## Privacidad y permisos
+
+La extensión necesita acceso a las páginas de productos compatibles para que pueda leer la MPN y el contexto de la página necesarios para identificar el componente. No reemplaza el inicio de sesión de su distribuidor ni realiza pedidos por usted: los enlaces * * Compra * * abren el flujo de pago del distribuidor.
+
+## Solución de problemas
+
+/ Problema / Intento |
+| --- | --- |
+/ Barra lateral vacía o parte incorrecta / Actualice la página del producto; confirme que se encuentra en la URL de detalles del SKU, no en los resultados de búsqueda |
+| Bucle de inicio de sesión / Permitir cookies de terceros para PartGenie o iniciar sesión en app.partgenie.ai primero, luego vuelva a cargar la página |
+| Es posible que la extensión que falta en un distribuidor / Sitio aún no sea compatible; en su lugar, use [Search](/es-MX/ai-search) con la MPN |
+
+Más problemas con la cuenta: [Solución de problemas de la cuenta] (/en-US / account-troubleshooting).
+
+## Relacionado
+
+- [Resumen de integraciones] (/es-US / integraciones)
+- [Integración EDA] (/en-US / eda-integration)
+— [Registro de cambios-PartGenie para Chrome] (/en-US / registro de cambios)

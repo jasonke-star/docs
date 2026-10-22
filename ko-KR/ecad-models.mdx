@@ -1,0 +1,63 @@
+---
+title: "ECAD 및 발자국"
+description: "부품의 CAD 모델 탭을 열어 카탈로그 발자국 및 기호를 확인하거나， 구축된 KiCad 라이브러리가 필요할 때 KiCad 라이브러리를 생성합니다。"
+---
+PartGenie 에는 파트에 대한 ECAD 를 얻는 세 가지 방법이 있습니다. 필요한 것과 일치하는 방법을 사용하세요。
+
+| 필요한 것 | 위치 |
+| --- | --- |
+| **Altium, Cadence, OrCAD, PADS 등을 위한 Professional** 기호， 풋프린트 및 3D | 컴포넌트 서랍 → **CAD 모델 ** → 포맷 선택 → **Request** ([FootprintKu](https://footprintku.com/) 파트너십을 통해) |
+| 파일에 이미 있는 자산 카탈로그 | 다운로드를 위해 파일이 나열된 경우 동일한 **CAD 모델 ** 탭 |
+| KiCad 라이브러리 생성 및 데이터시트 대조 | [KiCad 라이브러리 생성](/ko-KR/kicad-library) |
+
+## 카탈로그 모델 얻기
+
+<단계>
+<단계 제목=“부분 열기”>
+MPN 을 검색한 다음 답변이나 부품 카드에서 **MPN 배지 ** 를 클릭합니다. 이렇게 하면 구성 요소 서랍이 열립니다。
+</Step>
+<Step 제목=“CAD 모델로 전환”>
+서랍 탭은 **Product**, **Procurement** 및 **CAD Models** 입니다. Procurement 는 실시간 가격 및 재고입니다. **CAD Models** 는 해당 부분의 풋프린트 라이브러리입니다。
+</Step>
+<Step 제목=“EDA 형식 선택”>
+형식 드롭다운을 사용하십시오 (예: **Altium 18**, **Cadence**, **OrCAD**, **PADS** 또는 **KiCad** 등이 나열된 경우).
+</Step>
+<Step title=“요청 또는 다운로드”>
+FootprintKu 가 해당 MPN 에 대한 전문가 모델을 충족하는 경우 도식 기호， PCB 풋프린트 또는 STEP 3D 에 대해 **Request** 를 클릭합니다. 카탈로그 파일이 이미 사용 가능한 경우 직접 다운로드합니다。
+
+모든 MPN 이 모든 형식을 가지고 있는 것은 아닙니다. 아무것도 나열되어 있지 않으면， 일반적인 0603 을 추측하는 대신 [KiCad generation](/ko-KR/kicad-library) 을 사용하십시오。
+</Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="CAD Models: Altium format, Request schematic symbol, footprint, and STEP 3D"
+    src="/images/footprintku-ecad-cad-models.png"
+  />
+</Frame>
+
+## 대신 생성할 때
+
+다음과 같은 경우 KiCad 라이브러리를 생성합니다：
+
+- CAD 모델에는 이 정확한 MPN 및 패키지에 대한 파일이 없습니다
+- 데이터시트 페이지에 연결된 증거 테이블 (핀 수， 본문， 패드， 피치) 과 함께 Symbol + Footprint + STEP 가 필요합니다
+- 부품을 배치하기 전에 **KiCad 네이티브 가져오기 ** 검사가 필요합니다。
+
+검색에서 묻기：
+
+```
+generate verified KiCAD for RC0603FR-071KL
+```
+
+전체 단계: [KiCad library generation](/ko-KR/kicad-library).
+
+<경고>
+카탈로그 풋프린트와 생성된 라이브러리는 패드 크기나 핀 1 에 대해 의견이 일치하지 않을 수 있습니다. 만들어낼 모든 것에 대해서는 서로 대조하지 말고 데이터시트 페이지에 대해 둘 다 확인하세요。
+</경고>
+
+## 관련
+
+- [KiCad 라이브러리 생성](/ko-KR/kicad-library)
+- [Live sourcing](/ko-KR/live-sourcing) - CAD 모델 옆의 조달 탭
+- [데이터시트 인용](/ko-KR/datasheet-citations)

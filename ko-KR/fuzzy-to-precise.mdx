@@ -1,0 +1,40 @@
+---
+title: "모호한 의도에서 정확한 솔루션으로"
+description: "모호한 하드웨어 요구사항을 구체적인 MPN, 제약 조건 및 다음 조치로 전환"
+---
+종종 모호한 목표 (“USB 충전을 위한 것”) 로 시작합니다. PartGenie 는 이를 MPN, 제약 조건 및 프로젝트 작업으로 좁히는 데 도움이 됩니다。
+
+## 실용적인 루프
+
+1. ** 작업 상태 ** – 기능 + 환경 (“단일 셀 리온 충전기， 휴대용， 5V USB 입력”)
+2. **Add must-haves** – current, 패키지， 인터페이스， 임시， 인증
+3. ** 후보자 검토 ** – 공개 인용 배지 및 조달
+4. ** 잠금 제약 ** – 대안이 명확화를 요청할 때， 보드가 살아남아야 하는 것을 확인하십시오
+5. ** 행동 ** – BOM 으로 채택하거나， 설계를 시작하거나， 대안 보고서를 내보내기
+
+## 예시
+
+**Fuzzy:** “전력 은행을 위해 IT 와 같은 충전기 IC 가 필요합니다.”
+
+** 더 좋은:**
+
+```
+Alternative to BQ24195 for portable USB power bank, ≥4.5A charge, I2C, similar thermal package
+```
+
+제약 조건 카드 확인 → 비교 단축 목록 → 보고서 채택 또는 내보내기。
+
+## 모드를 전환할 때
+
+상황 모드
+| --- | --- |
+| 옵션 탐색 | **Search** |
+| 기존 BOM 변경 | **Work** |
+| 초기 아키텍처/초기 BOM | ** 디자인 ** |
+| 의무/발생 비용 | ** 요금 조회 ** |
+
+## 관련
+
+- [AI 이해 가능한 쿼리 작성 방법](/ko-KR/ai-query-writing)
+- [Alternatives](/ko-KR/alternatives)
+- [PartGenie Work](/ko-KR/partgenie-work)

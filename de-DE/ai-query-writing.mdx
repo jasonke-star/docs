@@ -1,0 +1,60 @@
+---
+title: "Wie schreibe ich KI-verständliche Abfragen"
+description: "Übersichtlichere PartGenie-Abfragen für Suche, Alternativen, Arbeit und Tarif schreiben"
+---
+Gute Anfragen erhalten bessere, überprüfbarere Antworten. Verwenden Sie diese Muster in ** Suche ** oder ** Arbeit **.
+
+## Kernmuster
+
+** Typ + Schlüsselparameter + Einschränkungen + Kontext**
+
+```
+Need an N-channel MOSFET, ≥60V, ≥20A, TO-220, for 12V motor drive, industrial temp
+```
+
+## Tun / Nicht tun
+
+/ Bevorzugen / Vermeiden |
+| --- | --- |
+/ Genaue MPN, wenn Sie es haben (`STM32F103C8T6`) | "ein Mikrocontroller" |
+/ Zahlen mit Einheiten (`3.3V`, `1A`, `SOT-23`) / nur "klein und billig" |
+/ Anwendungsbeschränkungen (`4.5A USB charge`, `automotive`) / Kein Anwendungsfall bei der Frage nach Alternativen |
+/ Ein Ziel pro Anfrage / Mischen von fünf unabhängigen Anfragen |
+
+## Rezepte abfragen
+
+** Nachschlagen / Spezifikationen**
+
+```
+STM32F103C8T6 operating voltage and absolute maximum ratings
+```
+
+** Alternativen ** (erwarten Sie eine Klärung der Einschränkungen)
+
+```
+Alternative to BQ24195 for 4.5A USB charging, VQFN preferred
+```
+
+** Arbeit / STÜCKLISTE**
+
+```
+Analyze top risks from this BOM and suggest adopts for NRND lines
+```
+
+**Tarif**
+
+```
+Check tariff for 74HC595 made in China entering the US
+```
+
+## Nach der Antwort
+
+- Klicken Sie auf ** Zitierabzeichen **, um zu überprüfen
+- Für Auswechslungen bestätigen oder überspringen Sie die Einschränkungskarte-Kontext verbessert die Passform
+- Hängen Sie Wissensdateien an, wenn die Anfrage von * Ihrem * Schaltplan oder Ihrer App-Notiz abhängt
+
+## Zusammenhang
+
+- [KI-Suche](/ de-DE /ki-Suche)
+- [Feature-Beispiele](/de-DE/feature-Beispiele)
+- [Von unscharfer Absicht zu präzisen Lösungen] (/ de-DE / unscharf zu genau)

@@ -1,0 +1,90 @@
+---
+title: "Greffon pour KiCad"
+description: "Inspectez les pièces, synchronisez l'état de la nomenclature et demandez une CAO électronique depuis l'intérieur de KiCad"
+---
+Le * * plugin PartGenie KiCad * * apporte l'intelligence des composants dans KiCad PCB Editor-sans quitter votre fichier de carte.
+
+Téléchargez et installez à partir de * * [app.partgenie.ai](https://app.partgenie.ai) → Paramètres → Intégrations → KiCad**.
+
+## Installer
+
+<Steps>
+  <Step title="Open Integrations">
+    Sign in at [app.partgenie.ai](https://app.partgenie.ai). Open **Settings → Integrations**.
+  </Step>
+  <Step title="Download KiCad">
+    Choose **KiCad**, download the plugin package, and follow the on-screen install steps for your OS and KiCad version.
+  </Step>
+  <Step title="Sign in inside KiCad">
+    Open the PartGenie panel in KiCad and sign in with the same PartGenie account you use on the web.
+  </Step>
+</Steps>
+
+## Partie inspecter
+
+Sélectionnez une empreinte ou un symbole dans KiCad, puis utilisez * * Inspecter la sélection* * (ou ouvrez le panneau PartGenie pour cette référence).
+
+<Frame>
+  <img
+    alt="PartGenie KiCad plugin showing Product tab for SM04B-SRSS-TB: parameters, Add to BOM, View on PartGenie"
+    src="/images/kicad-plugin-part-inspect.png"
+  />
+</Frame>
+
+À partir du panneau de pièces, vous pouvez:
+
+/ Tab / Ce que vous obtenez |
+| --- | --- |
+| ** Produit * * / Paramètres détaillés, statut du cycle de vie, description |
+/ * * Alternatives* | / Substituts avec preuves (même flux de travail que la recherche sur le Web |/
+/ * * Approvisionnement* | / Prix du marché en direct et stock le cas échéant |
+| ** Modèles CAO * * / Cataloguer ECAD ou * * Générer KiCad * * pour le symbole et l'empreinte |
+
+<Frame>
+  <img
+    alt="CAD Models tab in KiCad plugin: Generate KiCad, schematic symbol and PCB footprint requests"
+    src="/images/kicad-plugin-cad-models.png"
+  />
+</Frame>
+
+Utilisez * * Afficher sur PartGenie* * pour la page complète des composants, la discussion sur les fiches techniques et des recherches plus approfondies. ** Ajouter à la nomenclature * * envoie la pièce dans votre nomenclature de projet PartGenie.
+
+## Synchronisation et santé de la nomenclature du projet de travail
+
+Basculez le plugin sur * * Work* * pour agir sur le projet KiCad ouvert.
+
+<Frame>
+  <img
+    alt="PartGenie Work in KiCad: Project BOM StickHub synced 93 lines, Inspect selection and Sync project BOM"
+    src="/images/kicad-plugin-work-bom-sync.png"
+  />
+</Frame>
+
+<Steps>
+  <Step title="Sync project BOM">
+    Click **Sync project BOM**. PartGenie reads lines from your KiCad schematic and opens or updates the matching BOM in your account (for example “BOM synced (93 lines)”).
+  </Step>
+  <Step title="Open BOM health">
+    From the sync confirmation or Work chat, open **BOM health** to review match rate, risks, and estimated cost.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM health in KiCad plugin: 86% composite score, matched vs unmatched, est price, risks"
+    src="/images/kicad-plugin-bom-health.png"
+  />
+</Frame>
+
+La santé de la nomenclature comprend le score composite, les lignes appariées / non appariées,la fourchette de prix estimée, la composition des catégories et les risques signalés (tels que le NPP inégalé). Continuez l'analyse dans l'application Web avec le même projet.
+
+## Bientôt disponible
+
+Remplacement visuel * * par glisser-déposer ECAD* * dans la vue du tableau - échangez des symboles et des empreintes avec des alternatives soutenues par PartGenie sans recherche manuelle dans la bibliothèque.
+
+## Liés
+
+- [Vue d'ensemble des intégrations] (/fr-FR / intégrations)
+- [Intégration EDA] (/fr-FR / intégration eda)
+- [Gestion de la nomenclature] (/en-FR / gestion de la nomenclature)
+- [génération de la bibliothèque KiCad] (/fr-FR / bibliothèque kicad)

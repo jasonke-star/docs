@@ -1,0 +1,60 @@
+---
+title: "Cómo Escribir Consultas Comprensibles por IA"
+description: "Escriba consultas PartGenie más claras para búsqueda, alternativas, Trabajo y tarifas"
+---
+Las buenas consultas obtienen respuestas mejores y más verificables. Use estos patrones en * * Búsqueda * * o * * Trabajo**.
+
+## Patrón de núcleo
+
+** Tipo + parámetros clave + restricciones + contexto**
+
+```
+Need an N-channel MOSFET, ≥60V, ≥20A, TO-220, for 12V motor drive, industrial temp
+```
+
+## Hacer / No hacer
+
+/ Prefiero / Evitar |
+| --- | --- |
+/ MPN exacto cuando lo tenga (`STM32F103C8T6`) / "un microcontrolador" |
+/ Números con unidades (`3.3V`, `1A`, `SOT-23`) / "pequeño y barato" solamente |
+/ Restricciones de la aplicación (`4.5A USB charge`, `automotive`) / Sin caso de uso al pedir alternativas |
+/ Un objetivo por pregunta / Mezclar cinco preguntas no relacionadas |
+
+## Recetas de consulta
+
+** Búsqueda / especificaciones**
+
+```
+STM32F103C8T6 operating voltage and absolute maximum ratings
+```
+
+** Alternativas * * (espere aclaraciones sobre las restricciones)
+
+```
+Alternative to BQ24195 for 4.5A USB charging, VQFN preferred
+```
+
+** Trabajo / Lista de materiales**
+
+```
+Analyze top risks from this BOM and suggest adopts for NRND lines
+```
+
+** Tarifa**
+
+```
+Check tariff for 74HC595 made in China entering the US
+```
+
+## Después de la respuesta
+
+- Haga clic en * * insignias de citas* * para verificar
+- Para sustitutos, confirme u omita la tarjeta de restricción-el contexto mejora el ajuste
+- Adjunte archivos de conocimiento cuando la solicitud dependa de *su * esquema o nota de la aplicación
+
+## Relacionado
+
+- [Búsqueda de IA] (/en-US / búsqueda de ia)
+- [Ejemplos de funciones] (/en-US / feature-examples)
+- [De la intención difusa a las soluciones precisas] (/en-US / fuzzy-to-precise)

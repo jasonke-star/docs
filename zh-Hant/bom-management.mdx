@@ -1,0 +1,73 @@
+---
+title: "BOM 管理"
+description: "上傳 BOM、健康報告、工程 Diff、預估價格、對比與分享"
+---
+
+PartGenie 把 BOM 當作持續演進的工程文檔——匹配行、標風險、Adopt 替代、追蹤變更、估算成本。
+
+## 創建或上傳
+
+<Steps>
+  <Step title="附上 BOM">
+    首頁點 **Optimize BOM**，或把輸入框切到 **Work**，再上傳 **CSV / Excel** 或粘貼 part list。已有 BOM 從 **Projects** 打開。
+  </Step>
+  <Step title="看工具欄">
+    BOM 頂部：
+
+    - **Refreshing live stock** — 已刷新價格的行數
+    - **Files & Rules** — 項目文件和項目指令（會覆蓋賬號裡的個性化指令）
+    - **Changes** — Adopt 記錄和版本 Diff
+    - **Health** — 當前 BOM 健康分
+    - **Est.** — 成本估算區間，以及已計價行數
+    - **Export** / **Share**
+  </Step>
+  <Step title="處理表格">
+    每一行有原始料號、**Match**（例如 Full Match）、**Stock / Source** 上的分銷商標記、品牌。用 **Level** 和 **Match** 篩選。**Add Data Row** 加一行。行上的操作可以複製、重複或刪除。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM 工具欄：實時庫存刷新、Changes、Health、預估價格、Export、Share"
+    src="/images/bom-diff-estimate.png"
+  />
+</Frame>
+
+## 健康報告
+
+上傳後可查看：
+
+- 按類別的**器件分佈**（含風險數量）
+- **風險列表** — NRND/EOL、零庫存、無採購數據、缺失廠商
+- **批量替代料** — 掃描已匹配行並給出功能替代
+
+<Frame>
+  <img alt="BOM 器件分佈與風險" src="/images/bom-health-distribution.png" />
+</Frame>
+
+## 工程 Diff 與預估價格
+
+BOM 工具欄：
+
+- **Changes** — Adopt 記錄與版本歷史
+- **Est. price** — 基於實時採購的整單成本估算
+- **Health** — 健康度分數
+
+<Frame>
+  <img alt="BOM 工具欄：Changes、Health、預估價格" src="/images/bom-diff-estimate.png" />
+</Frame>
+
+## 對比與對話引用
+
+- 多選行 → **Compare** 橫向對比採購信息
+- 多選 BOM 行並在 Agent 對話中引用
+
+## 分享
+
+可通過郵箱或鏈接分享 BOM。見 [分享](/zh-Hant/share)。
+
+## 相關文檔
+
+- [PartGenie Work](/zh-Hant/partgenie-work)
+- [實時採購](/zh-Hant/live-sourcing)
+- [高效 BOM 管理最佳實踐](/zh-Hant/effective-bom-management)

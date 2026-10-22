@@ -1,0 +1,78 @@
+---
+title: "디자인 모드"
+description: "요약부터 계획， 아키텍처， BOM 및 멀티뷰 이미지까지 하드웨어 개념을 살펴봅니다。"
+---
+**Design** 는 하드웨어 아이디어를 검토 가능한 패키지로 변환합니다: 요약， 계획 (선택한 스키마 포함), 아키텍처， 초기 BOM, 이미지. 여전히 베타 버전입니다。
+
+## 디자인 시작하기
+
+<단계>
+<Step title=“Open Design”>
+홈페이지에서 **Design Hardware** 를 클릭하거나 **Work** 를 선택하고 제품을 설명합니다. 구성 요소 답변 아래의 **Design** 후속 작업을 사용하여 해당 부분에서 시작할 수도 있습니다。
+</단계>
+<Step title=“제품 설명”>
+그것이 무엇인지， 중요한 제약 조건이 무엇인지， 그리고 누구를 위한 것인지 말하세요. 예: 높이 제한이 있는 로봇 진공청소기， LiDAR, 그리고 중간 범위의 비용 목표。
+</단계>
+<Step title=“스테이지를 따르세요”>
+캔버스에는 완료된 단계가 나열됩니다: ** 요약 → 계획 → 아키텍처 → BOM → 이미지 **. 녹색 체크표시는 단계가 완료되었음을 의미합니다. 단계를 클릭하여 엽니다。
+</Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Design stages Brief, Plan, Architecture, BOM, and Image marked complete"
+    src="/images/design-plan-steps.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Chat follow-up that starts hardware design from a component"
+    src="/images/chat-design-followup.png"
+  />
+</Frame>
+
+## 계획 검토
+
+** 플랜 ** 은 패키지의 나머지 부분이 최종으로 처리되기 전에 방향을 선택하는 부분입니다。
+
+계획 페이지에는 다음이 표시됩니다：
+
+- ** 목표 ** - 하드웨어가 수행해야 하는 작업
+- **Metrics** - 높이， 흡수， 배터리， 충전 전류와 같은 숫자
+- 제약 - 인증， 비용， 환경， 전원， 크기
+- **Schemes** - 둘 이상의 아키텍처. 하나는 **Active** 로 표시됩니다。
+
+스키마에 대한 참고: * 방향으로 스키마를 선택합니다. 채팅에서 요청하여 옵션을 변경합니다. *
+
+상단의 스테이지 탭을 사용합니다 (** 플랜 **, 그리고 아키텍처 / BOM / 이미지 옆의 카운트). ** 사용 ** 은 선택 항목을 적용합니다. ** 내보내기 ** 는 패키지를 다운로드합니다。
+
+<Frame>
+  <img
+    alt="Plan review with goals, metrics, constraints, and an active architecture scheme"
+    src="/images/design-plan-review.png"
+  />
+</Frame>
+
+## 이미지
+
+** 이미지 ** 단계에서는 둘 이상의 보기를 표시할 수 있습니다. 큰 프레임은 현재 보기 (종종 ** 히어로 ** 라고 표시됨) 입니다. 전환 각도 아래의 축소판입니다. 축소판을 클릭하여 해당 보기를 검토합니다。
+
+<Frame>
+  <img
+    alt="Hero product image with additional view thumbnails"
+    src="/images/design-image-multiview.jpg"
+  />
+</Frame>
+
+## 패키지가 존재한 후
+
+- 디자인의 초기 BOM 은 다른 BOM 과 마찬가지로 열고 확인할 수 있습니다: 상태， 실제 재고， 대체품. [BOM management](/ko-KR/bom-management) 를 참조하세요。
+- 레이아웃할 부분은 ECAD 가 별도로 필요합니다: **CAD Models** 의 카탈로그 파일 또는 생성된 라이브러리입니다. [ECAD & footprints](/ko-KR/ecad-models) 및 [KiCad library generation](/ko-KR/kicad-library) 을 참조하십시오。
+- 디자인은 ** 크레딧 ** 을 소비합니다. [멤버십 & 가격] 을 참조하세요 (/ko-KR/membership-pricing).
+
+## 관련
+
+- [PartGenie Work](/ko-KR/partgenie-work)
+- [키캐드 라이브러리 세대](/ko-KR/kicad-library)
+- [Knowledge](/ko-KR/knowledge)

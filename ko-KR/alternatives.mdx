@@ -1,0 +1,47 @@
+---
+title: "대안"
+description: "프로젝트 컨텍스트에 더 적합한 대체 항목 찾기， MPN 비교 및 대체 보고서 내보내기"
+---
+PartGenie 의 대체 검색은 매개변수 외모 유사성을 넘어선다. 엔진은 ** 프로젝트 컨텍스트 ** - 전원， 열， 패키지， 애플리케이션 - 를 요청한 다음 업그레이드 경로와 기능적 대체 항목을 추천한다。
+
+## 더 스마트한 대체 검색
+
+대체 항목 (예: BQ24195* 에 대한 * 대체) 을 요청하면 PartGenie 에서 제약 조건을 명확히 하라는 메시지를 표시할 수 있습니다. 확인 또는 건너뛰기; 확인된 컨텍스트가 권장 사항에 사용됩니다。
+
+<Frame>
+  <img
+    alt="Clarification prompt for alternative constraints"
+    src="/images/alt-search-clarify.png"
+  />
+</Frame>
+
+결과에는 유사한 숫자뿐만 아니라 관계 유형 (업그레이드 경로/기능적 대체), 드롭인 메모 및 주요 사양이 표시됩니다。
+
+## MPN 비교
+
+BOM 또는 검색 결과에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 가격， 재고， MOQ, 리드 타임 및 패키징을 나란히 확인합니다。
+
+<Frame>
+  <img
+    alt="Compare Products panel for multiple MPNs"
+    src="/images/bom-compare-panel.png"
+  />
+</Frame>
+
+## 대체 보고서 (내보내기)
+
+구성 요소의 ** 대체 부품 ** 섹션에서：
+
+1. 구조화된 단축 목록 (목표， 요약， 설계 및 조달 지침， 위험/신뢰도가 있는 후보자) 을 보려면 ** 보고서 보기 ** 를 클릭합니다。
+2. FAE, 구매 또는 디자인 검토를 위해 **PDF** 또는 **Word** 로 내보내기
+
+<Frame>
+  <img
+    alt="Alternative report with PDF and Word export"
+    src="/images/alt-report-export.png"
+  />
+</Frame>
+
+## 프로젝트로 채택
+
+[PartGenie Work](/ko-KR/partgenie-work) 또는 BOM 분석에서 권장되는 대안은 프로젝트에 직접 **Adopt**ed 할 수 있습니다. 채택 기록은 [BOM engineering diff](/ko-KR/bom-management) 에서 추적됩니다。

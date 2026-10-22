@@ -1,0 +1,54 @@
+---
+title: "實時採購"
+description: "分銷商實時價格與庫存——開關數據源，一鍵跳轉採購"
+---
+
+PartGenie 將多家分銷商的**實時價格與庫存**接入器件詳情、BOM、對比視圖，以及搜索/替代料結果。
+
+## 已支持的實時數據源
+
+可在 **設置 → Distributors** 中開關，當前包括：
+
+- DigiKey、LCSC、TME、Unikeyic、OnlineComponents、WinSource、Arrow
+
+尚未實時接入的來源可能以 Catalog snapshot 展示。
+
+<Frame>
+  <img alt="Distributors 設置中的 Live pricing 列表" src="/images/sourcing-lcsc-arrow.png" />
+</Frame>
+
+## 在哪裡查看
+
+- **器件 Procurement 頁籤** — 價格階梯、封裝、更新時間
+- **BOM / Compare** — 庫存與價格列
+- **搜索與替代料** — 實時採購行（含置信度與來源）
+
+## 一鍵採購
+
+<Steps>
+  <Step title="打開抽屜">
+    點擊回答裡的 MPN 角標，或 BOM 裡的一行。
+  </Step>
+  <Step title="打開 Procurement">
+    抽屜頁籤是 **Product**、**Procurement**、**CAD Models**。價格和庫存在 **Procurement**。封裝庫在 **CAD Models**——見 [ECAD 與封裝庫](/zh-Hant/ecad-models)。
+  </Step>
+  <Step title="選包裝檔">
+    在分銷商名稱下切換 Tape & Reel、Cut Tape 等該分銷商提供的包裝。價格表會按數量更新。
+  </Step>
+  <Step title="Purchase">
+    點 **Purchase** 打開該分銷商的產品頁。旁邊的時間是 PartGenie 上次刷新報價的時間。
+  </Step>
+</Steps>
+
+<Frame>
+  <img alt="DigiKey 採購卡片與 Purchase 鏈接" src="/images/procurement-purchase-jump.png" />
+</Frame>
+
+## 偏好設置
+
+分銷商開關在所有視圖中同步生效。若有希望接入的數據源，歡迎告訴我們。廠商合作 Program 也在推進中。
+
+## 相關文檔
+
+- [OpenELAB 模組](/zh-Hant/openelab-modules)
+- [BOM 管理](/zh-Hant/bom-management)

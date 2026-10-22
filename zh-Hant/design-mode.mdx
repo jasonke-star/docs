@@ -1,0 +1,79 @@
+---
+title: "Design 模式"
+description: "從 Brief 走到 Plan、Architecture、BOM 和多視圖圖片的硬件概念流程"
+---
+
+**Design** 把一個硬件想法收成可評審的材料：Brief、可選方案的 Plan、Architecture、初始 BOM、圖片。仍是 Beta。
+
+## 開始一次設計
+
+<Steps>
+  <Step title="進入 Design">
+    在首頁點 **Design Hardware**，或切到 **Work** 後描述產品。也可以在某顆料的回答下面點 **Design** 追問，從那顆料開始。
+  </Step>
+  <Step title="描述產品">
+    說明它是什麼、硬性約束、給誰用。例如：有高度限制、帶 LiDAR、定位中端價位的掃地機器人。
+  </Step>
+  <Step title="按階段往下走">
+    畫布上的階段是 **Brief → Plan → Architecture → BOM → Image**。綠色勾表示該階段已完成。點某一階段即可打開。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Design 階段：Brief、Plan、Architecture、BOM、Image 均已完成"
+    src="/images/design-plan-steps.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="從器件回答一鍵進入硬件設計的追問"
+    src="/images/chat-design-followup.png"
+  />
+</Frame>
+
+## 評審 Plan
+
+**Plan** 用來在後面的材料被當成定稿之前選定方向。
+
+這一頁包括：
+
+- **Goals** — 硬件必須做到什麼
+- **Metrics** — 高度、吸力、電池、充電電流等數字
+- **Constraints** — 認證、成本、環境、電源、尺寸
+- **Schemes** — 不止一套架構，其中一套標為 **Active**
+
+方案上的說明是：選定一個方向；想改選項，就在對話裡說。
+
+頂部有階段頁籤（**Plan**，以及架構 / BOM / 圖片的數量）。**Use** 採用當前選擇，**Export** 導出這套材料。
+
+<Frame>
+  <img
+    alt="Plan 評審：目標、指標、約束，以及當前激活的架構方案"
+    src="/images/design-plan-review.png"
+  />
+</Frame>
+
+## 圖片
+
+**Image** 階段可以有多個視角。大圖是當前視圖（常標為 **Hero**），下面的縮略圖切換角度。點縮略圖查看該視角。
+
+<Frame>
+  <img
+    alt="Hero 主圖與其他視角縮略圖"
+    src="/images/design-image-multiview.jpg"
+  />
+</Frame>
+
+## 材料出來之後
+
+- Design 給出的初始 BOM 可以像普通 BOM 一樣看健康度、實時庫存和替代料。見 [BOM 管理](/zh-Hant/bom-management)。
+- 要畫板的料需要另外拿 ECAD：器件頁 **CAD Models** 裡的目錄文件，或生成的 KiCad 庫。見 [ECAD 與封裝庫](/zh-Hant/ecad-models)、[KiCad 庫生成](/zh-Hant/kicad-library)。
+- Design 消耗 **Credits**。見 [會員與定價](/zh-Hant/membership-pricing)。
+
+## 相關文檔
+
+- [PartGenie Work](/zh-Hant/partgenie-work)
+- [KiCad 庫生成](/zh-Hant/kicad-library)
+- [Knowledge](/zh-Hant/knowledge)

@@ -1,0 +1,50 @@
+---
+title: "アルバイト-バイト-パート求人情報"
+description: "メインチャットで直接BOMまたは設計プロジェクトを分析し、行動する"
+---
+**仕事**は、ホームページ上のプロジェクトモードです。 BOMをアップロードしたり、部品リストを貼り付けたり、既存のプロジェクトを開いたりして、会話を離れることなくリスクを分析し、代替案を取得し、変
+
+#＃仕事に切り替える
+
+ホームページの入力で、**仕事**（vs**検索**）を選択します。 BOMファイルを添付するか、部品リストを貼り付けてから、次のような質問をします:
+
+```
+Analyze top risks from this BOM.
+```
+
+<Frame>
+  <img
+    alt="Work mode with BOM attached and risk analysis prompt"
+    src="/images/partgenie-work-input.png"
+  />
+</Frame>
+
+##BOMプロジェクトのためにできる作業
+
+-**リスク分析**-EOL/NRND、ゼロ在庫、不足しているソーシングデータ、認識されていないメーカー
+—**BOMヘルスレポート**-カテゴリ分布、リスクカウント、次のステップを提案
+-**代替**-代替品をお勧めし、**プロジェクトに**それらを採用します
+-**コンテキストとチャット**-エージェントがサプライチェーンコンテキストを持つように、選択したBOM明細行を参照します
+
+<Frame>
+  <img
+    alt="Work chat showing BOM risks and NRND flags"
+    src="/images/partgenie-work-risks.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="BOM overview with Adopt buttons for alternatives"
+    src="/images/partgenie-work-adopt.png"
+  />
+</Frame>
+
+##デザインプロジェクト
+
+**Brief**、**Plan**、**Architecture**、**BOM**、**Image**のように、デザインを開くことができる段階として実行されます。 計画では、スキーム（一つは**アクティブ**です）を選択し、**使用**または**エクスポート**。 画像は複数のビューをサポートしています。 [デザインモード](/ja-JP/design-mode)を参照してください。
+
+#＃ヒント
+
+-目標がプロジェクトを変更することであるときに**仕事**を好む;オープンエンドのコンポーネントQ&Aのための**検索**を使用します
+-採用後、リビジョンをロックする前に[BOM変更/推定価格](/ja-JP/bom-management)を確認します

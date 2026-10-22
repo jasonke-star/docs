@@ -1,0 +1,63 @@
+---
+title: "Cao électronique et empreintes"
+description: "Ouvrez l'onglet Modèles CAO d'une pièce pour les empreintes et les symboles du catalogue, ou générez une bibliothèque KiCad lorsque vous en avez besoin"
+---
+PartGenie a trois façons d'obtenir ECAD pour une pièce. Utilisez celui qui correspond à ce dont vous avez besoin.
+
+| Vous avez besoin | Où |
+| --- | --- |
+/ ** Professionnel * * Symbole, empreinte et 3D pour Altium, Cadence, OrCAD, PADS et plus / Tiroir de composants → * * Modèles CAO * * → choisissez le format → * * Demande* *(via [FootprintKu] (https://footprintku.com/) partenariat) |
+/ Catalogue des actifs déjà sur fichier / Même onglet **Modèles CAO* * lorsque les fichiers sont répertoriés pour téléchargement |
+/ Une bibliothèque KiCad générée et vérifiée par rapport à la feuille de données | [génération de bibliothèque KiCad] (/fr-FR / kicad-library) |
+
+## Obtenir un modèle de catalogue
+
+<Steps>
+  <Step title="Open the part">
+    Search the MPN, then click the **MPN badge** in the answer or the part card. That opens the component drawer.
+  </Step>
+  <Step title="Switch to CAD Models">
+    The drawer tabs are **Product**, **Procurement**, and **CAD Models**. Procurement is live price and stock. **CAD Models** is the footprint library for that part.
+  </Step>
+  <Step title="Pick your EDA format">
+    Use the format dropdown (for example **Altium 18**, **Cadence**, **OrCAD**, **PADS**, or **KiCad** when listed).
+  </Step>
+  <Step title="Request or download">
+    Click **Request** for schematic symbol, PCB footprint, or STEP 3D when FootprintKu fulfills professional models for that MPN. Download directly when a catalog file is already available.
+
+    Not every MPN has every format. If nothing is listed, use [KiCad generation](/fr-FR/kicad-library) instead of guessing a generic 0603.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="CAD Models: Altium format, Request schematic symbol, footprint, and STEP 3D"
+    src="/images/footprintku-ecad-cad-models.png"
+  />
+</Frame>
+
+## Quand générer à la place
+
+Générer une bibliothèque KiCad lorsque:
+
+- Les modèles CAO n'ont pas de fichier pour ce MPN et ce package exacts
+- Vous avez besoin d'un symbole + Empreinte + PAS ensemble, avec un tableau de preuves (nombre de broches, corps, pad, pas) lié à une page de fiche technique
+- Vous voulez * * l'importation native de KiCad * * vérifie avant de placer la pièce
+
+Demander dans la recherche:
+
+```
+generate verified KiCAD for RC0603FR-071KL
+```
+
+Étapes complètes: [génération de la bibliothèque KiCad] (/fr-FR / kicad-library).
+
+< Avertissement>
+  Une empreinte de catalogue et une bibliothèque générée peuvent être en désaccord sur la taille du tampon ou la broche 1. Pour tout ce que vous allez fabriquer, vérifiez les deux par rapport à la page de la fiche technique, pas l'un par rapport à l'autre.
+< / Avertissement>
+
+## Liés
+
+- [génération de la bibliothèque KiCad] (/fr-FR / bibliothèque kicad)
+- [Approvisionnement en direct](/fr-FR/approvisionnement en direct)-l'onglet Approvisionnement à côté des modèles CAO
+- [Datasheet citations] (/fr-FR / datasheet-citations)

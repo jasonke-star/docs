@@ -1,0 +1,107 @@
+---
+title: "Ingenieurrechner"
+description: "Integrierte Leistungs- und Wärmeprüfungen bei der Suche mit intelligenten UI-Schiebereglern für lokales Was-wäre-wenn-Tuning"
+---
+Die Suche kann ** technische Berechnungen ** in der Antwort ausführen - keine separate Taschenrechner-App. PartGenie wählt das Audit aus, das zu Ihrer Frage passt, zeigt die Formeln an, führt ** Bestanden / Nicht bestanden ** Prüfungen durch, wenn Grenzwerte gelten, und fügt ein ** intelligentes UI **-Panel hinzu, das Sie ohne neue Suche einstellen können.
+
+<Frame>
+  <img
+    alt="Resistor power rating audit with sliders for voltage, resistance, and watt rating"
+    src="/images/engineering-calc-resistor-sliders.png"
+  />
+</Frame>
+
+## Welche Rechner erscheinen heute
+
+PartGenie ordnet Ihre Frage einem Auditpanel zu. Das Set wächst mit der Zeit; Dies sind die wichtigsten, die jetzt ausgeliefert werden:
+
+/ Audit-Panel / Was es berechnet / Typische Prüfungen / Schlüsseleingaben |
+| --- | --- | --- | --- |
+/ ** Widerstandsleistung ** / Verlustleistung ** P = V2 / R **, ** P = VI ** oder ** P = I2R ** und ** Rand ** gegen Nennleistung / Elektrisch - ist die Nennleistung ausreichend? / Spannung, Widerstand (oder Strom), Widerstandsleistung (W) |
+/ ** LDO-Verlustleistung und Sperrschichttemperatur ** / Abfallleistung ** Pd ≈ (Vin - Vout) × Iout ** (ggf. plus Ruhestrom), ** Tj = Ta + Pd × θJA ** vs Tj (max) | ** Elektrisch ** * Bestanden / nicht bestanden, ** Thermisch ** * Bestanden / nicht bestanden / Vin, Vout, Iout, Ta, θJA, Sperrschichtgrenze |
+
+Wenn ein Grenzwert fehlt, kann PartGenie ** vernünftige Standardwerte annehmen ** (z. B. Umgebungstemperatur 25 ° C oder ein typisches θJA) und dies in der Antwort sagen — oder ** Stresstest über Ihrer angegebenen Last ** (z. B. 400 mA, wenn Sie 200 mA gefragt haben), damit Sie Headroom sehen, nicht nur nominal.
+
+<Tipp>
+  Benennen Sie das Teil oder fügen Sie ** θJA ** / ** Tj (max) ** aus dem Datenblatt ein, wenn Sie sie haben. PartGenie kann Grenzen in Herstellerdaten setzen; generische Audits funktionieren immer noch mit Zahlen, die Sie in der Frage angeben.
+</Tipp>
+
+## Wie man fragt (Beispielabfragen)
+
+Bleiben Sie in ** Suche **. Verwenden Sie natürliche Sprache mit ** Zahlen und Einheiten **. Sie benötigen keinen speziellen Befehl.
+
+### Widerstandsleistung & Bewertung
+
+```
+100Ω resistor at 12V — is 0.25W rating enough?
+```
+
+```
+What power does a 10Ω resistor dissipate at 500mA? Margin vs 0.125W?
+```
+
+```
+1206 0.1W at 3.3V through 330Ω — pass or fail?
+```
+
+### LDO / Linearregler thermisch
+
+```
+Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?
+```
+
+```
+12V to 3.3V LDO at 400mA, Ta 25°C, θJA 50°C/W — will Tj exceed 125°C?
+```
+
+```
+MIC29302: 3.3V in, 2.5V out, 1.5A — thermal check at 75°C ambient
+```
+
+### Mischen des Part-Kontexts mit dem calc
+
+```
+For TPS7A3301 in SOT-23, 5V to 3.3V at 300mA — Pd and Tj estimate
+```
+
+```
+Compare 0.25W vs 0.5W for this divider: 12V, Rtop 10k, Rbot 3.3k
+```
+
+Wenn die Frage nicht eindeutig ist, antworte zuerst im Chat - dann benutze ** Versuche verschiedene Eingaben ** im Panel, anstatt erneut zu suchen.
+
+## Intelligente Benutzeroberfläche - Parameter lokal anpassen
+
+<Frame>
+  <img
+    alt="LDO answer with Electrical Pass and Thermal Fail checks"
+    src="/images/engineering-calc-ldo-checks.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Expanded thermal panel with predicted Tj versus limit"
+    src="/images/engineering-calc-thermal-panel.png"
+  />
+</Frame>
+
+Nach der schriftlichen Antwort:
+
+1. Öffnen Sie das Audit-Panel (zum Beispiel **Prüfung der Widerstandsleistung** oder **Verlustleistung und Sperrschichttemperatur**).
+2. Verwenden ** Probieren Sie verschiedene Eingaben aus (nur hier neu berechnet) ** — Schieberegler oder Felder für Spannung, Strom, Widerstand, Nennleistung, θJA usw.
+3. Beobachten Sie, wie ** Margin **, ** Pass / Fail ** Chips und Diagramme (z. B. vorhergesagtes Tj vs Limit) ** sofort ** im Browser aktualisiert werden.
+
+Diese lokale Neuberechnung gibt ** kein ** weiteres Suchguthaben aus. Verwenden Sie es für Sweeps: höhere Umgebungstemperatur, schlechtere θJA oder die nächste Standardwiderstandsleistung.
+
+## Was zu vertrauen
+
+- Taschenrechner verwenden Standard-EE-Formeln, die in der Antwort angegeben sind—Überprüfen Sie anhand Ihres Datenblatts und Ihrer Anwendungshinweise.
+- Lineare Wärmemodelle sind ** Schätzungen **; Reale Teile können früher strombegrenzt, zurückgeklappt oder thermisch abgeschaltet werden, als eine einfache Tj-Schätzung vorhersagt.
+- Überprüfen Sie bei Beschaffung und Abnahme die kritischen Grenzwerte auf dem ** Originaldatenblatt ** oder [Spezifikations-Chat] (/de-US/Spezifikations-Chat).
+
+## Zusammenhang
+
+- [KI-Suche](/ de-DE /ki-Suche)
+- [So schreiben Sie KI-verständliche Abfragen] (/ en-US / ai-query-writing)
+- [Änderungsprotokoll - technischer Rechner] (/ de-DE / Änderungsprotokoll)

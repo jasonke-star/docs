@@ -1,0 +1,63 @@
+---
+title: "ECAD y huellas"
+description: "Abra la pestaña Modelos CAD de una pieza para ver huellas y símbolos del catálogo, o genere una biblioteca KiCad cuando necesite construirla."
+---
+PartGenie tiene tres formas de obtener ECAD para una pieza. Use el que coincida con lo que necesita.
+
+/ Necesitas / Dónde |
+| --- | --- |
+/ ** Profesional * * símbolo, huella y 3D para Altium, Cadence, OrCAD, PADS y más | Cajón de componentes → **Modelos CAD * * → elegir formato → * * Solicitud* * (a través de [FootprintKu] (https://footprintku.com|) asociación) / 
+/ Catalogar activos ya archivados / Misma pestaña * * Modelos CAD * * cuando los archivos se enumeran para descargar |
+/ Una biblioteca KiCad generada y cotejada con la hoja de datos / [Generación de bibliotecas KiCad] (/en-US |kicad-library) / 
+
+## Obtener un modelo de catálogo
+
+<Steps>
+  <Step title="Open the part">
+    Search the MPN, then click the **MPN badge** in the answer or the part card. That opens the component drawer.
+  </Step>
+  <Step title="Switch to CAD Models">
+    The drawer tabs are **Product**, **Procurement**, and **CAD Models**. Procurement is live price and stock. **CAD Models** is the footprint library for that part.
+  </Step>
+  <Step title="Pick your EDA format">
+    Use the format dropdown (for example **Altium 18**, **Cadence**, **OrCAD**, **PADS**, or **KiCad** when listed).
+  </Step>
+  <Step title="Request or download">
+    Click **Request** for schematic symbol, PCB footprint, or STEP 3D when FootprintKu fulfills professional models for that MPN. Download directly when a catalog file is already available.
+
+    Not every MPN has every format. If nothing is listed, use [KiCad generation](/es-MX/kicad-library) instead of guessing a generic 0603.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="CAD Models: Altium format, Request schematic symbol, footprint, and STEP 3D"
+    src="/images/footprintku-ecad-cad-models.png"
+  />
+</Frame>
+
+## Cuándo generar en su lugar
+
+Genere una biblioteca KiCad cuando:
+
+- Los modelos CAD no tienen un archivo para esta MPN y paquete exactos
+- Necesita Símbolo + Huella + PASO juntos, con una tabla de evidencia (recuento de pines, cuerpo, almohadilla, tono) vinculada a una página de hoja de datos
+- Desea * * Controles de importación nativos de KiCad * * antes de colocar la pieza
+
+Preguntar en la Búsqueda:
+
+```
+generate verified KiCAD for RC0603FR-071KL
+```
+
+Pasos completos: [Generación de la biblioteca KiCad] (/en-US / kicad-library).
+
+< Advertencia>
+  Una huella de catálogo y una biblioteca generada pueden estar en desacuerdo sobre el tamaño del bloc de notas o el pin 1. Para cualquier cosa que fabrique, verifique ambos en la página de la hoja de datos, no entre sí.
+< / Advertencia>
+
+## Relacionado
+
+- [Generación de bibliotecas KiCad] (/en-US / kicad-library)
+- [Live sourcing] (/en-US / live-sourcing) - la pestaña de adquisiciones junto a los modelos CAD
+- [Citas de la hoja de datos] (/en-US / datasheet-citations)

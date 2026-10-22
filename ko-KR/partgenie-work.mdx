@@ -1,0 +1,50 @@
+---
+title: "파트지니 워크"
+description: "메인 채팅에서 직접 BOM 또는 디자인 프로젝트를 분석하고 조치를 취합니다。"
+---
+**Work** 는 홈페이지의 프로젝트 모드입니다. BOM 을 업로드하거나， 부품 목록을 붙여넣거나， 기존 프로젝트를 엽니다. 그런 다음 대화에서 나가지 않고 위험을 분석하고， 대안을 얻고， 변경 사항을 적용합니다。
+
+## 작업으로 전환
+
+홈페이지 입력에서 **Work**(vs **Search**) 를 선택합니다. BOM 파일을 첨부하거나 부품 목록을 붙여넣은 다음， 다음과 같이 물어봅니다：
+
+```
+Analyze top risks from this BOM.
+```
+
+<Frame>
+  <img
+    alt="Work mode with BOM attached and risk analysis prompt"
+    src="/images/partgenie-work-input.png"
+  />
+</Frame>
+
+## 작업이 BOM 프로젝트에 무엇을 할 수 있는가
+
+- ** 위험 분석 ** - EOL/NRND, 제로 스톡， 누락된 소스 데이터， 식별되지 않은 제조업체
+- **BOM 상태 보고서 ** - 범주 분포， 위험 수치， 제안된 다음 단계
+- ** 대안 ** - 교체품을 권장하고 ** 프로젝트에 도입 **
+- ** 컨텍스트가 있는 채팅 ** - 에이전트가 공급망 컨텍스트를 가질 수 있도록 선택된 BOM 행을 참조
+
+<Frame>
+  <img
+    alt="Work chat showing BOM risks and NRND flags"
+    src="/images/partgenie-work-risks.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="BOM overview with Adopt buttons for alternatives"
+    src="/images/partgenie-work-adopt.png"
+  />
+</Frame>
+
+## 디자인 프로젝트
+
+작업에서 디자인은 열 수 있는 단계로 실행됩니다: **Brief**, **Plan**, **Architecture**, **BOM**, **Image**. 계획에서 스키마 (하나는 **Active**) 를 선택한 다음 **Use** 또는 **Export** 를 선택합니다. 이미지는 둘 이상의 보기를 지원합니다. [Design mode] 를 참조하십시오。
+
+## 팁
+
+- 프로젝트를 변경하는 것이 목표일 때는 작업을 선호합니다. 오픈엔드 구성요소 Q&A 에는 검색을 사용합니다。
+- 채택 후 개정을 잠그기 전에 [BOM 변경/추정 가격] 검토 (/ko-KR/bom-management)

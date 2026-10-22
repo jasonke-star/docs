@@ -11,10 +11,18 @@ Use this when linking to PartGenie documentation from **Help Center MDX**, **pro
 
 ## Path pattern
 
-Mintlify locales match repo folders:
+Mintlify locales match repo folders. **Single source of truth:** [`scripts/locales.json`](../../scripts/locales.json).
 
-- English: `https://help.partgenie.ai/en-US/<page>`
-- 简体中文: `https://help.partgenie.ai/zh-Hans/<page>`
+| Web App `lng` | Help path prefix | Mintlify `language` |
+|---------------|------------------|---------------------|
+| `en` | `/en-US/` | `en` |
+| `zh-CN` | `/zh-Hans/` | `zh-Hans` |
+| `zh-TW` | `/zh-Hant/` | `zh-Hant` |
+| `de` | `/de-DE/` | `de` |
+| `ja` | `/ja-JP/` | `ja` |
+| `ko` | `/ko-KR/` | `ko` |
+| `fr` | `/fr-FR/` | `fr` |
+| `es-MX` | `/es-MX/` | `es-MX` |
 
 Examples:
 
@@ -47,3 +55,11 @@ When setting `content.actionUrl` on Admin / `publish_system_notice` presets:
 
 - Notice presets: `YuanQiService/scripts/ops/publish_system_notice/main.go` (`helpCenterBase`)
 - Shell example: `YuanQiService/scripts/ops/publish_footprintku_system_notice.sh` (`HELP_EN` / `HELP_ZH`)
+
+## i18n maintenance
+
+- Regenerate Mintlify nav: `node scripts/sync-docs-json-languages.mjs --write`
+- Verify MDX parity: `node scripts/check-locale-parity.mjs`
+- New locale body: `node scripts/convert-zh-hant.mjs` or `python3 scripts/translate-locale.py <dir> <lang>`
+- Changelog: ship **en-US + zh-Hans** first; other six locales within 48h when possible.
+- Glossary: [`scripts/glossary-en.md`](../../scripts/glossary-en.md)

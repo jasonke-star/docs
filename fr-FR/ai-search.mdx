@@ -1,0 +1,88 @@
+---
+title: "Recherche IA"
+description: "Composants de recherche avec langage naturel, voix, citations et réponses vérifiables"
+---
+PartGenie search est conçu pour les ingénieurs matériels—pas pour le chat générique. Vous obtenez * * des réponses vérifiables * * fondées sur les données des composants, les fiches techniques et les sources en direct.
+
+## Ce que tu peux demander
+
+- **Recherche MPN* — - numéros de pièces exacts, correspondances proches, suggestions du fabricant
+- **Spécifications et applications* — - sélection de la tension, de l'emballage et du cas d'utilisation
+— ** Alternatives * * - remplacements avec le contexte du projet (voir [Alternatives] (/en-US / alternatives))
+— ** Mathématiques d'ingénierie * * - puissance de la résistance, thermique LDO, contrôles de réussite / échec, curseurs d'interface utilisateur intelligents (voir [Calculatrice d'ingénierie] (/en-US / calculatrice d'ingénierie))
+— ** Modules et kits * * - cartes de développement et pièces robotiques via [OpenELAB](/fr-FR/openelab-modules)
+
+```
+Examples:
+- "STM32F103C8T6 operating voltage"
+- "alternative to BQ24195 for 4.5A USB charging"
+- "100uF 16V electrolytic, automotive grade"
+```
+
+## Comment chercher
+
+<Steps>
+  <Step title="Open the homepage">
+    Go to [app.partgenie.ai](https://app.partgenie.ai). Use **Search** mode for component Q&A, or **Work** when you're acting on a BOM/Design project.
+  </Step>
+  <Step title="Enter a query">
+    Type naturally, paste an MPN, upload a datasheet/image, or use **voice input** (microphone in the search bar).
+  </Step>
+  <Step title="Review the answer">
+    Answers include structured part cards, tables, and **citation badges**. Gray MPN badges open the component drawer; green = OEM, orange = distributor, purple = community.
+  </Step>
+  <Step title="Follow up">
+    Use suggested follow-ups—including one-click **Design** when you want to start hardware design from a part.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Voice input in the PartGenie search bar"
+    src="/images/search-voice-recording.png"
+  />
+</Frame>
+
+## Réponses vérifiables
+
+La plupart des outils d'IA vous donnent du texte. PartGenie cite * * les NMP exacts * * et * * les sources Web* * afin que vous puissiez vérifier avant d'intégrer la conception:
+
+- Cliquez sur un badge MPN → tiroir de composants (spécifications, stock, prix)
+- Cliquez sur badges de distributeur → aller aux listes sources
+- Les revendications de fiches techniques peuvent inclure * * des citations au niveau de la page* * (voir [Datasheet citations] (/en-US / datasheet-citations))
+
+<Frame>
+  <img
+    alt="Citation badges for MPN and distributor sources in an AI answer"
+    src="/images/citation-badges.png"
+  />
+</Frame>
+
+## Tableaux et exportation
+
+Tableaux de comparaison et alternatifs dans le support des réponses * * export* * (Pro). Placez le curseur en haut à droite d'un tableau à télécharger.
+
+## Ce que tu vois dans la réponse
+
+| À l'écran / Que faire |
+| --- | --- |
+/ ** Aperçu * * onglet / Lisez la réponse écrite, les tableaux et les puces de l'étape suivante |
+/ Badge gris * * MPN* | / Ouvre le tiroir des composants (spécifications, approvisionnement, CAO) |
+/ Badges verts / oranges / violets / Site OEM, distributeur ou source communautaire |
+/ Badge de numéro de page / Ouvre la fiche technique PDF sur cette page |
+/ ** Onglet Composants * | / La liste des composants correspondants pour cette réponse |
+| ** Onglet Sources * * / D'où proviennent les revendications |
+/ Microphone / Entrée vocale; la forme d'onde s'affiche pendant l'écoute |
+| * * + * * dans la boîte / Joindre un fichier ou une image |
+/ Puces de suivi / Prochaines questions suggérées, y compris * * Conception* * |
+
+** Recherche * * et * * Travail * * sont les deux puces à l'intérieur de l'entrée. La recherche est pour les questions. Le travail concerne un projet de nomenclature ou de conception que vous avez joint. Voir [partgenie-Travail](/fr-FR/partgenie-travail).
+
+Pour extraire une empreinte une fois que vous avez le bon MPN, ouvrez le tiroir et utilisez des **modèles CAO**, ou demandez une bibliothèque KiCad. Voir [CAO électronique et empreintes] (/en-US / modèles cao électronique).
+
+## Liés
+
+- [Alternatives](/fr-FR/alternatives) - recherche et rapports de substituts plus intelligents
+- [Approvisionnement en direct] — / en-US / approvisionnement en direct) - stock et prix dans les résultats
+- [génération de la bibliothèque KiCad] (/fr-FR / bibliothèque kicad)
+- [Comment écrire des requêtes compréhensibles par l'IA] (/fr-FR / ai-query-writing)

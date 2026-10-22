@@ -1,0 +1,87 @@
+---
+title: "Génération de bibliothèque KiCad"
+description: "Générez un symbole KiCad vérifié, une empreinte et une ÉTAPE 3D pour un MPN, puis téléchargez la bibliothèque (bêta)"
+---
+** Génération de bibliothèque KiCad (Bêta) * * construit une bibliothèque de pièces à partir de la base de données des composants de PartGenie et de la fiche technique: * * Symbole**, * * Empreinte** et * * ÉTAPE 3D**, plus un résumé des preuves que vous pouvez vérifier avant de le déposer dans un tableau.
+
+Ceci est différent du téléchargement d'un modèle de catalogue sur la page de la pièce. Les actifs du catalogue sont en direct sur l'onglet composant * * Modèles CAO* — - voir [CAO électronique et empreintes] (/en-US / Modèles CAO électronique). Utilisez generation lorsque vous avez besoin d'une bibliothèque native de KiCad avec code PIN, pad et contrôles visuels attachés.
+
+## Générer une bibliothèque
+
+<Steps>
+  <Step title="Start from Search">
+    Open [app.partgenie.ai](https://app.partgenie.ai) and stay on **Search** (not Work).
+  </Step>
+  <Step title="Ask for a verified library">
+    Use the MPN and package in the prompt:
+
+    
+__P0__
+
+
+    You can also say *symbol, footprint, and 3D model* for a specific MPN such as 
+__P1__
+ or 
+__P2__
+.
+  </Step>
+  <Step title="Wait for the job">
+    Generation can take a few minutes. PartGenie tells you it has started and notifies you **in the app and by email** when the library is ready. You can leave the chat and come back from **Recents** or **⌘K**.
+  </Step>
+  <Step title="Review Symbol, Footprint, and 3D">
+    The finished card shows three previews:
+
+    - **Symbol** — schematic symbol and pin numbers
+    - **Footprint** — pad layout (for example 0603 pads 1 and 2)
+    - **3D Model** — STEP body
+
+    Status chips on a finished library include **KiCad native import**, **Pin mapping**, and **Visual audit**.
+  </Step>
+  <Step title="Open the evidence summary">
+    Expand **Evidence summary**. Each row is a field (pin count, pitch, body size, pad size), the value used, the **datasheet page** it came from, and a status:
+
+    - **Calculated** — derived from datasheet or package data
+    - **Assumed** — a default the engine filled in (pitch is a common one)
+
+    Treat **Assumed** rows as items you must confirm.
+  </Step>
+  <Step title="Download">
+    Click **Download** on the part card and import the files into your KiCad project libraries.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Generated KiCad card with Symbol, Footprint, 3D Model, and Download"
+    src="/images/kicad-library-generate.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Evidence summary table with datasheet page and Calculated or Assumed status"
+    src="/images/kicad-library-evidence.png"
+  />
+</Frame>
+
+## Avant la fabrication-libération
+
+< Avertissement>
+  Les bibliothèques sont * * bêta**. Avant d'en utiliser un, vérifiez la hauteur, les pads, la broche 1 et le modèle 3D par rapport à la fiche technique. Une hauteur supposée ou une mauvaise marque pin-1 ne sera pas détectée uniquement par une vignette visuelle.
+< / Avertissement>
+
+- Ouvrez la page de la fiche technique citée à partir du tableau des preuves (voir [Citations de la fiche technique] (/en-US / datasheet-citations))
+- Confirmez le code pin 1 sur le symbole et l'empreinte
+- Si quelque chose ne va pas, répondez dans le même chat avec la correction — et envoyez des commentaires pour que le générateur puisse s'améliorer
+
+## Où les fichiers vont ensuite
+
+Les bibliothèques téléchargées sont à vous pour les importer dans KiCad. Le chat qui les a produits reste dans * * Récents**. Les rapports et fichiers associés peuvent également atterrir dans [Knowledge] (/fr-FR/knowledge) lorsque PartGenie enregistre l'artefact.
+
+## Liés
+
+- [Intégration EDA](/fr-FR/intégration eda) — importer dans KiCad 8 et d'autres outils
+- [Intégrations] (/fr-FR / intégrations)
+- [cao électronique et empreintes] (/en-US / modèles cao électronique) - modèles de catalogue déjà sur la pièce
+- [Mode de conception](/fr-FR/mode de conception)-architecture et nomenclature avant de dessiner le tableau
+- [Recherche d'IA] (/fr-FR / recherche d'ia)

@@ -1,0 +1,88 @@
+---
+title: "AI 검색"
+description: "자연어， 음성， 인용문 및 검증 가능한 답변으로 구성요소 검색"
+---
+PartGenie 검색은 일반적인 채팅이 아닌 하드웨어 엔지니어를 위해 구축되었습니다. 구성 요소 데이터， 데이터시트 및 라이브 소스를 기반으로 ** 검증 가능한 ** 답변을 얻을 수 있습니다。
+
+## 질문할 수 있는 내용
+
+- **MPN 검색 ** - 정확한 부품 번호， 근접 일치， 제조업체 제안
+- ** 사양 및 애플리케이션 ** - 전압， 패키지， 사용 사례 기반 선택
+- **Alternatives** - 프로젝트 컨텍스트에 따른 교체 ([Alternatives](/ko-KR/alternatives))
+- ** 엔지니어링 수학 ** – 저항 전력， LDO 열， 패스/실패 검사， 지능형 UI 슬라이더 (엔지니어링 계산기 참조)
+- ** 모듈 & 키트 ** - OpenELAB 를 통한 개발 보드 및 로봇 부품 (/ko-KR/openelab-modules)
+
+```
+Examples:
+- "STM32F103C8T6 operating voltage"
+- "alternative to BQ24195 for 4.5A USB charging"
+- "100uF 16V electrolytic, automotive grade"
+```
+
+## 검색 방법
+
+<Steps>
+  <Step title="Open the homepage">
+    Go to [app.partgenie.ai](https://app.partgenie.ai). Use **Search** mode for component Q&A, or **Work** when you're acting on a BOM/Design project.
+  </Step>
+  <Step title="Enter a query">
+    Type naturally, paste an MPN, upload a datasheet/image, or use **voice input** (microphone in the search bar).
+  </Step>
+  <Step title="Review the answer">
+    Answers include structured part cards, tables, and **citation badges**. Gray MPN badges open the component drawer; green = OEM, orange = distributor, purple = community.
+  </Step>
+  <Step title="Follow up">
+    Use suggested follow-ups—including one-click **Design** when you want to start hardware design from a part.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Voice input in the PartGenie search bar"
+    src="/images/search-voice-recording.png"
+  />
+</Frame>
+
+## 검증 가능한 답변
+
+대부분의 AI 도구는 텍스트를 제공합니다. PartGenie 는 ** 정확한 MPN** 및 ** 웹 소스 ** 를 인용하므로 설계하기 전에 확인할 수 있습니다：
+
+- MPN 배지 → 구성 요소 서랍 클릭 (사양， 재고， 가격)
+- 유통업체 배지 클릭 → 소스 목록으로 이동
+- 데이터시트 주장에는 ** 페이지 수준 인용 ** 이 포함될 수 있습니다 ([데이터시트 인용](/ko-KR/datasheet-citations) 참조)
+
+<Frame>
+  <img
+    alt="Citation badges for MPN and distributor sources in an AI answer"
+    src="/images/citation-badges.png"
+  />
+</Frame>
+
+## 표 및 내보내기
+
+답안의 비교 및 대체 표는 **export**(Pro) 를 지원합니다. 다운로드할 표의 오른쪽 상단을 클릭합니다。
+
+## 답변에서 보이는 내용
+
+| 화면에서 | 해야 할 일 |
+| --- | --- |
+| ** 개요 ** 탭 | 기록된 답변， 표 및 다음 단계 점수표 읽기 |
+| 회색 **MPN** 배지 | 구성 요소 서랍 열기 (사양， 조달， CAD) |
+| 녹색/주황색/보라색 배지 | OEM 사이트， 유통업체 또는 커뮤니티 소스 |
+| 페이지 번호 배지 | 해당 페이지에서 데이터시트 PDF 를 엽니다 |
+| **Components** 탭 | 이 답변의 일치하는 부품 목록 |
+| ** 소스 ** 탭 | 클레임이 추출된 위치 |
+| 마이크 | 음성 입력; 듣는 동안 파형이 표시됨 |
+| 상자 안에서 | 파일 또는 이미지 첨부 |
+| 후속 칩 | **Design** 를 포함한 다음 질문 제안 |
+
+**Search** 와 **Work** 는 입력 내의 두 칩입니다. 검색은 질문을 위한 것입니다. 작업은 첨부한 BOM 또는 디자인 프로젝트를 위한 것입니다. [PartGenie Work](/ko-KR/partgenie-work) 를 참조하십시오。
+
+올바른 MPN 을 얻은 후 발자국을 추출하려면 서랍을 열고 **CAD Models** 를 사용하거나 KiCad 라이브러리를 요청하세요. [ECAD & footprints](/ko-KR/ecad-models) 를 참조하세요。
+
+## 관련
+
+- [Alternatives](/ko-KR/alternatives) - 더 스마트한 대체 검색 및 보고서
+- [Live sourcing](/ko-KR/live-sourcing) - 결과 주식 및 가격
+- [KiCad 라이브러리 생성](/ko-KR/kicad-library)
+- [AI 이해 가능한 쿼리 작성 방법](/ko-KR/ai-query-writing)

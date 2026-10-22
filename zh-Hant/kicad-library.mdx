@@ -1,0 +1,84 @@
+---
+title: "KiCad 庫生成"
+description: "按 MPN 生成經過校驗的 KiCad Symbol、Footprint 與 STEP 3D，並下載工程文件（Beta）"
+---
+
+**KiCad 庫生成（Beta）** 基於 PartGenie 器件庫和規格書，為指定型號生成 **Symbol、Footprint、STEP 3D**，並附上可核對的證據表。
+
+這和器件頁上直接下載目錄模型不是同一條路。目錄裡已有的封裝 / 符號在器件 **CAD Models** 頁籤——見 [ECAD 與封裝庫](/zh-Hant/ecad-models)。需要帶引腳、焊盤和視覺校驗的 KiCad 工程文件時，用生成。
+
+## 生成庫
+
+<Steps>
+  <Step title="從 Search 開始">
+    打開 [app.partgenie.ai](https://app.partgenie.ai)，保持在 **Search**（不要切到 Work）。
+  </Step>
+  <Step title="用型號發起生成">
+    在提問裡寫上 MPN 和封裝：
+
+    ```
+    generate verified KiCAD for RC0603FR-071KL
+    ```
+
+    也可以直接說為某個型號生成 symbol、footprint 和 3D，例如 `STM32F103RET6`、`OPA810IDBVR`。
+  </Step>
+  <Step title="等待任務完成">
+    生成可能需要幾分鐘。PartGenie 會說明任務已開始，完成後通過**站內通知和郵件**告知。你可以離開當前對話，之後從 **Recents** 或 **⌘K** 找回。
+  </Step>
+  <Step title="查看 Symbol、Footprint、3D">
+    完成後卡片分三塊預覽：
+
+    - **Symbol** — 原理圖符號與引腳號
+    - **Footprint** — 焊盤（例如 0603 的 1、2 腳）
+    - **3D Model** — STEP 外形
+
+    校驗通過時會看到 **KiCad native import**、**Pin mapping**、**Visual audit**。
+  </Step>
+  <Step title="打開 Evidence summary">
+    展開 **Evidence summary**。每一行是一個字段（引腳數、pitch、本體尺寸、焊盤尺寸）、採用的數值、對應**規格書頁碼**，以及狀態：
+
+    - **Calculated** — 由規格書或封裝數據算出
+    - **Assumed** — 引擎補上的默認值（pitch 較常見）
+
+    **Assumed** 的行必須人工確認。
+  </Step>
+  <Step title="下載">
+    在器件卡片上點 **Download**，把文件導入 KiCad 工程庫。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="生成的 KiCad 卡片：Symbol、Footprint、3D 與 Download"
+    src="/images/kicad-library-generate.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="Evidence summary：規格書頁碼，以及 Calculated / Assumed 狀態"
+    src="/images/kicad-library-evidence.png"
+  />
+</Frame>
+
+## 投板前
+
+<Warning>
+  庫仍是 **Beta**。使用前請對照規格書核對 pitch、焊盤、Pin 1 和 3D。縮略圖看起來正常，不代表假定的間距一定正確。
+</Warning>
+
+- 從證據表打開被引用的規格書頁（見 [規格書頁碼溯源](/zh-Hant/datasheet-citations)）
+- 同時核對符號和封裝上的 Pin 1
+- 不對就在同一條對話裡指出，也歡迎把問題反饋給我們
+
+## 文件之後在哪
+
+下載的庫由你導入 KiCad。生成它的對話留在 **Recents**。相關產物也可能進入 [Knowledge](/zh-Hant/knowledge)。
+
+## 相關文檔
+
+- [EDA 集成](/zh-Hant/eda-integration) — 導入 KiCad 8 與其他 EDA
+- [集成總覽](/zh-Hant/integrations)
+- [ECAD 與封裝庫](/zh-Hant/ecad-models)
+- [Design 模式](/zh-Hant/design-mode)
+- [AI 智能搜索](/zh-Hant/ai-search)

@@ -1,0 +1,39 @@
+---
+title: "替代料"
+description: "結合項目上下文找更合適的替代方案，對比 MPN，並導出 Alternative Report"
+---
+
+PartGenie 的替代料搜索不止於參數相近。引擎會追問**項目上下文**（功耗、散熱、封裝、應用），再推薦升級路徑與功能替代。
+
+## 更智能的替代搜索
+
+當你查找替換（例如 *alternative to BQ24195*）時，系統可能彈出約束確認。確認或跳過；已確認的上下文會用於推薦。
+
+<Frame>
+  <img alt="替代料約束澄清提問" src="/images/alt-search-clarify.png" />
+</Frame>
+
+結果會標明關係類型（升級路徑 / 功能替代）、是否 drop-in，以及關鍵規格。
+
+## 對比 MPN
+
+在 BOM 或搜索結果中多選 MPN，點擊 **Compare**，橫向對比價格、庫存、MOQ、交期與封裝。
+
+<Frame>
+  <img alt="多個 MPN 的 Compare Products 面板" src="/images/bom-compare-panel.png" />
+</Frame>
+
+## Alternative Report（導出）
+
+在器件的 **Alternative Parts** 區域：
+
+1. 點擊 **View report** 查看結構化短名單（目標器件、摘要、設計/採購建議、候選料風險與置信度）
+2. 導出為 **PDF** 或 **Word**，方便同步 FAE、採購或設計評審
+
+<Frame>
+  <img alt="Alternative report 與 PDF/Word 導出" src="/images/alt-report-export.png" />
+</Frame>
+
+## Adopt 進項目
+
+在 [PartGenie Work](/zh-Hant/partgenie-work) 或 BOM 分析中，可將推薦替代料直接 **Adopt** 進項目。Adopt 記錄見 [BOM 管理](/zh-Hant/bom-management) 中的工程 Diff。

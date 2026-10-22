@@ -1,0 +1,55 @@
+---
+title: "통합"
+description: "브라우저， EDA 도구 및 모바일 앱에 PartGenie 연결"
+---
+PartGenie 는 이미 작업하고 있는 곳에서 만납니다: 전체 프로젝트를 위한 웹 앱， 디스트리뷰터 페이지의 Chrome, 벤치의 mobile, 그리고 레이아웃을 위한 ECAD 다운로드 또는 KiCad 생성。
+
+이 페이지를 사용하여 올바른 연결을 선택하세요. 단계별 안내서는 표에 링크되어 있습니다。
+
+## 올바른 통합 선택하기
+
+| 통합 | 연결 방법 | 할 수 있는 일 | EDA / 브라우저 열기？ |
+| ---| ---| ---| ---|
+| [PartGenie web](/ko-KR/getting-started) | [app.partgenie.ai] 에 로그인 (https://app.partgenie.ai) | 검색， 작업， BOM, 디자인， 지식， KiCad 생성， 라이브 소싱 | 브라우저에서 작업하는 동안 사용 |
+| [Chrome extension](/ko-KR/chrome-extension) | [Chrome Web Store](https://chromewebstore.google.com/detail/partgenie/djhpmidamklapnaidbhljfpbnnlninmk) 에서 설치， PartGenie 계정으로 로그인 | DigiKey, Mouser, LCSC 및 기타 지원되는 페이지에서 MPN 인식; 채팅， 증거가 있는 대안， ECAD, 가격 비교 | 지원되는 제품 탭을 열어둔 상태로 유지; 목록 옆에 사이드바 유지 |
+| [Mobile app](/ko-KR/mobile-app) | App Store 또는 Google Play 에서 PartGenie** 설치 | 부품 스냅， PCB 스캔， SMD 코드 검색， 이동 중 검색 | 책상에서 떨어져 있을 때 사용 |
+| [ECAD 카탈로그 다운로드](/ko-KR/eda-integration#download-catalog-models) | 웹 또는 Chrome → 파트 열기 → **CAD 모델 ** | Altium, KiCad, Eagle, OrCAD, Allegro 등의 형식으로 기호， 발자국 및 STEP 다운로드 (해당 MPN 에 표시된 경우) | EDA 도구를 열어 파일 가져오기 |
+| [KiCad 라이브러리 생성](/ko-KR/eda-integration#kicad-import) | 웹 또는 Chrome → 검색 또는 **CAD 모델 ** → 생성 → ** 다운로드 ** | KiCad 8`.kicad_sym`,`.kicad_mod`, 및 증거 및 가져오기 검사가 있는 3D(베타) | 프로젝트에 라이브러리를 추가하기 위해 **KiCad 8** 열기 |
+| [KiCad plugin](/ko-KR/kicad-plugin) | [Settings → Integrations](/ko-KR/kicad-Plugin#install) → PCB 에디터에 KiCad → install | 부품 검사， BOM 동기화， BOM 상태， KiCad 에서 ECAD 생성/요청 | 플러그인 패널로 **KiCad** 열어두기 |
+
+<정보>
+PartGenie 는 EDA 라이선스를 대체하지 않습니다. 카탈로그 다운로드 및 생성된 KiCad 파일은 기존 Altium, KiCad, Eagle, OrCAD 또는 Allegro 워크플로로 ** 가져옵니다. 제조 전에 항상 피치， 핀 1 및 패드를 데이터 시트와 비교하여 확인하십시오。
+</정보>
+
+## 일반적인 흐름
+
+** 소싱 → 디자인 **
+
+1. [Chrome 확장] 으로 DigiKey 또는 Mouser 의 파트를 탐색합니다。
+2. 대안을 검토하고 **CAD 모델 ** 을 열거나 KiCad 를 생성합니다。
+3. EDA 도구로 가져오기 – [EDA 통합](/ko-KR/eda-integration).
+
+** 질문 → 발자국 **
+
+1. [Search](/ko-KR/ai-search) 웹 앱에서 MPN 을 검색합니다。
+2. 컴포넌트 서랍 → **CAD 모델 ** 을 열거나 [KiCad 라이브러리 생성](/ko-KR/kicad-library) 을 실행합니다。
+3. 도구에 대해 [EDA 통합](/ko-KR/eda-integration) 을 따릅니다。
+
+** 벤치 → 책상 **
+
+1. [모바일 앱](/ko-KR/mobile-app) 으로 표시를 식별합니다。
+2. 웹 검색 또는 유통업체 페이지의 Chrome 에서 동일한 MPN 을 계속 사용합니다。
+
+## 계정 및 크레딧
+
+Chrome, 웹 및 모바일은 동일한 PartGenie 계정 및 **credits** 모델을 공유합니다. KiCad 생성 및 일부 ECAD 다운로드는 [멤버십 & 가격](/ko-KR/membership-pricing) 에 표시된 대로 크레딧 또는 추가 청구를 사용합니다。
+
+## 지원되는 사이트의 개인정보 보호
+
+Chrome 확장은 지원되는 유통업체 및 제조업체 페이지에서만 활성화됩니다. 이는 해당 페이지의 정보를 사용하여 사용자가 보고 있는 구성 요소를 식별합니다. [Chrome 확장](/ko-KR/chrome-extension#privacy-and-permissions) 을 참조하십시오。
+
+## 관련
+
+- [ECAD & footprints](/ko-KR/ecad-models) - 카탈로그 대 생성된 라이브러리
+- [Live sourcing](/ko-KR/live-sourcing) - 웹 및 Chrome 의 가격 및 주식
+- [Contact us](/ko-KR/contact-us) - 엔터프라이즈 API/PLM 옵션

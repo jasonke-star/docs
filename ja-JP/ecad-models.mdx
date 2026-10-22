@@ -1,0 +1,63 @@
+---
+title: "ECAD＆フットプリント"
+description: "部品のCADモデルタブを開いてカタログフットプリントとシンボルを表示するか、必要に応じてKiCadライブラリを生成します"
+---
+PartGenieには、部品のECADを取得する3つの方法があります。 あなたが必要とするものと一致するものを使用してください。
+
+|あなたが必要|どこ|
+| --- | --- |
+|**Professional**Altium、Cadence、OrCAD、PADSなどのシンボル、フットプリント、3D/コンポーネントドロワー→**CADモデル**→フォーマットを選択→**リクエスト**（[FootprintKu]（https://footprintku.com/)パートナーシップ)|
+|すでにファイルにあるカタログアセット/同じ**CADモデル**ファイルがダウンロード用にリストされているタブ|
+|Kicadライブラリが生成され、データシートに対してチェックされます/[KiCadライブラリ生成](/en-US|kicad-library)/
+
+##カタログモデルを取得する
+
+<Steps>
+  <Step title="Open the part">
+    Search the MPN, then click the **MPN badge** in the answer or the part card. That opens the component drawer.
+  </Step>
+  <Step title="Switch to CAD Models">
+    The drawer tabs are **Product**, **Procurement**, and **CAD Models**. Procurement is live price and stock. **CAD Models** is the footprint library for that part.
+  </Step>
+  <Step title="Pick your EDA format">
+    Use the format dropdown (for example **Altium 18**, **Cadence**, **OrCAD**, **PADS**, or **KiCad** when listed).
+  </Step>
+  <Step title="Request or download">
+    Click **Request** for schematic symbol, PCB footprint, or STEP 3D when FootprintKu fulfills professional models for that MPN. Download directly when a catalog file is already available.
+
+    Not every MPN has every format. If nothing is listed, use [KiCad generation](/ja-JP/kicad-library) instead of guessing a generic 0603.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="CAD Models: Altium format, Request schematic symbol, footprint, and STEP 3D"
+    src="/images/footprintku-ecad-cad-models.png"
+  />
+</Frame>
+
+##代わりに生成するとき
+
+次の場合にKiCadライブラリを生成する:
+
+-CADモデルには、この正確なMPNとパッケージのファイルがありません
+-データシートのページに結ばれる証拠のテーブル（ピン数、ボディ、パッド、ピッチ）が付いている記号+足跡+ステップを、一緒に必要とします
+-部品を配置する前に**KiCadネイティブインポート**チェックが必要です
+
+検索で尋ねる:
+
+```
+generate verified KiCAD for RC0603FR-071KL
+```
+
+完全な手順:[KiCadライブラリ生成](/ja-US/kicad-library)。
+
+<警告>
+  カタログのフットプリントと生成されたライブラリは、パッドのサイズまたはピン1に一致しない場合があります。 あなたが製造するものについては、お互いに対してではなく、データシートのページに対して両方を確認してください。
+</警告>
+
+##関連
+
+-[KiCadライブラリ生成](/ja-US/kicad-library)
+-[Live sourcing](/ja-JP/live—sourcing)-CADモデルの横にある[Procurement]タブ
+-[データシートの引用](/ja-JP/データシートの引用)

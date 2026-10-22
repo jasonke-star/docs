@@ -1,0 +1,83 @@
+---
+title: "AI 智能搜索"
+description: "用自然語言、語音與可驗證引用搜索元器件"
+---
+
+PartGenie 搜索面向硬件工程師，不是通用聊天。回答基於器件數據、規格書與實時來源，**可核驗、可溯源**。
+
+## 你可以問什麼
+
+- **MPN 查詢** — 精確料號、近匹配、廠商聯想
+- **規格與應用** — 電壓、封裝、場景選型
+- **替代料** — 結合項目上下文推薦（見 [替代料](/zh-Hant/alternatives)）
+- **工程計算** — 電阻功率、LDO 結溫、Pass/Fail、Intelligent UI 滑條（見 [工程計算器](/zh-Hant/engineering-calculator)）
+- **模組與套件** — 開發板、機器人部件等（見 [OpenELAB](/zh-Hant/openelab-modules)）
+
+```
+示例：
+- "STM32F103C8T6 工作電壓"
+- "BQ24195 替代料，4.5A USB 充電"
+- "100uF 16V 電解電容，車規"
+```
+
+## 如何搜索
+
+<Steps>
+  <Step title="打開首頁">
+    訪問 [app.partgenie.ai](https://app.partgenie.ai)。器件問答用 **Search**；對 BOM/Design 項目分析執行用 **Work**。
+  </Step>
+  <Step title="輸入查詢">
+    自然語言、粘貼 MPN、上傳規格書/圖片，或使用搜索框中的**語音輸入**。
+  </Step>
+  <Step title="閱讀回答">
+    含器件卡片、表格與**引用角標**。灰色 MPN 角標打開器件抽屜；綠 = 原廠、橙 = 分銷商、紫 = 社區。
+  </Step>
+  <Step title="繼續追問">
+    可使用追問建議——包括一鍵 **Design**，基於當前器件啟動硬件設計。
+  </Step>
+</Steps>
+
+<Frame>
+  <img alt="搜索框語音輸入" src="/images/search-voice-recording.png" />
+</Frame>
+
+## 可驗證的回答
+
+大多數 AI 只給文字。PartGenie 會引用**具體 MPN**與**來源鏈接**，設計導入前可自行核對：
+
+- 點擊 MPN 角標 → 器件抽屜（規格、庫存、價格）
+- 點擊分銷商角標 → 跳轉採購頁
+- 規格書結論可帶**頁碼級引用**（見 [規格書頁碼溯源](/zh-Hant/datasheet-citations)）
+
+<Frame>
+  <img alt="回答中的 MPN 與分銷商引用角標" src="/images/citation-badges.png" />
+</Frame>
+
+## 表格導出
+
+回答中的對比/替代料表格支持**導出**（Pro）。鼠標懸停表格右上角即可下載。
+
+## 回答界面上有什麼
+
+| 界面 | 做什麼 |
+| --- | --- |
+| **Overview** | 看正文、表格和下一步建議 |
+| 灰色 **MPN** 角標 | 打開器件抽屜（規格、採購、CAD） |
+| 綠 / 橙 / 紫角標 | 原廠、分銷商、社區來源 |
+| 頁碼角標 | 打開規格書 PDF 的那一頁 |
+| **Components** | 這次回答匹配到的器件列表 |
+| **Sources** | 結論引用了哪些來源 |
+| 麥克風 | 語音輸入，錄音時會出波形 |
+| 輸入框裡的 **+** | 附加文件或圖片 |
+| 追問芯片 | 建議的下一問，其中可以有 **Design** |
+
+輸入框裡的 **Search** 和 **Work** 是兩種模式。Search 用來提問；Work 用來處理已經附上的 BOM 或 Design 項目。見 [PartGenie Work](/zh-Hant/partgenie-work)。
+
+型號確定之後要封裝，打開抽屜的 **CAD Models**，或直接生成 KiCad 庫。見 [ECAD 與封裝庫](/zh-Hant/ecad-models)。
+
+## 相關文檔
+
+- [替代料](/zh-Hant/alternatives)
+- [實時採購](/zh-Hant/live-sourcing)
+- [KiCad 庫生成](/zh-Hant/kicad-library)
+- [如何撰寫 AI 能理解的查詢](/zh-Hant/ai-query-writing)

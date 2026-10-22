@@ -1,0 +1,78 @@
+---
+title: "BOM 관리"
+description: "BOM 업로드， 상태 보고서， 엔지니어링 차이， 추정 비용， 비교 및 공유"
+---
+PartGenie 는 BOM 을 살아 있는 엔지니어링 문서로 취급합니다. 즉， 라인을 일치시키고， 위험을 표시하며， 대안을 채택하고， 변경 사항을 추적하고， 비용을 추정합니다。
+
+## 생성 또는 업로드
+
+<Steps>
+  <Step title="Attach the BOM">
+    On the homepage, click **Optimize BOM** or switch the input to **Work**, then upload **CSV / Excel** or paste a part list. You can also open an existing BOM from **Projects**.
+  </Step>
+  <Step title="Read the toolbar">
+    Across the top of the BOM:
+
+    - **Refreshing live stock** — how many lines have been priced
+    - **Files & Rules** — project files and instructions (these override your account custom instructions)
+    - **Changes** — Adopt history and version diff
+    - **Health** — score for the current BOM
+    - **Est.** — estimated cost range and how many lines are priced
+    - **Export** / **Share**
+  </Step>
+  <Step title="Work the table">
+    Each row shows the original part number, **Match** (for example Full Match), **Stock / Source** distributor marks, and brand. Filter with **Level** and **Match**. **Add Data Row** inserts a line. Row actions copy, duplicate, or delete.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM toolbar with live stock refresh, Changes, Health, estimated price, Export, and Share"
+    src="/images/bom-diff-estimate.png"
+  />
+</Frame>
+
+## 건강 보고서
+
+업로드 후 다음을 위해 상태 개요를 엽니다：
+
+- ** 카테고리별 구성 요소 분포 ** (위험 수 포함)
+- ** 위험 목록 ** - NRND/EOL, 재고 제로， 출처 데이터 없음， 제조업체 실종
+- ** 대량 대체품 ** - 스캔 일치 선 및 표면 기능 교체
+
+<Frame>
+  <img
+    alt="BOM component distribution and risk counts"
+    src="/images/bom-health-distribution.png"
+  />
+</Frame>
+
+## 엔지니어링 차이 및 추정 가격
+
+BOM 도구 모음에서：
+
+- ** 변경사항 ** - 채택 기록 및 버전 기록 (무엇이 무엇을 대체했는지， 행이 변경되었을 때)
+- ** 동부 가격 ** - 라이브 소싱에서 BOM 수준 비용 추정치 (예: 범위 + 가격이 책정된 라인 수)
+- **Health** - 전체 상태 점수
+
+<Frame>
+  <img
+    alt="BOM toolbar with Changes, Health, and estimated price"
+    src="/images/bom-diff-estimate.png"
+  />
+</Frame>
+
+## 비교 및 채팅 컨텍스트
+
+- 행 선택 → ** 병렬 소싱을 위한 비교 **
+- BOM 행을 다중 선택하고 에이전트 채팅에서 소싱 결정을 위해 참조
+
+## 공유
+
+이메일 또는 링크를 통해 팀원들과 BOM 을 공유하세요. [Share](/ko-KR/share) 를 참조하세요。
+
+## 관련
+
+- [PartGenie Work](/ko-KR/partgenie-work)
+- [라이브 소싱](/ko-KR/live-sourcing)
+- [Effective BOM management](/ko-KR/effective-bom-management)

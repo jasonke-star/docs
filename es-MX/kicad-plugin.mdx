@@ -1,0 +1,90 @@
+---
+title: "Complemento de KiCad"
+description: "Inspeccione piezas, sincronice el estado de la lista de materiales y solicite ECAD desde dentro de KiCad"
+---
+El * * complemento PartGenie KiCad * * aporta inteligencia de componentes al Editor de PCB de KiCad, sin salir del archivo de su placa.
+
+Descargue e instale desde * * [app.partgenie.ai] (https://app.partgenie.ai) → Configuración → Integraciones → KiCad**.
+
+## Instalar
+
+<Steps>
+  <Step title="Open Integrations">
+    Sign in at [app.partgenie.ai](https://app.partgenie.ai). Open **Settings → Integrations**.
+  </Step>
+  <Step title="Download KiCad">
+    Choose **KiCad**, download the plugin package, and follow the on-screen install steps for your OS and KiCad version.
+  </Step>
+  <Step title="Sign in inside KiCad">
+    Open the PartGenie panel in KiCad and sign in with the same PartGenie account you use on the web.
+  </Step>
+</Steps>
+
+## Inspección de piezas
+
+Seleccione una huella o símbolo en KiCad, luego use **Inspeccionar selección** (o abra el panel PartGenie para esa referencia).
+
+<Frame>
+  <img
+    alt="PartGenie KiCad plugin showing Product tab for SM04B-SRSS-TB: parameters, Add to BOM, View on PartGenie"
+    src="/images/kicad-plugin-part-inspect.png"
+  />
+</Frame>
+
+Desde el panel de piezas puede:
+
+/ Pestaña / Lo que obtienes |
+| --- | --- |
+| ** Producto * * / Parámetros detallados, estado del ciclo de vida, descripción |
+/ * * Alternativas* | / Sustitutos con evidencia (mismo flujo de trabajo que la búsqueda web) |
+/ * * Adquisiciones* * / Precio de mercado en vivo y existencias cuando estén disponibles |
+/ * * Modelos CAD * * | Catálogo ECAD o * * Generar KiCad* * para símbolo y huella |
+
+<Frame>
+  <img
+    alt="CAD Models tab in KiCad plugin: Generate KiCad, schematic symbol and PCB footprint requests"
+    src="/images/kicad-plugin-cad-models.png"
+  />
+</Frame>
+
+Use * * Ver en PartGenie** para ver la página completa de componentes, el chat de la hoja de datos y una investigación más profunda. ** Agregar a la lista de materiales * * envía la pieza a la lista de materiales de su proyecto PartGenie.
+
+## Work-sincronización y estado de la lista de materiales del proyecto
+
+Cambie el complemento a * * Work* * para actuar en el proyecto abierto de KiCad.
+
+<Frame>
+  <img
+    alt="PartGenie Work in KiCad: Project BOM StickHub synced 93 lines, Inspect selection and Sync project BOM"
+    src="/images/kicad-plugin-work-bom-sync.png"
+  />
+</Frame>
+
+<Steps>
+  <Step title="Sync project BOM">
+    Click **Sync project BOM**. PartGenie reads lines from your KiCad schematic and opens or updates the matching BOM in your account (for example “BOM synced (93 lines)”).
+  </Step>
+  <Step title="Open BOM health">
+    From the sync confirmation or Work chat, open **BOM health** to review match rate, risks, and estimated cost.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="BOM health in KiCad plugin: 86% composite score, matched vs unmatched, est price, risks"
+    src="/images/kicad-plugin-bom-health.png"
+  />
+</Frame>
+
+El estado de la lista de materiales incluye puntaje compuesto, líneas coincidentes / no coincidentes, rango de precios estimado, combinación de categorías y riesgos marcados (como MPN sin coincidencia). Continúe el análisis en la aplicación web con el mismo proyecto.
+
+## Próximamente
+
+Visual * * Reemplazo de arrastrar y soltar de ECAD * * en la vista del tablero: intercambie símbolos y huellas con alternativas respaldadas por PartGenie sin búsqueda manual de bibliotecas.
+
+## Relacionado
+
+- [Resumen de integraciones] (/es-US / integraciones)
+- [Integración EDA] (/en-US / eda-integration)
+- [Gestión de listas de materiales] (/es-MX/bom-management)
+- [Generación de bibliotecas KiCad] (/en-US / kicad-library)

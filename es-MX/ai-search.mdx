@@ -1,0 +1,88 @@
+---
+title: "Búsqueda de IA"
+description: "Busque componentes con lenguaje natural, voz, citas y respuestas verificables"
+---
+PartGenie search está diseñado para ingenieros de hardware—no para chat genérico. Obtiene **respuestas verificables** basadas en datos de componentes, hojas de datos y fuentes en vivo.
+
+## What you can ask
+
+- **Búsqueda de MPN* — - números de pieza exactos, coincidencias cercanas, sugerencias del fabricante
+- **Especificaciones y aplicaciones* — -Selección impulsada por voltaje, paquete, caso de uso
+- **Alternativas* — - reemplazos con el contexto del proyecto (consulte [Alternativas] (/en-US / alternativas))
+- **Matemáticas de ingeniería* — - potencia de la resistencia, LDO térmico, comprobaciones de Aprobado / suspenso, controles deslizantes inteligentes de la interfaz de usuario (consulte [Calculadora de ingeniería] (/en-US / calculadora de ingeniería))
+- **Módulos y kits* — - Placas de desarrollo y piezas de robótica a través de [OpenELAB] (/en-US / openelab-modules)
+
+```
+Examples:
+- "STM32F103C8T6 operating voltage"
+- "alternative to BQ24195 for 4.5A USB charging"
+- "100uF 16V electrolytic, automotive grade"
+```
+
+## Cómo buscar
+
+<Steps>
+  <Step title="Open the homepage">
+    Go to [app.partgenie.ai](https://app.partgenie.ai). Use **Search** mode for component Q&A, or **Work** when you're acting on a BOM/Design project.
+  </Step>
+  <Step title="Enter a query">
+    Type naturally, paste an MPN, upload a datasheet/image, or use **voice input** (microphone in the search bar).
+  </Step>
+  <Step title="Review the answer">
+    Answers include structured part cards, tables, and **citation badges**. Gray MPN badges open the component drawer; green = OEM, orange = distributor, purple = community.
+  </Step>
+  <Step title="Follow up">
+    Use suggested follow-ups—including one-click **Design** when you want to start hardware design from a part.
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="Voice input in the PartGenie search bar"
+    src="/images/search-voice-recording.png"
+  />
+</Frame>
+
+## Respuestas verificables
+
+La mayoría de las herramientas de IA te dan texto. PartGenie cita * * MPN exactos * * y * * fuentes web* * para que pueda verificar antes de diseñar:
+
+- Haga clic en una insignia MPN → cajón de componentes (especificaciones, stock, precios) 
+- Haga clic en insignias de distribuidor → saltar a listados de fuentes
+- Las reclamaciones de la hoja de datos pueden incluir * * citas a nivel de página* * (consulte [Citas de la hoja de datos] (/es-MX/datasheet-citations))
+
+<Frame>
+  <img
+    alt="Citation badges for MPN and distributor sources in an AI answer"
+    src="/images/citation-badges.png"
+  />
+</Frame>
+
+## Tablas y exportación
+
+Las tablas de comparación y alternativas en respuestas admiten **exportar* *(Pro). Desplace el cursor sobre la parte superior derecha de una tabla para descargar.
+
+## Lo que ves en la respuesta
+
+/ En pantalla / Qué hacer |
+| --- | --- |
+/ ** Descripción general * * pestaña / Lea la respuesta escrita, las tablas y las viñetas del siguiente paso |
+/ Insignia gris * * MPN* | / Abre el cajón de componentes (especificaciones, adquisiciones, CAD) |
+/ Insignias verdes / naranjas | moradas / Sitio OEM, distribuidor o fuente comunitaria |
+/ Insignia de número de página / Abre el PDF de la hoja de datos en esa página |
+/ ** Pestaña Componentes * * / La lista de piezas coincidentes para esta respuesta |
+/ ** Pestaña Fuentes * * / De dónde se extrajeron los reclamos |
+| Entrada de micrófono / voz; la forma de onda se muestra mientras escucha |
+| * * + * * en el cuadro / Adjuntar un archivo o imagen |
+/ Fichas de seguimiento / Próximas preguntas sugeridas, incluido * * Diseño * * |
+
+** Buscar * * y * * Trabajar * * son los dos chips dentro de la entrada. La búsqueda es para preguntas. El trabajo es para una lista de materiales o un proyecto de diseño que haya adjuntado. Consulte [Trabajo de PartGenie] (/es-MX/partgenie-work).
+
+Para extraer una huella después de tener la MPN correcta, abra el cajón y use * * Modelos CAD**, o solicite una biblioteca KiCad. Consulte [ECAD y huellas] (/en-US / ecad-models).
+
+## Relacionado
+
+- [Alternativas] (/es — US / alternativas) - búsqueda e informes de sustitutos más inteligentes
+- [Live sourcing](/es-MX/live — sourcing) - stock y precio en resultados
+- [Generación de bibliotecas KiCad] (/en-US / kicad-library)
+- [Cómo escribir consultas comprensibles por IA] (/en-US / ai-query-writing)

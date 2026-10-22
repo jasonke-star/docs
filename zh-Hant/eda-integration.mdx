@@ -1,0 +1,124 @@
+---
+title: "EDA 集成"
+description: "為 Altium、KiCad、Eagle、OrCAD、Allegro 下載 ECAD，或生成可驗證的 KiCad 庫"
+---
+
+PartGenie 通過**可下載的庫文件**接入你的 EDA 流程，不會替代 CAD 席位。兩條路徑：
+
+- **目錄模型** — 許多 MPN 已有 symbol、footprint、STEP。
+- **KiCad 生成（Beta）** — 從規格書生成 KiCad 8 庫，帶證據與導入校驗。
+
+入口：[app.partgenie.ai](https://app.partgenie.ai)、[Chrome 擴展](/zh-Hant/chrome-extension)，或 [partgenie.ai](https://www.partgenie.ai/) 上的公開器件頁。
+
+## 選路徑
+
+| 需求 | 做法 |
+| --- | --- |
+| 該 MPN 目錄裡已有文件 | [下載目錄模型](#download-catalog-models) |
+| 要 KiCad 8 symbol + footprint + 3D 與證據表 | [KiCad 導入](#kicad-import) |
+| Altium / Eagle / OrCAD / Allegro | 在 **CAD Models** 下載對應格式，在工具內導入 |
+
+目錄 vs 生成：[ECAD 與封裝庫](/zh-Hant/ecad-models)。生成完整步驟：[KiCad 庫生成](/zh-Hant/kicad-library)。
+
+## 下載目錄模型
+
+<Steps>
+  <Step title="打開器件">
+    Search 裡點 **MPN** 角標或器件卡片。Chrome 裡在支持的分銷商品頁側邊欄打開 **CAD models**。
+  </Step>
+  <Step title="打開 CAD Models">
+    抽屜頁簽為 **Product**、**Procurement**、**CAD Models**。**Procurement** 是實時價與庫存；**CAD Models** 是封裝庫。
+  </Step>
+  <Step title="選格式並下載">
+    下載該 MPN 提供的 symbol、footprint、3D（Altium、KiCad、Eagle、OrCAD、Allegro 等，以頁面列出為準）。不是每個 MPN 都有全部格式——若頁簽為空，請 [生成 KiCad](#kicad-import) 或聯繫支持。
+  </Step>
+  <Step title="導入 EDA">
+    按你所用 EDA 廠商的導入方式操作。發佈給團隊前，對照規格書確認 Pin 1、pitch 與 courtyard。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="器件抽屜 Procurement 頁籤；封裝下載在右側 CAD Models"
+    src="/images/procurement-purchase-jump.png"
+  />
+</Frame>
+
+<Tip>
+  目錄 footprint 與 KiCad 生成結果可能在焊盤或 Pin 1 上不一致。要投產的料，以**規格書頁**為準，不要默認 generic 0603。
+</Tip>
+
+### Altium Designer
+
+1. 在 **CAD Models** 下載 **Altium**（或通用 PCB footprint / STEP）文件。
+2. 在 Altium 中導入或複製到工程庫（**.PcbLib** / **.SchLib** 或團隊統一的庫流程）。
+3. 在原理圖符號上指定 footprint 與 3D，再跑常規 DRC。
+
+若只有 KiCad 原生文件，可用 Altium 的 KiCad 導入器，或經 [KiCad 庫生成](/zh-Hant/kicad-library) 後按團隊認可的遷移流程轉換。
+
+### Eagle / Fusion Electronics
+
+**CAD Models** 列出 Eagle 或通用 footprint 時，通過 Eagle 庫編輯器或 Fusion Electronics 庫管理加入。
+
+### OrCAD / Allegro
+
+下載 PartGenie 為該 MPN 列出的 OrCAD / Allegro 格式，走 Cadence 庫路徑導入。支持 3D 的流程可掛 STEP 做高度碰撞檢查。
+
+## KiCad 導入
+
+生成在 PartGenie（網頁或 Chrome）完成，目標格式為 **KiCad 8**。
+
+<Steps>
+  <Step title="生成庫">
+    在 **Search**（不是 Work）中提問，例如：
+
+    ```
+    generate verified KiCAD for RC0603FR-071KL
+    ```
+
+    或在器件頁 **CAD models** 發起生成。等待應用內通知與郵件——可能需要幾分鐘。
+  </Step>
+  <Step title="核對證據">
+    打開完成卡片：**Symbol**、**Footprint**、**3D Model**、**Evidence summary**（Calculated / Assumed）。下載前看 **KiCad native import**、**Pin mapping**、**Visual audit**。
+  </Step>
+  <Step title="Download">
+    在庫卡片點 **Download**，獲得已通過機器導入校驗的 KiCad 8 `.kicad_sym`、`.kicad_mod` 與 3D 文件。
+  </Step>
+  <Step title="加入 KiCad 工程">
+    在 KiCad 8 中：
+
+    1. 將 symbol、footprint 放到工程或全局庫目錄（或團隊規定路徑）。
+    2. 更新 **sym-lib-table** 與 **fp-lib-table**，讓 KiCad 解析新庫名。
+    3. 在符號 / 封裝編輯器重載庫，把器件放到原理圖並關聯 footprint。
+    4. 打開 3D 視圖，對照規格書看高度與 Pin 1。
+  </Step>
+</Steps>
+
+<Frame>
+  <img
+    alt="生成的 KiCad 庫：Symbol、Footprint、3D 預覽與 Download"
+    src="/images/kicad-library-generate.png"
+  />
+</Frame>
+
+<Frame>
+  <img
+    alt="KiCad 生成結果的 Evidence summary 與規格書頁碼"
+    src="/images/kicad-library-evidence.png"
+  />
+</Frame>
+
+<Warning>
+  KiCad 生成處於 **Beta**。量產前請對照規格書核對 pitch、焊盤、Pin 1 與 3D。封裝覆蓋限於支持族（SO、QFN、BGA、被動件、常見連接器等）——當前列表見 [KiCad 生成器](https://www.partgenie.ai/kicad-generator) 頁面。
+</Warning>
+
+## Credits 與計費
+
+KiCad 生成消耗 **Credits**。**ECAD 模型下載**可能單獨計費，見 [會員與定價](/zh-Hant/membership-pricing)。
+
+## 相關
+
+- [集成總覽](/zh-Hant/integrations)
+- [Chrome 擴展](/zh-Hant/chrome-extension)
+- [KiCad 庫生成](/zh-Hant/kicad-library)
+- [ECAD 與封裝庫](/zh-Hant/ecad-models)
