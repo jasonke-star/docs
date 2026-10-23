@@ -2,15 +2,15 @@
 title: "Génération de bibliothèque KiCad"
 description: "Générez un symbole KiCad vérifié, une empreinte et une ÉTAPE 3D pour un MPN, puis téléchargez la bibliothèque (bêta)"
 ---
-** Génération de bibliothèque KiCad (Bêta) * * construit une bibliothèque de pièces à partir de la base de données des composants de PartGenie et de la fiche technique: * * Symbole**, * * Empreinte** et * * ÉTAPE 3D**, plus un résumé des preuves que vous pouvez vérifier avant de le déposer dans un tableau.
+** Génération de bibliothèque KiCad (Bêta) ** construit une bibliothèque de pièces à partir de la base de données des composants de PartGenie et de la fiche technique: ** Symbole**, ** Empreinte** et ** ÉTAPE 3D**, plus un résumé des preuves que vous pouvez vérifier avant de le déposer dans un tableau.
 
-Ceci est différent du téléchargement d'un modèle de catalogue sur la page de la pièce. Les actifs du catalogue sont en direct sur l'onglet composant * * Modèles CAO* — - voir [CAO électronique et empreintes] (/en-US / Modèles CAO électronique). Utilisez generation lorsque vous avez besoin d'une bibliothèque native de KiCad avec code PIN, pad et contrôles visuels attachés.
+Ceci est différent du téléchargement d'un modèle de catalogue sur la page de la pièce. Les actifs du catalogue sont en direct sur l'onglet composant * * Modèles CAO* — - voir [CAO électronique et empreintes](/fr-FR/ecad-models). Utilisez generation lorsque vous avez besoin d'une bibliothèque native de KiCad avec code PIN, pad et contrôles visuels attachés.
 
 ## Générer une bibliothèque
 
 <Steps>
   <Step title="Démarrer à partir de la recherche">
-Ouvrir [app.partgenie.ai](https://app.partgenie.ai) et restez sur * * Recherche* * (ne fonctionne pas).
+Ouvrir [app.partgenie.ai](https://app.partgenie.ai) et restez sur ** Recherche** (ne fonctionne pas).
   </Step>
   <Step title="Demandez une bibliothèque vérifiée">
 Utilisez le MPN et le package à l'invite:
@@ -22,7 +22,7 @@ Utilisez le MPN et le package à l'invite:
 Vous pouvez également indiquer * symbole, empreinte et modèle 3D* pour un MPN spécifique tel que 'STM32F103RET6' ou 'OPA810IDBVR'`
   </Step>
   <Step title="Attendez le travail">
-La génération peut prendre quelques minutes. PartGenie vous indique qu'il a démarré et vous avertit * * dans l'application et par e-mail** lorsque la bibliothèque est prête. Vous pouvez quitter le chat et revenir de * * Récents * * ou * * ⌘K**.
+La génération peut prendre quelques minutes. PartGenie vous indique qu'il a démarré et vous avertit ** dans l'application et par e-mail** lorsque la bibliothèque est prête. Vous pouvez quitter le chat et revenir de ** Récents ** ou ** ⌘K**.
   </Step>
   <Step title="Examinez le symbole, l'empreinte et la 3D">
 La carte terminée montre trois aperçus:
@@ -31,18 +31,18 @@ La carte terminée montre trois aperçus:
 — ** Empreinte * * - disposition des pads (par exemple 0603 pads 1 et 2)
 - **Modèle 3D * * — Corps de MARCHE
 
-Les puces d'état sur une bibliothèque terminée incluent * * l'importation native de KiCad**, * * le mappage des broches** et * * l'audit visuel**.
+Les puces d'état sur une bibliothèque terminée incluent ** l'importation native de KiCad**, ** le mappage des broches** et ** l'audit visuel**.
   </Step>
   <Step title="Ouvrir le résumé des preuves">
-Développer * * Résumé des preuves**. Chaque ligne est un champ (nombre de broches, pas, taille du corps, taille du tampon), la valeur utilisée, la * * page de fiche technique* * d'où elle provient et un statut:
+Développer ** Résumé des preuves**. Chaque ligne est un champ (nombre de broches, pas, taille du corps, taille du tampon), la valeur utilisée, la ** page de fiche technique** d'où elle provient et un statut:
 
 - **Calculé* — - dérivé de la fiche technique ou des données du package
 - **Supposé* — - a par défaut le moteur rempli (le pas est courant)
 
-Traitez les lignes * * supposées * * comme des éléments que vous devez confirmer.
+Traitez les lignes ** supposées ** comme des éléments que vous devez confirmer.
   </Step>
   <Step title="Télécharger">
-Cliquez sur * * Télécharger* * sur la fiche de la pièce et importez les fichiers dans vos bibliothèques de projet KiCad.
+Cliquez sur ** Télécharger** sur la fiche de la pièce et importez les fichiers dans vos bibliothèques de projet KiCad.
   </Step>
 </Steps>
 
@@ -66,18 +66,18 @@ Cliquez sur * * Télécharger* * sur la fiche de la pièce et importez les fichi
   Libraries are **Beta**. Before you use one, check pitch, pads, pin 1, and the 3D model against the datasheet. An Assumed pitch or a wrong pin-1 mark will not be caught by a visual thumbnail alone.
 </Warning>
 
-- Ouvrez la page de la fiche technique citée à partir du tableau des preuves (voir [Citations de la fiche technique] (/en-US / datasheet-citations))
+- Ouvrez la page de la fiche technique citée à partir du tableau des preuves (voir [Citations de la fiche technique](/fr-FR/datasheet-citations))
 - Confirmez le code pin 1 sur le symbole et l'empreinte
 - Si quelque chose ne va pas, répondez dans le même chat avec la correction — et envoyez des commentaires pour que le générateur puisse s'améliorer
 
 ## Où les fichiers vont ensuite
 
-Les bibliothèques téléchargées sont à vous pour les importer dans KiCad. Le chat qui les a produits reste dans * * Récents**. Les rapports et fichiers associés peuvent également atterrir dans [Knowledge] (/fr-FR/knowledge) lorsque PartGenie enregistre l'artefact.
+Les bibliothèques téléchargées sont à vous pour les importer dans KiCad. Le chat qui les a produits reste dans ** Récents**. Les rapports et fichiers associés peuvent également atterrir dans [Knowledge] (/fr-FR/knowledge) lorsque PartGenie enregistre l'artefact.
 
 ## Liés
 
-- [Intégration EDA](/fr-FR/intégration eda) — importer dans KiCad 8 et d'autres outils
-- [Intégrations] (/fr-FR / intégrations)
-- [cao électronique et empreintes] (/en-US / modèles cao électronique) - modèles de catalogue déjà sur la pièce
-- [Mode de conception](/fr-FR/mode de conception)-architecture et nomenclature avant de dessiner le tableau
-- [Recherche d'IA] (/fr-FR / recherche d'ia)
+- [Intégration EDA](/fr-FR/eda-integration) — importer dans KiCad 8 et d'autres outils
+- [Intégrations](/fr-FR/integrations)
+- [cao électronique et empreintes](/fr-FR/ecad-models) - modèles de catalogue déjà sur la pièce
+- [Mode de conception](/fr-FR/design-mode)-architecture et nomenclature avant de dessiner le tableau
+- [Recherche d'IA](/fr-FR/ai-search)

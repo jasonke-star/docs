@@ -208,8 +208,10 @@ def translate_one_update_block(block: str, lang: str) -> str:
 def translate_changelog(body: str, lang: str, dest_name: str) -> str:
     """Rebuild from EN structure; translate 2026 entries (Tier 1), keep older EN."""
     body = body.replace("/en-US/", f"/{dest_name}/")
-    # Tier 1: recent release notes; older blocks stay EN with locale link prefixes.
-    pattern = re.compile(r'(<Update label="2026-10-[^"]*"[\s\S]*?</Update>)')
+    # Tier 1–2: Sep–Oct 2026 release notes; older blocks stay EN with locale link prefixes.
+    pattern = re.compile(
+        r'(<Update label="2026-(?:09|10)-[^"]*"[\s\S]*?</Update>)'
+    )
 
     def repl(m: re.Match) -> str:
         return translate_one_update_block(m.group(1), lang)
@@ -253,15 +255,24 @@ def fix_mdx_component_tags(text: str) -> str:
         (r"</Warnung>", "</Warning>"),
         (r"<Consejo\b", "<Tip"),
         (r"<Avertissement\b", "<Warning>"),
+        (r"<\s*Infos\s*>", "<Info>"),
+        (r"<\s*/\s*Infos\s*>", "</Info>"),
+        (r"<\s*INFO\s*>", "<Info>"),
+        (r"<\s*/\s*INFO\s*>", "</Info>"),
+        (r"<情報>", "<Info>"),
+        (r"</情報>", "</Info>"),
+        (r"<정보>", "<Info>"),
+        (r"</정보>", "</Info>"),
     ]
     for pat, rep in replacements:
         text = re.sub(pat, rep, text, flags=re.IGNORECASE)
     text = re.sub(
-        r"^(Numéro de pièce|Modèle:|Modell:|Modelo:)\s*(<)",
+        r"^(Numéro de pièce|Modèle:|Modelo:)\s*(<)",
         r"\2",
         text,
         flags=re.MULTILINE,
     )
+    text = re.sub(r"\bMODELL:\s*(<Frame\b)", r"\1", text, flags=re.IGNORECASE)
     return text
 
 

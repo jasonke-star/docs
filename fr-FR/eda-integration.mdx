@@ -2,12 +2,12 @@
 title: "Intégration de l'AED"
 description: "Téléchargez ECAD pour Altium, KiCad, Eagle, OrCAD et Allegro, ou générez des bibliothèques KiCad vérifiées"
 ---
-PartGenie se connecte à votre flux de travail EDA via * * des bibliothèques téléchargeables**, et non en remplaçant votre siège CAO. Deux chemins:
+PartGenie se connecte à votre flux de travail EDA via ** des bibliothèques téléchargeables**, et non en remplaçant votre siège CAO. Deux chemins:
 
 — ** Modèles de catalogue * * - symbole, empreinte et ÉTAPE déjà dans PartGenie pour de nombreux MPN.
 - **Génération de KiCad (Bêta)* — - construire des bibliothèques KiCad 8 à partir de la fiche technique avec des preuves et des contrôles d'importation.
 
-Vous pouvez commencer à partir de [app.partgenie.ai](https://app.partgenie.ai), l ' [extension Chrome] (/en-US / chrome-extension), ou une page de partie publique sur [partgenie.ai](https://www.partgenie.ai/).
+Vous pouvez commencer à partir de [app.partgenie.ai](https://app.partgenie.ai), l ' [extension Chrome](/fr-FR/chrome-extension), ou une page de partie publique sur [partgenie.ai](https://www.partgenie.ai/).
 
 ## Choisissez un chemin
 
@@ -15,18 +15,18 @@ Vous pouvez commencer à partir de [app.partgenie.ai](https://app.partgenie.ai),
 | --- | --- |
 / Fichiers déjà dans le catalogue pour votre MPN /[ Télécharger les modèles du catalogue] (#télécharger-les-modèles-du-catalogue) |
 / Symbole KiCad 8 + empreinte + 3D avec preuves | [Importation KiCad] (#importation kicad) |
-/ Altium / Eagle | OrCAD / Allegro / Téléchargez le format indiqué sur les * * Modèles CAO**, puis importez - le dans votre outil |
+/ Altium / Eagle | OrCAD / Allegro / Téléchargez le format indiqué sur les ** Modèles CAO**, puis importez - le dans votre outil |
 
-Détails sur le catalogue et les bibliothèques générées: [CAO électronique et empreintes] (/en-US / modèles cao électronique). Procédure pas à pas de génération complète: [génération de la bibliothèque KiCad] (/fr-FR / kicad-library).
+Détails sur le catalogue et les bibliothèques générées: [CAO électronique et empreintes](/fr-FR/ecad-models). Procédure pas à pas de génération complète: [génération de la bibliothèque KiCad](/fr-FR/kicad-library).
 
 ## Télécharger les modèles du catalogue
 
 <Steps>
   <Step title="Ouvrir la pièce">
-Dans la recherche, cliquez sur le badge** MPN * * ou la carte de pièce. Dans Chrome, ouvrez * * Modèles CAO* * à partir de la barre latérale sur une page de distributeur prise en charge.
+Dans la recherche, cliquez sur le badge** MPN ** ou la carte de pièce. Dans Chrome, ouvrez ** Modèles CAO* * à partir de la barre latérale sur une page de distributeur prise en charge.
   </Step>
   <Step title="Modèles CAO Ouverts">
-Dans le tiroir des composants, les onglets sont * * Produit**, * * Approvisionnement** et * * Modèles CAO**. ** Approvisionnement * * est le prix en direct et le stock; * * Modèles CAO* * est la bibliothèque d'empreintes.
+Dans le tiroir des composants, les onglets sont ** Produit**, ** Approvisionnement** et ** Modèles CAO**. ** Approvisionnement ** est le prix en direct et le stock; ** Modèles CAO* * est la bibliothèque d'empreintes.
   </Step>
   <Step title="Choisissez le format et téléchargez">
 Téléchargez le symbole, l'empreinte et/ou les fichiers 3D proposés pour votre EDA (Altium, KiCad, Eagle, OrCAD, Allegro et autres lorsqu'ils sont répertoriés). Tous les MPN n'ont pas tous les formats—si l'onglet est vide, [générer KiCad](#kicad-import) ou contactez le support.
@@ -49,15 +49,15 @@ Suivez les étapes d'importation de votre fournisseur pour le type de fichier qu
 
 ### Concepteur d'Altium
 
-1. Téléchargez les actifs **Altium** (ou empreinte / pas de PCB neutre) à partir de * * Modèles CAO**.
-2. Dans Altium, importez ou copiez dans les bibliothèques de votre projet (* * .PcbLib**/**.SchLib * * ou flux de bibliothèque unifié que votre équipe utilise).
+1. Téléchargez les actifs **Altium** (ou empreinte / pas de PCB neutre) à partir de ** Modèles CAO**.
+2. Dans Altium, importez ou copiez dans les bibliothèques de votre projet (** .PcbLib**/**.SchLib * * ou flux de bibliothèque unifié que votre équipe utilise).
 3. Attribuez l'empreinte et le modèle 3D sur le symbole schématique, puis exécutez votre RDC habituel.
 
 Si vous n'avez que des fichiers natifs de KiCad, utilisez l'importateur KiCad d'Altium ou régénérez via [génération de bibliothèque KiCad] (/fr-FR/kicad-library) et convertissez avec le processus de migration approuvé de votre équipe.
 
 ### Aigle / Fusion Électronique
 
-Téléchargez des actifs d'empreinte compatibles Eagle ou génériques lorsqu'ils sont répertoriés sur des * * modèles CAO**, puis ajoutez-les via l'éditeur de bibliothèque Eagle ou la gestion de bibliothèque Fusion Electronics.
+Téléchargez des actifs d'empreinte compatibles Eagle ou génériques lorsqu'ils sont répertoriés sur des ** modèles CAO**, puis ajoutez-les via l'éditeur de bibliothèque Eagle ou la gestion de bibliothèque Fusion Electronics.
 
 ### OrCAD / Allegro
 
@@ -69,25 +69,25 @@ La génération se fait dans PartGenie (web ou Chrome). ** KiCad 8* * est le for
 
 <Steps>
   <Step title="Générer la bibliothèque">
-Dans * * Recherche* *(ne fonctionne pas), demandez par exemple:
+Dans ** Recherche**(ne fonctionne pas), demandez par exemple:
 
     ```
     generate verified KiCAD for RC0603FR-071KL
     ```
 
-Ou utilisez * * Modèles CAO * * → générer à partir de la page de la pièce. Attendez l'avis intégré à l'application et la génération d'e—mails peut prendre quelques minutes.
+Ou utilisez ** Modèles CAO ** → générer à partir de la page de la pièce. Attendez l'avis intégré à l'application et la génération d'e—mails peut prendre quelques minutes.
   </Step>
   <Step title="Examiner les preuves">
-Ouvrez la carte terminée: * * Symbole**, * * Empreinte**, * * Modèle 3D** et * * Résumé des preuves* *(Calculé vs Supposé). Vérifiez * * l'importation native de KiCad**, * * le mappage des broches** et **l'audit visuel** avant de télécharger.
+Ouvrez la carte terminée: ** Symbole**, ** Empreinte**, ** Modèle 3D** et ** Résumé des preuves**(Calculé vs Supposé). Vérifiez ** l'importation native de KiCad**, ** le mappage des broches** et **l'audit visuel** avant de télécharger.
   </Step>
   <Step title="Télécharger">
-Cliquez sur * * Télécharger* * sur la fiche de la bibliothèque. Vous recevez KiCad 8 `.kicad_comme'`'.kicad_mod', et les fichiers 3D PartGenie déjà vérifiés avec une passe d'importation machine.
+Cliquez sur ** Télécharger** sur la fiche de la bibliothèque. Vous recevez KiCad 8 `.kicad_comme'`'.kicad_mod', et les fichiers 3D PartGenie déjà vérifiés avec une passe d'importation machine.
   </Step>
   <Step title="Ajouter à votre projet KiCad">
 Dans KiCad 8:
 
 1. Placez les fichiers de symboles et d'empreintes dans vos dossiers de projet ou de bibliothèque globale (ou les chemins sur lesquels votre équipe normalise).
-2. Mettez à jour **sym-lib-table * * et * * fp-lib-table * * pour que KiCad résolve les nouveaux noms de bibliothèques.
+2. Mettez à jour **sym-lib-table ** et ** fp-lib-table * * pour que KiCad résolve les nouveaux noms de bibliothèques.
 3. Rechargez les bibliothèques dans l'éditeur de symboles ou d'empreintes, placez la pièce sur le schéma et associez l'empreinte.
 4. Ouvrez la visionneuse 3D et comparez la hauteur du corps et la broche 1 à la fiche technique.
   </Step>
@@ -113,11 +113,11 @@ Dans KiCad 8:
 
 ## Crédits et facturation
 
-La génération KiCad utilise * * crédits**. Le téléchargement du catalogue * * des modèles ECAD* * peut être facturé séparément en fonction de votre forfait—voir [Adhésion et tarification] (/en-US / prix d'adhésion).
+La génération KiCad utilise ** crédits**. Le téléchargement du catalogue ** des modèles ECAD** peut être facturé séparément en fonction de votre forfait—voir [Adhésion et tarification](/fr-FR/membership-pricing).
 
 ## Liés
 
-- [Vue d'ensemble des intégrations] (/fr-FR / intégrations)
-- [Extension Chrome](/en-FR/extension chrome)-[extension chrome] (/en-FR / extension chrome)
-- [génération de la bibliothèque KiCad] (/fr-FR / bibliothèque kicad)
-- [CAO électronique et empreintes] (/en-US / modèles cao électronique)
+- [Vue d'ensemble des intégrations](/fr-FR/integrations)
+- [Extension Chrome](/en-FR/chrome-extension)-[extension chrome](/fr-FR/chrome-extension)
+- [génération de la bibliothèque KiCad](/fr-FR/kicad-library)
+- [CAO électronique et empreintes](/fr-FR/ecad-models)

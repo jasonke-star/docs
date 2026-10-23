@@ -10,6 +10,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { Converter } from 'opencc-js'
+import { applyZhHantTerms } from './zh-hant-terms.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
@@ -31,14 +32,14 @@ for (const file of files) {
   if (file === 'what-is-partgenie.mdx') continue
   let text = fs.readFileSync(path.join(srcDir, file), 'utf8')
   text = text.replaceAll('/zh-Hans/', '/zh-Hant/')
-  text = converter(text)
+  text = applyZhHantTerms(converter(text))
   fs.writeFileSync(path.join(destDir, file), text)
 }
 
 if (fs.existsSync(enIndex)) {
   let index = fs.readFileSync(enIndex, 'utf8')
   index = index.replaceAll('/en-US/', '/zh-Hant/')
-  index = converter(index)
+  index = applyZhHantTerms(converter(index))
   index = index.replace(/^title:.*$/m, 'title: "什麼是 PartGenie"')
   index = index.replace(/^description:.*$/m, 'description: "AI 電子工程助手：搜尋、BOM、設計與採購"')
   fs.writeFileSync(path.join(destDir, 'index.mdx'), index)

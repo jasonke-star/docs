@@ -1,124 +1,123 @@
 ---
-title: "EDA integration"
-description: "Download ECAD for Altium, KiCad, Eagle, OrCAD, and Allegro, or generate verified KiCad libraries"
+title: "Integración de EDA"
+description: "Descargue ECAD para Altium, KiCad, Eagle, OrCAD y Allegro, o genere bibliotecas verificadas de KiCad"
 ---
+PartGenie se conecta a su flujo de trabajo EDA a través de **bibliotecas descargables**, no reemplazando su asiento CAD. Dos caminos:
 
-PartGenie connects to your EDA workflow through **downloadable libraries**, not by replacing your CAD seat. Two paths:
+— ** Modelos de catálogo * * - símbolo, huella y PASO ya en PartGenie para muchas MPN.
+- **Generación de KiCad (Beta)* — - cree bibliotecas de KiCad 8 a partir de la hoja de datos con pruebas y comprobaciones de importación.
 
-- **Catalog models** — symbol, footprint, and STEP already in PartGenie for many MPNs.
-- **KiCad generation (Beta)** — build KiCad 8 libraries from the datasheet with evidence and import checks.
+Puede comenzar desde [app.partgenie.ai] (https://app.partgenie.ai), la [extensión de Chrome] (/en-US / chrome-extension) o una página de partes pública en [partgenie.ai] (https://www.partgenie.ai/).
 
-You can start from [app.partgenie.ai](https://app.partgenie.ai), the [Chrome extension](/es-MX/chrome-extension), or a public part page on [partgenie.ai](https://www.partgenie.ai/).
+## Elige un camino
 
-## Pick a path
-
-| You need | Use |
+/ Necesitas / Usar |
 | --- | --- |
-| Files already in the catalog for your MPN | [Download catalog models](#download-catalog-models) |
-| KiCad 8 symbol + footprint + 3D with evidence | [KiCad import](#kicad-import) |
-| Altium / Eagle / OrCAD / Allegro | Download the format listed on **CAD Models**, then import in your tool |
+/ Archivos que ya están en el catálogo de su MPN / [Descargar modelos del catálogo] (#descargar-modelos-del-catálogo) |
+/ Símbolo de KiCad 8 + huella + 3D con evidencia /[importación de KiCad] (#kicad-import) |
+/ Altium / Eagle / OrCAD / Allegro / Descargue el formato listado en * * Modelos CAD**, luego importe en su herramienta |
 
-Details on catalog vs generated libraries: [ECAD & footprints](/es-MX/ecad-models). Full generation walkthrough: [KiCad library generation](/es-MX/kicad-library).
+Detalles sobre el catálogo frente a las bibliotecas generadas: [ECAD & footprints] (/en-US / ecad-models). Tutorial de generación completa: [Generación de bibliotecas KiCad] (/en-US / kicad-library).
 
-## Download catalog models
+## Descargar modelos de catálogo
 
-<Steps>
-  <Step title="Open the part">
-    In Search, click the **MPN** badge or part card. In Chrome, open **CAD models** from the sidebar on a supported distributor page.
+MODELO: <Steps>
+  <Step title="Abra la pieza">
+En la búsqueda, haga clic en la insignia** MPN * * o en la tarjeta de pieza. En Chrome, abra * * Modelos CAD * * desde la barra lateral en la página de un distribuidor compatible.
   </Step>
-  <Step title="Open CAD Models">
-    In the component drawer, tabs are **Product**, **Procurement**, and **CAD Models**. **Procurement** is live price and stock; **CAD Models** is the footprint library.
+  <Step title="Modelos CAD Abiertos">
+En el cajón de componentes, las pestañas son * * Producto**, * * Adquisición* * y * * Modelos CAD**. ** Adquisición * * es precio en vivo y stock; * * Modelos CAD * * es la biblioteca de huellas.
   </Step>
-  <Step title="Choose format and download">
-    Download the symbol, footprint, and/or 3D files offered for your EDA (Altium, KiCad, Eagle, OrCAD, Allegro, and others when listed). Not every MPN has every format—if the tab is empty, [generate KiCad](#kicad-import) or contact support.
+  <Step title="Elige formato y descarga">
+Descargue los archivos de símbolos, huellas y / o 3D que se ofrecen para su EDA (Altium, KiCad, Eagle, OrCAD, Allegro y otros, cuando estén listados). No todas las MPN tienen todos los formatos; si la pestaña está vacía, [genere KiCad] (#kicad-import)o comuníquese con el soporte.
   </Step>
-  <Step title="Import into your EDA">
-    Follow your vendor’s import steps for the file type you downloaded. Confirm pin 1, pitch, and courtyard against the datasheet before you release the library to the team.
+  <Step title="Importe a su EDA">
+Siga los pasos de importación de su proveedor para el tipo de archivo que descargó. Confirme el pin 1, pitch y courtyard con la hoja de datos antes de entregar la biblioteca al equipo.
   </Step>
 </Steps>
 
-<Frame>
+MODELO: <Frame>
   <img
     alt="Component drawer Procurement tab; CAD Models is the next tab for footprint downloads"
     src="/images/procurement-purchase-jump.png"
   />
 </Frame>
 
-<Tip>
+MODELO: <Tip>
   Catalog footprints and generated KiCad libraries can disagree on pad size or pin 1. For anything you will fabricate, trust the **datasheet page**, not a generic 0603.
 </Tip>
 
-### Altium Designer
+### Diseñador de Altium
 
-1. Download the **Altium** (or neutral PCB footprint / STEP) assets from **CAD Models**.
-2. In Altium, import or copy into your project libraries (**.PcbLib** / **.SchLib** or unified library flow your team uses).
-3. Assign the footprint and 3D model on the schematic symbol, then run your usual DRC.
+1. Descargue los activos** Altium **(o huella / paso neutral de PCB) de* * Modelos CAD**.
+2. En Altium, importe o copie en sus bibliotecas de proyectos (**.PcbLib** / **.SchLib* * o flujo de biblioteca unificado que usa su equipo).
+3. Asigne la huella y el modelo 3D en el símbolo esquemático, luego ejecute su DRC habitual.
 
-If you only have KiCad-native files, use Altium’s KiCad importer or regenerate via [KiCad library generation](/es-MX/kicad-library) and convert with your team’s approved migration process.
+Si solo tiene archivos nativos de KiCad, use el importador de KiCad de Altium o regenérelo a través de [KiCad library generation] (/en-US / kicad-library) y conviértalo con el proceso de migración aprobado por su equipo.
 
-### Eagle / Fusion Electronics
+### Eagle / Electrónica de Fusión
 
-Download Eagle-compatible or generic footprint assets when listed on **CAD Models**, then add them through Eagle’s library editor or Fusion Electronics library management.
+Descargue activos de huellas genéricas o compatibles con Eagle cuando aparezcan en * * Modelos CAD**, luego agréguelos a través del editor de bibliotecas de Eagle o la administración de bibliotecas de Fusion Electronics.
 
 ### OrCAD / Allegro
 
-Download the OrCAD or Allegro format when PartGenie lists it for the MPN, then import through your Cadence library path. STEP models attach for 3D collision checks where your flow supports them.
+Descargue el formato OrCAD o Allegro cuando PartGenie lo incluya en la MPN, luego impórtelo a través de la ruta de la biblioteca Cadence. Los modelos escalonados se conectan para verificaciones de colisiones en 3D donde su flujo los admite.
 
-## KiCad import
+## Importación de KiCad
 
-Generation happens in PartGenie (web or Chrome). **KiCad 8** is the target format.
+La generación ocurre en PartGenie (web o Chrome). ** KiCad 8 * * es el formato de destino.
 
-<Steps>
-  <Step title="Generate the library">
-    In **Search** (not Work), ask for example:
+MODELO: <Steps>
+  <Step title="Generar la biblioteca">
+En * * Buscar* *(no funciona), pregunte por ejemplo:
 
     ```
     generate verified KiCAD for RC0603FR-071KL
     ```
 
-    Or use **CAD models** → generate from the part page. Wait for the in-app notice and email—generation can take a few minutes.
+O use * * Modelos CAD * * → generar desde la página de piezas. Espere el aviso en la aplicación y la generación de correo electrónico puede demorar unos minutos.
   </Step>
-  <Step title="Review evidence">
-    Open the finished card: **Symbol**, **Footprint**, **3D Model**, and **Evidence summary** (Calculated vs Assumed). Check **KiCad native import**, **Pin mapping**, and **Visual audit** before you download.
+  <Step title="Revisar la evidencia">
+Abra la tarjeta terminada: * * Símbolo**, * * Huella**, * * Modelo 3D* * y * * Resumen de evidencia* *(Calculado versus Supuesto). Compruebe * * Importación nativa de KiCad**, **Asignación de pines** y * * Auditoría visual * * antes de descargar.
   </Step>
-  <Step title="Download">
-    Click **Download** on the library card. You receive KiCad 8 `.kicad_sym`, `.kicad_mod`, and 3D files PartGenie already checked with a machine import pass.
+  <Step title="Descargar">
+Haga clic en * * Descargar* * en la tarjeta de la biblioteca. Recibes KiCad 8 `.kicad_sym`, `.kicad_mod', y archivos 3D PartGenie ya comprobados con un pase de importación de máquina.
   </Step>
-  <Step title="Add to your KiCad project">
-    In KiCad 8:
+  <Step title="Agregue a su proyecto KiCad">
+En KiCad 8:
 
-    1. Place symbol and footprint files in your project or global library folders (or paths your team standardizes on).
-    2. Update **sym-lib-table** and **fp-lib-table** so KiCad resolves the new library names.
-    3. Reload libraries in the Symbol or Footprint editor, place the part on the schematic, and associate the footprint.
-    4. Open the 3D viewer and compare body height and pin 1 to the datasheet.
+1. Coloque archivos de símbolos y huellas en las carpetas de su proyecto o biblioteca global (o rutas en las que su equipo estandarice).
+2. Actualice * * sym-lib-table * * y * * fp-lib-table * * para que KiCad resuelva los nuevos nombres de biblioteca.
+3. Vuelva a cargar las bibliotecas en el editor de símbolos o Huellas, coloque la pieza en el esquema y asocie la huella.
+4. Abra el visor 3D y compare la altura del cuerpo y el pin 1 con la hoja de datos.
   </Step>
 </Steps>
 
-<Frame>
+MODELO: <Frame>
   <img
     alt="Generated KiCad library with Symbol, Footprint, 3D Model previews and Download"
     src="/images/kicad-library-generate.png"
   />
 </Frame>
 
-<Frame>
+MODELO: <Frame>
   <img
     alt="Evidence summary for generated KiCad assets with datasheet page references"
     src="/images/kicad-library-evidence.png"
   />
 </Frame>
 
-<Warning>
+MODELO: <Warning>
   KiCad generation is **Beta**. Verify pitch, pads, pin 1, and 3D against the datasheet before production. Package coverage is limited to supported families (SO, QFN, BGA, passives, common connectors, and similar)—see the [KiCad generator](https://www.partgenie.ai/kicad-generator) page for the current list.
 </Warning>
 
-## Credits and billing
+## Créditos y facturación
 
-KiCad generation uses **credits**. Catalog **ECAD models download** may be billed separately depending on your plan—see [Membership & pricing](/es-MX/membership-pricing).
+La generación de KiCad utiliza * * créditos**. Catálogo * * Descarga de modelos ECAD * * se puede facturar por separado según su plan; consulte [Membresía y precios] (/en-US / membership-pricing).
 
-## Related
+## Relacionado
 
-- [Integrations overview](/es-MX/integrations)
-- [Chrome extension](/es-MX/chrome-extension)
-- [KiCad library generation](/es-MX/kicad-library)
-- [ECAD & footprints](/es-MX/ecad-models)
+- [Resumen de integraciones] (/es-US / integraciones)
+- [Extensión de Chrome] (/en-US / chrome-extension)
+- [Generación de bibliotecas KiCad] (/en-US / kicad-library)
+- [ECAD y huellas] (/en-US / ecad-models)

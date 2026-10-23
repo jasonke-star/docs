@@ -10,7 +10,8 @@
    - Accordion / Steps pages after script changes: `HC_TRANSLATE_PYTHON=python3 node scripts/retranslate-ui-heavy.mjs`
    - **zh-Hant:** `npm run locales:zh-hant` after zh-Hans edits
 4. `npm run locales:sync` then `npm run locales:check`.
-5. `mintlify broken-links` before merge.
+5. `npm run locales:fix-links` then `mintlify broken-links` before merge.
+6. Manual pass: [I18N_REVIEW_CHECKLIST.md](./I18N_REVIEW_CHECKLIST.md).
 
 ## Changelog + prod SYSTEM notices
 

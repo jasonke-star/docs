@@ -21,7 +21,7 @@ Search 可以在回答裡直接做**工程計算**，不用切到單獨的計算
 | **Resistor power rating**（電阻功率校核） | 功耗 **P = V²/R**、**P = VI**、**P = I²R** 及相對額定功率的 **margin** | 電氣 — 額定功率是否夠用 | 電壓、阻值（或電流）、額定功率 (W) |
 | **Power dissipation & junction temperature**（LDO 功耗與結溫） | 壓差功耗 **Pd ≈ (Vin − Vout) × Iout**（必要時含靜態電流），**Tj = Ta + Pd × θJA** 對比 Tj(max) | **Electrical** · Pass/Fail，**Thermal** · Pass/Fail | Vin、Vout、Iout、Ta、θJA、結溫上限 |
 
-若問題裡缺參數，PartGenie 可能採用**合理默認值**（例如 Ta=25°C 或典型 θJA）並在回答中說明；也可能在標稱負載之上做**應力估算**（例如問 200mA 卻按 400mA 算），方便看到最壞情況。
+若問題裡缺參數，PartGenie 可能採用**合理預設值**（例如 Ta=25°C 或典型 θJA）並在回答中說明；也可能在標稱負載之上做**應力估算**（例如問 200mA 卻按 400mA 算），方便看到最壞情況。
 
 <Tip>
   儘量寫上型號，或從規格書粘貼 **θJA**、**Tj(max)**。有 datasheet 時 PartGenie 會盡量用廠商極限；只有數字的泛化校核也可以直接問。

@@ -2,54 +2,55 @@
 title: "Intégrations"
 description: "Connectez PartGenie à votre navigateur, à vos outils EDA et à vos applications mobiles"
 ---
-PartGenie vous rencontre là où vous travaillez déjà: l'application web pour les projets complets, * * Chrome * * sur les pages des distributeurs, * * mobile * * sur le banc et * * téléchargements ECAD* * ou génération KiCad pour la mise en page.
+
+PartGenie vous rencontre là où vous travaillez déjà: l'application web pour les projets complets, ** Chrome ** sur les pages des distributeurs, ** mobile ** sur le banc et ** téléchargements ECAD** ou génération KiCad pour la mise en page.
 
 Utilisez cette page pour choisir la bonne connexion. Des guides étape par étape sont liés dans le tableau.
 
-## Choisissez la bonne intégration
+## Choose the right integration
 
-/ Intégration / Comment ça se connecte | Que pouvez-vous faire / EDA / navigateur ouvert? |
+| Integration | How it connects | What you can do | EDA / browser open? |
 | --- | --- | --- | --- |
-/ [PartGenie web] (/fr-FR | pour commencer) / Connectez-vous à [app.partgenie.ai](https://app.partgenie.ai) / Recherche, Travail, nomenclature, Conception, Connaissances, génération de KiCad, sourcing en direct / Utiliser pendant que vous travaillez dans le navigateur |
-| [Extension Chrome] (/en-FR | extension chrome) / Installer à partir du [Chrome Web Store] (https://chromewebstore.google.com/detail/partgenie/djhpmidamklapnaidbhljfpbnnlninmk), connectez-vous avec votre compte PartGenie / Reconnaissez les MPN sur DigiKey, Mouser, LCSC et d'autres pages prises en charge; chat, alternatives avec preuves, CAO électronique, comparez les prix / Gardez un onglet de produit pris en charge ouvert; la barre latérale reste à côté de la liste |
-/[Application mobile] (/en-US | application mobile) / Installez * * PartGenie * * depuis l'App Store ou Google Play / Snap parts, scannez les PCB, recherche de code SMD, recherchez en déplacement | Utilisez lorsque vous n'êtes pas à votre bureau |
-| [Téléchargement du catalogue ECAD] (/en-US / eda-integration#download-catalog-models) / Web ou Chrome → Ouvrez la pièce → * * Modèles CAO* | / Téléchargez le symbole, l'empreinte et l'ÉTAPE dans les formats pour Altium, KiCad, Eagle, OrCAD, Allegro, etc. (lorsqu'ils sont répertoriés pour ce NPP | / Ouvrez votre outil EDA pour importer les fichiers |
-| [Génération de la bibliothèque KiCad] (/fr-FR / intégration eda # importation de kicad) / Web ou Chrome → Rechercher ou * * modèles CAO * * → générer → * * Télécharger* | / KiCad 8 `.kicad_sym`, `.kicad_mod`, et 3D avec preuves et contrôles d'importation (Bêta | / Ouvrez * * KiCad 8* * pour ajouter la bibliothèque à votre projet |
-| [Greffon KiCad] (/fr-FR / greffon-kicad) /[Paramètres → Intégrations] (/fr-FR / greffon-kicad#install) → KiCad → installer dans l'éditeur de PCB / Inspection des pièces, synchronisation de la nomenclature, santé de la nomenclature, CAO électronique générer / demander dans KiCad / Garder * * KiCad * * ouvert avec le panneau du greffon |
+| [PartGenie web](/fr-FR/getting-started) | Sign in at [app.partgenie.ai](https://app.partgenie.ai) | Search, Work, BOM, Design, Knowledge, KiCad generation, live sourcing | Use while you work in the browser |
+| [Chrome extension](/fr-FR/chrome-extension) | Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/partgenie/djhpmidamklapnaidbhljfpbnnlninmk), sign in with your PartGenie account | Recognize MPNs on DigiKey, Mouser, LCSC, and other supported pages; chat, alternatives with evidence, ECAD, compare prices | Keep a supported product tab open; sidebar stays beside the listing |
+| [Mobile app](/fr-FR/mobile-app) | Install **PartGenie** from the App Store or Google Play | Snap parts, scan PCBs, SMD code lookup, search on the go | Use when you are away from your desk |
+| [ECAD catalog download](/fr-FR/eda-integration#download-catalog-models) | Web or Chrome → open the part → **CAD Models** | Download symbol, footprint, and STEP in formats for Altium, KiCad, Eagle, OrCAD, Allegro, and more (when listed for that MPN) | Open your EDA tool to import the files |
+| [KiCad library generation](/fr-FR/eda-integration#kicad-import) | Web or Chrome → Search or **CAD models** → generate → **Download** | KiCad 8 `.kicad_sym`, `.kicad_mod`, and 3D with evidence and import checks (Beta) | Open **KiCad 8** to add the library to your project |
+| [KiCad plugin](/fr-FR/kicad-plugin) | [Settings → Integrations](/fr-FR/kicad-plugin#install) → KiCad → install in PCB Editor | Part inspect, BOM sync, BOM health, ECAD generate/request in KiCad | Keep **KiCad** open with the plugin panel |
 
-< Infos>
-  PartGenie ne remplace pas votre licence EDA. Les téléchargements de catalogue et les fichiers KiCad générés sont importés **dans** votre flux de travail Altium, KiCad, Eagle, OrCAD ou Allegro existant. Vérifiez toujours le pas, la broche 1 et les plaquettes par rapport à la fiche technique avant la fabrication.
-< / Infos>
+<Info>
+  PartGenie does not replace your EDA license. Catalog downloads and generated KiCad files are imported **into** your existing Altium, KiCad, Eagle, OrCAD, or Allegro workflow. Always verify pitch, pin 1, and pads against the datasheet before fabrication.
+</Info>
 
 ## Flux typiques
 
 ** Sourcing → conception**
 
-1. Parcourez une pièce sur DigiKey ou Mouser avec l'extension [Chrome] (/en-US / chrome-extension).
-2. Passez en revue les alternatives et ouvrez * * des modèles CAO* * ou générez KiCad.
-3. Importez dans votre outil EDA- [intégration EDA] (/en-US / intégration eda).
+1. Parcourez une pièce sur DigiKey ou Mouser avec l'extension [Chrome](/fr-FR/chrome-extension).
+2. Passez en revue les alternatives et ouvrez ** des modèles CAO** ou générez KiCad.
+3. Importez dans votre outil EDA- [intégration EDA](/fr-FR/eda-integration).
 
 **Question → empreinte**
 
-1. [Recherche] (/en-US / ai-search) le numéro de référence client dans l'application Web.
-2. Ouvrez le tiroir de composants → * * Modèles CAO**, ou exécutez [génération de bibliothèque KiCad] (/fr-FR/kicad-library).
-3. Suivez [Intégration EDA] (/en-US / intégration eda) pour votre outil.
+1. [Recherche](/fr-FR/ai-search) le numéro de référence client dans l'application Web.
+2. Ouvrez le tiroir de composants → ** Modèles CAO**, ou exécutez [génération de bibliothèque KiCad] (/fr-FR/kicad-library).
+3. Suivez [Intégration EDA](/fr-FR/eda-integration) pour votre outil.
 
 ** Banc → bureau**
 
-1. Identifiez un marquage avec l ' [application mobile](/fr-FR/application mobile).
+1. Identifiez un marquage avec l ' [application mobile](/fr-FR/mobile-app).
 2. Continuez la même MPN dans la recherche sur le Web ou dans Chrome sur une page de distributeur.
 
 ## Compte et crédits
 
-Chrome, Web et mobile partagent le même compte PartGenie et le même modèle de **crédits**. La génération de KiCad et certains téléchargements ECAD utilisent des crédits ou une facturation complémentaire comme indiqué sur [Adhésion et tarification] (/en-US / membership-pricing).
+Chrome, Web et mobile partagent le même compte PartGenie et le même modèle de **crédits**. La génération de KiCad et certains téléchargements ECAD utilisent des crédits ou une facturation complémentaire comme indiqué sur [Adhésion et tarification](/fr-FR/membership-pricing).
 
 ## Confidentialité sur les sites pris en charge
 
-L'extension Chrome s'active uniquement sur les pages de distributeur et de fabricant prises en charge. Il utilise les informations sur cette page pour identifier le composant que vous consultez. Voir [extension Chrome] (/en-US / extension chrome#confidentialité et autorisations).
+L'extension Chrome s'active uniquement sur les pages de distributeur et de fabricant prises en charge. Il utilise les informations sur cette page pour identifier le composant que vous consultez. Voir [extension Chrome](/fr-FR/chrome-extension#privacy-and-permissions).
 
 ## Liés
 
-- [CAO électronique et empreintes](/fr-FR/modèles cao électronique)-catalogue vs bibliothèques générées
-- [Approvisionnement en direct] (/en-US / approvisionnement en direct)-prix et stock sur le Web et Chrome
-- [Contactez-nous](/fr-FR/contactez — nous) - API d'entreprise / options PLM
+- [CAO électronique et empreintes](/fr-FR/ecad-models)-catalogue vs bibliothèques générées
+- [Approvisionnement en direct](/fr-FR/live-sourcing)-prix et stock sur le Web et Chrome
+- [Contactez-nous](/fr-FR/contact-us) - API d'entreprise / options PLM

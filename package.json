@@ -6,6 +6,7 @@
     "locales:sync": "node scripts/sync-docs-json-languages.mjs --write",
     "locales:check": "node scripts/check-locale-parity.mjs",
     "locales:zh-hant": "node scripts/convert-zh-hant.mjs",
+    "locales:fix-links": "node scripts/fix-mdx-locale-links.mjs --write",
     "locales:translate": "node scripts/run-translations.mjs"
   },
   "devDependencies": {
