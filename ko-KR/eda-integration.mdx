@@ -21,19 +21,19 @@ MPN 용 카탈로그에 이미 있는 파일 | [카탈로그 모델 다운로드
 
 ## 카탈로그 모델 다운로드
 
-<단계>
-<단계 제목=“부분 열기”>
-검색에서 **MPN** 배지 또는 부품 카드를 클릭합니다. Chrome 에서 지원되는 유통업체 페이지의 사이드바에서 **CAD 모델 ** 을 엽니다。
-</Step>
-<Step title=“CAD 모델 열기”>
-구성 요소 서랍의 탭은 **Product**, **Procurement** 및 **CAD Models** 입니다. **Procurement** 는 실시간 가격 및 재고입니다. **CAD Models** 는 풋프린트 라이브러리입니다。
-</Step>
-<Step title=“형식 선택 및 다운로드”>
-EDA(Altium, KiCad, Eagle, OrCAD, Allegro 및 나열된 경우 기타) 에 제공되는 기호， 풋프린트 및/또는 3D 파일을 다운로드합니다. 모든 MPN 에 모든 형식이 있는 것은 아닙니다. 탭이 비어 있는 경우 [generate KiCad](#kicad-import) 또는 지원팀에 문의하십시오。
-</Step>
-<단계 제목=“EDA 로 가져오기”>
-다운로드한 파일 유형에 대한 공급업체의 가져오기 단계를 따릅니다. 팀에 라이브러리를 릴리스하기 전에 데이터 시트에서 핀 1, 피치 및 코트를 확인합니다。
-</단계>
+<Steps>
+  <Step title="파트 열기">
+검색에서 배지 또는 부품 카드를 클릭합니다. 크롬에서 지원되는 배포자 페이지의 사이드바에서**캐드 모델**을 엽니다.
+  </Step>
+  <Step title="오픈 캐드 모델">
+구성 요소 서랍에서 탭은**제품**,**조달**및**캐드 모델**입니다. **조달**라이브 가격 및 재고입니다;**치사한 사람 모델**발자국 라이브러리입니다.
+  </Step>
+  <Step title="형식 및 다운로드 선택">
+이 응용 프로그램을 다운로드하려면 다음 단계를 따르십시오.*************** 탭이 비어 있는 경우[키캐드 생성](#키캐드-가져오기)또는 지원팀에 문의하십시오.
+  </Step>
+  <Step title="당신의 에다로 가져 오기">
+다운로드한 파일 형식에 대해 공급업체의 가져오기 단계를 따릅니다. 팀에 라이브러리를 해제하기 전에 데이터 시트에 대해 핀 1,피치 및 안뜰을 확인하십시오.
+  </Step>
 </Steps>
 
 <Frame>
@@ -43,9 +43,9 @@ EDA(Altium, KiCad, Eagle, OrCAD, Allegro 및 나열된 경우 기타) 에 제공
   />
 </Frame>
 
-<팁>
-카탈로그 발자국과 생성된 KiCad 라이브러리는 패드 크기 또는 핀 1 에 대해 의견이 일치하지 않을 수 있습니다. 조작할 모든 것에 대해서는 일반적인 0603 이 아닌 ** 데이터시트 페이지 ** 를 신뢰하십시오。
-</팁>
+<Tip>
+  Catalog footprints and generated KiCad libraries can disagree on pad size or pin 1. For anything you will fabricate, trust the **datasheet page**, not a generic 0603.
+</Tip>
 
 ### 알티움 디자이너
 
@@ -67,30 +67,30 @@ PartGenie 가 MPN 에 대해 나열할 때 OrCAD 또는 Allegro 형식을 다운
 
 생성은 PartGenie(웹 또는 Chrome) 에서 발생합니다. **KiCad 8** 은 대상 형식입니다。
 
-<단계>
-<단계 제목=“라이브러리 생성”>
-**Search**(Work 가 아님) 에서 예를 들어 다음과 같이 묻습니다：
+<Steps>
+  <Step title="라이브러리 생성">
+**검색**(작동하지 않음)에서 예를 들어:
 
-```
+    ```
     generate verified KiCAD for RC0603FR-071KL
     ```
 
-또는 **CAD 모델 ** → 부품 페이지에서 생성을 사용합니다. 앱 내 알림과 이메일을 기다리십시오 — 생성에는 몇 분이 걸릴 수 있습니다。
-</Step>
-<Step 제목=“증거 검토”>
-완성된 카드를 엽니다: **Symbol**, **Footprint**, **3D Model** 및 **Evidence summary** (Calculated vs. Assumed). 다운로드하기 전에 **KiCad 네이티브 가져오기 **, **Pin mapping** 및 **Visual audit** 를 확인하십시오。
-</Step>
-<단계 제목=“다운로드”>
-라이브러리 카드에서 **Download** 를 클릭합니다. KiCad 8 을 받게 됩니다。`.kicad_sym`,`.kicad_mod`, 및 3D 파일 PartGenie 는 이미 머신 가져오기 패스로 확인되었습니다。
-</단계>
-<Step title=“KiCad 프로젝트에 추가”>
-KiCad 8 에서：
+또는**치사한 사람 모형**를 사용하십시오**부분 페이지에서 생성하십시오. 몇 분 정도 걸릴 수 있습니다 인앱 통지 및 이메일 생성을 기다립니다.
+  </Step>
+  <Step title="증거 검토">
+완성 된 카드를 엽니 다:**기호**,**발자국**,**3 차원 모델**및**증거 요약**(계산 대 가정). 다운로드하기 전에**키캐드 기본 가져오기**,**핀 매핑**및**시각적 감사**를 확인하십시오.
+  </Step>
+  <Step title="다운로드">
+도서관 카드에서**다운로드**를 클릭합니다. 당신은 키캐드 8'를받습니다.키카드 시임시스템 가져 오기 패스로 이미 확인되었습니다.
+  </Step>
+  <Step title="키캐드 프로젝트에 추가">
+키카드 8:
 
-1. 프로젝트 또는 글로벌 라이브러리 폴더 (또는 팀이 표준화한 경로) 에 기호 및 풋프린트 파일을 배치합니다。
-2. KiCad 가 새 라이브러리 이름을 확인할 수 있도록 **sym-lib-table** 및 **fp-lib-table** 을 업데이트합니다。
-3. 심볼 또는 풋프린트 편집기에서 라이브러리를 다시 로드하고， 스키마에 파트를 배치하고， 풋프린트를 연결합니다。
-4. 3D 뷰어를 열고 본체 높이와 핀 1 을 데이터시트와 비교합니다。
-</Step>
+1. 프로젝트 또는 글로벌 라이브러리 폴더(또는 팀에서 표준화하는 경로)에 심볼 및 풋프린트 파일을 배치합니다.
+2. 이 라이브러리는 새 라이브러리의 이름을 업데이트하는 데 사용됩니다.
+3. 심볼 또는 풋프린트 편집기에서 라이브러리를 다시 로드하고 부품을 회로도에 배치하고 풋프린트를 연결합니다.
+4. 3 차원 뷰어를 열고 몸체 높이와 핀 1 을 데이터시트에 비교합니다.
+  </Step>
 </Steps>
 
 <Frame>
@@ -107,9 +107,9 @@ KiCad 8 에서：
   />
 </Frame>
 
-<경고>
-KiCad 세대는 ** 베타 ** 입니다. 제작 전에 데이터 시트에서 피치， 패드， 핀 1 및 3D 를 확인하십시오。패키지 적용 범위는 지원되는 제품군 (SO, QFN, BGA, 패시브， 일반 커넥터 등) 으로 제한됩니다. 현재 목록은 [KiCad 생성기](https://www.partgenie.ai/kicad-generator) 페이지를 참조하십시오。
-</경고>
+<Warning>
+  KiCad generation is **Beta**. Verify pitch, pads, pin 1, and 3D against the datasheet before production. Package coverage is limited to supported families (SO, QFN, BGA, passives, common connectors, and similar)—see the [KiCad generator](https://www.partgenie.ai/kicad-generator) page for the current list.
+</Warning>
 
 ## 크레딧 및 청구
 

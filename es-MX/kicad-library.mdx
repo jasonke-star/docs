@@ -8,56 +8,52 @@ Esto es diferente a descargar un modelo de catálogo en la página de piezas. Lo
 
 ## Generar una biblioteca
 
-<Steps>
-  <Step title="Start from Search">
-    Open [app.partgenie.ai](https://app.partgenie.ai) and stay on **Search** (not Work).
+MODELO: <Steps>
+  <Step title="Empezar desde la Búsqueda">
+Abierto [app.partgenie.ai] (https://app.partgenie.ai) y quédate en **Buscar* * (no funciona).
   </Step>
-  <Step title="Ask for a verified library">
-    Use the MPN and package in the prompt:
+  <Step title="Solicite una biblioteca verificada">
+Use la MPN y el paquete en el indicador:
 
-    
-__P0__
+    ```
+    generate verified KiCAD for RC0603FR-071KL
+    ```
 
-
-    You can also say *symbol, footprint, and 3D model* for a specific MPN such as 
-__P1__
- or 
-__P2__
-.
+También puede decir * símbolo, huella y modelo 3D* para una MPN específica, como 'STM32F103RET6' u 'OPA810IDBVR'`
   </Step>
-  <Step title="Wait for the job">
-    Generation can take a few minutes. PartGenie tells you it has started and notifies you **in the app and by email** when the library is ready. You can leave the chat and come back from **Recents** or **⌘K**.
+  <Step title="Espera el trabajo">
+La generación puede tardar unos minutos. PartGenie le informa que se ha iniciado y le notifica **en la aplicación y por correo electrónico** cuando la biblioteca está lista. Puedes abandonar el chat y volver de * * Recientes * * o * * ⌘K**.
   </Step>
-  <Step title="Review Symbol, Footprint, and 3D">
-    The finished card shows three previews:
+  <Step title="Revise el Símbolo, la Huella y el 3D">
+La tarjeta terminada muestra tres vistas previas:
 
-    - **Symbol** — schematic symbol and pin numbers
-    - **Footprint** — pad layout (for example 0603 pads 1 and 2)
-    - **3D Model** — STEP body
+- **Símbolo * * - símbolo esquemático y números pin
+- **Huella * — - diseño de la almohadilla (por ejemplo, 0603 almohadillas 1 y 2)
+- **Modelo 3D * * - Cuerpo ESCALONADO
 
-    Status chips on a finished library include **KiCad native import**, **Pin mapping**, and **Visual audit**.
+Los chips de estado en una biblioteca terminada incluyen * * Importación nativa de KiCad**, * * Asignación de pines * * y * * Auditoría visual**.
   </Step>
-  <Step title="Open the evidence summary">
-    Expand **Evidence summary**. Each row is a field (pin count, pitch, body size, pad size), the value used, the **datasheet page** it came from, and a status:
+  <Step title="Abra el resumen de pruebas">
+Expanda * * Resumen de evidencia**. Cada fila es un campo (número de pines, tono, tamaño del cuerpo, tamaño de la almohadilla), el valor utilizado, la **página de la hoja de datos** de donde proviene y un estado:
 
-    - **Calculated** — derived from datasheet or package data
-    - **Assumed** — a default the engine filled in (pitch is a common one)
+- **Calculado* — - derivado de la hoja de datos o datos del paquete
+- **Asumido* — - un valor predeterminado que completó el motor (el tono es común)
 
-    Treat **Assumed** rows as items you must confirm.
+Trate las filas * * asumidas * * como elementos que debe confirmar.
   </Step>
-  <Step title="Download">
-    Click **Download** on the part card and import the files into your KiCad project libraries.
+  <Step title="Descargar">
+Haga clic en * * Descargar* * en la tarjeta de piezas e importe los archivos a sus bibliotecas de proyectos de KiCad.
   </Step>
 </Steps>
 
-<Frame>
+MODELO: <Frame>
   <img
     alt="Generated KiCad card with Symbol, Footprint, 3D Model, and Download"
     src="/images/kicad-library-generate.png"
   />
 </Frame>
 
-<Frame>
+MODELO: <Frame>
   <img
     alt="Evidence summary table with datasheet page and Calculated or Assumed status"
     src="/images/kicad-library-evidence.png"
@@ -66,9 +62,9 @@ __P2__
 
 ## Before you fabrication-lanzamiento
 
-< Advertencia>
-  Las bibliotecas son**Beta**. Antes de usar uno, verifique el tono, las almohadillas, el pin 1 y el modelo 3D con la hoja de datos. Un tono supuesto o una marca incorrecta de pin-1 no serán capturados solo por una miniatura visual.
-< / Advertencia>
+MODELO: <Warning>
+  Libraries are **Beta**. Before you use one, check pitch, pads, pin 1, and the 3D model against the datasheet. An Assumed pitch or a wrong pin-1 mark will not be caught by a visual thumbnail alone.
+</Warning>
 
 - Abra la página de la hoja de datos citada desde la tabla de evidencia (consulte [Citas de la hoja de datos] (/en-US / datasheet-citations))
 - Confirme el pin 1 tanto en el símbolo como en la huella

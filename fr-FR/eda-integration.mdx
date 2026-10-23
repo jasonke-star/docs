@@ -22,17 +22,17 @@ Détails sur le catalogue et les bibliothèques générées: [CAO électronique 
 ## Télécharger les modèles du catalogue
 
 <Steps>
-  <Step title="Open the part">
-    In Search, click the **MPN** badge or part card. In Chrome, open **CAD models** from the sidebar on a supported distributor page.
+  <Step title="Ouvrir la pièce">
+Dans la recherche, cliquez sur le badge** MPN * * ou la carte de pièce. Dans Chrome, ouvrez * * Modèles CAO* * à partir de la barre latérale sur une page de distributeur prise en charge.
   </Step>
-  <Step title="Open CAD Models">
-    In the component drawer, tabs are **Product**, **Procurement**, and **CAD Models**. **Procurement** is live price and stock; **CAD Models** is the footprint library.
+  <Step title="Modèles CAO Ouverts">
+Dans le tiroir des composants, les onglets sont * * Produit**, * * Approvisionnement** et * * Modèles CAO**. ** Approvisionnement * * est le prix en direct et le stock; * * Modèles CAO* * est la bibliothèque d'empreintes.
   </Step>
-  <Step title="Choose format and download">
-    Download the symbol, footprint, and/or 3D files offered for your EDA (Altium, KiCad, Eagle, OrCAD, Allegro, and others when listed). Not every MPN has every format—if the tab is empty, [generate KiCad](#kicad-import) or contact support.
+  <Step title="Choisissez le format et téléchargez">
+Téléchargez le symbole, l'empreinte et/ou les fichiers 3D proposés pour votre EDA (Altium, KiCad, Eagle, OrCAD, Allegro et autres lorsqu'ils sont répertoriés). Tous les MPN n'ont pas tous les formats—si l'onglet est vide, [générer KiCad](#kicad-import) ou contactez le support.
   </Step>
-  <Step title="Import into your EDA">
-    Follow your vendor’s import steps for the file type you downloaded. Confirm pin 1, pitch, and courtyard against the datasheet before you release the library to the team.
+  <Step title="Importer dans votre EDA">
+Suivez les étapes d'importation de votre fournisseur pour le type de fichier que vous avez téléchargé. Confirmez le code pin 1, pitch et courtyard par rapport à la fiche technique avant de remettre la bibliothèque à l'équipe.
   </Step>
 </Steps>
 
@@ -43,9 +43,9 @@ Détails sur le catalogue et les bibliothèques générées: [CAO électronique 
   />
 </Frame>
 
-< Astuce>
-  Les empreintes de catalogue et les bibliothèques KiCad générées peuvent être en désaccord sur la taille du pad ou la broche 1. Pour tout ce que vous fabriquerez, faites confiance à la **page de la fiche technique**, pas à un générique 0603.
-< / Astuce>
+<Tip>
+  Catalog footprints and generated KiCad libraries can disagree on pad size or pin 1. For anything you will fabricate, trust the **datasheet page**, not a generic 0603.
+</Tip>
 
 ### Concepteur d'Altium
 
@@ -68,32 +68,28 @@ Téléchargez le format OrCAD ou Allegro lorsque PartGenie le répertorie pour l
 La génération se fait dans PartGenie (web ou Chrome). ** KiCad 8* * est le format cible.
 
 <Steps>
-  <Step title="Generate the library">
-    In **Search** (not Work), ask for example:
+  <Step title="Générer la bibliothèque">
+Dans * * Recherche* *(ne fonctionne pas), demandez par exemple:
 
-    
-__P0__
+    ```
+    generate verified KiCAD for RC0603FR-071KL
+    ```
 
-
-    Or use **CAD models** → generate from the part page. Wait for the in-app notice and email—generation can take a few minutes.
+Ou utilisez * * Modèles CAO * * → générer à partir de la page de la pièce. Attendez l'avis intégré à l'application et la génération d'e—mails peut prendre quelques minutes.
   </Step>
-  <Step title="Review evidence">
-    Open the finished card: **Symbol**, **Footprint**, **3D Model**, and **Evidence summary** (Calculated vs Assumed). Check **KiCad native import**, **Pin mapping**, and **Visual audit** before you download.
+  <Step title="Examiner les preuves">
+Ouvrez la carte terminée: * * Symbole**, * * Empreinte**, * * Modèle 3D** et * * Résumé des preuves* *(Calculé vs Supposé). Vérifiez * * l'importation native de KiCad**, * * le mappage des broches** et **l'audit visuel** avant de télécharger.
   </Step>
-  <Step title="Download">
-    Click **Download** on the library card. You receive KiCad 8 
-__P1__
-, 
-__P2__
-, and 3D files PartGenie already checked with a machine import pass.
+  <Step title="Télécharger">
+Cliquez sur * * Télécharger* * sur la fiche de la bibliothèque. Vous recevez KiCad 8 `.kicad_comme'`'.kicad_mod', et les fichiers 3D PartGenie déjà vérifiés avec une passe d'importation machine.
   </Step>
-  <Step title="Add to your KiCad project">
-    In KiCad 8:
+  <Step title="Ajouter à votre projet KiCad">
+Dans KiCad 8:
 
-    1. Place symbol and footprint files in your project or global library folders (or paths your team standardizes on).
-    2. Update **sym-lib-table** and **fp-lib-table** so KiCad resolves the new library names.
-    3. Reload libraries in the Symbol or Footprint editor, place the part on the schematic, and associate the footprint.
-    4. Open the 3D viewer and compare body height and pin 1 to the datasheet.
+1. Placez les fichiers de symboles et d'empreintes dans vos dossiers de projet ou de bibliothèque globale (ou les chemins sur lesquels votre équipe normalise).
+2. Mettez à jour **sym-lib-table * * et * * fp-lib-table * * pour que KiCad résolve les nouveaux noms de bibliothèques.
+3. Rechargez les bibliothèques dans l'éditeur de symboles ou d'empreintes, placez la pièce sur le schéma et associez l'empreinte.
+4. Ouvrez la visionneuse 3D et comparez la hauteur du corps et la broche 1 à la fiche technique.
   </Step>
 </Steps>
 
@@ -111,9 +107,9 @@ __P2__
   />
 </Frame>
 
-< Avertissement>
-  La génération KiCad est * * bêta**. Vérifiez la hauteur, les plaquettes, la broche 1 et la 3D par rapport à la fiche technique avant la production. La couverture des paquets est limitée aux familles supportées (SO, QFN, BGA, passifs, connecteurs communs et similaires— - voir le [générateur KiCad] (https://www.partgenie.ai/kicad-generator) page pour la liste actuelle.
-< / Avertissement>
+<Warning>
+  KiCad generation is **Beta**. Verify pitch, pads, pin 1, and 3D against the datasheet before production. Package coverage is limited to supported families (SO, QFN, BGA, passives, common connectors, and similar)—see the [KiCad generator](https://www.partgenie.ai/kicad-generator) page for the current list.
+</Warning>
 
 ## Crédits et facturation
 

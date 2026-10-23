@@ -1,52 +1,48 @@
 ---
-title: "KiCadライブラリの生成"
-description: "Mpnの検証済みのkicadシンボル、フットプリント、およびステップ3Dを生成し、ライブラリ（ベータ版）をダウンロードします。"
+title: "KiCad ライブラリの世代"
+description: "MPN 用に検証済みの KiCad シンボル、フットプリント、および STEP 3D を生成し、ライブラリをダウンロードする (ベータ版)"
 ---
-**Kicadライブラリ生成(ベータ版)**PartGenieのコンポーネントデータベースとデータシートから部品ライブラリを構築します。**Symbol**、**Footprint**、および**STEP3D**、さらにボードにドロップする前に確認
+**KiCad ライブラリ生成 (ベータ版)** は、PartGenie のコンポーネントデータベースとデータシートからパーツライブラリを構築します:**Symbol**、**Footprint**、および **STEP 3D**、さらにボードにドロップする前に確認できる証拠の概要。
 
-これは、部品ページでカタログモデルをダウンロードするのとは異なります。 カタログアセットは、コンポーネント**CADモデル**タブに表示されます-[ECADとフットプリント](/ja-JP/ecad-models)を参照してください。 ピン、パッド、および視覚的なチェックが添付されたKiCadネイティブライブラリが必要な場合は、generationを使用します。
+これは、パーツページでカタログモデルをダウンロードする場合とは異なります。カタログアセットは、コンポーネント **CAD モデル ** タブでライブ表示されます。[ECAD & footprints](/ja-JP/ecad-models) を参照してください。ピン、パッド、およびビジュアルチェックがアタッチされた KiCad ネイティブライブラリが必要な場合は、generation を使用します。
 
-##ライブラリを生成する
+## ライブラリの生成
 
 <Steps>
-  <Step title="Start from Search">
-    Open [app.partgenie.ai](https://app.partgenie.ai) and stay on **Search** (not Work).
+  <Step title="検索から開始">
+オープン[app.partgenie.ai](https://app.partgenie.ai）とに滞在**検索**（動作しません）。
   </Step>
-  <Step title="Ask for a verified library">
-    Use the MPN and package in the prompt:
+  <Step title="検証済みライブラリのリクエスト">
+プロンプトでMPNとパッケージを使用します:
 
-    
-__P0__
+    ```
+    generate verified KiCAD for RC0603FR-071KL
+    ```
 
-
-    You can also say *symbol, footprint, and 3D model* for a specific MPN such as 
-__P1__
- or 
-__P2__
-.
+また、`STM32F103RET6`や`OPA810IDBVR`などの特定のMPNに対して、*symbol、footprint、および3D model*と言うこともできます。
   </Step>
-  <Step title="Wait for the job">
-    Generation can take a few minutes. PartGenie tells you it has started and notifies you **in the app and by email** when the library is ready. You can leave the chat and come back from **Recents** or **⌘K**.
+  <Step title="仕事を待つ">
+生成には数分かかることがあります。 PartGenieは、それが開始されたことを伝え、ライブラリの準備ができたら**アプリで、電子メールで**あなたに通知します。 あなたはチャットを離れて、**Recents**または**⌘K**から戻ってくることができます。
   </Step>
-  <Step title="Review Symbol, Footprint, and 3D">
-    The finished card shows three previews:
+  <Step title="シンボル、フットプリント、および3Dを確認する">
+完成したカードには3つのプレビューが表示されます:
 
-    - **Symbol** — schematic symbol and pin numbers
-    - **Footprint** — pad layout (for example 0603 pads 1 and 2)
-    - **3D Model** — STEP body
+—**シンボル**-回路図シンボルとピン番号
+-**フットプリント**-パッドレイアウト（たとえば、0603パッド1と2）
+—**3Dモデル**-ステップボディ
 
-    Status chips on a finished library include **KiCad native import**, **Pin mapping**, and **Visual audit**.
+完成したライブラリのステータスチップには、**KiCad native import**、**Pin mapping**、および**Visual audit**が含まれます。
   </Step>
-  <Step title="Open the evidence summary">
-    Expand **Evidence summary**. Each row is a field (pin count, pitch, body size, pad size), the value used, the **datasheet page** it came from, and a status:
+  <Step title="証拠の概要を開く">
+**証拠の概要**を展開します。 各行は、フィールド（ピン数、ピッチ、ボディサイズ、パッドサイズ）、使用された値、データシートページ**、およびステータスです:
 
-    - **Calculated** — derived from datasheet or package data
-    - **Assumed** — a default the engine filled in (pitch is a common one)
+-**計算**-データシートまたはパッケージデータから派生
+-**仮定**-デフォルトで入力されたエンジン（ピッチは一般的なものです）
 
-    Treat **Assumed** rows as items you must confirm.
+**仮定された**行を確認する必要がある項目として扱います。
   </Step>
-  <Step title="Download">
-    Click **Download** on the part card and import the files into your KiCad project libraries.
+  <Step title="ダウンロード">
+部品カードの**Download**をクリックして、ファイルをKiCadプロジェクトライブラリにインポートします。
   </Step>
 </Steps>
 
@@ -64,24 +60,24 @@ __P2__
   />
 </Frame>
 
-##リリースする前に
+## 製造リリース前
 
-<警告>
-  ライブラリは**ベータ**です。 使用する前に、ピッチ、パッド、ピン1、および3Dモデルをデータシートに対して確認してください。 想定されるピッチまたは間違ったピン-1マークは、視覚的なサムネイルだけではキャッチされません。
-</警告>
+<Warning>
+  Libraries are **Beta**. Before you use one, check pitch, pads, pin 1, and the 3D model against the datasheet. An Assumed pitch or a wrong pin-1 mark will not be caught by a visual thumbnail alone.
+</Warning>
 
--証拠表から引用データシートのページを開きます([データシート引用](/ja-JP/データシート-引用)を参照)
--シンボルとフットプリントの両方のピン1を確認する
-—何かが間違っている場合は、修正と同じチャットで返信-と発電機が改善できるようにフィードバックを送信します
+- 証拠テーブルから引用されたデータシートページを開きます ([データシート引用](/ja-JP/datasheet-citations))
+- シンボルとフットプリントの両方でピン 1 を確認する
+- 問題がある場合は、同じチャットで修正を返信し、ジェネレーターを改善できるようにフィードバックを送信します
 
-##ファイルはその後どこに行くのか
+## 後でファイルが移動する場所
 
-ダウンロードしたライブラリは、kicadにインポートするためにあなたのものです。 それらを生成したチャットは**Recents**にとどまります。 関連するレポートやファイルは、PartGenieがアーティファクトを保存するときに[Knowledge](/ja-JP/knowledge)に配置することもできます。
+ダウンロードしたライブラリは、KiCad にインポートできます。それらを生成したチャットは **Recents** に保存されます。関連するレポートやファイルも、PartGenie がアーティファクトを保存すると [Knowledge](/ja-JP/knowledge) に保存される場合があります。
 
-##関連
+## 関連
 
--[EDA integration](/ja-JP/eda-integration)-KiCad8およびその他のツールへのインポート
--[統合](/ja-JP/integrations)
--[ECAD&footprints](/ja-JP/ecad-models)-カタログモデルはすでに一部にあります
--[デザインモード](/ja-JP/design-mode)-ボードを描画する前のアーキテクチャとBOM
--[AI検索](/ja-JP/ai-search)
+- [EDA 統合](/ja-JP/eda-integration)- KiCad 8 およびその他のツールへのインポート
+- [Integrations](/ja-JP/integrations)
+- [ECAD & footprints](/ja-JP/ecad-models) - すでにパートにあるカタログモデル
+- [デザインモード](/ja-JP/design-mode)- ボードを描く前のアーキテクチャと BOM
+- [AI Search](/ja-JP/ai-search)

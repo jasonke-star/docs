@@ -2,8 +2,14 @@
 title: "체인지로그"
 description: "PartGenie 의 최신 기능 업데이트 및 버전 릴리스 정보 보기"
 ---
-__P3__
 
+
+<Update label="2026-10-22" tags={["ECAD", "Preview", "CAD Models"]} description="다운로드하기 전에 기호 및 발자국 미리보기"><Frame>
+    <img
+      alt="CAD Models KiCad Beta preview: schematic symbol and PCB footprint pan and zoom before Download KiCad"
+      src="/images/ecad-preview-kicad-beta.png"
+    />
+  </Frame>
 
 <Frame>
     <img
@@ -12,15 +18,13 @@ __P3__
     />
   </Frame>
 
-**CAD 모델에는 이제 라이브 ECAD 미리보기가 포함되어 있습니다 ** — 다운로드를 커밋하기 전에 서랍에서 도식 기호와 PCB 발자국을 검사하십시오。
+**CAD 모델에 이제 라이브 ECAD 미리보기가 포함됩니다 **—다운로드를 커밋하기 전에 서랍에서 도식 기호와 PCB 풋프린트를 검사하세요。
 
 ** 툴 형식 ** 을 선택합니다 (예: **KiCad**, **Altium**, **Allegro**, **OrCAD**, **Cadence**, **PADS** 및 기타 나열된 대상). **KiCad** 는 생성된 기호와 풋프린트의 미리보기를 표시한 다음， 라이브러리가 준비되면 **KiCad** 를 다운로드합니다. **Altium** 및 기타 전문 형식은 **Preview · Powered by FootprintKu** 를 표시합니다. EDA 스택에서 해당 MPN 이 필요한 경우 기호， 풋프린트 또는 3D 에서 **Request** 를 사용합니다。
 
-검색， 구성 요소 서랍， Chrome 및 [KiCad 플러그인](/ko-KR/kicad-plugin) 에서 동일한 **CAD 모델 ** 탭. 가이드: [ECAD & footprints](/ko-KR/ecad-models).
-</업데이트>
+검색， 구성 요소 서랍， Chrome 및 [KiCad 플러그인](/ko-KR/kicad-plugin) 의 동일한 **CAD 모델 ** 탭. 가이드: [ECAD & footprints](/ko-KR/ecad-models).</Update>
 
-<Update label="2026-10-21" tags={["Team", "Workspace", "BOM"]} description="Team workspace is live">
-  <Frame>
+<Update label="2026-10-21" tags={["Team", "Workspace", "BOM"]} description="팀 워크스페이스 라이브"><Frame>
     <img
       alt="Workspace settings Team rules: preset sourcing checks on Component, Supplier, and Risk for every BOM analysis"
       src="/images/workspace-team-rules.png"
@@ -34,15 +38,13 @@ __P3__
     />
   </Frame>
 
-** 팀 에디션 ** 은 전자 그룹에 공유된 ** 작업 공간 ** 을 제공합니다. 이는 회사 라이브러리， 소싱 정책 및 전체 팀을 위한 하나의 청구서입니다。
+**Team 에디션 ** 은 전자 그룹에 공유된 **workspace** - 회사 라이브러리， 소싱 정책 및 전체 팀에 대한 하나의 청구서를 제공합니다。
 
 ** 설정 → 작업 공간 **(팀 탭) 을 열어 ** 일반 ** 브랜딩， ** 멤버 ** 및 초대， ** 라이브러리 ** 승인， ** 규칙 **, ** 분석 ** 및 ** 결제 ** 를 관리합니다. ** 팀 규칙 ** 은 모든 BOM 분석에 적용됩니다: ** 프리셋 ** 확인 (예: EOL 부품 없음， 듀얼 소스， AVL 전용， 브랜드 또는 국가 블랙리스트， 단일 소스 및 요금 경고) 을 선택하거나 ** 사용자 지정 ** 정책을 작성합니다. ** 작업 공간 분석 ** 은 채택 상태 (활성 사용자， 메시지， 소비된 크레딧 (팀 풀 대 개인), 멤버당 사용량 및 ** 내보내기 보고 **) 를 보여줍니다。
 
-플랜에는 멤버당 **5 석 **, ** 월별 AI 크레딧 2,000 개/워크스페이스 풀 **, 프로 기능이 포함됩니다. ** 설정 → 멤버십 **(팀) 에서 시작하거나 support@partgenie.ai(mailto:support@partgenie.ai) 에 문의하여 데모를 확인하세요. 개요: [멤버십 & 가격](/ko-KR/membership-pricing).
-</업데이트>
+플랜에는 멤버당 **5 석 **, ** 월별 AI 크레딧 2,000 개/워크스페이스 풀 **, 프로 기능이 포함됩니다. ** 설정 → 멤버십 **(팀) 에서 시작하거나 support@partgenie.ai(mailto:support@partgenie.ai) 에 문의하여 데모를 확인하세요. 개요: [멤버십 & 가격](/ko-KR/멤버십 - 가격).</Update>
 
-<Update label="2026-10-20" tags={["ECAD", "FootprintKu", "Partnership"]} description="Professional ECAD via FootprintKu">
-  <Frame>
+<Update label="2026-10-20" tags={["ECAD", "FootprintKu", "Partnership"]} description="FootprintKu 를 통한 전문적인 ECAD"><Frame>
     <img
       alt="PartGenie and footprintku AI partnership"
       src="/images/partgenie-footprintku-partnership.png"
@@ -60,11 +62,9 @@ __P3__
 
 파트 → **CAD 모델 ** 을 열고 EDA 형식 (예: **Altium**, **Cadence**, **OrCAD**, **PADS** 및 나열된 경우 KiCad) 을 선택한 다음 **Request** 기호， 풋프린트 또는 3D 를 선택합니다. 동일한 경로는 검색， 구성 요소 서랍， Chrome 및 [KiCad 플러그인](/ko-KR/kicad-plugin) 에서 작동합니다。
 
-검색에서 KiCad **generation** 은 데이터시트에서 검증된 라이브러리가 필요한 경우 여전히 베타 경로입니다 — [ECAD & footprints](/ko-KR/ecad-models) 를 참조하세요。
-</업데이트>
+검색에서 KiCad **generation** 은 데이터시트에서 검증된 라이브러리가 필요한 경우에도 여전히 베타 경로입니다 — [ECAD & footprints](/ko-KR/ecad-models) 를 참조하세요。</Update>
 
-<Update label="2026-10-14" tags={["KiCad", "Plugin", "BOM"]} description="PartGenie plugin for KiCad">
-  <Frame>
+<Update label="2026-10-14" tags={["KiCad", "Plugin", "BOM"]} description="KiCad 용 PartGenie 플러그인"><Frame>
     <img
       alt="KiCad plugin part inspect: Product parameters for a JST header, Add to BOM and View on PartGenie"
       src="/images/kicad-plugin-part-inspect.png"
@@ -98,11 +98,9 @@ __P3__
 
 ** 설치:** [app.partgenie.ai](https://app.partgenie.ai) → ** 설정 → 통합 → KiCad**. 가이드: [KiCad 플러그인](/ko-KR/kicad-plugin).
 
-** 곧 제공됩니다:** 보드에서 시각적 ECAD 드래그 앤 드롭 교체。
-</업데이트>
+** 곧 제공됩니다:** 보드에서 시각적 ECAD 드래그 앤 드롭 교체。</Update>
 
-<Update label="2026-10-13" tags={["Search", "Calculator", "UX"]} description="Built-in engineering calculator & Intelligent UI">
-  <Frame>
+<Update label="2026-10-13" tags={["Search", "Calculator", "UX"]} description="내장 엔지니어링 계산기 및 지능형 UI"><Frame>
     <img
       alt="Resistor power rating audit with formulas and sliders for voltage, resistance, and watt rating"
       src="/images/engineering-calc-resistor-sliders.png"
@@ -123,7 +121,7 @@ __P3__
     />
   </Frame>
 
-** 검색에 내장된 엔지니어링 계산기가 포함되었습니다. ** PartGenie 는 질문을 감사 패널과 일치시키고， 공식을 표시하며， 제한이 적용될 때 ** 통과/실패 ** 확인을 표시합니다。
+** 이제 검색에 내장된 엔지니어링 계산기가 포함됩니다. ** PartGenie 는 질문을 감사 패널과 일치시키고， 공식을 표시하며， 제한이 적용될 때 ** 통과/실패 ** 확인을 표시합니다。
 
 ** 이제 계산기 배송:**
 
@@ -132,74 +130,47 @@ __P3__
 | ** 저항 전력 등급 감사 ** | P = V2/R (또는 VI/I2R), 마진 대 등급 와트수 |
 | ** 전력 소모 및 접합 온도 ** | LDO Pd, Tj = Ta + Pd × θJA vs max—** 전기 ** 및 ** 열 ** 검사 |
 
-** 샘플 쿼리:**`100Ω resistor at 12V — is 0.25W rating enough?`·`Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?`·`12V to 3.3V at 400mA, θJA 50°C/W — thermal pass or fail?`
+** 예제 쿼리:** 12V 에서 100Ω 저항기 - 0.25W 등급이 충분한가？ · · 대략적인 추정치: 3.3V LDO 가 200mA 에서 12V 에서 얼마나 열을 감소시키는가？ · · 400mA 에서 12V~3.3V, θJA 50°C/W - 열 통과 또는 실패인가？
 
-더 많은 예: [Engineering calculator](/ko-KR/engineering-calculator).
+더 많은 예: [엔지니어링 계산기](/ko-KR/engineering-calculator).
 
-** 지능형 UI** 패널은 답변에 포함되어 있습니다: 라이브 숫자， 경계선 및 ** 다른 입력 ** 제어를 시도합니다. 슬라이더를 드래그하면 패널이 새 검색 없이 로컬에서 ** 다시 계산합니다. PartGenie 는 또한 질문이 충분히 지정되지 않았을 때 (예: 명목 부하 이상의 스트레스) 입력을 자체적으로 ** 조정할 수 있습니다。
-</업데이트>
+** 지능형 UI** 패널은 답변에 포함되어 있습니다: 라이브 숫자， 경계선 및 ** 다른 입력 ** 제어를 시도합니다. 슬라이더를 드래그하면 패널이 새 검색 없이 로컬에서 ** 다시 계산합니다. PartGenie 는 또한 질문이 충분히 지정되지 않았을 때 (예: 명목 부하 이상의 스트레스) 입력을 자체적으로 ** 조정할 수 있습니다。</Update>
 
-<Update label="2026-10-12" tags={["Datasheet", "Translation", "Beta"]} description="Translate datasheets in the PDF viewer (Beta)">
-  <Frame>
-    <img
-      alt="Datasheet PDF with layout parsing in progress before translated view"
-      src="/images/datasheet-translate-layout-parsing.png"
-    />
-  </Frame>
+<Update label="2026-10-12" tags={["Datasheet", "Translation", "Beta"]} description="PDF 뷰어에서 데이터 시트 번역하기 (베타)"><!------------
 
-<Frame>
-    <img
-      alt="Datasheet viewer with Original and Traditional Chinese toggle and Translate datasheet control"
-      src="/images/datasheet-translate-original-vs-translated.png"
-    />
-  </Frame>
+  <!------------
 
-** 데이터시트 번역은 베타 버전입니다. ** PDF 뷰어에서 ** 설정 → 언어 ** 에서 설정한 언어로 데이터시트를 번역합니다. 이는 매번 한 번씩 선택하는 것이 아닌 작업 언어입니다。
+  **데이터 시트 번역은 베타 버전입니다.*-작업 언어가 아닌 일회성 선택 각 시간.
 
-어떻게 읽고 싶은지 선택하세요：
+  당신이 그것을 읽을 방법을 선택:
 
-- ** 레이아웃 보존 ** - 텍스트를 읽는 동안 페이지 구조 유지번역됨 (레이아웃 분석이 먼저 실행됨)
-- ** 텍스트 읽기 ** – 긴 섹션을 빠르게 스캔하려는 경우 읽기 중심 보기
+  —**레이아웃 유지**-텍스트가 번역되는 동안 페이지 구조 유지(레이아웃 구문 분석이 먼저 실행됨)
+  -**텍스트 읽기**—긴 섹션을 빠르게 스캔하려는 읽기 중심보기
 
-긴 데이터시트는 특히 레이아웃 모드에서 시간이 걸릴 수 있습니다. 나갔다가 다시 돌아올 수 있습니다. 번역은 백그라운드에서 계속되며 문서를 다시 열면 준비되어 있을 것입니다。
+  긴 데이터 시트는 특히 레이아웃 모드에서 시간이 걸릴 수 있습니다. 당신은 떠나 다시 올 수 있습니다;번역은 백그라운드에서 계속 당신이 그것을 다시 열 때 문서가 준비가 될 것입니다.
 
-엔지니어링 결정에 대해서는 여전히 **original** 페이지 또는 [datasheet chat](/ko-KR/specification-chat) 에서 중요한 숫자와 제한을 확인하십시오。
-</업데이트>
+  엔지니어링 결정을 위해**원본**페이지 또는[데이터시트 채팅](/코-크로/사양 채팅)에서 중요한 숫자와 제한을 확인합니다.</Update>
 
-<Update label="2026-10-08" tags={["Chrome", "Extension", "Sourcing"]} description="PartGenie for Chrome — research beside the part">
-  <Frame>
-    <img
-      alt="PartGenie Chrome extension on a DigiKey product page for AO3400A: alternatives table, CAD models, Find alternatives, Compare prices, and Ask about this part"
-      src="/images/chrome-extension-digikey-sidebar.png"
-    />
-  </Frame>
+<Update label="2026-10-08" tags={["Chrome", "Extension", "Sourcing"]} description="크롬 용 파트 제니—부품 옆 연구"><!------------
 
-**PartGenie for Chrome 이 여기에 있습니다. ** 지원되는 유통업체 및 제조업체 페이지에서는 확장 프로그램이 사용자가 보고 있는 MPN 을 인식합니다. 복사 및 붙여넣기 기능이나 추가 탭이 필요하지 않습니다. 채팅， 대안， ECAD 및 가격 비교는 부품 외부에 유지됩니다。
+  **크롬 용 파트 제니가 여기에 있습니다.**지원되는 배포자 및 제조업체 페이지에서 확장 프로그램은 복사—붙여넣기,추가 탭 없이 보고 있는 파일을 인식합니다. 채팅,대안,전자 카드 및 가격 비교는 부분 옆에 있습니다.
 
-사이드바에서 다음을 수행할 수 있습니다：
+  사이드 바에서 당신은 할 수 있습니다:
 
-- 스펙 테이블뿐만 아니라 검토할 수 있는 증거가 있는 ** 대안 ** 찾기
-- ** 열린 부분과 교체 부분을 비교 **
-- 지원되는 형식에 대해 ECAD**(기호， 발자국， 3D) 열기 또는 생성
-- ** 유통업체 간 가격 ** 및 재고 비교
-- 브라우저에서 데이터시트와 채팅하고 부품에 대해 질문하기
-- 자세한 연구를 위해 전체 **PartGenie 구성 요소 페이지 ** 로 이동하세요。
+  -당신이 검토 할 수있는 증거**대안**찾기-뿐만 아니라 사양 테이블
+  -**비교**교체와 열린 부분
+  -지원 형식에 대한 열기 또는**생성**(기호,발자국,3 차원)
+  -**대리점에서 가격**및 재고 비교
+  -**데이터 시트**와 채팅 및 브라우저의 부분에 대한 질문
+  -더 깊은 연구를 위해 전체**파트 제니 구성 요소 페이지로 이동**
 
-현재 **DigiKey**, **Mouse**, **LCSC** 및 기타 지원되는 소스를 포함한 사이트에서 작동합니다. 지원은 해당 페이지에서만 실행되며， 구성 요소를 식별하는 데 필요한 정보를 사용합니다. [partgenie.ai](https://partgenie.ai/) 에서 자세히 알아보세요。
-</업데이트>
+  ************************* 지원은 구성 요소를 식별하는 데 필요한 정보를 사용하여 해당 페이지에서만 실행됩니다. 더 알아보기[partgenie.ai](https://partgenie.ai/).</Update>
 
-<Update label="2026-10-01" tags={["Search", "Components", "UX"]} description="View component details beside the answer">
-  <Frame>
-    <img
-      alt="Search answer with ESP32-S3-WROOM-1 module cards, and the ESP32-S3-WROOM-1-N4 detail panel open beside the reply"
-      src="/images/component-detail-beside-answer.png"
-    />
-  </Frame>
+<Update label="2026-10-01" tags={["Search", "Components", "UX"]} description="답변 옆의 구성 요소 세부 정보 보기"><!------------
 
-** 이제 구성 요소 세부 정보가 답변 옆에 열립니다. ** 검색에서 부품 카드 (사진， 제조업체 및 MPN) 를 클릭하면 세부 정보 패널이 답변 옆에 유지됩니다. 스레드를 벗어나지 않고 매개 변수， 패키지 및 설명을 읽을 수 있습니다. 여기에서 BOM 에 추가하거나 CAD 모델로 전환할 수 있습니다。
+  **구성 요소 세부 정보는 이제 답변 옆에 열립니다.**검색에서 부품 카드(사진,제조업체 및 사진)를 클릭하면 세부 사항 패널이 답장 옆에 있습니다. 스레드를 떠나지 않고 매개 변수,패키지 및 설명을 읽습니다. 여기에서 당신은**봄에 추가**또는**치사한 사람 모델**로 전환 할 수 있습니다.
 
-여러 부품이 동시에 답변에 남을 수 있으므로， 스레드 옆에서 하나를 열어 화면에 남아 있는 다른 부품들과 비교할 수 있습니다。
-</업데이트>
+  여러 부분은 한 번에 대답에 머물 수 있습니다,그래서 당신은 스레드 옆에 하나를 열고 화면에 여전히 다른 사람과 비교할 수 있습니다.</Update>
 
 <Update label="2026-09-30" tags={["Search", "Datasheet", "PDF"]} description="Search and open datasheets from Search">
   <Frame>
@@ -209,17 +180,17 @@ __P3__
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Datasheet PDF open beside the search answer, with Chat with datasheet at the bottom of the viewer"
       src="/images/datasheet-search-viewer.png"
     />
   </Frame>
 
-** 데이터 시트를 검색하고 응답에서 열 수 있습니다. ** 검색에서 “STM32F103RET6 의 데이터 시트” 와 같은 질문을 하면 PartGenie 가 응답에서 PDF 를 반환합니다. 파일 카드를 클릭하여 채팅 옆에 있는 문서를 한 페이지씩 읽습니다。
+  **Search a datasheet and open it in the answer.** Ask in Search—for example “datasheet for STM32F103RET6”—and PartGenie returns the PDF in the reply. Click the file card to read the document beside the chat, page by page.
 
-매개변수를 자세히 보려면 뷰어에서 데이터시트와 채팅을 클릭합니다. 후속 질문은 검색을 종료하지 않고 해당 문서 (잠자기 현재， 핀아웃， 패키지 테이블) 에 유지됩니다。
-</업데이트>
+  For a closer look at parameters, click **Chat with datasheet** in the viewer. Follow-up questions stay on that document—sleep current, pinout, package tables—without leaving the search.
+</Update>
 
 <Update label="2026-09-28" tags={["App", "iOS", "Mobile"]} description="PartGenie for iOS is live">
   <Frame>
@@ -229,10 +200,10 @@ __P3__
     />
   </Frame>
 
-**PartGenie for iOS 가 실시간으로 제공됩니다. ** 칩 식별， PCB 스캔， 표시 읽기， SMD 코드 검색， 데이터시트 찾기 및 검증된 대체 기능 등 Android 와 동일한 포켓 워크플로가 이제 iPhone 에서도 사용 가능합니다。
+  **PartGenie for iOS is live.** The same pocket workflow as Android—identify chips, scan PCBs, read markings, look up SMD codes, find datasheets and verified alternatives—now on iPhone.
 
-PartGenie 를 두 플랫폼의 벤치로 가져가세요. 웹은 가장 완전한 작업 공간을 유지합니다. 앱은 노트북이 아닌 보드를 들고 있는 순간을 다룹니다。
-</업데이트>
+  Take PartGenie to the bench on either platform. Web stays the fullest workspace; the app covers the moments when you're holding a board, not a laptop.
+</Update>
 
 <Update label="2026-09-26" tags={["Personalization", "Memory", "UX"]} description="Custom instructions for Search, BOM & Design">
   <Frame>
@@ -242,17 +213,17 @@ PartGenie 를 두 플랫폼의 벤치로 가져가세요. 웹은 가장 완전�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Profile settings with role, industries, and custom instructions for how PartGenie writes answers"
       src="/images/custom-instructions.png"
     />
   </Frame>
 
-** 사용자 지정 지침 ** 을 설정하여 검색， BOM 및 설계 답변이 사용자의 업무 방식 (역할， 산업 및 결론으로 리드하거나 리드 시간 및 대안을 호출하는 등의 기본 설정) 과 일치하도록 합니다。
+  Set **custom instructions** so Search, BOM, and Design answers match how you work—role, industry, and preferences such as leading with the conclusion or calling out lead time and alternatives.
 
-이렇게 하면 권장되는 부분이 아닌 답변 작성 방식이 변경됩니다. 검색 결과 순서는 중립적으로 유지됩니다. 프로젝트에 자체 규칙이 있는 경우에도 파일 및 규칙의 프로젝트 지침이 이러한 기본값을 재정의합니다。
-</업데이트>
+  This changes **how answers are written**, not which parts are recommended. Search result order stays neutral. Project instructions in Files & Rules still override these defaults when a project has its own rules.
+</Update>
 
 <Update label="2026-09-25" tags={["Design", "Plan", "Images"]} description="Design plan review & multi-view images">
   <Frame>
@@ -262,24 +233,24 @@ PartGenie 를 두 플랫폼의 벤치로 가져가세요. 웹은 가장 완전�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Plan review with goals, metrics, constraints, and selectable architecture schemes"
       src="/images/design-plan-review.png"
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Generated product image with Hero view and additional angle thumbnails"
       src="/images/design-image-multiview.jpg"
     />
   </Frame>
 
-** 디자인 계획 검토 ** 는 여기에 있습니다. 요약 후， PartGenie 는 목표， 지표 및 제약 조건을 포함한 여러 아키텍처 체계를 제안합니다. 방향을 선택하거나 채팅에서 옵션 변경을 요청한 다음， 아키텍처， BOM 및 이미지를 통해 계속하세요。
+  **Design plan review** is here. After Brief, PartGenie proposes multiple architecture schemes—goals, metrics, and constraints included. Pick a direction (or ask in chat to change the options), then continue through Architecture, BOM, and Image.
 
-생성된 이미지는 이제 여러 뷰를 지원합니다. 단일 샷 대신 히어로와 기타 각도 간에 전환하여 하나 이상의 관점에서 개념을 검토할 수 있습니다。
-</업데이트>
+  Generated **images now support multiple views**. Switch between Hero and other angles instead of a single shot, so you can review the concept from more than one perspective.
+</Update>
 
 <Update label="2026-09-24" tags={["Search", "Navigation", "UX"]} description="⌘K quick search across chats, Knowledge & Projects">
   <Frame>
@@ -289,15 +260,15 @@ PartGenie 를 두 플랫폼의 벤치로 가져가세요. 웹은 가장 완전�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Quick search palette to find chats, Knowledge files, and Projects, plus New Chat"
       src="/images/quick-search-palette.png"
     />
   </Frame>
 
-**⌘K**(사이드바에서 검색) 로 더 빠르게 어디든 이동할 수 있습니다. 빠른 검색 팔레트를 열어 **chat**, **Knowledge** 및 **Projects** 를 한 곳에서 찾거나 현재 화면에서 나가지 않고 **New Chat** 을 시작할 수 있습니다。
-</업데이트>
+  Jump anywhere faster with **⌘K** (Search in the sidebar). Open the quick-search palette to find **chats**, **Knowledge**, and **Projects** in one place—or start a **New Chat** without leaving your current screen.
+</Update>
 
 <Update label="2026-09-23" tags={["KiCad", "ECAD", "Beta"]} description="Generate verified KiCad libraries (Beta)">
   <Frame>
@@ -307,17 +278,17 @@ PartGenie 를 두 플랫폼의 벤치로 가져가세요. 웹은 가장 완전�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Evidence summary for generated KiCad assets: pin mapping, body/pad size from datasheet, visual audit checks"
       src="/images/kicad-library-evidence.png"
     />
   </Frame>
 
-**KiCad 라이브러리 생성은 베타 버전입니다. ** PartGenie 에게 MPN 용 라이브러리를 생성하도록 요청하고 **Symbol**, **Footprint** 및 **STEP 3D** 를 가져온 다음， 프로젝트용 엔지니어링 준비 KiCad 파일을 다운로드하세요。
+  **KiCad library generation is in Beta.** Ask PartGenie to generate a library for an MPN and get **Symbol**, **Footprint**, and **STEP 3D**—then download engineering-ready KiCad files for your project.
 
-생성된 자산은 PartGenie 의 공식 구성 요소 데이터베이스 및 데이터시트 (핀 매핑， 시각적 감사， 페이지 참조가 포함된 증거 요약) 를 기반으로 하는 다차원 검사를 거칩니다. 여전히 베타 - 프로덕션 사용 전에 피치， 패드， 핀 1 및 3D 를 데이터시트와 비교하여 확인해야 합니다. 피드백을 환영합니다; 정확도를 계속 향상시킬 것입니다。
-</업데이트>
+  Generated assets go through multi-dimensional checks grounded in PartGenie's official component database and datasheets (pin mapping, visual audit, evidence summary with page references). Still Beta—pitch, pads, pin 1, and 3D should be verified against the datasheet before production use. Feedback welcome; we'll keep tightening accuracy.
+</Update>
 
 <Update label="2026-09-21" tags={["Data", "Catalog", "Coverage"]} description="25M more component records added">
   <Frame>
@@ -327,8 +298,8 @@ PartGenie 를 두 플랫폼의 벤치로 가져가세요. 웹은 가장 완전�
     />
   </Frame>
 
-**+2,500 만 개의 구성 요소 레코드 ** 가 이제 PartGenie 에 있습니다. 우리는 cov 를 확장했습니다IT, ST, NXP, Infineon, onsemi, Microchip, Renesas, Samsung, SK hynix, NVIDIA 등 선도적인 제조업체들을 통해 검색， 대체， BOM 매칭 및 소싱을 통해 실제로 사용하는 부품을 더 많이 찾을 수 있습니다。
-</업데이트>
+  **+25 million component records** are now in PartGenie. We've expanded coverage across leading manufacturers—TI, ST, NXP, Infineon, onsemi, Microchip, Renesas, Samsung, SK hynix, NVIDIA, and many more—so search, alternatives, BOM matching, and sourcing hit more of the parts you actually use.
+</Update>
 
 <Update label="2026-09-20" tags={["Share", "Chat", "BOM"]} description="Share chat answers & BOMs by email">
   <Frame>
@@ -338,8 +309,8 @@ PartGenie 를 두 플랫폼의 벤치로 가져가세요. 웹은 가장 완전�
     />
   </Frame>
 
-채팅 응답 및 BOM 을 이제 ** 공유 ** 할 수 있습니다. 이메일로 팀원을 초대하거나 (알림을 받습니다), 보기 액세스를 선택하거나， 링크를 복사할 수 있습니다. 초대받은 사람에게는 비공개로 유지하거나， 링크를 가진 모든 사람이 대화나 BOM 을 읽을 수 있도록 공개 보기를 열 수 있습니다。
-</업데이트>
+  Chat answers and BOMs can now be **shared**. Invite teammates by email (they get a notification), choose view access, or copy a link. Keep it private to invited people, or open public view when you want anyone with the link to read the conversation or BOM.
+</Update>
 
 <Update label="2026-09-18" tags={["Alternatives", "Report", "Export"]} description="Generate & export Alternative reports">
   <Frame>
@@ -349,15 +320,15 @@ PartGenie 를 두 플랫폼의 벤치로 가져가세요. 웹은 가장 완전�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Alternative report modal with executive summary, design and procurement guidance, candidates, and PDF/Word export"
       src="/images/alt-report-export.png"
     />
   </Frame>
 
-이제 모든 구성 요소의 대체 부품 섹션에서 대체 보고서 ** 를 생성하고 내보낼 수 있습니다. 열기 ** 보고서 ** 를 보면 목표 부품， 경영진 요약， 설계 엔지니어 및 조달을 위한 지침， 후보자 차이점， 핀 투 핀 적합도， 위험 및 신뢰도 등의 구조화된 간략한 목록을 확인할 수 있습니다. FAE, 조달 또는 설계 검토와 공유해야 할 경우 **PDF** 또는 **Word** 로 내보내세요。
-</업데이트>
+  You can now **generate and export an Alternative report** from any component's Alternative Parts section. Open **View report** for a structured shortlist—target part, executive summary, guidance for design engineers and procurement, plus candidate differences, pin-to-pin fit, risk, and confidence. Export to **PDF** or **Word** when you need to share with FAE, purchasing, or design review.
+</Update>
 
 <Update label="2026-09-10" tags={["BOM", "Diff", "Pricing"]} description="BOM engineering diff & estimated cost">
   <Frame>
@@ -367,14 +338,14 @@ PartGenie 를 두 플랫폼의 벤치로 가져가세요. 웹은 가장 완전�
     />
   </Frame>
 
-BOM 은 살아 있는 문서입니다. PartGenie 는 이제 엔지니어링 차이를 유지하므로 최신 행 목록뿐만 아니라 무엇이 언제 왜 변경되었는지 볼 수 있습니다。
+  A BOM is a living document. PartGenie now keeps an **engineering diff** so you can see what changed, when, and why—not just the latest line list.
 
-- ** 채택 기록 ** - 모든 대체 스왑이 기록되므로， 어떤 MPN 이 어떤 MPN 을 대체했는지 추적하고， 대체에 검토가 필요할 때 컨텍스트를 롤백할 수 있습니다。
-- ** 버전 기록 ** - 행이 추가， 제거 또는 업데이트됨에 따라 시간 경과에 따른 BOM 개정 사항 비교
-- ** 추정 가격 ** - 라이브 소싱에서 BOM 수준 비용 추정치를 확인하여 엔지니어링 변경과 함께 조달 영향을 확인할 수 있습니다。
+  - **Adopt history** — every alternative swap is recorded, so you can trace which MPN replaced which, and roll back context when a substitution needs review
+  - **Version history** — compare BOM revisions over time as lines are added, removed, or updated
+  - **Estimated price** — see a BOM-level cost estimate from live sourcing, so procurement impact is visible alongside the engineering change
 
-개정을 잠그기 전에 차이를 검토하세요. 무엇이 이동되었는지， 그리고 비용이 얼마인지 알아보세요。
-</업데이트>
+  Review the diff before you lock a revision. Know what moved, and what it costs.
+</Update>
 
 <Update label="2026-09-09" tags={["Web", "i18n", "UX"]} description="PartGenie web is now multilingual">
   <Frame>
@@ -384,8 +355,8 @@ BOM 은 살아 있는 문서입니다. PartGenie 는 이제 엔지니어링 차�
     />
   </Frame>
 
-**PartGenie 웹이 이제 사용자의 언어로 작동합니다. **Settings → Language** 아래에서 UI 를 전환하거나 Auto** 상태로 두어 브라우저를 따라갈 수 있습니다. 지원되는 지역은 영어， 독일어， 일본어， 한국어， 번체 중국어， 프랑스어 및 에스파냐어 (멕시코) 입니다. 따라서 지역 간 팀이 컨텍스트를 전환하지 않고 PartGenie 에서 작업할 수 있습니다。
-</업데이트>
+  **PartGenie web now speaks your language.** Switch the UI under **Settings → Language**, or leave it on **Auto** to follow your browser. Supported locales include English, Deutsch, 日本語, 한국어, 繁體中文, Français, and Español (México)—so teams across regions can work in PartGenie without switching context.
+</Update>
 
 <Update label="2026-09-08" tags={["OpenELAB", "Modules", "Sourcing"]} description="You can search modules & kits now">
   <Frame>
@@ -395,22 +366,22 @@ BOM 은 살아 있는 문서입니다. PartGenie 는 이제 엔지니어링 차�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Product drawer for Seeed Studio M12 Telephoto Lens with Add to BOM and Source with PartGenie actions"
       src="/images/openelab-product.png"
     />
   </Frame>
 
-** 이제 모듈 및 키트를 검색할 수 있습니다. ** PartGenie 는 개발 모듈， 로보틱스 및 제조업체 하드웨어를 위한 AIoT 혁신 플랫폼인 **OpenELAB** 와 파트너십을 맺어 개별 구성 요소를 넘어 구축 준비가 된 빌딩 블록으로 확장했습니다。
+  **You can search modules & kits now.** PartGenie has partnered with **OpenELAB**—the AIoT innovation platform for development modules, robotics, and maker hardware—to expand beyond discrete components into ready-to-build building blocks.
 
-검색 및 탐색：
-- ** 모듈 및 센서 ** - 카메라， 무선， 전원， 디스플레이 등
-- ** 개발 보드 ** - ESP32, STM32, Jetson 및 생태계 키트
-- ** 로봇 부품 ** — 팔， 액추에이터， LiDAR, 비전 모듈， 로봇 키트
+  Search and explore:
+  - **Modules & sensors** — cameras, wireless, power, displays, and more
+  - **Development boards** — ESP32, STM32, Jetson, and ecosystem kits
+  - **Robotics parts** — arms, actuators, LiDAR, vision modules, robot kits
 
-PartGenie 에서 적절한 모듈을 찾은 다음 **OpenELAB** 로 이동하여 원클릭 구매 - 유통업체의 라이브 소싱과 동일한 워크플로우로， 이제 BOM 의 모듈 및 키트 계층을 다룹니다。
-</업데이트>
+  Find the right module in PartGenie, then jump to **OpenELAB** for one-click purchase—same workflow as our distributor live sourcing, now covering the module and kit layer of your BOM.
+</Update>
 
 <Update label="2026-09-07" tags={["Work", "BOM", "Design"]} description="PartGenie Work — analyze & act on your projects in chat">
   <Frame>
@@ -420,29 +391,29 @@ PartGenie 에서 적절한 모듈을 찾은 다음 **OpenELAB** 로 이동하여
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Work chat analyzing BOM risks including NRND lifecycle and missing distributor stock"
       src="/images/partgenie-work-risks.png"
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="BOM overview with component distribution, risks, and Adopt buttons for alternative suggestions"
       src="/images/partgenie-work-adopt.png"
     />
   </Frame>
 
-**PartGenie Work** 는 라이브입니다. 메인 채팅에 프로젝트를 가져오고 대화에서 벗어나지 않고 분석에서 실행으로 넘어가세요。
+  **PartGenie Work** is live—bring your project into the main chat and go from analysis to action without leaving the conversation.
 
-BOM 을 업로드하거나， 부품 목록을 붙여넣거나， 기존 프로젝트를 연 다음， Work 에게 다음을 요청하세요：
-- ** 리스크 분석 ** – 라이프사이클 (EOL/NRND), 소싱 격차， 주식 및 가격 책정 문제
-- **BOM 상태 보고서 생성 ** – 배포， 위험 수치 및 제안된 다음 단계
-- ** 대안 권장 ** – 및 ** 프로젝트에 직접 대체품 채택 **
+  Upload a BOM, paste a part list, or open an existing project, then ask Work to:
+  - **Analyze risks** — lifecycle (EOL/NRND), sourcing gaps, stock and pricing issues
+  - **Generate a BOM health report** — distribution, risk counts, and suggested next steps
+  - **Recommend alternatives** — and **Adopt** replacements directly into your project
 
-작업은 또한 ** 디자인 프로젝트 ** 를 다룹니다: 개념 디자인 시작， 아키텍처 다이어그램 생성， 초기 BOM, 기술 제안 - 따라서 초기 하드웨어 아이디어가 하나의 스레드에서 구조화된 제공 가능한 것이 됩니다。
-</업데이트>
+  Work also covers **Design projects**: kick off concept design, generate architecture diagrams, an initial BOM, and a technical proposal—so early hardware ideas become structured deliverables in one thread.
+</Update>
 
 <Update label="2026-09-03" tags={["App", "Android", "Mobile"]} description="PartGenie App for Android is live">
   <Frame>
@@ -452,16 +423,16 @@ BOM 을 업로드하거나， 부품 목록을 붙여넣거나， 기존 프로�
     />
   </Frame>
 
-**PartGenie for Android 가 실시간으로 제공됩니다. ** 웹에서 사용하는 것과 동일한 AI 기반 워크플로우를 이제 주머니에 넣고 칩 식별， PCB 스캔， 표시 읽기， SMD 코드 검색， 데이터시트 찾기 및 검증된 대안을 사용할 수 있습니다。
+  **PartGenie for Android is live.** Identify chips, scan PCBs, read markings, look up SMD codes, find datasheets and verified alternatives—with the same AI-powered workflow you use on the web, now in your pocket.
 
-모바일 우선 시나리오 다루기：
-- ** 표시를 식별하기 위해 구성 요소를 스냅 ** 합니다
-- **PCB** 를 스캔하여 보드에서 칩 찾기
-- ** 전체 MPN 이 인쇄되지 않은 경우 SMD 코드 검색 **
-- ** 데이터시트 요청 **, 대안 찾기， CAD 모델 얻기 - 웹 경험에 맞게 조정
+  Mobile-first scenarios covered:
+  - **Snap a component** to identify markings
+  - **Scan a PCB** to find chips on board
+  - **SMD code lookup** when the full MPN isn't printed
+  - **Ask datasheets**, find alternatives, get CAD models—aligned with the web experience
 
-iOS 가 곧 출시됩니다. 오늘 안드로이드를 다운로드하고 PartGenie 를 벤치에 가져가세요。
-</업데이트>
+  iOS is coming soon. Download Android today and take PartGenie with you on the bench.
+</Update>
 
 <Update label="2026-09-02" tags={["Pro", "Trial", "Pricing"]} description="Try Pro free for 7 days">
   <Frame>
@@ -471,8 +442,8 @@ iOS 가 곧 출시됩니다. 오늘 안드로이드를 다운로드하고 PartGe
     />
   </Frame>
 
-**Pro 를 7 일간 무료로 체험해 보세요 ** — **Monthly Pro** 플랜에서 사용할 수 있습니다. 스마트 검색， BOM 분석， 디자인， 라이브 소싱， 테이블 내보내기 등 전체 Pro 경험을 활용해 보세요. 청구 설정에서 평가판을 시작하세요. 평가판 기간 중 언제든지 취소할 수 있습니다。
-</업데이트>
+  **Try Pro free for 7 days**—available on the **Monthly Pro** plan. Unlock the full Pro experience: smarter search, BOM analysis, Design, live sourcing, table export, and more. Start your trial from billing settings; cancel anytime during the trial period.
+</Update>
 
 <Update label="2026-09-01" tags={["Sourcing", "Procurement", "UX"]} description="One-click jump to distributor purchase pages">
   <Frame>
@@ -482,8 +453,8 @@ iOS 가 곧 출시됩니다. 오늘 안드로이드를 다운로드하고 PartGe
     />
   </Frame>
 
-라이브 가격 책정은 이제 **Purchase** 단축키와 함께 제공됩니다. 모든 구성 요소의 조달 탭에서 **Purchase** 를 클릭하면 해당 유통업체의 목록 (DigiKey, LCSC, Arrow, TME 등) 으로 바로 이동하여 주문할 수 있습니다. PartGenie 에서 가격 및 재고 확인， 구매이를 가진 플랫폼에서。
-</업데이트>
+  Live pricing now comes with a **Purchase** shortcut. From the Procurement tab on any component, click **Purchase** to jump straight to that distributor's listing—DigiKey, LCSC, Arrow, TME, and the rest—ready to order. Check price and stock in PartGenie, buy on the platform that has it.
+</Update>
 
 <Update label="2026-08-27" tags={["Sourcing", "LCSC", "Arrow"]} description="LCSC & Arrow join live pricing">
   <Frame>
@@ -493,8 +464,8 @@ iOS 가 곧 출시됩니다. 오늘 안드로이드를 다운로드하고 PartGe
     />
   </Frame>
 
-**LCSC** 및 **Arrow** 는 이제 실시간 가격 책정 소스입니다. 구성 요소 세부 정보， BOM 및 비교 뷰에서 DigiKey, TME, Unikeyic, OnlineComponents 및 WinSource 에 실시간 가격 및 주가를 조인합니다. **Settings → Distributors** 아래의 모든 소스를 전환합니다. 7 개의 디스트리뷰터， 1 개의 뷰。
-</업데이트>
+  **LCSC** and **Arrow** are now live pricing sources—real-time price and stock join DigiKey, TME, Unikeyic, OnlineComponents, and WinSource across component detail, BOM, and compare views. Toggle any source under **Settings → Distributors**. Seven distributors, one view.
+</Update>
 
 <Update label="2026-08-22" tags={["Credits", "Usage"]} description="Usage now measured in credits">
   <Frame>
@@ -504,10 +475,10 @@ iOS 가 곧 출시됩니다. 오늘 안드로이드를 다운로드하고 PartGe
     />
   </Frame>
 
-사용량은 이제 단일 검색 카운터 대신 ** 크레딧 ** 으로 측정됩니다. 구성 요소 검색， 대체 검색， BOM 분석， 하드웨어 설계와 같은 다양한 워크플로는 서로 다른 비율로 크레딧을 소비하므로， 할당량이 어디로 향하고 있는지 훨씬 더 명확한 그림을 얻을 수 있습니다。
+  Usage is now measured in **credits** instead of a single search counter. Different workflows—component search, alternative finding, BOM analysis, hardware design—consume credits at different rates, so you get a much clearer picture of where your quota is going.
 
-크레딧은 매월 재설정됩니다. 무료 플랜에는 매월 10 크레딧이 포함됩니다. 또한 언제든지 재설정을 기다리지 않고 더 추가할 수 있습니다. 상단 막대의 크레딧 표시기에서 잔액을 확인하세요。
-</업데이트>
+  Credits reset monthly. Free plan includes 10 credits/month. You can also **Top up** anytime to add more without waiting for the reset. Check your balance from the credit indicator in the top bar.
+</Update>
 
 <Update label="2026-08-21" tags={["Search", "Alternatives", "Sourcing"]} description="Live sourcing data in search & alternative results">
   <Frame>
@@ -517,8 +488,8 @@ iOS 가 곧 출시됩니다. 오늘 안드로이드를 다운로드하고 PartGe
     />
   </Frame>
 
-검색 및 대체 결과에는 이제 5 개 유통업체 (재고， 가격 (MOQ 포함), 리드 타임， 신뢰도 점수， 소스) 에서 가져온 라이브 소싱 데이터 ** 가 부품 권장 사항과 함께 포함됩니다. 탭을 전환하거나 별도의 소싱 보기를 방문할 필요가 없습니다. 조달 그림이 답의 일부입니다。
-</업데이트>
+  Search and alternative results now include **live sourcing data** pulled from our five distributors—stock, price (with MOQ), lead time, confidence score, and source—right alongside the part recommendations. No need to switch tabs or visit a separate sourcing view; the procurement picture is part of the answer.
+</Update>
 
 <Update label="2026-08-20" tags={["Search", "Datasheet", "Citations"]} description="Datasheet page-level citations in AI answers">
   <Frame>
@@ -528,17 +499,17 @@ iOS 가 곧 출시됩니다. 오늘 안드로이드를 다운로드하고 PartGe
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Datasheet PDF opened at page 38 showing the Operating Conditions table referenced by the AI answer"
       src="/images/datasheet-citation-pdf.png"
     />
   </Frame>
 
-AI 답변은 이제 각 클레임이 어디에서 왔는지 정확히 보여줍니다. 스펙 값， 등급 및 전기 매개변수는 그것들이 추출된 데이터 시트 페이지로 태그가 지정됩니다. 페이지 배지를 클릭하여 PDF 의 해당 페이지로 직접 이동하세요. PartGenie 를 벗어나지 않고 소스를 읽고， 번호를 확인하고， 후속 질문을 하세요。
+  AI answers now show **exactly where each claim comes from**. Spec values, ratings, and electrical parameters are tagged with the datasheet page they were pulled from. Click any page badge to jump directly to that page in the PDF—read the source, verify the number, ask follow-up questions, all without leaving PartGenie.
 
-모든 답변은 증거로 뒷받침됩니다. AI 가 정답을 맞혔는지 더 이상 궁금해할 필요가 없습니다。
-</업데이트>
+  Every answer is evidence-backed. No more wondering whether the AI got it right.
+</Update>
 
 <Update label="2026-08-19" tags={["Sourcing", "Live pricing"]} description="OnlineComponents & WinSource live pricing now available">
   <Frame>
@@ -548,8 +519,8 @@ AI 답변은 이제 각 클레임이 어디에서 왔는지 정확히 보여줍�
     />
   </Frame>
 
-**OnlineComponents** 및 **WinSource** 는 라이브 가격 책정 라인업에 참여합니다. 이제 구성 요소 세부 정보， BOM 및 비교 뷰에서 5 개 유통업체의 실시간 가격 및 재고를 확인할 수 있습니다. ** 설정 → 유통업체 ** 에서 원하는 소스를 전환하세요. 더 알아보기 - 어떤 것이 중요한지 알려주세요。
-</업데이트>
+  **OnlineComponents** and **WinSource** join the live pricing lineup—real-time price and stock from five distributors now available in component detail, BOM, and compare views. Toggle any source under **Settings → Distributors**. More on the way—let us know which ones matter to you.
+</Update>
 
 <Update label="2026-08-18" tags={["Search", "Export", "Pro"]} description="Export tables from search answers">
   <Frame>
@@ -559,8 +530,8 @@ AI 답변은 이제 각 클레임이 어디에서 왔는지 정확히 보여줍�
     />
   </Frame>
 
-이제 검색 답변의 테이블을 **exported** 로 만들 수 있습니다. 테이블의 오른쪽 상단 모서리 위로 포인터를 올려 다운로드 버튼을 표시하고， 비교 결과， 대체 목록 또는 사양 요약을 워크플로에 끌어옵니다. **Pro** 에서 사용할 수 있습니다。
-</업데이트>
+  Tables in search answers can now be **exported**. Hover the top-right corner of any table to reveal the download button—pull comparison results, alternative lists, or spec summaries into your workflow. Available on **Pro**.
+</Update>
 
 <Update label="2026-08-17" tags={["Alternatives", "AI", "Search"]} description="Alternative search just got smarter">
   <Frame>
@@ -570,17 +541,17 @@ AI 답변은 이제 각 클레임이 어디에서 왔는지 정확히 보여줍�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Alternative results for BQ24195 with upgrade path and functional alternates, reflecting confirmed application constraints"
       src="/images/alt-search-results.png"
     />
   </Frame>
 
-대안 검색이 더욱 스마트해졌습니다. PartGenie 는 이미 원시 사양을 넘어 검색했습니다. 이제는 부품을 추천하기 전에 프로젝트 컨텍스트 (전력 한도， 열 제약， 패키지 적합도， 애플리케이션 시나리오) 에 대한 명확한 질문도 합니다。
+  Alternative search just got smarter. PartGenie already looked beyond raw specs—now it also **asks clarifying questions** about your project context (power limits, thermal constraints, package fit, application scenarios) before recommending parts.
 
-예를 들어， **BQ24195** 에 대한 대안을 검색하면 4.5A+ 고속 충전， VQFN 열 패드 또는 산업용 온도 범위와 같은 제약 조건을 확인하라는 메시지가 표시됩니다. 확인 (또는 건너뛰기) 하면 엔진이 해당 컨텍스트를 사용하여 실제 부품 사용 방식에 맞게 조정된 더 적합한 옵션 (업그레이드 경로 및 기능적 대안) 을 표시합니다。
-</업데이트>
+  For example, searching alternatives to **BQ24195** prompts you to confirm constraints like 4.5A+ fast charging, VQFN thermal pad, or industrial temp range. Confirm (or skip), and the engine uses that context to surface better-fit options—upgrade paths and functional alternates—tuned to how you actually use the part.
+</Update>
 
 <Update label="2026-08-16" tags={["Search", "Voice", "UX"]} description="Search now supports voice input">
   <Frame>
@@ -590,15 +561,15 @@ AI 답변은 이제 각 클레임이 어디에서 왔는지 정확히 보여줍�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Active voice recording with waveform and duration timer in the search bar"
       src="/images/search-voice-recording.png"
     />
   </Frame>
 
-검색은 이제 ** 음성 입력 ** 을 지원합니다. 검색 막대에서 마이크를 탭하고 쿼리 (MPN 검색， 대체 요청， 애플리케이션 질문) 를 말하면 PartGenie 가 실시간으로 트랜스크립션합니다. 벤치에 앉아 있거나 데이터 시트를 넘길 때 손이 자유로워집니다。
-</업데이트>
+  Search now supports **voice input**. Tap the microphone in the search bar, speak your query—MPN lookups, alternative requests, application questions—and PartGenie transcribes it live. Hands free when you're at the bench or flipping through a datasheet.
+</Update>
 
 <Update label="2026-08-15" tags={["Knowledge", "Files", "AI"]} description="Knowledge — your personal hardware knowledge base">
   <Frame>
@@ -608,28 +579,28 @@ AI 답변은 이제 각 클레임이 어디에서 왔는지 정확히 보여줍�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Knowledge file card with context menu: Chat about this, Download, Delete"
       src="/images/knowledge-actions.png"
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Homepage with a Knowledge file attached to the chat input, ready to ask component questions with full file context"
       src="/images/knowledge-chat.png"
     />
   </Frame>
 
-**Knowledge** 는 PartGenie 내의 개인 하드웨어 엔지니어링 라이브러리입니다. 파일을 업로드하면 AI 가 구성 요소 데이터베이스와 함께 해당 파일을 참조하므로， 일반적인 지식뿐만 아니라 실제 엔지니어링 컨텍스트에 근거한 답변을 얻을 수 있습니다。
+  **Knowledge** is your personal hardware engineering library inside PartGenie. Upload your files and the AI references them alongside our component database—so answers are grounded in your actual engineering context, not just general knowledge.
 
-지원되는 파일 유형에는 데이터시트 (MPN 자동 감지 및 연결), 참조 설계， 앱 노트， 스키마， Gerbers 등이 포함됩니다. 파일은 날짜 및 유형별로 구성되며， ** 업로드 ** 및 **AI 생성 ** 콘텐츠에 대한 탭이 있습니다。
+  Supported file types include datasheets (MPN auto-detected and linked), reference designs, app notes, schematics, Gerbers, and more. Files are organized by date and type, with tabs for **Uploaded** and **AI Generated** content.
 
-AI 가 생성한 아티팩트 (예: 대체 보고서， BOM 분석 요약， 세션 중에 생성된 기타 출력) 도 여기에 자동으로 저장되므로 대화 사이에 아무것도 유실되지 않습니다。
+  AI-generated artifacts—such as alternative reports, BOM analysis summaries, and other outputs produced during your sessions—are automatically saved here too, so nothing gets lost between conversations.
 
-라이브러리에 들어가면 어떤 파일에 대해서든 직접 채팅할 수 있습니다. 지식 페이지에서 새 대화에 첨부하거나， 검색에 끌어넣어 질문을 하거나， 대안을 비교하거나， 자신의 문서를 컨텍스트로 사용하여 BOM 최적화를 실행할 수 있습니다。
-</업데이트>
+  Once in your library, you can **chat about any file directly**—attach it to a new conversation from the Knowledge page, or pull it into search to ask questions, compare alternatives, or run BOM optimization with your own documents as context.
+</Update>
 
 <Update label="2026-08-14" tags={["Search", "Citations", "UX"]} description="Cleaner citation badges — source type at a glance">
   <Frame>
@@ -639,17 +610,17 @@ AI 가 생성한 아티팩트 (예: 대체 보고서， BOM 분석 요약， 세
     />
   </Frame>
 
-AI 답변의 인용 배지에는 이제 색상으로 구분된 출처 레이블이 있어서 정보가 어디에서 오는지 정확히 알 수 있으며， 이에 얼마나 무게를 두어야 하는지도 알 수 있습니다：
+  Citation badges in AI answers now carry color-coded source labels so you know exactly where information is coming from—and how much weight to give it:
 
-| 배지 | 소스 유형 | 예시 |
-| --- |---| --- |
-| **Gray** | MPN(opens component drawer) / 일반 웹 | 뉴스， 블로그， 집계기 |
-| **Green** | OEM - 제조업체 공식 사이트 | ti.com, Infineon.com, st.com, nxp.com |
-| **Orange** | 유통업체 – 공인 리셀러 | digikey.com, mouse.com, lcsc.com, arrow.com
-| ** 퍼플 ** | 커뮤니티 – 포럼 및 기술 Q&A | reddit.com, stackoverflow.com, csdn.net, edaboard.com |
+  | Badge | Source type | Examples |
+  |---|---|---|
+  | **Gray** | MPN (opens component drawer) / general web | News, blogs, aggregators |
+  | **Green** | OEM — manufacturer official site | ti.com, infineon.com, st.com, nxp.com |
+  | **Orange** | Distributor — authorized reseller | digikey.com, mouser.com, lcsc.com, arrow.com |
+  | **Purple** | Community — forums & technical Q&A | reddit.com, stackoverflow.com, csdn.net, edaboard.com |
 
-MPN 배지는 클릭할 수도 있습니다. 하나를 탭하면 답변에서 직접 구성 요소 서랍을 열 수 있습니다。
-</업데이트>
+  MPN badges are also clickable—tap one to open the component drawer directly from the answer.
+</Update>
 
 <Update label="2026-08-13" tags={["Sourcing", "Unikeyic", "Live pricing"]} description="Unikeyic live pricing now available">
   <Frame>
@@ -659,8 +630,8 @@ MPN 배지는 클릭할 수도 있습니다. 하나를 탭하면 답변에서 �
     />
   </Frame>
 
-**Unikeyic** 은 DigiKey 및 TME 를 라이브 가격 책정 소스로 합류했습니다. 이제 구성 요소 세부 정보， BOM 및 비교 뷰에서 실시간 가격 및 재고를 확인할 수 있습니다. ** 설정 → 유통업체 ** 에서 전환하세요. 더 많은 유통업체가 도착할 예정입니다. 귀하의 워크플로에 중요한 유통업체가 무엇인지 알려주세요。
-</업데이트>
+  **Unikeyic** joins DigiKey and TME as a live pricing source—real-time price and stock now available across component detail, BOM, and compare views. Toggle it under **Settings → Distributors**. More distributors are on the way; let us know which ones matter to your workflow.
+</Update>
 
 <Update label="2026-08-12" tags={["BOM", "Risk", "Alternatives"]} description="BOM Health Report — distribution, risks & bulk alternatives">
   <Frame>
@@ -670,19 +641,19 @@ MPN 배지는 클릭할 수도 있습니다. 하나를 탭하면 답변에서 �
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="BOM risk breakdown showing NRND, zero stock, no sourcing data and missing manufacturer, plus 9 lines with functional alternatives"
       src="/images/bom-health-risks.png"
     />
   </Frame>
 
-BOM 상태 보고서가 이제 더욱 실행 가능해졌습니다. BOM 을 업로드하고 다음을 확인하세요：
+  The BOM Health Report is now more actionable. Upload your BOM and get:
 
-- ** 구성 요소 분포 ** - BOM 이 카테고리별로 어떻게 분류되는지 확인하세요 (IC, 수동， 개별 반도체 등). 카테고리별 위험 수치가 한눈에 표시됩니다。
-- ** 위험 분석 ** - EOL/NRND, 제로 스톡， 누락된 소스 데이터， 식별되지 않은 제조업체 - 각각 심각도별로 플래그가 표시되어 있어 무엇을 먼저 해결해야 할지 알 수 있습니다
-- ** 대량 대체 제안 ** - 공급 위험이 있는 라인의 경우 PartGenie 가 자동으로 스캔하고 기능적 대체 제품을 표시하여 검토 및 교체할 준비를 합니다
-</업데이트>
+  - **Component distribution** — see how your BOM breaks down by category (ICs, passives, discrete semiconductors, etc.), with risk counts surfaced per category at a glance
+  - **Risk analysis** — EOL/NRND, zero stock, missing sourcing data, unrecognized manufacturers—each flagged by severity so you know what to tackle first
+  - **Bulk alternative suggestions** — for lines with supply risk, PartGenie automatically scans and surfaces functional alternatives, ready to review and swap
+</Update>
 
 <Update label="2026-08-11" tags={["Tariff", "Compliance", "Beta"]} description="Tariff lookup — MPN-level US import tariff (Beta)">
   <Frame>
@@ -692,23 +663,23 @@ BOM 상태 보고서가 이제 더욱 실행 가능해졌습니다. BOM 을 업�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Tariff result for 74HC595 made in China: HTS 8542, base rate 0%, Section 301 China semiconductor 50%, forced labor surcharge 12.5%, estimated total 62.5%"
       src="/images/tariff-result.png"
     />
   </Frame>
 
-** 요금 검색은 현재 베타 버전입니다. **
+  **Tariff Lookup is now in Beta.**
 
-2026 년， 공급망 의사결정은 무역 정책을 무시할 수 없습니다. 관세는 빠르게 변화하고 있으며， 전자 제품의 경우 복잡성이 현실입니다: 수천 개의 부품 번호， 모호한 HTS 분류， 그리고 서로 겹쳐지는 계층화된 추가 요금. 잘못되면 조달 결정， 비용 모델， 그리고 규정 준수에 영향을 미칩니다。
+  In 2026, supply chain decisions can't ignore trade policy. Tariffs are shifting fast—and for electronics, the complexity is real: thousands of part numbers, ambiguous HTS classifications, and layered surcharges that stack on top of each other. Getting it wrong affects sourcing decisions, cost models, and compliance.
 
-PartGenie 를 사용하면 이제 출처 국가별로 특정 MPN 의 ** 예상 미국 수입 관세 ** 를 확인할 수 있습니다. 부품 번호를 입력하고， 제조 장소를 선택하고， 기본 요금， 적용 가능한 섹션 301 추가 요금， UFLPA 요금， 예상 총액 등 전체 관세 분석을 한 곳에서 확인할 수 있습니다
+  PartGenie now lets you check the **estimated US import tariff for a specific MPN by country of origin**. Enter a part number, select where it's made, and get a full tariff breakdown—base rate, applicable Section 301 surcharges, UFLPA rates, and an estimated total—all in one place.
 
-> 추정만 - 구속력 있는 관세 결정이 아닙니다. 신청하기 전에 허가된 관세 중개인과 확인하세요。
+  > Estimate only — not a binding customs determination. Verify with a licensed customs broker before filing.
 
-현재 ** 미국 수입 관세 ** 검색을 지원합니다. 더 많은 목적지 국가가 도착 중입니다 - 가장 필요한 국가를 알려주세요。
-</업데이트>
+  Currently supports **US import tariff** lookup. More destination countries are on the way—tell us which you need most.
+</Update>
 
 <Update label="2026-08-10" tags={["Search", "AI", "MPN"]} description="Search answers now cite specific MPNs">
   <Frame>
@@ -718,8 +689,8 @@ PartGenie 를 사용하면 이제 출처 국가별로 특정 MPN 의 ** 예상 �
     />
   </Frame>
 
-대부분의 AI 도구는 텍스트를 제공합니다. PartGenie 는 ** 확인 가능한 답변 ** 을 제공합니다. 이제 모든 구성 요소 권장 사항에서 정확한 MPN 인라인을 인용합니다. 아무 배지나 클릭하여 구성 요소 서랍을 열고 라이브 데이터에 대해 사양， 가격 및 재고를 교차 확인할 수 있습니다. 맹목적인 신뢰가 필요하지 않습니다。
-</업데이트>
+  Most AI tools give you text. PartGenie gives you **verifiable answers**. Every component recommendation now cites the exact MPN inline—click any badge to open the component drawer and cross-check specs, pricing, and stock against live data. No blind trust required.
+</Update>
 
 <Update label="2026-08-09" tags={["Search", "Web", "Sourcing"]} description="Search now supports web lookup">
   <Frame>
@@ -729,8 +700,8 @@ PartGenie 를 사용하면 이제 출처 국가별로 특정 MPN 의 ** 예상 �
     />
   </Frame>
 
-PartGenie 답변은 추측이 아닌 기반이 있습니다. 쿼리가 내장된 데이터베이스를 넘어서면 (예: 아직 직접 통합되지 않은 유통업체의 조달 데이터) 엔진이 웹을 검색하고 인용된 출처를 표시합니다. 각 클레임은 원래 목록으로 다시 링크되므로 구매하기 전에 확인할 수 있습니다。
-</업데이트>
+  PartGenie answers are grounded, not guessed. When a query goes beyond the built-in database—such as procurement data from distributors not yet directly integrated—the engine **searches the web and surfaces cited sources**. Every claim links back to the original listing, so you can verify before you buy.
+</Update>
 
 <Update label="2026-08-06" tags={["BOM", "Sourcing", "Compare"]} description="BOM MPN compare & agent context">
   <Frame>
@@ -740,15 +711,15 @@ PartGenie 답변은 추측이 아닌 기반이 있습니다. 쿼리가 내장된
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Compare Products panel showing pricing, stock, MOQ, lead time and vendor platforms for multiple MPNs"
       src="/images/bom-compare-panel.png"
     />
   </Frame>
 
-BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업체 간에 가격， 재고， MOQ, 리드 타임 및 패키징을 나란히 볼 수 있습니다. 에이전트 채팅에서 특정 BOM 행을 참조할 수도 있습니다. 하나 이상의 행을 선택하고 AI 에게 전체 컨텍스트와 함께 조달 조언， 위험 분석 또는 교체 권장 사항을 요청할 수 있습니다。
-</업데이트>
+  Select multiple MPNs in your BOM and hit **Compare** to see price, stock, MOQ, lead time, and packaging side by side across distributors. You can also reference specific BOM lines in the agent chat—select one or more lines and ask the AI for sourcing advice, risk analysis, or substitution recommendations with full context.
+</Update>
 
 <Update label="2026-08-04" tags={["Design", "AI", "Hardware"]} description="Design from chat — one click to hardware design">
   <Frame>
@@ -758,8 +729,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-어떤 구성요소에 대해서든 AI 답변을 얻은 후， 후속 제안에는 이제 **Design** 단축키가 포함됩니다. 이를 클릭하면 해당 부분으로 하드웨어 설계로 바로 이동할 수 있으며， 처음부터 시작할 필요가 없습니다. 구성요소 검색， AI 답변 및 세부 정보 페이지에서 작동합니다。
-</업데이트>
+  After getting an AI answer on any component, follow-up suggestions now include a **Design** shortcut. Click it to jump straight into hardware design with that part—no need to start from scratch. Works from component search, AI answers, and detail pages.
+</Update>
 
 <Update label="2026-08-05" tags={["Sourcing", "TME", "DigiKey"]} description="TME live pricing + sourcing settings">
   <Frame>
@@ -769,17 +740,17 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Sourcing settings showing DigiKey and TME as live pricing sources and Mouser, LCSC as catalog snapshots"
       src="/images/sourcing-settings.png"
     />
   </Frame>
 
-**TME** 가 이제 실시간으로 제공됩니다 — 구성 요소 세부 정보 및 BOM 에서 **DigiKey** 및 **TME** 의 실시간 가격 책정 및 재고를 확인할 수 있습니다. ** 설정 → 디스트리뷰터 ** 에 표시되는 디스트리뷰터를 전환하세요. 환경설정은 모든 보기에 적용됩니다. 마우저 및 LCSC 는 카탈로그 스냅샷으로 사용할 수 있으며， 실시간 가격 책정이 곧 제공됩니다。
+  **TME** is now live—real-time pricing and stock from **DigiKey** and **TME** in component detail and BOM. Toggle which distributors appear under **Settings → Distributors**; preferences apply across all views. Mouser and LCSC are available as catalog snapshots, with live pricing coming soon.
 
-디스트리뷰터를 추가하고 싶으신가요？ 말씀해 주세요. 제조업체이며 직접 연결하고 싶으시다면 연락해 주세요 — ** 제조업체 프로그램 ** 이 진행 중입니다。
-</업데이트>
+  Want a distributor added? Tell us. If you're a manufacturer and want to connect directly, reach out—a **Manufacturer Program** is on the way.
+</Update>
 
 <Update label="2026-07-31-notifications" tags={["Notifications", "Enrichment", "UX"]} description="Notifications rebuild">
   <Frame>
@@ -789,19 +760,19 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Notifications Activity tab showing alternative analysis enrichment tasks in progress"
       src="/images/notifications-activity.png"
     />
   </Frame>
 
-** 알림 **, 재구축：
+  **Notifications**, rebuilt:
 
-1. ** 검색 완료 알림 ** – 답변이 완료되면 사운드가 재생되며， 설정에서 톤 전환 ** 및 미리 보기가 가능합니다。
-2. ** 스마트 보강 ** – MPN 또는 대안이 아직 우리 카탈로그에 없을 때， 우리는 보강 작업을 시작하고 ** 작업이 완료되면 알려드립니다 **. 수요가 높습니다. 오늘날 작업은 종종 수십 분이 걸립니다 – 우리는 **24 시간 ** 내에 완료하기 위해 노력하고 있습니다。
-3. ** 앱 내 + 이메일 ** – ** 설정 → 알림 ** 에서 분석 결과， 팁 등을 위한 채널을 선택하세요。
-</업데이트>
+  1. **Search-complete alerts** — play a sound when an answer finishes, with **tone switching** and preview in Settings.
+  2. **Smart enrichment** — when an MPN or alternatives aren’t in our catalog yet, we kick off an enrichment job and **notify you when it’s done**. Demand is high; jobs often take tens of minutes today—we’re working to finish them within **24 hours**.
+  3. **In-app + email** — choose channels for analysis results, tips, and more under **Settings → Notifications**.
+</Update>
 
 <Update label="2026-07-31-component-detail" tags={["Component Detail", "Share", "UX"]} description="Clearer specs & shareable part pages">
   <Frame>
@@ -811,8 +782,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 구성 요소 세부 정보 페이지 ** 가 읽기 쉽습니다. 이제 매개 변수에는 도움이 되는 영어 약어 ** 로 더 명확한 레이블이 표시됩니다 (예: VCEO**, VCBO** 전용).gside 전체 이름). 전체 장치 정보， 대체 항목， 데이터시트 컨텍스트를 포함한 파트 페이지를 한 곳에서 복사 링크를 통해 동료들과 공유할 수도 있습니다。
-</업데이트>
+  **Component detail pages** are easier to read—parameters now show clearer labels with **English abbreviations** where it helps (e.g. **VCEO**, **VCBO** alongside full names). You can also **share a part page with colleagues** via **Copy link**—including full device info, **alternatives**, and **datasheet** context in one place.
+</Update>
 
 <Update label="2026-07-31-procurement" tags={["Procurement", "DigiKey", "Realtime"]} description="Live DigiKey pricing & stock">
   <Frame>
@@ -822,8 +793,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 조달 데이터가 이제 실시간으로 제공됩니다. **DigiKey** 의 실시간 ** 가격 및 재고 ** 를 ** 구성 요소 서랍 ** 및 **BOM** 에서 확인할 수 있습니다. 더 많은 유통업체가 곧 도착할 예정입니다. 필요한 출처가 있으면 응답하여 알려주십시오. 우선순위를 지정하겠습니다。
-</업데이트>
+  **Procurement data is now live**—real-time **price and stock** from **DigiKey**, available in the **component drawer** and in **BOM**. More distributors are on the way; if there’s a source you need, reply and tell us—we’ll prioritize it.
+</Update>
 
 <Update label="2026-07-31" tags={["Search", "Performance", "Speed"]} description="Search, faster">
   <Frame>
@@ -833,8 +804,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 검색이 ~64% 더 빠릅니다 (평균). ** 평균 검색 시간이 **81 초 → 29 초 ** 에서 줄었으며， 이제 검색의 절반 이상이 30 초 미만에 완료됩니다 (**~22% → ~57%**). MPN 스타일 검색은 특히 빠릅니다 — 평균 **~147 초 → ~16 초 **.
-</업데이트>
+  **Search is ~64% faster (median).** Median search time dropped from **81s → 29s**, and over half of searches now finish in under 30 seconds (**~22% → ~57%**). MPN-style lookups are especially snappy—median **~147s → ~16s**.
+</Update>
 
 <Update label="2026-07-27-bom-agent" tags={["BOM", "Agent", "Alternatives"]} description="BOM Agent">
   <Frame>
@@ -844,17 +815,17 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-**BOM Agent** 가 실시간으로 작동합니다. PartGenie 에 재료 청구서를 가져와서 끝에서 끝까지 작업하세요：
+  **BOM Agent** is live—bring your bill of materials into PartGenie and work it end to end:
 
-- ** 자동으로 분석 ** - BOM 텍스트 붙여넣기 또는 ** 업로드 ** CSV/Excel
-- **MPN 정규화 ** - 제조업체 부품 번호 정리 및 일치
-- ** 위험 분석 ** - 목록 전체에서 EOL, 고위험 및 기타 문제를 찾습니다。
-- ** 대안 ** - 대량 제안을 포함한 대체 권장 사항 확인
-- 상태 보고서 - 전체 상태에 대한 명확한 BOM 상태 보기
-- ** 채팅으로 작업 ** - 에이전트에게 대화에서 분석하고 ** 대체 항목을 실행 ** 하도록 요청
+  - **Parse automatically** — paste BOM text or **upload** CSV / Excel
+  - **Normalize MPNs** — clean and match manufacturer part numbers
+  - **Risk analysis** — spot EOL, high-risk, and other issues across the list
+  - **Alternatives** — get substitute recommendations, including bulk suggestions
+  - **Health report** — a clear **BOM Health** view of overall status
+  - **Chat to act** — ask the agent to analyze and **execute replacements** in conversation
 
-홈페이지에서 **BOM 최적화 ** 로 시작하거나 홈 입력에서 업로드합니다。
-</업데이트>
+  Start from the homepage with **Optimize BOM**, or upload from the home input.
+</Update>
 
 <Update label="2026-07-27-home-input" tags={["Homepage", "BOM", "Design"]} description="Homepage input">
   <Frame>
@@ -864,8 +835,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 홈페이지 입력 **, 업데이트됨—** 홈 화면에서 BOM** 을 업로드하여 ** 위험 분석 **, ** 대량 대체 권장 사항 ** 등을 위한 **BOM 에이전트 ** 를 입력합니다. ** 디자인 하드웨어 ** 를 탭하여 ** 디자인 모드 ** 로 전환하거나， 일상적인 **MPN / 사양 / 대체 ** 검색을 위해 일반적으로 입력합니다。
-</업데이트>
+  **Homepage input**, updated—**upload a BOM** from the home screen to enter the **BOM agent** for **risk analysis**, **bulk alternative recommendations**, and more. Tap **Design Hardware** to jump into **Design mode**, or type normally for everyday **MPN / specs / alternatives** search.
+</Update>
 
 <Update label="2026-07-27-projects" tags={["Projects", "BOM", "Design"]} description="Projects workspace">
   <Frame>
@@ -875,8 +846,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-**BOM** 및 **Design** 은 이제 **Projects** - 미래의 ** 하드웨어 프로젝트 작업 공간 ** 에서 실행됩니다. 검토를 위해 **BOM** 을 업로드하든 아니면 ** 하드웨어를 처음부터 ** 디자인하든， 유형， 소스 및 즐겨찾기에 대한 필터를 사용하여 모든 것을 한 곳에서 찾고 다시 열 수 있습니다。
-</업데이트>
+  **BOM** and **Design** now live under **Projects**—your future **hardware project workspace**. Whether you **upload a BOM** for review or **design hardware from scratch**, find and reopen everything in one place with filters for type, source, and favorites.
+</Update>
 
 <Update label="2026-07-27" tags={["Search", "MPN", "Suggestions"]} description="Search suggestions">
   <Frame>
@@ -886,8 +857,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 입력하는 대로 제안을 검색할 수 있습니다. ** 정확한 ** 및 ** 근접 ** 일치 항목과 ** 제조업체 ** 제안을 포함한 **MPN** 검색입니다. 결과를 선택하여 한 번의 클릭으로 ** 구성 요소 ** 또는 ** 제조업체 ** 세부 정보를 열고， ** 데이터시트 채팅 ** 으로 이동하며， 먼저 전체 검색을 실행하지 않고도 ** 조달 데이터 ** 에 더 빠르게 액세스할 수 있습니다。
-</업데이트>
+  **Search suggestions** as you type—**MPN** lookups with **Exact** and **Near** matches, plus **manufacturer** suggestions. Select a result to open **component** or **manufacturer** details in one click, jump into **datasheet chat**, and reach **procurement data** faster without running a full search first.
+</Update>
 
 <Update label="2026-07-20" tags={["Design", "Beta", "Hardware"]} description="Design mode Beta">
   <Frame>
@@ -897,25 +868,25 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="Design mode architecture diagram with BOM, technical solution, build guide, and reference image views"
       src="/images/design-mode-architecture.png"
     />
   </Frame>
 
-** 디자인 모드 (베타)** 는 라이브입니다 — 자연어로 제품을 설명하고 다음을 포함한 ** 초기 하드웨어 팩 ** 을 생성합니다：
+  **Design mode (Beta)** is live—describe a product in natural language and generate an **initial hardware pack**, including:
 
-- 아키텍처 - 설계의 블록 다이어그램
-- **BOM** - 빌드의 부품 목록
-- ** 기술 솔루션 ** - 시스템 작동 방식
-- ** 빌드 가이드 ** - 조립 및 가져오기 단계
-- ** 참조 이미지 ** — 하드웨어에 대한 시각적 개념
+  - **Architecture** — block diagram of your design
+  - **BOM** — parts list for the build
+  - **Technical solution** — how the system works
+  - **Build guide** — steps to assemble and bring up
+  - **Reference image** — visual concept for the hardware
 
-또한 반복할 때 에이전트에게 디자인을 수정하거나 부품을 교체하도록 요청할 수도 있습니다。
+  You can also **ask the agent to modify the design** or **substitute parts** as you iterate.
 
-**Design** 는 모든 플랜에 포함되어 있습니다—**Pro** 는 최대 **15** 디자인까지 가능합니다. 변경 사항은 ** 일반 검색 크레딧 ** 으로 계산됩니다. **ECAD 라이브러리 ** 가 곧 제공됩니다 (EDA 용 발자국/도식 다운로드).
-</업데이트>
+  **Design** is included on all plans—**Pro** gets up to **15** designs. Modifications count as **general search credits**. **ECAD library** is coming soon (download footprints / schematics for your EDA).
+</Update>
 
 <Update label="2026-06-17" tags={["Education", "Pro", "Students"]} description="Education program">
   <Frame>
@@ -925,8 +896,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-**PartGenie for Education** 은 [partgenie.ai/education](https://www.partgenie.ai/education) 에서 라이브로 제공됩니다. ** 공인 대학교의 ** 하드웨어 및 EE 학생 ** 을 위한 **12 개월 Pro 무료 **(**299 달러 가치 **) 입니다. 부품을 검색하고， ** 캡스톤 및 실험실 BOM** 을 관리하고， **MCU 대체 ** 를 찾고， ** 데이터시트 Q&A** 를 과정 작업에 사용하세요. ** 학생으로 Pro** 를 무료로 받거나， ** 클럽에 지원하세요。
-</업데이트>
+  **PartGenie for Education** is live at [partgenie.ai/education](https://www.partgenie.ai/education)—**12 months of Pro free** (**$299 value**) for **hardware and EE students** at accredited universities. Search parts, manage **capstone and lab BOMs**, find **MCU alternatives**, and use **datasheet Q&A** for coursework. **Get free Pro** as a student, or **apply for your club**.
+</Update>
 
 <Update label="2026-06-16" tags={["Component Detail", "Alternatives", "Data"]} description="v1.0.23 Release">
   <Frame>
@@ -936,8 +907,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 검색에서 구성 요소 세부 정보 페이지 ** 가 ** 보강 ** 되고 있습니다. ** 애플리케이션 시나리오 ** 및 ** 대체 부분 ** 이 사용 가능한 경우 (예: 핀 호환 및 매개변수 대체) 를 참조하십시오. 단축 목록에 대한 내보내기가 포함되어 있습니다. ** 데이터 적용 범위가 카탈로그 전체에서 점진적으로 ** 확장되고 있습니다. 시간이 지남에 따라 더 많은 부분이 이러한 필드를 획득합니다。
-</업데이트>
+  **Component detail pages** from search are being **enriched**—see **application scenarios** and **alternative parts** where available (e.g. pin-compatible and parametric alternates), with export for your shortlist. **Data coverage is rolling out gradually** across the catalog; more parts gain these fields over time.
+</Update>
 
 <Update label="2026-06-15" tags={["AI Answer", "Transparency", "UX"]} description="v1.0.22 Release">
   <Frame>
@@ -947,8 +918,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-**AI 응답 ** 은 이제 PartGenie 가 작동하는 동안 ** 생각하는 시간 ** 을 표시합니다 - 예: ** 생각 · 6 초 ** - 따라서 공백 대기 대신 진행 상황을 확인할 수 있습니다. 또한 우리는 시간이 지남에 따라 지연 시간을 줄이기 위해 백그라운드에서 ** 응답 속도 ** 를 최적화하고 있습니다。
-</업데이트>
+  **AI answers** now show **thinking time** while PartGenie works—e.g. **Thinking · 6s**—so you see progress instead of a blank wait. We’re also **optimizing response speed** behind the scenes to cut down latency over time.
+</Update>
 
 <Update label="2026-06-14" tags={["Homepage", "Insights", "UX"]} description="v1.0.21 Release">
   <Frame>
@@ -958,8 +929,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 새로운 홈페이지 ** — 검색， 도구 및 디렉터리에 대한 더 명확한 입력이 포함된 Your AI Hardware Companion**. **Insights** (이전의 **Discover**) 는 ** 반도체 & EE 뉴스 **, 트렌드 부분 및 시장 컨텍스트에 대한 상위 탐색에서 **Tools**, **Compare** 및 **Resources** 와 함께 활동합니다。
-</업데이트>
+  **New homepage**—**Your AI Hardware Companion** with clearer entry to search, tools, and directories. **Insights** (formerly **Discover**) lives in the top nav for **semiconductor & EE news**, trending parts, and market context—alongside **Tools**, **Compare**, and **Resources**.
+</Update>
 
 <Update label="2026-06-13" tags={["Manufacturer", "Directory", "Browse"]} description="v1.0.20 Release">
   <Frame>
@@ -969,8 +940,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 제조업체 디렉터리 ** 는 라이브입니다—**7,112 개 이상의 제조업체 ** 가 하나의 연결된 허브에 있습니다. **category** 또는 **A–Z** 로 탐색하거나， 설명 및 카탈로그 컨텍스트가 있는 프로필을 열거나， PartGenie 에게 **manu 에 대해 물어보세요。billers**, **alternatives** 또는 **BOM** — 정적 공급업체 목록이 아닌 조달 및 교차 참조를 위한 인텔리전스입니다。
-</업데이트>
+  **Manufacturer directory** is live—**7,112+ manufacturers** in one connected hub. Browse by **category** or **A–Z**, open profiles with descriptions and catalog context, or ask PartGenie about **manufacturers**, **alternatives**, or **BOM**—intelligence for sourcing and cross-reference, not a static vendor list.
+</Update>
 
 <Update label="2026-06-12" tags={["Category", "Directory", "Browse"]} description="v1.0.19 Release">
   <Frame>
@@ -980,8 +951,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 카테고리 디렉터리 ** 는 연결된 하나의 허브에서 53 개 이상의 구성 요소 카테고리 ** 를 실시간으로 제공합니다. **A-Z** 를 탐색하고， 카테고리 칩에서 이동하며， ** 하위 카테고리 수 **, ** 부품 합계 ** 및 짧은 가이드가 포함된 카드를 열 수 있습니다. 정적 카탈로그가 아닌 엔지니어 및 소싱 팀을 위해 구축된 검색 창에서 PartGenie 에게 ** 카테고리 **, ** 선택 가이드 ** 또는 ** 대안 ** 에 대해 질문할 수 있습니다。
-</업데이트>
+  **Category directory** is live—**53+ component categories** in one connected hub. Browse **A–Z**, jump from category chips, and open cards with **subcategory counts**, **part totals**, and short guides. Ask PartGenie about **categories**, **selection guides**, or **alternatives** from the search bar—built for engineers and sourcing teams, not a static catalog.
+</Update>
 
 <Update label="2026-06-11" tags={["Discover", "News", "Trends"]} description="v1.0.18 Release">
   <Frame>
@@ -991,8 +962,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-**Discover** 는 라이브입니다. ** 채팅 ** 옆의 새로운 탭에서 AI & 컴퓨팅， 메모리， MCU 및 전력과 같은 주제로 필터링된 ** 큐레이팅된 반도체 및 EE 뉴스 ** 를 확인할 수 있습니다. PartGenie 에서 ** 가장 많이 검색된 ** 내용과 ** 가장 빠르게 증가하는 ** 내용을 확인하세요. 각 기사가 ** 부품， 제조업체 및 공급 영향 ** 과 어떻게 연관되는지에 대한 **AI 분석 ** 을 통해 ** 추세를 파악하고 더 나은 소싱 결정을 내릴 수 있습니다。
-</업데이트>
+  **Discover** is live—a new tab beside **Chat** for **curated semiconductor and EE news**, filtered by topics like AI & compute, memory, MCUs, and power. See what’s **most searched** and **fastest rising** on PartGenie, with **AI analysis** of how each story ties to **parts, manufacturers, and supply impact**—so you can spot trends and make better sourcing decisions.
+</Update>
 
 <Update label="2026-06-10" tags={["AI", "Plans", "Database"]} description="v1.0.17 Release">
   <Frame>
@@ -1002,8 +973,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 더 스마트한 AI, 더 많은 할당량. ** 플랜에는 이제 Free 에서의 **5 사용량과 Pro 에서의 **500 사용량이 포함됩니다. **OpenAI GPT-5.5**, **Google Gemini**, **Anthropic Claude** 등을 포함한 ** 고급 모델 ** 로 구동되는 응답이 포함되며， 검색， 교차 참조 및 공급업체 워크플로를 위한 ** 더 풍부한 구성 요소 데이터베이스 ** 로 지원됩니다。
-</업데이트>
+  **Smarter AI, more quota.** Plans now include **5 uses on Free** and **500 on Pro**—with answers powered by **advanced models** including **OpenAI GPT‑5.5**, **Google Gemini**, **Anthropic Claude**, and more, backed by a **richer component database** for search, cross-reference, and vendor workflows.
+</Update>
 
 <Update label="2026-06-09" tags={["Manufacturer", "Vendor", "Compare"]} description="v1.0.16 Release">
   <Frame>
@@ -1013,14 +984,14 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 제조업체 검색 ** 은 여기에 있습니다 — 한 대화에서 세 가지 워크플로우：
+  **Manufacturer lookup** is here—three workflows in one chat:
 
-- ** 카테고리 추천 ** - 제품 카테고리별 공급업체 제안 받기
-- ** 벤더 프로필 ** - 단일 제조업체에 대한 회사 개요， 카탈로그 분석 및 부품 수
-- ** 벤더 비교 ** - 병렬 프로필 및 AI 분석 (예: MCU 의 ST 대 NXP)
+  - **Category recommendation** — get vendor suggestions by product category
+  - **Vendor profile** — company overview, catalog breakdown, and part counts for a single manufacturer
+  - **Vendor compare** — side-by-side profiles and AI analysis (e.g. ST vs NXP for MCUs)
 
-홈페이지의 **AI 제조업체 파인더 ** 에서 시작하거나 자연어로 질문하세요。
-</업데이트>
+  Start from **AI Manufacturer Finder** on the homepage, or ask in natural language.
+</Update>
 
 <Update label="2026-06-05" tags={["Tools", "AI", "Getting Started"]} description="v1.0.15 Release">
   <Frame>
@@ -1030,17 +1001,17 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 여섯 개의 워크플로， 하나의 채팅. ** PartGenie 는 여전히 ** 단일 대화 ** 에서 시작됩니다 — 작업에 대한 올바른 경로를 안내합니다. ** 홈페이지 ** 에서， **Tools** 는 각 워크플로에 대한 명확한 항목을 제공합니다：
+  **Six workflows, one chat.** PartGenie still starts from a **single conversation**—we route you through the right path for your task. On the **homepage**, **Tools** offers a clear entry for each workflow:
 
-- ** 데이터시트 AI** - 데이터시트 및 문서와 채팅
-- **BOM Analyzer** - 자재 청구서 업로드 및 분석
-- **AI 구성요소 파인더 ** - 요구사항별로 부품 검색
-- **AI 제조업체 파인더 ** - 제조업체 및 브랜드 발견
-- ** 제품 비교 ** - 매개변수 병렬 비교
-- **AI 대체 검색기 ** - 교차 참조 및 대체 항목 찾기
+  - **Datasheet AI** — chat with datasheets and documents
+  - **BOM Analyzer** — upload and analyze your bill of materials
+  - **AI Component Finder** — search parts by requirements
+  - **AI Manufacturer Finder** — discover manufacturers and brands
+  - **Compare Product** — side-by-side parameter comparison
+  - **AI Alternative Finder** — find cross-references and substitutes
 
-작업을 알고 있을 때 홈페이지에서 도구를 선택하세요. 빈 프롬프트가 아니라 동일한 PartGenie 채팅과 해당 작업을 위해 구축된 워크플로에 접속하게 됩니다。
-</업데이트>
+  Pick a tool on the homepage when you know the job—you land in the same PartGenie chat, on the workflow built for it, not a blank prompt.
+</Update>
 
 <Update label="2026-06-04" tags={["Notifications", "Updates", "UX"]} description="v1.0.14 Release">
   <Frame>
@@ -1050,8 +1021,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 알림 ** 센터가 재설계되었습니다: 새로운 기능과 제품 뉴스를 위해 ** 업데이트 ** 를 검색하고， 계정을 위해 ** 활동 ** 을 검색하여 이메일을 뒤지지 않고도 배송된 내용과 중요한 내용을 확인할 수 있습니다。
-</업데이트>
+  The **Notifications** center is redesigned: browse **Updates** for new features and product news, and **Activity** for your account—so you catch what shipped and what matters to you without digging through email.
+</Update>
 
 <Update label="2026-06-02" tags={["Usage", "Settings", "Billing"]} description="v1.0.13 Release">
   <Frame>
@@ -1061,8 +1032,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 설정 → 사용량 ** 을 열어 이 청구 기간의 ** 플랜 제한 및 소비 ** 를 확인합니다. **AI 검색 **, ** 데이터시트 채팅 **, ** 파일 업로드 **, **BOM** 및 기타 포함된 기능을 통해 재설정 날짜와 진행 상황을 한눈에 확인할 수 있습니다。
-</업데이트>
+  Open **Settings → Usage** to see **plan limits and consumption** for this billing period—**AI Search**, **Datasheet chat**, **file uploads**, **BOM**, and other included features, with reset dates and progress at a glance.
+</Update>
 
 <Update label="2026-06-01" tags={["Onboarding", "Getting Started", "UX"]} description="v1.0.12 Release">
   <Frame>
@@ -1072,8 +1043,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-새로운 온보딩은 첫날부터 안내합니다: 사이드바의 시작하기 체크리스트 (첫 번째 질문 하기， 데이터시트로 채팅하기， 첫 번째 BOM 업로드하기) 를 통해 핵심 워크플로를 단계별로 시도할 수 있습니다。
-</업데이트>
+  New **onboarding** guides you from day one: a **Getting started** checklist in the sidebar—**ask your first question**, **chat with a datasheet**, and **upload your first BOM**—so you can try core workflows step by step.
+</Update>
 
 <Update label="2026-05-28" tags={["Export", "UX", "Products"]} description="v1.0.11 Release">
   <Frame>
@@ -1083,8 +1054,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 제품 내보내기 ** 가 더 깔끔합니다: 검색 결과에서 부분을 선택한 다음， ** 비교 ** 와 동일한 작업 표시줄에서 ** 내보내기 ** 를 선택하면 검토 또는 공유에 필요한 데이터를 다운로드하는 단계가 줄어듭니다。
-</업데이트>
+  **Product export** is cleaner: select parts from search results, then **Export** from the same action bar as **Compare**—fewer steps to download the data you need for review or sharing.
+</Update>
 
 <Update label="2026-05-27" tags={["AI Answer", "MPN", "Component Detail"]} description="v1.0.10 Release">
   <Frame>
@@ -1094,8 +1065,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-**AI 답변 ** 에서 테이블 및 비교에서 부품 번호 ** - 대상 또는 후보 MPN - 를 클릭하여 ** 구성 요소 세부사항 ** 을 엽니다: 파라미터를 확인하고， 사양을 검토하고， 세션을 떠나지 않고 ** 데이터시트 채팅 ** 을 시작합니다。
-</업데이트>
+  In **AI answers**, **click any part number**—target or candidate MPN—in tables and comparisons to open **component details**: confirm parameters, review specs, and start **datasheet chat** without leaving your session.
+</Update>
 
 <Update label="2026-05-26" tags={["Compare", "Alternative", "Overview"]} description="v1.0.9 Release">
   <Frame>
@@ -1105,8 +1076,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-**Overview** 에서 **target** 부분과 **candidate** 대안을 선택한 다음 **Compare** 를 눌러 **side-by-side** 보기를 표시합니다. 이 보기는 답변 페이지를 벗어나지 않고도 교차 참조 및 대체 선택을 위해 구축되었습니다。
-</업데이트>
+  In **Overview**, pick a **target** part and **candidate** alternatives, then hit **Compare** for a **side-by-side** view—built for cross-reference and substitute selection without leaving the answer page.
+</Update>
 
 <Update label="2026-05-25" tags={["AI Answer", "UX", "AI Task"]} description="v1.0.8 Release">
   <Frame>
@@ -1116,15 +1087,15 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-<Frame>
+  <Frame>
     <img
       alt="AI Task tab showing step-by-step thinking process from analysis to data search"
       src="/images/ai-answer-ai-task.png"
     />
   </Frame>
 
-**AI 답변 ** 페이지는 더 쉽게 스캔할 수 있습니다: ** 개요 ** 는 추천 부품을 더 깔끔한 구조로 정리하고， **AI 작업 ** 은 의도， 대체 계획， 데이터 검색 등 전체 ** 사고 프로세스 ** 를 보여주므로 PartGenie 가 각 결과에 도달한 방법을 추적할 수 있습니다。
-</업데이트>
+  The **AI answer** page is easier to scan: **Overview** lays out recommended parts in a cleaner structure, and **AI Task** shows the full **thinking process**—intent, substitute planning, data search, and more—so you can follow how PartGenie reached each result.
+</Update>
 
 <Update label="2026-05-24" tags={["Manufacturer", "Brand", "Products"]} description="v1.0.7 Release">
   <Frame>
@@ -1134,8 +1105,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-** 제조업체 브랜드 페이지 ** 는 이제 각 브랜드에 대한 ** 관련 제품 ** 을 표시합니다. 카테고리별로 탐색하고， 부품 번호， 설명 및 패키지를 확인하며， 한 곳에서 전체 카탈로그를 탐색할 수 있습니다 (사용 가능한 경우 공식 사이트 링크 포함).
-</업데이트>
+  **Manufacturer brand pages** now show **associated products** for each brand—browse by category, see part numbers, descriptions, and packages, and explore the full catalog from one place (with a link to the official site when available).
+</Update>
 
 <Update label="2026-05-17" tags={["BOM", "Upload"]} description="v1.0.6 Release">
   <Frame>
@@ -1145,8 +1116,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-**CSV 또는 Excel**(.xlsx, .xls) 로 자료 청구서를 업로드합니다. PartGenie 는 구조를 구문 분석합니다。유레 및 양， 지정자， MPN, 제조업체， 공급업체 등의 필드를 사용하여 구조화된 BOM 을 한 곳에서 검토하고 작업할 수 있습니다。
-</업데이트>
+  Upload your bill of materials as **CSV or Excel** (.xlsx, .xls). PartGenie parses structure and fields—quantity, designator, MPN, manufacturer, supplier, and more—so you can review and work from a structured BOM in one place.
+</Update>
 
 <Update label="2026-05-17-bom-chat" tags={["BOM", "BOM Assistant"]} description="v1.0.6 Release">
   <Frame>
@@ -1156,8 +1127,8 @@ BOM 에서 여러 MPN 을 선택하고 ** 비교 ** 를 클릭하여 유통업�
     />
   </Frame>
 
-BOM 스마트 어시스턴트에서 BOM 과 채팅하기: 주요 구성 요소， 매치 상태， 브랜드 및 사양에 대해 질문합니다. 답변이 테이블 옆에 나타나며 구조화된 요약을 통해 조치를 취할 수 있습니다。
-</업데이트>
+  **Chat with your BOM** in the **BOM Smart Assistant**: ask about key components, match status, brands, and specs—answers appear next to your table with structured summaries you can act on.
+</Update>
 
 <Update label="2026-05-16" tags={["Datasheet", "Citation", "PDF"]} description="v1.0.5 Release">
   <Frame>
@@ -1167,8 +1138,8 @@ BOM 스마트 어시스턴트에서 BOM 과 채팅하기: 주요 구성 요소�
     />
   </Frame>
 
-**PDF 데이터시트 **(또는 기타 문서) 를 업로드하고 ** 페이지 내 인용문 ** 으로 답변을 얻으세요. 클릭하여 데이터시트 채팅에서 각 주장 (핀 레이아웃， 테이블， 사양 등) 바로 뒤의 페이지에서 소스를 열 수 있는 번호가 매겨진 마커입니다。
-</업데이트>
+  Upload a **PDF datasheet** (or other document) and get answers with **in-page citations**—numbered markers you can click to open the source in datasheet chat, right on the page behind each claim (pin layouts, tables, specs, and more).
+</Update>
 
 <Update label="2026-05-15" tags={["Chat History", "Search", "BOM", "Datasheet"]} description="v1.0.5 Release">
   <Frame>
@@ -1178,8 +1149,8 @@ BOM 스마트 어시스턴트에서 BOM 과 채팅하기: 주요 구성 요소�
     />
   </Frame>
 
-** 최근 검색 ** 이 더 깨끗하고 검색하기 쉽습니다: 고정된 스레드와 최근 스레드가 그룹화되며， 각 항목에는 세 가지 메시지 유형 ** 중 하나 ** 가 표시됩니다—** 검색 **, **BOM** 또는 ** 데이터시트 **—따라서 적절한 유형의 대화를 한눈에 다시 열 수 있습니다。
-</업데이트>
+  **Recent Search** is cleaner and easier to scan: pinned and recent threads are grouped, and each entry shows one of **three message types**—**Search**, **BOM**, or **Datasheet**—so you can reopen the right kind of conversation at a glance.
+</Update>
 
 <Update label="2026-05-13" tags={["AI FAE", "Alternative"]} description="v1.0.4 Release">
   <Frame>
@@ -1189,8 +1160,8 @@ BOM 스마트 어시스턴트에서 BOM 과 채팅하기: 주요 구성 요소�
     />
   </Frame>
 
-더 스마트한 대체 구성 요소 검색 엔진이 실행 중입니다: AI FAE 워크플로우는 의도 및 대체 계획에서 검색까지 안내합니다. 명확한 **AI 작업 ** 타임라인을 통해 MPN 의 단순한 목록이 아닌 각 대체 요소가 어떻게 발견되었는지 확인할 수 있습니다。
-</업데이트>
+  A smarter alternative-component search engine is live: the AI FAE workflow walks you from intent and substitute planning through retrieval—with a clear **AI Task** timeline so you can see how each alternative was found, not just a flat list of MPNs.
+</Update>
 
 <Update label="2026-05-11" tags={["Verified Web Search"]} description="v1.0.3 Release">
   <Frame>
@@ -1202,8 +1173,8 @@ BOM 스마트 어시스턴트에서 BOM 과 채팅하기: 주요 구성 요소�
     />
   </Frame>
 
-웹 검색은 실시간 시장/업계 데이터에 대해 자동으로 활성화되며， 이제 모든 AI 응답에 직접적인 인용이 포함됩니다. 어떤 참조든 클릭하여 데이터가 정확히 어디에서 왔는지 확인하세요。
-</업데이트>
+  Web Search is automatically enabled for real-time market/industry data, and every AI response now includes direct citations. Click any reference to see exactly where the data came from.
+</Update>
 
 <Update label="2026-05-11-page-mapping" tags={["Page-Mapping"]} description="v1.0.3 Release">
   <Frame>
@@ -1215,8 +1186,8 @@ BOM 스마트 어시스턴트에서 BOM 과 채팅하기: 주요 구성 요소�
     />
   </Frame>
 
-이제 PartGenie 가 제공하는 모든 답변에는 데이터시트/파일과 채팅할 때 답변이 존재하는 정확한 페이지에 대한 즉시 참조가 포함되어 있습니다. 이는 500 페이지 이상의 문서에서도 마찬가지입니다。
-</업데이트>
+  Now, every answer PartGenie provides includes an Instant Reference to the exact page where the answer exists when chatting with datasheet/files, even in documents with 500+ pages.
+</Update>
 
 <Update label="2026-05-10" tags={["LaTeX"]} description="v1.0.2 Release">
   <Frame>
@@ -1236,8 +1207,8 @@ BOM 스마트 어시스턴트에서 BOM 과 채팅하기: 주요 구성 요소�
     />
   </Frame>
 
-이제 AI 답변에서 LaTeX 공식과 전기 기호의 더 나은 렌더링을 확인할 수 있습니다。
-</업데이트>
+  Now you can see better rendering of LaTeX formulas and electrical symbols in AI answer.
+</Update>
 
 <Update label="2026-05-09" tags={["AI Follow-up"]} description="v1.0.1 Release">
   <Frame>
@@ -1257,8 +1228,8 @@ BOM 스마트 어시스턴트에서 BOM 과 채팅하기: 주요 구성 요소�
     />
   </Frame>
 
-이제 답변 페이지에서 쿼리 요약을 받은 후 후속 질문 3 개가 표시됩니다。
-</업데이트>
+  You will now see 3 follow up questions after receiving query summary at the answer page.
+</Update>
 
 <Update label="2026-01-12" tags={["Mobile"]} description="v0.2.0 Release">
   <Frame>
@@ -1278,13 +1249,13 @@ BOM 스마트 어시스턴트에서 BOM 과 채팅하기: 주요 구성 요소�
     />
   </Frame>
 
-이제 partgenie.ai 에서 모바일로 검색할 수 있습니다。
-</업데이트>
+  You can now search on mobile at partgenie.ai.
+</Update>
 
 <Update label="2025-11-16" tags={["Beta","AI Search","BOM Management"]} description="v0.1.0 Beta Release">
   <Frame>
     ![PartGenie Beta Version Overview](/images/ko-KR/partgenie-overview.png)
   </Frame>
 
-PartGenie 가 공식적으로 베타 테스트 단계에 진입했습니다！ 자연어 기반 구성 요소 검색， 데이터시트 채팅， 재료 목록 관리를 지원하는 핵심 AI 스마트 검색 및 BOM 관리 기능을 출시했습니다. 경험을 통해 귀중한 피드백을 제공해 주시기 바랍니다。
-</업데이트>
+  PartGenie officially enters the Beta testing phase! We've launched core AI smart search and BOM management features, supporting natural language-based component search, datasheet chat, and material list management. Welcome to experience and provide valuable feedback.
+</Update>

@@ -9,44 +9,40 @@ Ceci est différent du téléchargement d'un modèle de catalogue sur la page de
 ## Générer une bibliothèque
 
 <Steps>
-  <Step title="Start from Search">
-    Open [app.partgenie.ai](https://app.partgenie.ai) and stay on **Search** (not Work).
+  <Step title="Démarrer à partir de la recherche">
+Ouvrir [app.partgenie.ai](https://app.partgenie.ai) et restez sur * * Recherche* * (ne fonctionne pas).
   </Step>
-  <Step title="Ask for a verified library">
-    Use the MPN and package in the prompt:
+  <Step title="Demandez une bibliothèque vérifiée">
+Utilisez le MPN et le package à l'invite:
 
-    
-__P0__
+    ```
+    generate verified KiCAD for RC0603FR-071KL
+    ```
 
-
-    You can also say *symbol, footprint, and 3D model* for a specific MPN such as 
-__P1__
- or 
-__P2__
-.
+Vous pouvez également indiquer * symbole, empreinte et modèle 3D* pour un MPN spécifique tel que 'STM32F103RET6' ou 'OPA810IDBVR'`
   </Step>
-  <Step title="Wait for the job">
-    Generation can take a few minutes. PartGenie tells you it has started and notifies you **in the app and by email** when the library is ready. You can leave the chat and come back from **Recents** or **⌘K**.
+  <Step title="Attendez le travail">
+La génération peut prendre quelques minutes. PartGenie vous indique qu'il a démarré et vous avertit * * dans l'application et par e-mail** lorsque la bibliothèque est prête. Vous pouvez quitter le chat et revenir de * * Récents * * ou * * ⌘K**.
   </Step>
-  <Step title="Review Symbol, Footprint, and 3D">
-    The finished card shows three previews:
+  <Step title="Examinez le symbole, l'empreinte et la 3D">
+La carte terminée montre trois aperçus:
 
-    - **Symbol** — schematic symbol and pin numbers
-    - **Footprint** — pad layout (for example 0603 pads 1 and 2)
-    - **3D Model** — STEP body
+- **Symbole* — - symbole schématique et numéros de broche
+— ** Empreinte * * - disposition des pads (par exemple 0603 pads 1 et 2)
+- **Modèle 3D * * — Corps de MARCHE
 
-    Status chips on a finished library include **KiCad native import**, **Pin mapping**, and **Visual audit**.
+Les puces d'état sur une bibliothèque terminée incluent * * l'importation native de KiCad**, * * le mappage des broches** et * * l'audit visuel**.
   </Step>
-  <Step title="Open the evidence summary">
-    Expand **Evidence summary**. Each row is a field (pin count, pitch, body size, pad size), the value used, the **datasheet page** it came from, and a status:
+  <Step title="Ouvrir le résumé des preuves">
+Développer * * Résumé des preuves**. Chaque ligne est un champ (nombre de broches, pas, taille du corps, taille du tampon), la valeur utilisée, la * * page de fiche technique* * d'où elle provient et un statut:
 
-    - **Calculated** — derived from datasheet or package data
-    - **Assumed** — a default the engine filled in (pitch is a common one)
+- **Calculé* — - dérivé de la fiche technique ou des données du package
+- **Supposé* — - a par défaut le moteur rempli (le pas est courant)
 
-    Treat **Assumed** rows as items you must confirm.
+Traitez les lignes * * supposées * * comme des éléments que vous devez confirmer.
   </Step>
-  <Step title="Download">
-    Click **Download** on the part card and import the files into your KiCad project libraries.
+  <Step title="Télécharger">
+Cliquez sur * * Télécharger* * sur la fiche de la pièce et importez les fichiers dans vos bibliothèques de projet KiCad.
   </Step>
 </Steps>
 
@@ -66,9 +62,9 @@ __P2__
 
 ## Avant la fabrication-libération
 
-< Avertissement>
-  Les bibliothèques sont * * bêta**. Avant d'en utiliser un, vérifiez la hauteur, les pads, la broche 1 et le modèle 3D par rapport à la fiche technique. Une hauteur supposée ou une mauvaise marque pin-1 ne sera pas détectée uniquement par une vignette visuelle.
-< / Avertissement>
+<Warning>
+  Libraries are **Beta**. Before you use one, check pitch, pads, pin 1, and the 3D model against the datasheet. An Assumed pitch or a wrong pin-1 mark will not be caught by a visual thumbnail alone.
+</Warning>
 
 - Ouvrez la page de la fiche technique citée à partir du tableau des preuves (voir [Citations de la fiche technique] (/en-US / datasheet-citations))
 - Confirmez le code pin 1 sur le symbole et l'empreinte

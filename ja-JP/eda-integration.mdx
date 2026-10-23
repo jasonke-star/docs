@@ -1,5 +1,5 @@
 ---
-title: "EDA統合"
+title: "EDA 統合"
 description: "Altium、KiCad、Eagle、OrCAD、およびAllegro用のECADをダウンロードするか、検証済みのKICADライブラリを生成します"
 ---
 PartGenieは、CADシートを交換するのではなく、**ダウンロード可能なライブラリ**を介してEDAワークフローに接続します。 二つの道:
@@ -22,17 +22,17 @@ PartGenieは、CADシートを交換するのではなく、**ダウンロード
 #＃カタログモデルのダウンロード
 
 <Steps>
-  <Step title="Open the part">
-    In Search, click the **MPN** badge or part card. In Chrome, open **CAD models** from the sidebar on a supported distributor page.
+  <Step title="パーツを開く">
+検索で、**MPN**バッジまたはパーツカードをクリックします。 Chromeで、サポートされている販売代理店ページのサイドバーから**CADモデル**を開きます。
   </Step>
-  <Step title="Open CAD Models">
-    In the component drawer, tabs are **Product**, **Procurement**, and **CAD Models**. **Procurement** is live price and stock; **CAD Models** is the footprint library.
+  <Step title="CADモデルを開く">
+コンポーネントドロワーでは、タブは**製品**、**調達**、および**CADモデル**です。 **調達**はライブ価格と在庫です。**CADモデル**はフットプリントライブラリです。
   </Step>
-  <Step title="Choose format and download">
-    Download the symbol, footprint, and/or 3D files offered for your EDA (Altium, KiCad, Eagle, OrCAD, Allegro, and others when listed). Not every MPN has every format—if the tab is empty, [generate KiCad](#kicad-import) or contact support.
+  <Step title="フォーマットとダウンロードを選択">
+EDA用に提供されているシンボル、フットプリント、および/または3Dファイル（Altium、KiCad、Eagle、OrCAD、Allegroなど）をダウンロードします。 すべてのMPNがすべての形式を持つわけではありません—タブが空の場合は、[generate KiCad]（＃kicad-import）またはサポートに連絡してください。
   </Step>
-  <Step title="Import into your EDA">
-    Follow your vendor’s import steps for the file type you downloaded. Confirm pin 1, pitch, and courtyard against the datasheet before you release the library to the team.
+  <Step title="EDAへのインポート">
+ダウンロードしたファイルの種類については、仕入先のインポート手順に従ってください。 ライブラリをチームにリリースする前に、ピン1、ピッチ、および中庭をデータシートに対して確認してください。
   </Step>
 </Steps>
 
@@ -43,8 +43,8 @@ PartGenieは、CADシートを交換するのではなく、**ダウンロード
   />
 </Frame>
 
-＜ヒント＞
-  カタログのフットプリントと生成されたKiCadライブラリは、パッドのサイズまたはピン1 あなたが製造するものについては、一般的な0603ではなく、**データシートページ**を信頼してください。
+<Tip>
+  Catalog footprints and generated KiCad libraries can disagree on pad size or pin 1. For anything you will fabricate, trust the **datasheet page**, not a generic 0603.
 </Tip>
 
 ###Altium Designer
@@ -68,32 +68,28 @@ PartGenieがMpn用にOrCADまたはAllegro形式をリストしたときにダ�
 生成はPartGenie（webまたはChrome）で発生します。 **KiCad8**はターゲット形式です。
 
 <Steps>
-  <Step title="Generate the library">
-    In **Search** (not Work), ask for example:
+  <Step title="ライブラリの生成">
+**検索**（動作しない）では、例えば尋ねます:
 
-    
-__P0__
+    ```
+    generate verified KiCAD for RC0603FR-071KL
+    ```
 
-
-    Or use **CAD models** → generate from the part page. Wait for the in-app notice and email—generation can take a few minutes.
+または、部品ページから**CADモデル**→生成を使用します。 アプリ内通知を待つと、電子メールの生成には数分かかることがあります。
   </Step>
-  <Step title="Review evidence">
-    Open the finished card: **Symbol**, **Footprint**, **3D Model**, and **Evidence summary** (Calculated vs Assumed). Check **KiCad native import**, **Pin mapping**, and **Visual audit** before you download.
+  <Step title="レビューの証拠">
+完成したカードを開きます：**シンボル**、**フットプリント**、**3Dモデル**、および**証拠の概要**（計算された対仮定された）。 ダウンロードする前に**Kicadネイティブインポート**、**Pinマッピング**、および**視覚的な監査**を確認してください。
   </Step>
-  <Step title="Download">
-    Click **Download** on the library card. You receive KiCad 8 
-__P1__
-, 
-__P2__
-, and 3D files PartGenie already checked with a machine import pass.
+  <Step title="ダウンロード">
+ライブラリカードの**ダウンロード**をクリックします。 あなたはKiCad8`を受け取ります。kicad_sym`,'。Kicad_mod`、および3DファイルPartGenieはすでにマシンインポートパスでチェックしました。
   </Step>
-  <Step title="Add to your KiCad project">
-    In KiCad 8:
+  <Step title="KiCadプロジェクトに追加する">
+KiCadでは8:
 
-    1. Place symbol and footprint files in your project or global library folders (or paths your team standardizes on).
-    2. Update **sym-lib-table** and **fp-lib-table** so KiCad resolves the new library names.
-    3. Reload libraries in the Symbol or Footprint editor, place the part on the schematic, and associate the footprint.
-    4. Open the 3D viewer and compare body height and pin 1 to the datasheet.
+1. シンボルファイルとフットプリントファイルをプロジェクトフォルダまたはグローバルライブラリフォルダ(またはチームが標準化するパス)に配置します。
+2. Sym-lib-tableとfp-lib-tableを更新して、kicadが新しいライブラリ名を解決するようにします。
+3. ライブラリの再読み込みシンボルエディタまたはフットプリントエディタで、部品を回路図に配置し、フットプリントを関連付けます。
+4. 3Dビューアを開き、ボディの高さとピン1をデータシートと比較します。
   </Step>
 </Steps>
 
@@ -111,9 +107,9 @@ __P2__
   />
 </Frame>
 
-<警告>
-  KiCadの生成は**ベータ**です。 生産前に、ピッチ、パッド、ピン1、および3Dをデータシートと照合してください。 パッケージの適用範囲は、サポートされているファミリ(SO、QFN、BGA、受動部品、共通コネクタなど)に制限されています—[KiCad generator](https://www.partgenie.ai/kicad-generator）現在のリストのページ。
-</警告>
+<Warning>
+  KiCad generation is **Beta**. Verify pitch, pads, pin 1, and 3D against the datasheet before production. Package coverage is limited to supported families (SO, QFN, BGA, passives, common connectors, and similar)—see the [KiCad generator](https://www.partgenie.ai/kicad-generator) page for the current list.
+</Warning>
 
 ##クレジットと請求
 
