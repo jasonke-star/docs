@@ -7,7 +7,7 @@ PartGenie se conecta a su flujo de trabajo EDA a través de **bibliotecas descar
 — ** Modelos de catálogo * * - símbolo, huella y PASO ya en PartGenie para muchas MPN.
 - **Generación de KiCad (Beta)* — - cree bibliotecas de KiCad 8 a partir de la hoja de datos con pruebas y comprobaciones de importación.
 
-Puede comenzar desde [app.partgenie.ai] (https://app.partgenie.ai), la [extensión de Chrome] (/en-US / chrome-extension) o una página de partes pública en [partgenie.ai] (https://www.partgenie.ai/).
+Puede comenzar desde [app.partgenie.ai] (https://app.partgenie.ai), la [extensión de Chrome](/es-MX/chrome-extension) o una página de partes pública en [partgenie.ai] (https://www.partgenie.ai/).
 
 ## Elige un camino
 
@@ -15,18 +15,18 @@ Puede comenzar desde [app.partgenie.ai] (https://app.partgenie.ai), la [extensi�
 | --- | --- |
 / Archivos que ya están en el catálogo de su MPN / [Descargar modelos del catálogo] (#descargar-modelos-del-catálogo) |
 / Símbolo de KiCad 8 + huella + 3D con evidencia /[importación de KiCad] (#kicad-import) |
-/ Altium / Eagle / OrCAD / Allegro / Descargue el formato listado en * * Modelos CAD**, luego importe en su herramienta |
+/ Altium / Eagle / OrCAD / Allegro / Descargue el formato listado en ** Modelos CAD**, luego importe en su herramienta |
 
-Detalles sobre el catálogo frente a las bibliotecas generadas: [ECAD & footprints] (/en-US / ecad-models). Tutorial de generación completa: [Generación de bibliotecas KiCad] (/en-US / kicad-library).
+Detalles sobre el catálogo frente a las bibliotecas generadas: [ECAD & footprints](/es-MX/ecad-models). Tutorial de generación completa: [Generación de bibliotecas KiCad](/es-MX/kicad-library).
 
 ## Descargar modelos de catálogo
 
 MODELO: <Steps>
   <Step title="Abra la pieza">
-En la búsqueda, haga clic en la insignia** MPN * * o en la tarjeta de pieza. En Chrome, abra * * Modelos CAD * * desde la barra lateral en la página de un distribuidor compatible.
+En la búsqueda, haga clic en la insignia** MPN ** o en la tarjeta de pieza. En Chrome, abra ** Modelos CAD * * desde la barra lateral en la página de un distribuidor compatible.
   </Step>
   <Step title="Modelos CAD Abiertos">
-En el cajón de componentes, las pestañas son * * Producto**, * * Adquisición* * y * * Modelos CAD**. ** Adquisición * * es precio en vivo y stock; * * Modelos CAD * * es la biblioteca de huellas.
+En el cajón de componentes, las pestañas son ** Producto**, ** Adquisición** y ** Modelos CAD**. ** Adquisición ** es precio en vivo y stock; ** Modelos CAD * * es la biblioteca de huellas.
   </Step>
   <Step title="Elige formato y descarga">
 Descargue los archivos de símbolos, huellas y / o 3D que se ofrecen para su EDA (Altium, KiCad, Eagle, OrCAD, Allegro y otros, cuando estén listados). No todas las MPN tienen todos los formatos; si la pestaña está vacía, [genere KiCad] (#kicad-import)o comuníquese con el soporte.
@@ -49,15 +49,15 @@ MODELO: <Tip>
 
 ### Diseñador de Altium
 
-1. Descargue los activos** Altium **(o huella / paso neutral de PCB) de* * Modelos CAD**.
+1. Descargue los activos** Altium **(o huella / paso neutral de PCB) de** Modelos CAD**.
 2. En Altium, importe o copie en sus bibliotecas de proyectos (**.PcbLib** / **.SchLib* * o flujo de biblioteca unificado que usa su equipo).
 3. Asigne la huella y el modelo 3D en el símbolo esquemático, luego ejecute su DRC habitual.
 
-Si solo tiene archivos nativos de KiCad, use el importador de KiCad de Altium o regenérelo a través de [KiCad library generation] (/en-US / kicad-library) y conviértalo con el proceso de migración aprobado por su equipo.
+Si solo tiene archivos nativos de KiCad, use el importador de KiCad de Altium o regenérelo a través de [KiCad library generation](/es-MX/kicad-library) y conviértalo con el proceso de migración aprobado por su equipo.
 
 ### Eagle / Electrónica de Fusión
 
-Descargue activos de huellas genéricas o compatibles con Eagle cuando aparezcan en * * Modelos CAD**, luego agréguelos a través del editor de bibliotecas de Eagle o la administración de bibliotecas de Fusion Electronics.
+Descargue activos de huellas genéricas o compatibles con Eagle cuando aparezcan en ** Modelos CAD**, luego agréguelos a través del editor de bibliotecas de Eagle o la administración de bibliotecas de Fusion Electronics.
 
 ### OrCAD / Allegro
 
@@ -69,25 +69,25 @@ La generación ocurre en PartGenie (web o Chrome). ** KiCad 8 * * es el formato 
 
 MODELO: <Steps>
   <Step title="Generar la biblioteca">
-En * * Buscar* *(no funciona), pregunte por ejemplo:
+En ** Buscar**(no funciona), pregunte por ejemplo:
 
     ```
     generate verified KiCAD for RC0603FR-071KL
     ```
 
-O use * * Modelos CAD * * → generar desde la página de piezas. Espere el aviso en la aplicación y la generación de correo electrónico puede demorar unos minutos.
+O use ** Modelos CAD ** → generar desde la página de piezas. Espere el aviso en la aplicación y la generación de correo electrónico puede demorar unos minutos.
   </Step>
   <Step title="Revisar la evidencia">
-Abra la tarjeta terminada: * * Símbolo**, * * Huella**, * * Modelo 3D* * y * * Resumen de evidencia* *(Calculado versus Supuesto). Compruebe * * Importación nativa de KiCad**, **Asignación de pines** y * * Auditoría visual * * antes de descargar.
+Abra la tarjeta terminada: ** Símbolo**, ** Huella**, ** Modelo 3D** y ** Resumen de evidencia**(Calculado versus Supuesto). Compruebe ** Importación nativa de KiCad**, **Asignación de pines** y ** Auditoría visual ** antes de descargar.
   </Step>
   <Step title="Descargar">
-Haga clic en * * Descargar* * en la tarjeta de la biblioteca. Recibes KiCad 8 `.kicad_sym`, `.kicad_mod', y archivos 3D PartGenie ya comprobados con un pase de importación de máquina.
+Haga clic en ** Descargar** en la tarjeta de la biblioteca. Recibes KiCad 8 `.kicad_sym`, `.kicad_mod', y archivos 3D PartGenie ya comprobados con un pase de importación de máquina.
   </Step>
   <Step title="Agregue a su proyecto KiCad">
 En KiCad 8:
 
 1. Coloque archivos de símbolos y huellas en las carpetas de su proyecto o biblioteca global (o rutas en las que su equipo estandarice).
-2. Actualice * * sym-lib-table * * y * * fp-lib-table * * para que KiCad resuelva los nuevos nombres de biblioteca.
+2. Actualice ** sym-lib-table ** y ** fp-lib-table ** para que KiCad resuelva los nuevos nombres de biblioteca.
 3. Vuelva a cargar las bibliotecas en el editor de símbolos o Huellas, coloque la pieza en el esquema y asocie la huella.
 4. Abra el visor 3D y compare la altura del cuerpo y el pin 1 con la hoja de datos.
   </Step>
@@ -113,11 +113,11 @@ MODELO: <Warning>
 
 ## Créditos y facturación
 
-La generación de KiCad utiliza * * créditos**. Catálogo * * Descarga de modelos ECAD * * se puede facturar por separado según su plan; consulte [Membresía y precios] (/en-US / membership-pricing).
+La generación de KiCad utiliza ** créditos**. Catálogo ** Descarga de modelos ECAD ** se puede facturar por separado según su plan; consulte [Membresía y precios](/es-MX/membership-pricing).
 
 ## Relacionado
 
-- [Resumen de integraciones] (/es-US / integraciones)
-- [Extensión de Chrome] (/en-US / chrome-extension)
-- [Generación de bibliotecas KiCad] (/en-US / kicad-library)
-- [ECAD y huellas] (/en-US / ecad-models)
+- [Resumen de integraciones](/es-MX/integrations)
+- [Extensión de Chrome](/es-MX/chrome-extension)
+- [Generación de bibliotecas KiCad](/es-MX/kicad-library)
+- [ECAD y huellas](/es-MX/ecad-models)

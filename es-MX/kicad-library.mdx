@@ -2,9 +2,9 @@
 title: "Generación de bibliotecas KiCad"
 description: "Genere un símbolo de KiCad verificado, huella y STEP 3D para una MPN, luego descargue la biblioteca (Beta)"
 ---
-** Generación de bibliotecas KiCad (Beta) * * construye una biblioteca de piezas a partir de la base de datos de componentes de PartGenie y la hoja de datos: **Símbolo**, **Huella** y **PASO 3D**, además de un resumen de evidencia que puede verificar antes de colocarlo en un tablero.
+** Generación de bibliotecas KiCad (Beta) ** construye una biblioteca de piezas a partir de la base de datos de componentes de PartGenie y la hoja de datos: **Símbolo**, **Huella** y **PASO 3D**, además de un resumen de evidencia que puede verificar antes de colocarlo en un tablero.
 
-Esto es diferente a descargar un modelo de catálogo en la página de piezas. Los activos del catálogo se encuentran activos en la pestaña componente * * Modelos CAD*—; consulte [ECAD y huellas] (/en-US / ecad-models). Utilice la generación cuando necesite una biblioteca nativa de KiCad con comprobaciones visuales, de pin y pad adjuntas.
+Esto es diferente a descargar un modelo de catálogo en la página de piezas. Los activos del catálogo se encuentran activos en la pestaña componente * * Modelos CAD*—; consulte [ECAD y huellas](/es-MX/ecad-models). Utilice la generación cuando necesite una biblioteca nativa de KiCad con comprobaciones visuales, de pin y pad adjuntas.
 
 ## Generar una biblioteca
 
@@ -22,7 +22,7 @@ Use la MPN y el paquete en el indicador:
 También puede decir * símbolo, huella y modelo 3D* para una MPN específica, como 'STM32F103RET6' u 'OPA810IDBVR'`
   </Step>
   <Step title="Espera el trabajo">
-La generación puede tardar unos minutos. PartGenie le informa que se ha iniciado y le notifica **en la aplicación y por correo electrónico** cuando la biblioteca está lista. Puedes abandonar el chat y volver de * * Recientes * * o * * ⌘K**.
+La generación puede tardar unos minutos. PartGenie le informa que se ha iniciado y le notifica **en la aplicación y por correo electrónico** cuando la biblioteca está lista. Puedes abandonar el chat y volver de ** Recientes ** o ** ⌘K**.
   </Step>
   <Step title="Revise el Símbolo, la Huella y el 3D">
 La tarjeta terminada muestra tres vistas previas:
@@ -31,18 +31,18 @@ La tarjeta terminada muestra tres vistas previas:
 - **Huella * — - diseño de la almohadilla (por ejemplo, 0603 almohadillas 1 y 2)
 - **Modelo 3D * * - Cuerpo ESCALONADO
 
-Los chips de estado en una biblioteca terminada incluyen * * Importación nativa de KiCad**, * * Asignación de pines * * y * * Auditoría visual**.
+Los chips de estado en una biblioteca terminada incluyen ** Importación nativa de KiCad**, ** Asignación de pines ** y ** Auditoría visual**.
   </Step>
   <Step title="Abra el resumen de pruebas">
-Expanda * * Resumen de evidencia**. Cada fila es un campo (número de pines, tono, tamaño del cuerpo, tamaño de la almohadilla), el valor utilizado, la **página de la hoja de datos** de donde proviene y un estado:
+Expanda ** Resumen de evidencia**. Cada fila es un campo (número de pines, tono, tamaño del cuerpo, tamaño de la almohadilla), el valor utilizado, la **página de la hoja de datos** de donde proviene y un estado:
 
 - **Calculado* — - derivado de la hoja de datos o datos del paquete
 - **Asumido* — - un valor predeterminado que completó el motor (el tono es común)
 
-Trate las filas * * asumidas * * como elementos que debe confirmar.
+Trate las filas ** asumidas ** como elementos que debe confirmar.
   </Step>
   <Step title="Descargar">
-Haga clic en * * Descargar* * en la tarjeta de piezas e importe los archivos a sus bibliotecas de proyectos de KiCad.
+Haga clic en ** Descargar** en la tarjeta de piezas e importe los archivos a sus bibliotecas de proyectos de KiCad.
   </Step>
 </Steps>
 
@@ -66,18 +66,18 @@ MODELO: <Warning>
   Libraries are **Beta**. Before you use one, check pitch, pads, pin 1, and the 3D model against the datasheet. An Assumed pitch or a wrong pin-1 mark will not be caught by a visual thumbnail alone.
 </Warning>
 
-- Abra la página de la hoja de datos citada desde la tabla de evidencia (consulte [Citas de la hoja de datos] (/en-US / datasheet-citations))
+- Abra la página de la hoja de datos citada desde la tabla de evidencia (consulte [Citas de la hoja de datos](/es-MX/datasheet-citations))
 - Confirme el pin 1 tanto en el símbolo como en la huella
 - Si algo anda mal, responda en el mismo chat con la corrección — y envíe comentarios para que el generador pueda mejorar
 
 ## A dónde van los archivos después
 
-Las bibliotecas descargadas son suyas para importarlas a KiCad. El chat que los produjo permanece en **Recientes**. Los informes y archivos relacionados también pueden aparecer en [Knowledge] (/en-US / knowledge) cuando PartGenie guarde el artefacto.
+Las bibliotecas descargadas son suyas para importarlas a KiCad. El chat que los produjo permanece en **Recientes**. Los informes y archivos relacionados también pueden aparecer en [Knowledge](/es-MX/knowledge) cuando PartGenie guarde el artefacto.
 
 ## Relacionado
 
-- [Integración EDA](/es-MX/eda — integration) - importar a KiCad 8 y otras herramientas
-- [Integraciones] (/es-US / integraciones)
-- [ECAD & footprints] (/en-US / ecad-models) - modelos de catálogo ya en la pieza
-- [Modo de diseño](/es-MX/design — mode) - arquitectura y lista de materiales antes de dibujar el tablero
-- [Búsqueda de IA] (/en-US / búsqueda de ia)
+- [Integración EDA](/es-MX/eda-integration) - importar a KiCad 8 y otras herramientas
+- [Integraciones](/es-MX/integrations)
+- [ECAD & footprints](/es-MX/ecad-models) - modelos de catálogo ya en la pieza
+- [Modo de diseño](/es-MX/design-mode) - arquitectura y lista de materiales antes de dibujar el tablero
+- [Búsqueda de IA](/es-MX/ai-search)
