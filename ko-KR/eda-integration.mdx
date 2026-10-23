@@ -1,39 +1,38 @@
 ---
-title: "EDA integration"
-description: "Download ECAD for Altium, KiCad, Eagle, OrCAD, and Allegro, or generate verified KiCad libraries"
+title: "EDA 통합"
+description: "Altium, KiCad, Eagle, OrCAD 및 Allegro 용 ECAD 다운로드 또는 검증된 KiCad 라이브러리 생성"
 ---
+PartGenie 는 CAD 시트를 교체하는 것이 아니라 ** 다운로드 가능한 라이브러리 ** 를 통해 EDA 워크플로에 연결됩니다. 두 가지 경로：
 
-PartGenie connects to your EDA workflow through **downloadable libraries**, not by replacing your CAD seat. Two paths:
+- ** 카탈로그 모델 ** - 많은 MPN 에 대해 PartGenie 에 이미 있는 기호， 풋프린트 및 STEP
+- **KiCad 생성 (베타)** - 증거 및 가져오기 검사를 사용하여 데이터시트에서 KiCad 8 라이브러리를 구축합니다。
 
-- **Catalog models** — symbol, footprint, and STEP already in PartGenie for many MPNs.
-- **KiCad generation (Beta)** — build KiCad 8 libraries from the datasheet with evidence and import checks.
+[app.partgenie.ai](https://app.partgenie.ai), [Chrome extension](/ko-KR/chrome-extension) 또는 [partgenie.ai](https://www.partgenie.ai/) 의 퍼블릭 파트 페이지에서 시작할 수 있습니다。
 
-You can start from [app.partgenie.ai](https://app.partgenie.ai), the [Chrome extension](/ko-KR/chrome-extension), or a public part page on [partgenie.ai](https://www.partgenie.ai/).
+## 경로 선택하기
 
-## Pick a path
-
-| You need | Use |
+| 필요하다 | 사용하라 |
 | --- | --- |
-| Files already in the catalog for your MPN | [Download catalog models](#download-catalog-models) |
-| KiCad 8 symbol + footprint + 3D with evidence | [KiCad import](#kicad-import) |
-| Altium / Eagle / OrCAD / Allegro | Download the format listed on **CAD Models**, then import in your tool |
+MPN 용 카탈로그에 이미 있는 파일 | [카탈로그 모델 다운로드](#kicad-import-models) |
+| KiCad 8 기호 + 발자국 + 증거가 있는 3D | [KiCad 가져오기](#kicad-import) |
+| Altium / Eagle / OrCAD / Allegro | **CAD Models** 에 나열된 형식을 다운로드한 다음 도구에 가져오기 |
 
-Details on catalog vs generated libraries: [ECAD & footprints](/ko-KR/ecad-models). Full generation walkthrough: [KiCad library generation](/ko-KR/kicad-library).
+카탈로그 대 생성 라이브러리에 대한 세부 정보: [ECAD & footprints](/ko-KR/ecad-models). 전체 생성 튜토리얼: [KiCad library generation](/ko-KR/kicad-library).
 
-## Download catalog models
+## 카탈로그 모델 다운로드
 
 <Steps>
-  <Step title="Open the part">
-    In Search, click the **MPN** badge or part card. In Chrome, open **CAD models** from the sidebar on a supported distributor page.
+  <Step title="파트 열기">
+검색에서 **MPN** 배지 또는 부품 카드를 클릭합니다. Chrome 에서 지원되는 유통업체 페이지의 사이드바에서 **CAD 모델 ** 을 엽니다。
   </Step>
-  <Step title="Open CAD Models">
-    In the component drawer, tabs are **Product**, **Procurement**, and **CAD Models**. **Procurement** is live price and stock; **CAD Models** is the footprint library.
+  <Step title="CAD 모델 열기">
+구성 요소 서랍의 탭은 **Product**, **Procurement** 및 **CAD Models** 입니다. **Procurement** 는 실시간 가격 및 재고입니다. **CAD Models** 는 풋프린트 라이브러리입니다。
   </Step>
-  <Step title="Choose format and download">
-    Download the symbol, footprint, and/or 3D files offered for your EDA (Altium, KiCad, Eagle, OrCAD, Allegro, and others when listed). Not every MPN has every format—if the tab is empty, [generate KiCad](#kicad-import) or contact support.
+  <Step title="형식 선택 및 다운로드">
+EDA(Altium, KiCad, Eagle, OrCAD, Allegro 및 나열된 경우 기타) 에 제공되는 기호， 풋프린트 및/또는 3D 파일을 다운로드합니다. 모든 MPN 에 모든 형식이 있는 것은 아닙니다. 탭이 비어 있는 경우 [generate KiCad](#kicad-import) 또는 지원팀에 문의하십시오。
   </Step>
-  <Step title="Import into your EDA">
-    Follow your vendor’s import steps for the file type you downloaded. Confirm pin 1, pitch, and courtyard against the datasheet before you release the library to the team.
+  <Step title="EDA 로 가져오기">
+다운로드한 파일 유형에 대한 공급업체의 가져오기 단계를 따릅니다. 팀에 라이브러리를 릴리스하기 전에 데이터 시트에서 핀 1, 피치 및 코트를 확인합니다。
   </Step>
 </Steps>
 
@@ -48,49 +47,49 @@ Details on catalog vs generated libraries: [ECAD & footprints](/ko-KR/ecad-model
   Catalog footprints and generated KiCad libraries can disagree on pad size or pin 1. For anything you will fabricate, trust the **datasheet page**, not a generic 0603.
 </Tip>
 
-### Altium Designer
+### 알티움 디자이너
 
-1. Download the **Altium** (or neutral PCB footprint / STEP) assets from **CAD Models**.
-2. In Altium, import or copy into your project libraries (**.PcbLib** / **.SchLib** or unified library flow your team uses).
-3. Assign the footprint and 3D model on the schematic symbol, then run your usual DRC.
+1. **CAD Models** 에서 **Altium** (또는 중립 PCB 풋프린트/STEP) 에셋을 다운로드합니다。
+2. Altium 에서 프로젝트 라이브러리 (**.PcbLib** / **.SchLib** 또는 팀에서 사용하는 통합 라이브러리 흐름) 로 가져오거나 복사합니다。
+3. 스키마 기호에 풋프린트와 3D 모델을 할당한 다음， 일반적인 DRC 를 실행합니다。
 
-If you only have KiCad-native files, use Altium’s KiCad importer or regenerate via [KiCad library generation](/ko-KR/kicad-library) and convert with your team’s approved migration process.
+KiCad 네이티브 파일만 있는 경우 Altium 의 KiCad 가져오기를 사용하거나 [KiCad library generation](/ko-KR/kicad-library) 를 통해 재생하고 팀의 승인된 마이그레이션 프로세스를 사용하여 변환하십시오。
 
-### Eagle / Fusion Electronics
+### 이글 / Fusion Electronics
 
-Download Eagle-compatible or generic footprint assets when listed on **CAD Models**, then add them through Eagle’s library editor or Fusion Electronics library management.
+**CAD 모델 ** 에 나열된 경우 Eagle 호환 또는 일반 풋프린트 자산을 다운로드한 다음 Eagle 의 라이브러리 편집기 또는 Fusion Electronics 라이브러리 관리를 통해 추가합니다。
 
 ### OrCAD / Allegro
 
-Download the OrCAD or Allegro format when PartGenie lists it for the MPN, then import through your Cadence library path. STEP models attach for 3D collision checks where your flow supports them.
+PartGenie 가 MPN 에 대해 나열할 때 OrCAD 또는 Allegro 형식을 다운로드한 다음， Cadence 라이브러리 경로를 통해 가져옵니다. STEP 모델은 흐름에서 지원하는 경우 3D 충돌 검사를 위해 연결됩니다。
 
-## KiCad import
+## KiCad 가져오기
 
-Generation happens in PartGenie (web or Chrome). **KiCad 8** is the target format.
+생성은 PartGenie(웹 또는 Chrome) 에서 발생합니다. **KiCad 8** 은 대상 형식입니다。
 
 <Steps>
-  <Step title="Generate the library">
-    In **Search** (not Work), ask for example:
+  <Step title="라이브러리 생성">
+**Search**(Work 가 아님) 에서 예를 들어 다음과 같이 묻습니다：
 
     ```
     generate verified KiCAD for RC0603FR-071KL
     ```
 
-    Or use **CAD models** → generate from the part page. Wait for the in-app notice and email—generation can take a few minutes.
+또는 **CAD 모델 ** → 부품 페이지에서 생성을 사용합니다. 앱 내 알림과 이메일을 기다리십시오 — 생성에는 몇 분이 걸릴 수 있습니다。
   </Step>
-  <Step title="Review evidence">
-    Open the finished card: **Symbol**, **Footprint**, **3D Model**, and **Evidence summary** (Calculated vs Assumed). Check **KiCad native import**, **Pin mapping**, and **Visual audit** before you download.
+  <Step title="증거 검토">
+완성된 카드를 엽니다: **Symbol**, **Footprint**, **3D Model** 및 **Evidence summary** (Calculated vs. Assumed). 다운로드하기 전에 **KiCad 네이티브 가져오기 **, **Pin mapping** 및 **Visual audit** 를 확인하십시오。
   </Step>
-  <Step title="Download">
-    Click **Download** on the library card. You receive KiCad 8 `.kicad_sym`, `.kicad_mod`, and 3D files PartGenie already checked with a machine import pass.
+  <Step title="다운로드">
+라이브러리 카드에서 ** 다운로드 ** 를 클릭합니다. KiCad 8 `.kicad_sym`, `.kicad_mod` 및 PartGenie 3D 파일이 기계 가져오기 패스로 이미 확인되어 있습니다。
   </Step>
-  <Step title="Add to your KiCad project">
-    In KiCad 8:
+  <Step title="KiCad 프로젝트에 추가">
+KiCad 8 에서：
 
-    1. Place symbol and footprint files in your project or global library folders (or paths your team standardizes on).
-    2. Update **sym-lib-table** and **fp-lib-table** so KiCad resolves the new library names.
-    3. Reload libraries in the Symbol or Footprint editor, place the part on the schematic, and associate the footprint.
-    4. Open the 3D viewer and compare body height and pin 1 to the datasheet.
+1. 프로젝트 또는 글로벌 라이브러리 폴더 (또는 팀이 표준화한 경로) 에 기호 및 풋프린트 파일을 배치합니다。
+2. KiCad 가 새 라이브러리 이름을 확인할 수 있도록 **sym-lib-table** 및 **fp-lib-table** 을 업데이트합니다。
+3. 기호 또는 풋프린트 편집기에서 라이브러리를 다시 로드하고， 스키마에 파트를 배치하고， 풋프린트를 연결합니다。
+4. 3D 뷰어를 열고 신체 높이와 핀 1 을 데이터시트와 비교합니다。
   </Step>
 </Steps>
 
@@ -112,13 +111,13 @@ Generation happens in PartGenie (web or Chrome). **KiCad 8** is the target forma
   KiCad generation is **Beta**. Verify pitch, pads, pin 1, and 3D against the datasheet before production. Package coverage is limited to supported families (SO, QFN, BGA, passives, common connectors, and similar)—see the [KiCad generator](https://www.partgenie.ai/kicad-generator) page for the current list.
 </Warning>
 
-## Credits and billing
+## 크레딧 및 청구
 
-KiCad generation uses **credits**. Catalog **ECAD models download** may be billed separately depending on your plan—see [Membership & pricing](/ko-KR/membership-pricing).
+KiCad 세대는 ** 크레딧 ** 을 사용합니다. 카탈로그 **ECAD 모델 다운로드 ** 는 플랜에 따라 별도로 청구될 수 있습니다. [멤버십 & 가격] 을 참조하세요。
 
-## Related
+## 관련
 
-- [Integrations overview](/ko-KR/integrations)
+- [통합 개요](/ko-KR/integrations)
 - [Chrome extension](/ko-KR/chrome-extension)
 - [KiCad library generation](/ko-KR/kicad-library)
 - [ECAD & footprints](/ko-KR/ecad-models)
