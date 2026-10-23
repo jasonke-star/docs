@@ -1,48 +1,49 @@
 ---
-title: "KiCad ライブラリの世代"
-description: "MPN 用に検証済みの KiCad シンボル、フットプリント、および STEP 3D を生成し、ライブラリをダウンロードする (ベータ版)"
+title: "KiCad library generation"
+description: "Generate a verified KiCad symbol, footprint, and STEP 3D for an MPN, then download the library (Beta)"
 ---
-**KiCad ライブラリ生成 (ベータ版)** は、PartGenie のコンポーネントデータベースとデータシートからパーツライブラリを構築します:**Symbol**、**Footprint**、および **STEP 3D**、さらにボードにドロップする前に確認できる証拠の概要。
 
-これは、パーツページでカタログモデルをダウンロードする場合とは異なります。カタログアセットは、コンポーネント **CAD モデル ** タブでライブ表示されます。[ECAD & footprints](/ja-JP/ecad-models) を参照してください。ピン、パッド、およびビジュアルチェックがアタッチされた KiCad ネイティブライブラリが必要な場合は、generation を使用します。
+**KiCad library generation (Beta)** builds a part library from PartGenie's component database and the datasheet: **Symbol**, **Footprint**, and **STEP 3D**, plus an evidence summary you can check before you drop it into a board.
 
-## ライブラリの生成
+This is different from downloading a catalog model on the part page. Catalog assets live on the component **CAD Models** tab — see [ECAD & footprints](/ja-JP/ecad-models). Use generation when you need a KiCad-native library with pin, pad, and visual checks attached.
+
+## Generate a library
 
 <Steps>
-  <Step title="検索から開始">
-オープン[app.partgenie.ai](https://app.partgenie.ai）とに滞在**検索**（動作しません）。
+  <Step title="Start from Search">
+    Open [app.partgenie.ai](https://app.partgenie.ai) and stay on **Search** (not Work).
   </Step>
-  <Step title="検証済みライブラリのリクエスト">
-プロンプトでMPNとパッケージを使用します:
+  <Step title="Ask for a verified library">
+    Use the MPN and package in the prompt:
 
     ```
     generate verified KiCAD for RC0603FR-071KL
     ```
 
-また、`STM32F103RET6`や`OPA810IDBVR`などの特定のMPNに対して、*symbol、footprint、および3D model*と言うこともできます。
+    You can also say *symbol, footprint, and 3D model* for a specific MPN such as `STM32F103RET6` or `OPA810IDBVR`.
   </Step>
-  <Step title="仕事を待つ">
-生成には数分かかることがあります。 PartGenieは、それが開始されたことを伝え、ライブラリの準備ができたら**アプリで、電子メールで**あなたに通知します。 あなたはチャットを離れて、**Recents**または**⌘K**から戻ってくることができます。
+  <Step title="Wait for the job">
+    Generation can take a few minutes. PartGenie tells you it has started and notifies you **in the app and by email** when the library is ready. You can leave the chat and come back from **Recents** or **⌘K**.
   </Step>
-  <Step title="シンボル、フットプリント、および3Dを確認する">
-完成したカードには3つのプレビューが表示されます:
+  <Step title="Review Symbol, Footprint, and 3D">
+    The finished card shows three previews:
 
-—**シンボル**-回路図シンボルとピン番号
--**フットプリント**-パッドレイアウト（たとえば、0603パッド1と2）
-—**3Dモデル**-ステップボディ
+    - **Symbol** — schematic symbol and pin numbers
+    - **Footprint** — pad layout (for example 0603 pads 1 and 2)
+    - **3D Model** — STEP body
 
-完成したライブラリのステータスチップには、**KiCad native import**、**Pin mapping**、および**Visual audit**が含まれます。
+    Status chips on a finished library include **KiCad native import**, **Pin mapping**, and **Visual audit**.
   </Step>
-  <Step title="証拠の概要を開く">
-**証拠の概要**を展開します。 各行は、フィールド（ピン数、ピッチ、ボディサイズ、パッドサイズ）、使用された値、データシートページ**、およびステータスです:
+  <Step title="Open the evidence summary">
+    Expand **Evidence summary**. Each row is a field (pin count, pitch, body size, pad size), the value used, the **datasheet page** it came from, and a status:
 
--**計算**-データシートまたはパッケージデータから派生
--**仮定**-デフォルトで入力されたエンジン（ピッチは一般的なものです）
+    - **Calculated** — derived from datasheet or package data
+    - **Assumed** — a default the engine filled in (pitch is a common one)
 
-**仮定された**行を確認する必要がある項目として扱います。
+    Treat **Assumed** rows as items you must confirm.
   </Step>
-  <Step title="ダウンロード">
-部品カードの**Download**をクリックして、ファイルをKiCadプロジェクトライブラリにインポートします。
+  <Step title="Download">
+    Click **Download** on the part card and import the files into your KiCad project libraries.
   </Step>
 </Steps>
 
@@ -60,24 +61,24 @@ description: "MPN 用に検証済みの KiCad シンボル、フットプリン�
   />
 </Frame>
 
-## 製造リリース前
+## Before you fabrication-release
 
 <Warning>
   Libraries are **Beta**. Before you use one, check pitch, pads, pin 1, and the 3D model against the datasheet. An Assumed pitch or a wrong pin-1 mark will not be caught by a visual thumbnail alone.
 </Warning>
 
-- 証拠テーブルから引用されたデータシートページを開きます ([データシート引用](/ja-JP/datasheet-citations))
-- シンボルとフットプリントの両方でピン 1 を確認する
-- 問題がある場合は、同じチャットで修正を返信し、ジェネレーターを改善できるようにフィードバックを送信します
+- Open the cited datasheet page from the evidence table (see [Datasheet citations](/ja-JP/datasheet-citations))
+- Confirm pin 1 on both the symbol and the footprint
+- If something is wrong, reply in the same chat with the correction — and send feedback so the generator can improve
 
-## 後でファイルが移動する場所
+## Where files go afterward
 
-ダウンロードしたライブラリは、KiCad にインポートできます。それらを生成したチャットは **Recents** に保存されます。関連するレポートやファイルも、PartGenie がアーティファクトを保存すると [Knowledge](/ja-JP/knowledge) に保存される場合があります。
+Downloaded libraries are yours to import into KiCad. The chat that produced them stays in **Recents**. Related reports and files can also land in [Knowledge](/ja-JP/knowledge) when PartGenie saves the artifact.
 
-## 関連
+## Related
 
-- [EDA 統合](/ja-JP/eda-integration)- KiCad 8 およびその他のツールへのインポート
+- [EDA integration](/ja-JP/eda-integration) — import into KiCad 8 and other tools
 - [Integrations](/ja-JP/integrations)
-- [ECAD & footprints](/ja-JP/ecad-models) - すでにパートにあるカタログモデル
-- [デザインモード](/ja-JP/design-mode)- ボードを描く前のアーキテクチャと BOM
+- [ECAD & footprints](/ja-JP/ecad-models) — catalog models already on the part
+- [Design mode](/ja-JP/design-mode) — architecture and BOM before you draw the board
 - [AI Search](/ja-JP/ai-search)
