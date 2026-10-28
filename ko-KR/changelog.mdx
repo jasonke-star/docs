@@ -3,6 +3,30 @@ title: "체인지로그"
 description: "PartGenie 의 최신 기능 업데이트 및 버전 릴리스 정보 보기"
 ---
 
+<Update label="2026-10-28" tags={["Workspace", "Home", "Navigation"]} description="홈 작업대와 프로젝트， 시계 및 라이브러리를 위한 더 명확한 사이드바"><Frame>
+    <img
+      alt="Hardware projects hub: search, BOM and Design filters, card and list views for unified hardware projects"
+      src="/images/projects-workspace.png"
+    />
+  </Frame>
+
+** 로그인한 홈은 이제 단일 히어로 검색이 아닌 작업대가 되었습니다. ** [app.partgenie.ai](https://app.partgenie.ai) 에 로그인하면 시간별 인사말， 3 열 행의 라이브 카드， BOM, 디자인， 대안， 요금 검색 및 데모를 위한 PartGenie 탐색 회전목마가 제공됩니다. 열에 아직 아무것도 없으면 PartGenie 는 검색을 탭하여 가이드 카드， 새 BOM, [AI Watch](/ko-KR/changelog#2026-10-27) 또는 RFQ 를 표시합니다. 활동이 있으면 동일한 슬롯이 데이터 카드로 전환됩니다 - 최근 프로젝트， 작업 (검색/작업/BOM/디자인/Watch 스레드), 검색 결과 및 RFQ 열기 - 각각 최대 5 개의 행과 빠른 요약 링크가 있습니다. 스켈레톤 위치 지정자가 로드되고 목록이 가져옵니다。
+
+사이드바 정보 아키텍처는 팀이 실제로 작업하는 방식을 중심으로 구성됩니다：
+
+| 영역 | 변경된 사항 |
+| --- | --- |
+| **Search** | 기본 항목을 유지합니다. **⌘K** 빠른 검색은 채팅， 지식 및 프로젝트를 다룹니다. |
+| **Watch** | **Findings** 및 **Watch** 탭이 있는 자체 대상 (Collection 과 더 이상 혼합되지 않음). |
+| **Collection** | 저장된 부품， 브랜드 및 책갈피 - 표 옆의 목록 및 세부 정보. |
+| **Projects** | 최상위 **Projects** 는 ** 하드웨어 프로젝트 ** 허브를 엽니다. 사이드바를 확장하여 정렬， 고정， 이름 변경， 복제 또는 삭제를 통해 최근 프로젝트를 표시할 수 있습니다. |
+| ** 라이브러리 ** | 팀 ** 부품 라이브러리 ** 및 승인은 여기에 있습니다. **Launch** 는 커넥터 설치 흐름에 대한 라이브러리 아래에서 반환됩니다. |
+| ** 소싱 ** | 팀 작업 공간은 조달이 활성화된 경우 라이브러리 위에 ** 소싱/RFQ** 표면을 표시합니다. |
+
+하드웨어 프로젝트는 하나의 프로젝트 셸 아래에서 디자인 및 BOM 을 통합합니다. 프로젝트 페이지에서 필터링 및 정렬하고， 카드 또는 목록 보기를 전환하고， 아키텍처 및 디자인 그림을 열고， BOM 상태 결과를 검토하고， 예상 BOM 가격을 표시하고， 프로젝트를 벗어나지 않고 RFQ 를 시작하거나 계속할 수 있습니다. 가져오기 경로는 BOM 이 CSV, 채팅 또는 디자인 동기화에서 온 것인지 여부에 관계없이 각 줄에 참조 지정자를 유지합니다。
+
+**Workspace chrome** 도 더욱 강화되었습니다: **Settings → Workspace** 에서 더욱 명확해진 비어 있고 비활성화된 작업공간 카드， 업데이트된 온보딩으로 작업대에 도달할 수 있습니다 (선택적 팀 초대 포함), 그리고 현재 사용 중인 페이지에서 컨텍스트별 ** 새로운 시계 **/**RFQ** 작업이 가능합니다. 개요: [시작하기](/ko-KR/getting-started) · [BOM 관리](/ko-KR/bom-management) · [컬렉션](/ko-KR/favorites).</Update>
+
 <Update label="2026-10-27" tags={["Watch", "AI", "Sourcing"]} description="AI Watch – PCN, EOL 및 시장 변화에 대한 부품 및 공급업체 모니터링">
   <Frame>
     <img

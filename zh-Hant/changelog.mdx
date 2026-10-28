@@ -3,6 +3,32 @@ title: 更新日誌
 description: 查看 PartGenie 的最新功能更新和版本發佈資訊
 ---
 
+<Update label="2026-10-28" tags={["Workspace", "首頁", "導航"]} description="首頁工作臺與更清晰的側欄 IA（Projects、Watch、Library）">
+  <Frame>
+    <img
+      alt="硬件項目中心：搜索與 BOM/Design 篩選，統一硬件項目的卡片與列表視圖"
+      src="/images/projects-workspace.png"
+    />
+  </Frame>
+
+  **登入後的首頁改為「工作臺」，不再只有居中搜索框。** 在 [app.partgenie.ai](https://app.partgenie.ai) 登入後會看到時段問候、**三列卡片**和底部 **Explore PartGenie** 輪播（BOM、Design、替代料、關稅查詢、演示等入口）。某一列還沒有數據時，會顯示**引導卡片**，一鍵進入 Search、新建 BOM、[AI Watch](/zh-Hant/changelog#2026-10-27) 或 RFQ；有活動後同一位置切換為**數據卡片**——最近的 **Projects**、**Tasks**（Search / Work / BOM / Design / Watch 會話）、**Watch 命中**與**進行中的 RFQ**，每列最多五行並可快速續聊。列表加載時使用骨架屏佔位。
+
+  **側欄資訊架構**按實際工作流重新分組：
+
+  | 區域 | 變化 |
+  | --- | --- |
+  | **Search** | 仍是預設入口；**⌘K** 可搜對話、Knowledge 與 Projects。 |
+  | **Watch** | 獨立入口，**Findings** 與 **Watch** 分頁（不再與 Collection 混在同一頁）。 |
+  | **Collection** | 收藏的器件、品牌與書籤；列表與詳情並排查看。 |
+  | **Projects** | 側欄 **Projects** 進入**硬件項目**中心；可展開最近項目，支持排序、置頂、重命名、複製或刪除。 |
+  | **Library** | 團隊 **Parts library** 與審批；**Launch** 回到 Library 下，用於連接器安裝。 |
+  | **Sourcing** | 團隊工作區在 Library 上方展示 **Sourcing / RFQs**（啟用採購時）。 |
+
+  **硬件項目（Hardware projects）** 將 **Design 與 BOM 收進同一項目殼**：在項目頁可篩選排序、切換**卡片/列表**、查看 **Architecture** 與設計圖、閱讀 **BOM health findings**、查看 **BOM 估價趨勢**，並**發起或繼續 RFQ**。無論 BOM 來自 CSV、對話還是 design sync，導入都會保留位號。
+
+  **Workspace 體驗**同步收緊：未激活/空工作區卡片在 **設定 → Workspace** 中更清晰； onboarding 完成後直接進入工作臺（可選團隊邀請）；在當前頁面即可 **New watch** / **RFQ**。參見 [快速開始](/zh-Hant/getting-started) · [BOM 管理](/zh-Hant/bom-management) · [Collection](/zh-Hant/favorites)。
+</Update>
+
 <Update label="2026-10-27" tags={["Watch", "AI", "採購"]} description="AI Watch — 監控器件與廠商的 PCN、EOL 與市場變化">
   <Frame>
     <img

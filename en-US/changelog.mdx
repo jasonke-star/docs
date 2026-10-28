@@ -3,6 +3,32 @@ title: "Changelog"
 description: "View PartGenie's latest feature updates and version release information"
 ---
 
+<Update label="2026-10-28" tags={["Workspace", "Home", "Navigation"]} description="Home workbench and a clearer sidebar for Projects, Watch, and Library">
+  <Frame>
+    <img
+      alt="Hardware projects hub: search, BOM and Design filters, card and list views for unified hardware projects"
+      src="/images/projects-workspace.png"
+    />
+  </Frame>
+
+  **The signed-in home is now a workbench—not a single hero search.** After you sign in at [app.partgenie.ai](https://app.partgenie.ai), you get a time-of-day greeting, a **three-column row** of live cards, and an **Explore PartGenie** carousel for BOM, Design, alternatives, tariff lookup, and demos. When a column has nothing yet, PartGenie shows a **guide card** with one tap into Search, a new BOM, [AI Watch](/en-US/changelog#2026-10-27), or RFQs. Once you have activity, the same slots switch to **data cards**—recent **Projects**, **Tasks** (Search / Work / BOM / Design / Watch threads), **Watch findings**, and **open RFQs**—each with up to five rows and quick resume links. Skeleton placeholders load while lists fetch.
+
+  **Sidebar information architecture** is organized around how teams actually work:
+
+  | Area | What changed |
+  | --- | --- |
+  | **Search** | Still your default entry; **⌘K** quick search covers chats, Knowledge, and Projects. |
+  | **Watch** | Its own destination with **Findings** and **Watch** tabs (no longer mixed with Collection). |
+  | **Collection** | Saved parts, brands, and bookmarks—list plus detail beside the table. |
+  | **Projects** | Top-level **Projects** opens the **hardware projects** hub; the sidebar can expand to show recent projects with sort, pin, rename, duplicate, or delete. |
+  | **Library** | Team **Parts library** and approvals sit here; **Launch** returns under Library for connector install flows. |
+  | **Sourcing** | Team workspaces surface **Sourcing / RFQs** above Library when procurement is enabled. |
+
+  **Hardware projects** unify **Design and BOM** under one project shell. From the projects page you can filter and sort, switch **card or list** view, open **architecture** and design drawings, review **BOM health findings**, chart **estimated BOM price**, and **start or continue RFQs** without leaving the project. Import paths keep reference designators on each line whether the BOM came from CSV, chat, or design sync.
+
+  **Workspace chrome** got tighter too: clearer empty and inactive workspace cards in **Settings → Workspace**, refreshed onboarding that lands you in the workbench (with optional team invite), and contextual **New watch** / **RFQ** actions from the page you are already on. Overview: [Getting started](/en-US/getting-started) · [BOM management](/en-US/bom-management) · [Collection](/en-US/favorites).
+</Update>
+
 <Update label="2026-10-27" tags={["Watch", "AI", "Sourcing"]} description="AI Watch — monitor parts and vendors for PCN, EOL, and market changes">
   <Frame>
     <img

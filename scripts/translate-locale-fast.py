@@ -187,7 +187,7 @@ def translate_one_update_block(block: str, lang: str) -> str:
 
     def inner_repl(im: re.Match) -> str:
         inner_store.append(im.group(0))
-        return f"ZZQ940{len(inner_store) - 1}ZZQ"
+        return f"<!--PGF{len(inner_store) - 1:03d}-->"
 
     tmp = re.sub(r"<Frame[^>]*>[\s\S]*?</Frame>", inner_repl, block)
     desc = re.search(r'(description=")([^"]*)(")', tmp)
@@ -201,7 +201,8 @@ def translate_one_update_block(block: str, lang: str) -> str:
     mid_t = translate_text(lang, mid.strip()) if mid.strip() else mid
     out = head + mid_t + tail
     for i, frag in enumerate(inner_store):
-            out = out.replace(f"ZZQ940{i}ZZQ", frag)
+        out = out.replace(f"<!--PGF{i:03d}-->", frag)
+        out = out.replace(f"ZZQ940{i}ZZQ", frag)
     return out
 
 
