@@ -3,7 +3,7 @@ title: "Changelog"
 description: "View PartGenie's latest feature updates and version release information"
 ---
 
-<Update label="2026-10-28" tags={["Workspace", "Home", "Navigation"]} description="Home workbench and a clearer sidebar for Projects, Watch, and Library">
+<Update label="2026-10-28" tags={["Workspace", "Home", "Sidebar", "Navigation"]} description="Home workbench and resplit sidebar nav—Watch, Projects, Collection, Library">
   <Frame>
     <img
       alt="Signed-in home workbench: greeting, Search and Work input, Projects and Tasks columns, Set up a watch guide card, and Explore PartGenie shortcuts"
@@ -13,16 +13,16 @@ description: "View PartGenie's latest feature updates and version release inform
 
   **The signed-in home is now a workbench—not a single hero search.** After you sign in at [app.partgenie.ai](https://app.partgenie.ai), you get a time-of-day greeting, a **three-column row** of live cards, and an **Explore PartGenie** carousel for BOM, Design, alternatives, tariff lookup, and demos. When a column has nothing yet, PartGenie shows a **guide card** with one tap into Search, a new BOM, [AI Watch](/en-US/changelog#2026-10-27), or RFQs. Once you have activity, the same slots switch to **data cards**—recent **Projects**, **Tasks** (Search / Work / BOM / Design / Watch threads), **Watch findings**, and **open RFQs**—each with up to five rows and quick resume links. Skeleton placeholders load while lists fetch.
 
-  **Sidebar information architecture** is organized around how teams actually work:
+  **Left sidebar — primary navigation reshaped.** The top-level rail now follows a fixed order: **Search → Watch → Collection → Projects → Library** (Team workspaces also show **Sourcing / RFQs** above Library). Each item is its own destination—research, monitoring, saved parts, hardware work, and files/connectors—instead of tucking [AI Watch](/en-US/changelog#2026-10-27) beside Collection or scattering BOM and Design across unrelated menus.
 
-  | Area | What changed |
+  | Nav item | What changed |
   | --- | --- |
-  | **Search** | Still your default entry; **⌘K** quick search covers chats, Knowledge, and Projects. |
-  | **Watch** | Its own destination with **Findings** and **Watch** tabs (no longer mixed with Collection). |
-  | **Collection** | Saved parts, brands, and bookmarks—list plus detail beside the table. |
-  | **Projects** | Top-level **Projects** opens the **hardware projects** hub; the sidebar can expand to show recent projects with sort, pin, rename, duplicate, or delete. |
-  | **Library** | Team **Parts library** and approvals sit here; **Launch** returns under Library for connector install flows. |
-  | **Sourcing** | Team workspaces surface **Sourcing / RFQs** above Library when procurement is enabled. |
+  | **Search** | Still the default entry; **⌘K** quick search jumps across chats, Knowledge files, and Projects. |
+  | **Watch** | **First-class sidebar item** with a dedicated page—**Findings** for alerts and **Watch** for task schedules, pause, and edit (no longer mixed with saved parts). |
+  | **Collection** | **Split from Watch**—saved parts, brands, and bookmarks only; list and detail side by side. |
+  | **Projects** | **Redesigned hub**—clicking **Projects** opens the hardware projects workspace (filter, card/list, architecture, BOM health), not just chat threads. Expand the sidebar row to pin, sort, rename, duplicate, or delete **recent projects** in place. |
+  | **Library** | Knowledge uploads and chat files live here; Team **Parts library** and approvals when you are on a Team workspace; **Launch** (KiCad, Chrome, and other connectors) moved **under Library** instead of a loose top-level entry. |
+  | **Sourcing** | **RFQs and sourcing** sit above Library on Team workspaces when procurement is enabled. |
 
   **Hardware projects** unify **Design and BOM** under one project shell. From the projects page you can filter and sort, switch **card or list** view, open **architecture** and design drawings, review **BOM health findings**, chart **estimated BOM price**, and **start or continue RFQs** without leaving the project. Import paths keep reference designators on each line whether the BOM came from CSV, chat, or design sync.
 

@@ -3,7 +3,7 @@ title: "Changelogs"
 description: "Partgenies neueste Funktionsupdates und Versionsinformationen anzeigen"
 ---
 
-<Update label="2026-10-28" tags={["Workspace", "Home", "Navigation"]} description="Home-Workbench und eine übersichtlichere Seitenleiste für Projekte, Uhr und Bibliothek"><Frame>
+<Update label="2026-10-28" tags={["Workspace", "Home", "Sidebar", "Navigation"]} description="Home Workbench und geteilte Seitenleiste nav-Uhr, Projekte, Sammlung, Bibliothek"><Frame>
     <img
       alt="Signed-in home workbench: greeting, Search and Work input, Projects and Tasks columns, Set up a watch guide card, and Explore PartGenie shortcuts"
       src="/images/home-workbench.png"
@@ -12,16 +12,16 @@ description: "Partgenies neueste Funktionsupdates und Versionsinformationen anze
 
   ** Das angemeldete Zuhause ist jetzt eine Werkbank - keine einzige Heldensuche.** Nachdem Sie sich bei [ angemeldet haben]app.partgenie.ai ](https://app.partgenie.ai ), erhalten Sie eine Begrüßung zur Tageszeit, eine ** dreispaltige Zeile ** mit Live-Karten und ein ** Explore PartGenie ** Karussell für Stückliste, Design, Alternativen, Tarifsuche und Demos. Wenn eine Spalte noch nichts enthält, zeigt PartGenie eine ** Guide Card ** mit einem Fingertipp auf die Suche, eine neue Stückliste, [AI Watch] (/ de-DE / changelog # 2026-10-27) oder Anfragen an. Sobald Sie Aktivität haben, wechseln dieselben Steckplätze zu ** Datenkarten ** - aktuelle ** Projekte **, ** Aufgaben ** (Suche / Arbeit / Stückliste / Design / Uhr—Threads), ** Uhr-Ergebnisse ** und ** offene Anfragen ** - jeweils mit bis zu fünf Zeilen und schnellen Lebenslauflinks. Skelett-Platzhalter werden geladen, während Listen abgerufen werden.
 
-  ** Die Informationsarchitektur der Seitenleiste ** ist darauf ausgerichtet, wie Teams tatsächlich arbeiten:
+  ** Linke Seitenleiste - primäre Navigation neu gestaltet.** Die oberste Schiene folgt nun einer festen Reihenfolge: ** Suchen → Ansehen → Sammlung → Projekte → Bibliothek ** (Teamarbeitsbereiche zeigen auch ** Beschaffung / Anfragen ** über Bibliothek an). Jedes Element ist sein eigenes Ziel - Recherche, Überwachung, gespeicherte Teile, Hardwarearbeiten und Dateien / Anschlüsse — anstatt [AI Watch] (/ de-DE / changelog # 2026-10-27) neben Sammlung oder Streuung von Stücklisten und Design zu stecken über unabhängige Menüs.
 
-  / Bereich / Was hat sich geändert |
+  / Navigationselement / Was hat sich geändert |
   | --- | --- |
-  / ** Suche ** / Immer noch Ihr Standardeintrag; **⌘K ** Die Schnellsuche umfasst Chats, Wissen und Projekte. |
-  / ** Watch ** / Eigenes Ziel mit ** Fundstücken ** und ** Watch ** Registerkarten (nicht mehr mit Sammlung gemischt). |
-  / ** Sammlung ** / Gespeicherte Teile, Marken und Lesezeichen—Liste plus Details neben dem Tisch. |
-  / **Projekte** / Top-level **Projekte** öffnet den Hub **Hardware-Projekte**; Die Seitenleiste kann erweitert werden, um aktuelle Projekte mit Sortieren, Anheften, Umbenennen, Duplizieren oder Löschen anzuzeigen. |
-  / ** Bibliothek ** / Team ** Teilebibliothek ** und Genehmigungen sitzen hier; ** Starten ** gibt unter Bibliothek für Connector-Installationsabläufe zurück. |
-  | ** Beschaffung ** / Teamarbeitsbereiche Oberfläche ** Beschaffung / Anfragen ** über der Bibliothek, wenn die Beschaffung aktiviert ist. |
+  / **Suche ** / Immer noch der Standardeintrag; **⌘K ** Schnellsuche springt über Chats, Wissensdateien und Projekte. |
+  | ** Ansehen ** / ** Erstklassiges Seitenleistenelement ** mit einer eigenen Seite - ** Ergebnisse ** für Warnungen und ** Ansehen ** für Aufgabenpläne, Anhalten und Bearbeiten (nicht mehr mit gespeicherten Teilen gemischt). |
+  / ** Sammlung ** | ** Von der Uhr getrennt ** -nur gespeicherte Teile, Marken und Lesezeichen; Liste und Detail nebeneinander. |
+  / ** Projekte ** / ** Neu Gestalteter Hub **-Klicken auf ** Projekte ** öffnet den Arbeitsbereich Hardwareprojekte (Filter, Karte / Liste, Architektur, BOM Health), nicht nur Chat-Threads. Erweitern Sie die Seitenleistenzeile, um **aktuelle Projekte** an Ort und Stelle anzuheften, zu sortieren, umzubenennen, zu duplizieren oder zu löschen. |
+  / ** Bibliothek ** / Wissensuploads und Chatdateien leben hier; Team ** Teilebibliothek ** und Genehmigungen, wenn Sie sich in einem Teamarbeitsbereich befinden; ** Starten ** (KiCad, Chrome und andere Konnektoren) verschoben ** unter Bibliothek ** anstelle eines losen Eintrags auf oberster Ebene. |
+  / ** Beschaffung ** | ** Anfragen und Beschaffung ** sitzen über der Bibliothek in Teamarbeitsbereichen, wenn die Beschaffung aktiviert ist. |
 
   ** Hardware-Projekte ** vereinheitlichen ** Design und Stückliste ** unter einer Projekthülle. Auf der Projektseite können Sie filtern und sortieren, zwischen ** Karten- oder Listenansicht ** wechseln, ** Architektur- ** und Konstruktionszeichnungen öffnen, ** BOM Health-Befunde ** überprüfen, ** geschätzter BOM-Preis ** und ** Anfragen starten oder fortsetzen **, ohne das Projekt zu verlassen. Importpfade behalten Referenzbezeichnungen in jeder Zeile bei, unabhängig davon, ob die Stückliste aus CSV, Chat oder Designsynchronisation stammt.
 

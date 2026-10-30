@@ -3,7 +3,7 @@ title: "Journal des Modifications"
 description: "Afficher les dernières mises à jour des fonctionnalités et informations sur les versions de PartGenie"
 ---
 
-<Update label="2026-10-28" tags={["Workspace", "Home", "Navigation"]} description="Home workbench et une barre latérale plus claire pour les projets, la montre et la bibliothèque">
+<Update label="2026-10-28" tags={["Workspace", "Home", "Sidebar", "Navigation"]} description="Home workbench et navigation dans la barre latérale resplit-Montre, Projets, Collection, Bibliothèque">
   <Frame>
     <img
       alt="Établi d’accueil connecté : salutation, champ Search/Work, colonnes Projects et Tasks, carte Watch et raccourcis Explore PartGenie"
@@ -13,16 +13,16 @@ description: "Afficher les dernières mises à jour des fonctionnalités et info
 
   **La maison connectée est désormais un établi—pas une seule recherche de héros.** Après vous être connecté à [app.partgenie.ai](https://app.partgenie.ai), vous obtenez un message d'accueil à l'heure de la journée, une **rangée de trois colonnes** de cartes en direct et un carrousel * * Explore PartGenie * * pour la nomenclature, la conception, les alternatives, la recherche tarifaire et les démos. Lorsqu'une colonne n'a encore rien, PartGenie affiche une * * carte guide* * en appuyant simplement sur la recherche, une nouvelle nomenclature ,[ AI Watch] (/fr-FR / changelog#2026-10-27) ou des demandes de prix. Une fois que vous avez de l'activité, les mêmes emplacements passent aux **cartes de données**—projets **récents**, **Tâches** (Recherche / Travail / NOMENCLATURE / Conception / Fils de discussion), **Résultats de la montre** et **Appels d'offres ouverts**—chacun avec jusqu'à cinq lignes et des liens de CV rapides. Les espaces réservés du squelette se chargent pendant que les listes sont récupérées.
 
-  ** L'architecture de l'information de la barre latérale * * est organisée autour de la façon dont les équipes travaillent réellement:
+  ** Barre latérale gauche-la navigation principale a été remodelée.** Le rail de niveau supérieur suit désormais un ordre fixe: * * Recherche → Regarder → Collection → Projets → Bibliothèque* * (les espaces de travail d'équipe affichent également * * Sourcing/ RFQs * * au-dessus de la bibliothèque). Chaque élément est sa propre destination—recherche, surveillance, pièces sauvegardées, travail matériel et fichiers/connecteurs—au lieu de ranger [AI Watch](/fr-FR/changelog#2026-10-27) à côté de la Collection ou de disperser la nomenclature et la conception dans des menus indépendants.
 
-  / Région / Ce qui a changé |
+  / Élément de navigation / Ce qui a changé |
   | --- | --- |
-  | ** Recherche * * / Toujours votre entrée par défaut; * * ⌘K** la recherche rapide couvre les discussions, les connaissances et les projets. |
-  / * * Montre * * / Sa propre destination avec les onglets * * Résultats * * et * * Montre * * (n'est plus mélangé avec la Collection). |
-  | ** Collection * * / Pièces, marques et signets enregistrés-liste plus détails à côté du tableau. |
-  | ** Projets ** / Projets de niveau supérieur** ouvre le hub** projets matériels**; la barre latérale peut se développer pour afficher les projets récents avec trier, épingler, renommer, dupliquer ou supprimer. |
-  | ** Bibliothèque ** / Équipe * * Bibliothèque de pièces* * et les approbations se trouvent ici; * * Lancement * * retourne sous Bibliothèque pour les flux d'installation du connecteur. |
-  | ** Sourcing * * / Les espaces de travail d'équipe font surface * * Sourcing/ RFQs * * au-dessus de la bibliothèque lorsque l'approvisionnement est activé. |
+  | ** Recherche * * / Toujours l'entrée par défaut; * * ⌘K* * la recherche rapide parcourt les discussions, les fichiers de connaissances et les projets. |
+  | ** Regarder ** / * * Élément de barre latérale de première classe* * avec une page dédiée- * * Résultats * * pour les alertes et * * Regarder* * pour les calendriers de tâches, mettre en pause et modifier (n'est plus mélangé avec les parties enregistrées). |
+  | ** Collection ** / * * Séparée de la montre * * - pièces, marques et signets enregistrés uniquement; liste et détails côte à côte. |
+  | ** Projets ** / * * Hub repensé * * - cliquer sur * * Projets * * ouvre l'espace de travail des projets matériels( filtre, carte / liste, architecture, santé de la nomenclature), pas seulement les fils de discussion. Développez la ligne de la barre latérale pour épingler, trier, renommer, dupliquer ou supprimer les **projets récents* * en place. |
+  | ** Bibliothèque * * / Les téléchargements de connaissances et les fichiers de discussion sont en direct ici; Bibliothèque de pièces d'équipe* * et approbations lorsque vous êtes sur un espace de travail d'équipe; * * Lancement* *(KiCad, Chrome et autres connecteurs) déplacé * * sous Bibliothèque * * au lieu d'une entrée de niveau supérieur lâche. |
+  | ** Sourcing ** / ** Les appels d'offres et le sourcing * * se trouvent au-dessus de la bibliothèque dans les espaces de travail d'équipe lorsque l'approvisionnement est activé. |
 
   **Projets matériels * * unifier * * La conception et la nomenclature * * sous un seul shell de projet. À partir de la page Projets, vous pouvez filtrer et trier, changer de * * carte ou liste**, ouvrir * * architecture** et dessins de conception, examiner ** résultats de santé de la nomenclature**, graphique * * prix estimé de la nomenclature** et **démarrer ou continuer les demandes de prix* * sans quitter le projet. Les chemins d'importation conservent les désignateurs de référence sur chaque ligne, que la nomenclature provienne de CSV, chat ou design sync.
 

@@ -3,7 +3,7 @@ title: "Registro de Cambios"
 description: "Vea las últimas actualizaciones de funciones e información de lanzamiento de versiones de PartGenie"
 ---
 
-<Update label="2026-10-28" tags={["Workspace", "Home", "Navigation"]} description="Banco de trabajo para el hogar y una barra lateral más clara para Proyectos, Reloj y Biblioteca">
+<Update label="2026-10-28" tags={["Workspace", "Home", "Sidebar", "Navigation"]} description="Navegación de la barra lateral de resplit y workbench en el hogar: Reloj, Proyectos, Colección, Biblioteca">
   <Frame>
     <img
       alt="Banco de trabajo en inicio: saludo, entrada Search/Work, columnas Projects y Tasks, tarjeta para configurar Watch y accesos Explore PartGenie"
@@ -13,16 +13,16 @@ description: "Vea las últimas actualizaciones de funciones e información de la
 
   **La casa que inició sesión ahora es un banco de trabajo, no una búsqueda de un solo héroe.** Después de iniciar sesión en [app.partgenie.ai] (https://app.partgenie.ai), obtiene un saludo a la hora del día, una** fila de tres columnas **de tarjetas en vivo y un carrusel** Explore PartGenie * * para lista de materiales, Diseño, alternativas, búsqueda de tarifas y demostraciones. Cuando una columna aún no tiene nada, PartGenie muestra una * * tarjeta guía* * con un toque en la búsqueda, una nueva lista de materiales, [AI Watch] (/es-MX / changelog#2026-10-27) o RFQ. Una vez que tenga actividad, las mismas ranuras cambian a * * tarjetas de datos**: * * Proyectos recientes**, * * Tareas** (Búsqueda / Trabajo / Lista de materiales / Diseño / Hilos de observación), * * Hallazgos de observación** y * * RFQ abiertas**, cada una con hasta cinco filas y enlaces de currículum rápido. Los marcadores de posición esqueléticos se cargan mientras se recuperan las listas.
 
-  ** La arquitectura de la información de la barra lateral * * está organizada en torno a cómo funcionan realmente los equipos:
+  ** Barra lateral izquierda: navegación principal remodelada.** El carril de nivel superior ahora sigue un orden fijo: **Buscar → Ver → Colección → Proyectos → Biblioteca** (Los espacios de trabajo del equipo también muestran * * Abastecimiento / RFQs** arriba de la Biblioteca). Cada elemento tiene su propio destino (investigación, monitoreo, piezas guardadas, trabajo de hardware y archivos/conectores) en lugar de colocar [AI Watch](/es—MX/changelog#2026-10-27) al lado de la Recopilación o esparcir la lista de materiales y el diseño en menús no relacionados.
 
-  / Área / Qué cambió |
+  / Elemento de navegación / Qué cambió |
   | --- | --- |
-  / * * Buscar* | / Sigue siendo tu entrada predeterminada; * * ⌘K * * la búsqueda rápida cubre chats, Conocimientos y Proyectos. |
-  / * * Watch * * / Su propio destino con pestañas * * Findings **y * * Watch * * (ya no se mezclan con Collection). |
-  / * * Colección* | / Piezas guardadas, marcas y marcadores: lista más detalles al lado de la tabla. |
-  | ** Proyectos ** / Nivel superior** Proyectos * * abre el centro * * proyectos de hardware**; la barra lateral se puede expandir para mostrar proyectos recientes con ordenar, anclar, renombrar, duplicar o eliminar. |
-  / * * Biblioteca* * / Equipo ** Biblioteca de piezas* * y aprobaciones se encuentran aquí; * * Lanzamiento * * devoluciones en Biblioteca para flujos de instalación de conectores. |
-  | ** Sourcing * * / Los espacios de trabajo del equipo aparecen * * Sourcing / RFQs * * sobre la biblioteca cuando la adquisición está habilitada. |
+  / * * Buscar* | / Sigue siendo la entrada predeterminada; * * ⌘K * * la búsqueda rápida salta a través de chats, archivos de conocimiento y Proyectos. |
+  | ** Ver ** / * * Elemento de la barra lateral de primera clase * * con una página dedicada— * * Hallazgos* *para alertas y * * Ver* * para horarios de tareas, pausar y editar (ya no se mezcla con partes guardadas). |
+  | ** Colección ** / * * Dividida del reloj * * - solo guardó piezas, marcas y marcadores; enumere y detalle uno al lado del otro. |
+  | ** Proyectos ** / * * Hub rediseñado * * - al hacer clic en * * Proyectos * * se abre el espacio de trabajo de proyectos de hardware( filtro, tarjeta / lista, arquitectura, estado de la lista de materiales), no solo los hilos de chat. Expanda la fila de la barra lateral para anclar, ordenar, renombrar, duplicar o eliminar **proyectos recientes* * en su lugar. |
+  / * * Biblioteca * * / Carga de conocimientos y archivos de chat en vivo aquí; Equipo * * Biblioteca de piezas* * y aprobaciones cuando está en un espacio de trabajo en equipo; * * Lanzamiento** (KiCad, Chrome y otros conectores) movido **debajo de la Biblioteca** en lugar de una entrada suelta de nivel superior. |
+  | ** Abastecimiento ** / * * Las RFQ y el abastecimiento * * se encuentran encima de la Biblioteca en los espacios de trabajo del equipo cuando la adquisición está habilitada. |
 
   ** Proyectos de hardware * * unificar * * Diseño y lista de materiales * * bajo un shell de proyecto. Desde la página de proyectos, puede filtrar y ordenar, cambiar * * tarjeta o lista * * ver, abrir** arquitectura * * y dibujos de diseño, revisar * * Hallazgos de estado de la lista de materiales**, gráfico ** precio estimado de la lista de materiales * * y * * iniciar o continuar RFQs** sin salir del proyecto. Las rutas de importación mantienen designadores de referencia en cada línea, ya sea que la lista de materiales provenga de CSV, chat o design sync.
 

@@ -3,7 +3,7 @@ title: 更新日志
 description: 查看 PartGenie 的最新功能更新和版本发布信息
 ---
 
-<Update label="2026-10-28" tags={["Workspace", "首页", "导航"]} description="首页工作台与更清晰的侧栏 IA（Projects、Watch、Library）">
+<Update label="2026-10-28" tags={["Workspace", "首页", "侧栏", "导航"]} description="首页工作台 + 侧栏一级导航重排（Watch、Projects、Collection、Library）">
   <Frame>
     <img
       alt="登录后首页工作台：问候语、Search/Work 输入框、Projects 与 Tasks 三列卡片、Watch 引导卡与 Explore PartGenie 快捷入口"
@@ -13,16 +13,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
 
   **登录后的首页改为「工作台」，不再只有居中搜索框。** 在 [app.partgenie.ai](https://app.partgenie.ai) 登录后会看到时段问候、**三列卡片**和底部 **Explore PartGenie** 轮播（BOM、Design、替代料、关税查询、演示等入口）。某一列还没有数据时，会显示**引导卡片**，一键进入 Search、新建 BOM、[AI Watch](/zh-Hans/changelog#2026-10-27) 或 RFQ；有活动后同一位置切换为**数据卡片**——最近的 **Projects**、**Tasks**（Search / Work / BOM / Design / Watch 会话）、**Watch 命中**与**进行中的 RFQ**，每列最多五行并可快速续聊。列表加载时使用骨架屏占位。
 
-  **侧栏信息架构**按实际工作流重新分组：
+  **左侧栏一级导航重排。** 固定顺序为 **Search → Watch → Collection → Projects → Library**（团队工作区在 Library 上方还有 **Sourcing / RFQs**）。每条对应一类工作：检索、监控、收藏、硬件项目、文件与连接器——[AI Watch](/zh-Hans/changelog#2026-10-27) 不再和 Collection 挤在一起，BOM/Design 也不再散落在无关菜单里。
 
-  | 区域 | 变化 |
+  | 一级入口 | 变化 |
   | --- | --- |
-  | **Search** | 仍是默认入口；**⌘K** 可搜对话、Knowledge 与 Projects。 |
-  | **Watch** | 独立入口，**Findings** 与 **Watch** 分页（不再与 Collection 混在同一页）。 |
-  | **Collection** | 收藏的器件、品牌与书签；列表与详情并排查看。 |
-  | **Projects** | 侧栏 **Projects** 进入**硬件项目**中心；可展开最近项目，支持排序、置顶、重命名、复制或删除。 |
-  | **Library** | 团队 **Parts library** 与审批；**Launch** 回到 Library 下，用于连接器安装。 |
-  | **Sourcing** | 团队工作区在 Library 上方展示 **Sourcing / RFQs**（启用采购时）。 |
+  | **Search** | 仍是默认入口；**⌘K** 可跨对话、Knowledge 与 Projects 跳转。 |
+  | **Watch** | **独立一级入口**与专属页面——**Findings** 看告警，**Watch** 管理任务、暂停与编辑（不再与收藏器件混页）。 |
+  | **Collection** | **与 Watch 拆分**——只放收藏的器件、品牌与书签；列表与详情并排。 |
+  | **Projects** | **项目中心改版**——点 **Projects** 进入硬件项目工作台（筛选、卡片/列表、Architecture、BOM 健康），而不只是会话列表；侧栏可展开**最近项目**，支持置顶、排序、重命名、复制或删除。 |
+  | **Library** | Knowledge 上传与对话附件；团队工作区下为 **Parts library** 与审批；**Launch**（KiCad、Chrome 等连接器）收进 **Library** 下，不再单独占一级。 |
+  | **Sourcing** | 团队工作区启用采购时，**RFQ / 寻源**在 Library 上方。 |
 
   **硬件项目（Hardware projects）** 将 **Design 与 BOM 收进同一项目壳**：在项目页可筛选排序、切换**卡片/列表**、查看 **Architecture** 与设计图、阅读 **BOM health findings**、查看 **BOM 估价趋势**，并**发起或继续 RFQ**。无论 BOM 来自 CSV、对话还是 design sync，导入都会保留位号。
 
