@@ -1,0 +1,19 @@
+---
+title: SKUs
+description: Catalog, Intelligence, and Partner Availability
+---
+
+# Product SKUs
+
+| SKU | Who | Endpoints |
+|---|---|---|
+| **A Catalog** | ERP / PLM / EMS integrations | `lookup`, `batch-lookup`, `search`, `GET part`, `offers`, `offers/cached` |
+| **B Intelligence** | Decision / agent / BOM workflows | `resolve`, `alternatives`, `bom/analyze`, `claims`, `engineering-profile` |
+| **C Availability** | CAD / partner PDP embeds | `GET /api/v1/partner/availability` (YuanQiService) |
+
+ECAD API is **deferred** (not in current docs or pricing).
+
+## Evidence packaging
+
+- **Catalog** `GET /v1/parts/{id}` may include `has_claims`, `has_engineering_profile`, and `evidence_links`.
+- **Intelligence** returns claim / profile **bodies**. Without Intelligence → `403`.

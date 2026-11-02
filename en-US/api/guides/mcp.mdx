@@ -1,0 +1,24 @@
+---
+title: Using MCP
+---
+
+# MCP
+
+Same core as REST. Run:
+
+```bash
+cd YuanQiAiService
+.venv/bin/python -m partgenie_intel.mcp --list
+.venv/bin/python -m partgenie_intel.mcp --stdio
+```
+
+| MCP tool | REST |
+|---|---|
+| `parts_resolve` | `POST /v1/parts/resolve` |
+| `parts_lookup` | `POST /v1/parts/lookup` |
+| `parts_get` | `GET /v1/parts/{id}` |
+| `parts_offers` | `POST /v1/parts/offers` |
+| `parts_alternatives` | `POST /v1/parts/alternatives` |
+| `bom_analyze` | `POST /v1/bom/analyze` |
+
+Workspace `bom.*` tools in `bom_agent/mcp` remain for the PartGenie App BOM agent and are separate.

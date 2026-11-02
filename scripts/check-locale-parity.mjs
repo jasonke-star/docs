@@ -15,9 +15,26 @@ const docs = JSON.parse(fs.readFileSync(path.join(root, 'docs.json'), 'utf8'))
 
 let failed = false
 
+function collectPageRefs(langBlock) {
+  const refs = []
+  const groups = []
+  if (Array.isArray(langBlock.tabs)) {
+    for (const tab of langBlock.tabs) {
+      if (tab.groups) groups.push(...tab.groups)
+    }
+  } else if (Array.isArray(langBlock.groups)) {
+    groups.push(...langBlock.groups)
+  }
+  for (const g of groups) {
+    for (const pageRef of g.pages || []) {
+      refs.push(pageRef)
+    }
+  }
+  return refs
+}
+
 for (const langBlock of docs.navigation.languages) {
-  const pages = langBlock.groups.flatMap((g) => g.pages)
-  for (const pageRef of pages) {
+  for (const pageRef of collectPageRefs(langBlock)) {
     const mdx = path.join(root, `${pageRef}.mdx`)
     if (!fs.existsSync(mdx)) {
       console.error(`MISSING: ${pageRef}.mdx (language ${langBlock.language})`)
@@ -26,7 +43,19 @@ for (const langBlock of docs.navigation.languages) {
   }
 }
 
-// Orphan MDX in published dirs
+function walkMdx(dir, base = dir) {
+  const out = []
+  if (!fs.existsSync(dir)) return out
+  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, ent.name)
+    if (ent.isDirectory()) out.push(...walkMdx(full, base))
+    else if (ent.name.endsWith('.mdx')) {
+      out.push(path.relative(base, full).replace(/\.mdx$/, '').split(path.sep).join('/'))
+    }
+  }
+  return out
+}
+
 for (const loc of manifest.locales.filter((l) => l.published)) {
   const dir = path.join(root, loc.contentDir)
   if (!fs.existsSync(dir)) {
@@ -34,12 +63,8 @@ for (const loc of manifest.locales.filter((l) => l.published)) {
     failed = true
     continue
   }
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.mdx'))
-  const expected = new Set(
-    langBlockPages(docs, loc.mintlifyLanguage),
-  )
-  for (const f of files) {
-    const slug = f.replace(/\.mdx$/, '')
+  const expected = new Set(langBlockPages(docs, loc.mintlifyLanguage))
+  for (const slug of walkMdx(dir)) {
     const ref = `${loc.contentDir}/${slug}`
     if (!expected.has(ref)) {
       console.warn(`ORPHAN (not in nav): ${ref}.mdx`)
@@ -49,7 +74,7 @@ for (const loc of manifest.locales.filter((l) => l.published)) {
 
 function langBlockPages(docsJson, mintlifyLanguage) {
   const block = docsJson.navigation.languages.find((l) => l.language === mintlifyLanguage)
-  return block ? block.groups.flatMap((g) => g.pages) : []
+  return block ? collectPageRefs(block) : []
 }
 
 if (failed) {

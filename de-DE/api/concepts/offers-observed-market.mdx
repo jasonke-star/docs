@@ -1,0 +1,13 @@
+---
+title: Observed market (offers)
+---
+
+# Observed market
+
+`POST /parts/offers` returns distributor observations (DigiKey, LCSC, … via YuanQiService LiveQuote).
+
+- `market.median_price` / `available_stock` / `coverage`
+- **Not** PartGenie landed price
+- **Not** a binding quote
+
+Sourcing brand layers transaction pricing on top.

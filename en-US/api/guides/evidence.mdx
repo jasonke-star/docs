@@ -1,0 +1,51 @@
+---
+title: Evidence (claims & profiles)
+description: Flags on Catalog; bodies on Intelligence
+---
+
+# Evidence
+
+PartGenie persists L1 datasheet **claims** and L2 **engineering profiles** with `evidence_refs`.
+
+## Catalog — flags only
+
+```json
+{
+  "part_id": "pg_ad620arz",
+  "mpn": "AD620ARZ",
+  "has_claims": true,
+  "has_engineering_profile": true,
+  "evidence_links": {
+    "claims": "/v1/parts/pg_ad620arz/claims",
+    "engineering_profile": "/v1/parts/pg_ad620arz/engineering-profile"
+  }
+}
+```
+
+## Intelligence — claims
+
+`GET /v1/parts/{part_id}/claims?kind_prefix=limit.&limit=50`
+
+Or `POST /v1/parts/claims` with `{ "mpn", "kind_prefix", "limit" }`.
+
+Response includes `extract_status`, `datasheet`, and `claims[]` (`claim_id`, `kind`, `text`, `source.page`, …).
+
+## Intelligence — engineering profile
+
+`GET /v1/parts/{part_id}/engineering-profile?sections=pin_model,electrical_profile`
+
+Missing profile returns HTTP 200 with `synthesis_status: "missing"|"pending"`.
+
+## Alternatives + evidence
+
+```json
+POST /v1/parts/alternatives
+{
+  "mpn": "BQ24195RGER",
+  "objective": "drop_in",
+  "include_evidence": true,
+  "limit": 5
+}
+```
+
+Default `include_evidence=false` omits the `evidence` object.

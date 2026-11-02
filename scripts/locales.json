@@ -116,19 +116,36 @@
       },
       {
         "group": "Sourcing & Compliance",
-        "pages": ["live-sourcing", "tariff-lookup", "openelab-modules"]
+        "pages": [
+          "live-sourcing",
+          "tariff-lookup",
+          "openelab-modules"
+        ]
       },
       {
         "group": "Integrations",
-        "pages": ["integrations", "chrome-extension", "eda-integration", "kicad-plugin"]
+        "pages": [
+          "integrations",
+          "chrome-extension",
+          "eda-integration",
+          "kicad-plugin"
+        ]
       },
       {
         "group": "Collaboration & Apps",
-        "pages": ["share", "favorites", "mobile-app"]
+        "pages": [
+          "share",
+          "favorites",
+          "mobile-app"
+        ]
       },
       {
         "group": "Account & Membership",
-        "pages": ["account-management", "membership-pricing", "account-troubleshooting"]
+        "pages": [
+          "account-management",
+          "membership-pricing",
+          "account-troubleshooting"
+        ]
       },
       {
         "group": "Best Practices",
@@ -176,19 +193,36 @@
       },
       {
         "group": "采购与合规",
-        "pages": ["live-sourcing", "tariff-lookup", "openelab-modules"]
+        "pages": [
+          "live-sourcing",
+          "tariff-lookup",
+          "openelab-modules"
+        ]
       },
       {
         "group": "集成",
-        "pages": ["integrations", "chrome-extension", "eda-integration", "kicad-plugin"]
+        "pages": [
+          "integrations",
+          "chrome-extension",
+          "eda-integration",
+          "kicad-plugin"
+        ]
       },
       {
         "group": "协作与 App",
-        "pages": ["share", "favorites", "mobile-app"]
+        "pages": [
+          "share",
+          "favorites",
+          "mobile-app"
+        ]
       },
       {
         "group": "账户与订阅",
-        "pages": ["membership-pricing", "account-management", "account-troubleshooting"]
+        "pages": [
+          "membership-pricing",
+          "account-management",
+          "account-troubleshooting"
+        ]
       },
       {
         "group": "最佳实践",
@@ -236,19 +270,36 @@
       },
       {
         "group": "採購與合規",
-        "pages": ["live-sourcing", "tariff-lookup", "openelab-modules"]
+        "pages": [
+          "live-sourcing",
+          "tariff-lookup",
+          "openelab-modules"
+        ]
       },
       {
         "group": "整合",
-        "pages": ["integrations", "chrome-extension", "eda-integration", "kicad-plugin"]
+        "pages": [
+          "integrations",
+          "chrome-extension",
+          "eda-integration",
+          "kicad-plugin"
+        ]
       },
       {
         "group": "協作與 App",
-        "pages": ["share", "favorites", "mobile-app"]
+        "pages": [
+          "share",
+          "favorites",
+          "mobile-app"
+        ]
       },
       {
         "group": "帳戶與訂閱",
-        "pages": ["account-management", "membership-pricing", "account-troubleshooting"]
+        "pages": [
+          "account-management",
+          "membership-pricing",
+          "account-troubleshooting"
+        ]
       },
       {
         "group": "最佳實務",
@@ -264,7 +315,13 @@
     "de": [
       {
         "group": "Erste Schritte",
-        "pages": ["index", "getting-started", "faq", "changelog", "contact-us"]
+        "pages": [
+          "index",
+          "getting-started",
+          "faq",
+          "changelog",
+          "contact-us"
+        ]
       },
       {
         "group": "Suche & Antworten",
@@ -290,19 +347,36 @@
       },
       {
         "group": "Beschaffung & Compliance",
-        "pages": ["live-sourcing", "tariff-lookup", "openelab-modules"]
+        "pages": [
+          "live-sourcing",
+          "tariff-lookup",
+          "openelab-modules"
+        ]
       },
       {
         "group": "Integrationen",
-        "pages": ["integrations", "chrome-extension", "eda-integration", "kicad-plugin"]
+        "pages": [
+          "integrations",
+          "chrome-extension",
+          "eda-integration",
+          "kicad-plugin"
+        ]
       },
       {
         "group": "Zusammenarbeit & Apps",
-        "pages": ["share", "favorites", "mobile-app"]
+        "pages": [
+          "share",
+          "favorites",
+          "mobile-app"
+        ]
       },
       {
         "group": "Konto & Mitgliedschaft",
-        "pages": ["account-management", "membership-pricing", "account-troubleshooting"]
+        "pages": [
+          "account-management",
+          "membership-pricing",
+          "account-troubleshooting"
+        ]
       },
       {
         "group": "Best Practices",
@@ -318,7 +392,13 @@
     "ja": [
       {
         "group": "はじめに",
-        "pages": ["index", "getting-started", "faq", "changelog", "contact-us"]
+        "pages": [
+          "index",
+          "getting-started",
+          "faq",
+          "changelog",
+          "contact-us"
+        ]
       },
       {
         "group": "検索と回答",
@@ -344,19 +424,36 @@
       },
       {
         "group": "調達とコンプライアンス",
-        "pages": ["live-sourcing", "tariff-lookup", "openelab-modules"]
+        "pages": [
+          "live-sourcing",
+          "tariff-lookup",
+          "openelab-modules"
+        ]
       },
       {
         "group": "連携",
-        "pages": ["integrations", "chrome-extension", "eda-integration", "kicad-plugin"]
+        "pages": [
+          "integrations",
+          "chrome-extension",
+          "eda-integration",
+          "kicad-plugin"
+        ]
       },
       {
         "group": "コラボレーションとアプリ",
-        "pages": ["share", "favorites", "mobile-app"]
+        "pages": [
+          "share",
+          "favorites",
+          "mobile-app"
+        ]
       },
       {
         "group": "アカウントとメンバーシップ",
-        "pages": ["account-management", "membership-pricing", "account-troubleshooting"]
+        "pages": [
+          "account-management",
+          "membership-pricing",
+          "account-troubleshooting"
+        ]
       },
       {
         "group": "ベストプラクティス",
@@ -372,7 +469,13 @@
     "ko": [
       {
         "group": "시작하기",
-        "pages": ["index", "getting-started", "faq", "changelog", "contact-us"]
+        "pages": [
+          "index",
+          "getting-started",
+          "faq",
+          "changelog",
+          "contact-us"
+        ]
       },
       {
         "group": "검색 및 답변",
@@ -398,19 +501,36 @@
       },
       {
         "group": "소싱 및 규정 준수",
-        "pages": ["live-sourcing", "tariff-lookup", "openelab-modules"]
+        "pages": [
+          "live-sourcing",
+          "tariff-lookup",
+          "openelab-modules"
+        ]
       },
       {
         "group": "통합",
-        "pages": ["integrations", "chrome-extension", "eda-integration", "kicad-plugin"]
+        "pages": [
+          "integrations",
+          "chrome-extension",
+          "eda-integration",
+          "kicad-plugin"
+        ]
       },
       {
         "group": "협업 및 앱",
-        "pages": ["share", "favorites", "mobile-app"]
+        "pages": [
+          "share",
+          "favorites",
+          "mobile-app"
+        ]
       },
       {
         "group": "계정 및 멤버십",
-        "pages": ["account-management", "membership-pricing", "account-troubleshooting"]
+        "pages": [
+          "account-management",
+          "membership-pricing",
+          "account-troubleshooting"
+        ]
       },
       {
         "group": "모범 사례",
@@ -426,7 +546,13 @@
     "fr": [
       {
         "group": "Premiers pas",
-        "pages": ["index", "getting-started", "faq", "changelog", "contact-us"]
+        "pages": [
+          "index",
+          "getting-started",
+          "faq",
+          "changelog",
+          "contact-us"
+        ]
       },
       {
         "group": "Recherche et réponses",
@@ -452,19 +578,36 @@
       },
       {
         "group": "Approvisionnement et conformité",
-        "pages": ["live-sourcing", "tariff-lookup", "openelab-modules"]
+        "pages": [
+          "live-sourcing",
+          "tariff-lookup",
+          "openelab-modules"
+        ]
       },
       {
         "group": "Intégrations",
-        "pages": ["integrations", "chrome-extension", "eda-integration", "kicad-plugin"]
+        "pages": [
+          "integrations",
+          "chrome-extension",
+          "eda-integration",
+          "kicad-plugin"
+        ]
       },
       {
         "group": "Collaboration et apps",
-        "pages": ["share", "favorites", "mobile-app"]
+        "pages": [
+          "share",
+          "favorites",
+          "mobile-app"
+        ]
       },
       {
         "group": "Compte et abonnement",
-        "pages": ["account-management", "membership-pricing", "account-troubleshooting"]
+        "pages": [
+          "account-management",
+          "membership-pricing",
+          "account-troubleshooting"
+        ]
       },
       {
         "group": "Bonnes pratiques",
@@ -480,7 +623,13 @@
     "es-MX": [
       {
         "group": "Primeros pasos",
-        "pages": ["index", "getting-started", "faq", "changelog", "contact-us"]
+        "pages": [
+          "index",
+          "getting-started",
+          "faq",
+          "changelog",
+          "contact-us"
+        ]
       },
       {
         "group": "Búsqueda y respuestas",
@@ -506,19 +655,36 @@
       },
       {
         "group": "Abastecimiento y cumplimiento",
-        "pages": ["live-sourcing", "tariff-lookup", "openelab-modules"]
+        "pages": [
+          "live-sourcing",
+          "tariff-lookup",
+          "openelab-modules"
+        ]
       },
       {
         "group": "Integraciones",
-        "pages": ["integrations", "chrome-extension", "eda-integration", "kicad-plugin"]
+        "pages": [
+          "integrations",
+          "chrome-extension",
+          "eda-integration",
+          "kicad-plugin"
+        ]
       },
       {
         "group": "Colaboración y apps",
-        "pages": ["share", "favorites", "mobile-app"]
+        "pages": [
+          "share",
+          "favorites",
+          "mobile-app"
+        ]
       },
       {
         "group": "Cuenta y membresía",
-        "pages": ["account-management", "membership-pricing", "account-troubleshooting"]
+        "pages": [
+          "account-management",
+          "membership-pricing",
+          "account-troubleshooting"
+        ]
       },
       {
         "group": "Mejores prácticas",
@@ -533,27 +699,384 @@
     ]
   },
   "navbar": {
-    "en": { "support": "Support", "login": "Log in" },
-    "zh-Hans": { "support": "支持", "login": "登录" },
-    "zh-Hant": { "support": "支援", "login": "登入" },
-    "de": { "support": "Support", "login": "Anmelden" },
-    "ja": { "support": "サポート", "login": "ログイン" },
-    "ko": { "support": "지원", "login": "로그인" },
-    "fr": { "support": "Assistance", "login": "Se connecter" },
-    "es-MX": { "support": "Soporte", "login": "Iniciar sesión" }
+    "en": {
+      "support": "Support",
+      "login": "Log in"
+    },
+    "zh-Hans": {
+      "support": "支持",
+      "login": "登录"
+    },
+    "zh-Hant": {
+      "support": "支援",
+      "login": "登入"
+    },
+    "de": {
+      "support": "Support",
+      "login": "Anmelden"
+    },
+    "ja": {
+      "support": "サポート",
+      "login": "ログイン"
+    },
+    "ko": {
+      "support": "지원",
+      "login": "로그인"
+    },
+    "fr": {
+      "support": "Assistance",
+      "login": "Se connecter"
+    },
+    "es-MX": {
+      "support": "Soporte",
+      "login": "Iniciar sesión"
+    }
   },
   "globalAnchors": {
     "en": [
-      { "anchor": "Community", "href": "https://wa.me/17342391845", "icon": "whatsapp" },
-      { "anchor": "Home", "href": "https://partgenie.ai/", "icon": "newspaper" }
+      {
+        "anchor": "Community",
+        "href": "https://wa.me/17342391845",
+        "icon": "whatsapp"
+      },
+      {
+        "anchor": "Home",
+        "href": "https://partgenie.ai/",
+        "icon": "newspaper"
+      }
     ],
     "zh-Hans": [
-      { "anchor": "博客", "href": "https://partgenie.ai/", "icon": "newspaper" },
-      { "anchor": "社区", "href": "https://wa.me/17342391845", "icon": "whatsapp" }
+      {
+        "anchor": "博客",
+        "href": "https://partgenie.ai/",
+        "icon": "newspaper"
+      },
+      {
+        "anchor": "社区",
+        "href": "https://wa.me/17342391845",
+        "icon": "whatsapp"
+      }
     ],
     "default": [
-      { "anchor": "Community", "href": "https://wa.me/17342391845", "icon": "whatsapp" },
-      { "anchor": "Home", "href": "https://partgenie.ai/", "icon": "newspaper" }
+      {
+        "anchor": "Community",
+        "href": "https://wa.me/17342391845",
+        "icon": "whatsapp"
+      },
+      {
+        "anchor": "Home",
+        "href": "https://partgenie.ai/",
+        "icon": "newspaper"
+      }
+    ]
+  },
+  "apiOpenapi": "openapi.json",
+  "tabLabels": {
+    "en": {
+      "help": "Help",
+      "api": "API",
+      "apiReference": "API reference"
+    },
+    "zh-Hans": {
+      "help": "帮助",
+      "api": "API",
+      "apiReference": "API 参考"
+    },
+    "zh-Hant": {
+      "help": "說明",
+      "api": "API",
+      "apiReference": "API 參考"
+    },
+    "de": {
+      "help": "Hilfe",
+      "api": "API",
+      "apiReference": "API-Referenz"
+    },
+    "ja": {
+      "help": "ヘルプ",
+      "api": "API",
+      "apiReference": "API リファレンス"
+    },
+    "ko": {
+      "help": "도움말",
+      "api": "API",
+      "apiReference": "API 레퍼런스"
+    },
+    "fr": {
+      "help": "Aide",
+      "api": "API",
+      "apiReference": "Référence API"
+    },
+    "es-MX": {
+      "help": "Ayuda",
+      "api": "API",
+      "apiReference": "Referencia API"
+    }
+  },
+  "apiNavGroups": {
+    "en": [
+      {
+        "group": "Start",
+        "pages": [
+          "api/introduction",
+          "api/quickstart",
+          "api/authentication",
+          "api/oauth",
+          "api/pricing",
+          "api/skus",
+          "api/errors"
+        ]
+      },
+      {
+        "group": "Concepts",
+        "pages": [
+          "api/concepts/part-id",
+          "api/concepts/resolve-vs-lookup",
+          "api/concepts/offers-observed-market",
+          "api/concepts/brand-boundary"
+        ]
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "api/guides/batch-lookup",
+          "api/guides/bom-analyze",
+          "api/guides/alternatives-objectives",
+          "api/guides/evidence",
+          "api/guides/mcp"
+        ]
+      }
+    ],
+    "zh-Hans": [
+      {
+        "group": "开始",
+        "pages": [
+          "api/introduction",
+          "api/quickstart",
+          "api/authentication",
+          "api/oauth",
+          "api/pricing",
+          "api/skus",
+          "api/errors"
+        ]
+      },
+      {
+        "group": "概念",
+        "pages": [
+          "api/concepts/part-id",
+          "api/concepts/resolve-vs-lookup",
+          "api/concepts/offers-observed-market",
+          "api/concepts/brand-boundary"
+        ]
+      },
+      {
+        "group": "指南",
+        "pages": [
+          "api/guides/batch-lookup",
+          "api/guides/bom-analyze",
+          "api/guides/alternatives-objectives",
+          "api/guides/evidence",
+          "api/guides/mcp"
+        ]
+      }
+    ],
+    "zh-Hant": [
+      {
+        "group": "開始",
+        "pages": [
+          "api/introduction",
+          "api/quickstart",
+          "api/authentication",
+          "api/oauth",
+          "api/pricing",
+          "api/skus",
+          "api/errors"
+        ]
+      },
+      {
+        "group": "概念",
+        "pages": [
+          "api/concepts/part-id",
+          "api/concepts/resolve-vs-lookup",
+          "api/concepts/offers-observed-market",
+          "api/concepts/brand-boundary"
+        ]
+      },
+      {
+        "group": "指南",
+        "pages": [
+          "api/guides/batch-lookup",
+          "api/guides/bom-analyze",
+          "api/guides/alternatives-objectives",
+          "api/guides/evidence",
+          "api/guides/mcp"
+        ]
+      }
+    ],
+    "de": [
+      {
+        "group": "Start",
+        "pages": [
+          "api/introduction",
+          "api/quickstart",
+          "api/authentication",
+          "api/oauth",
+          "api/pricing",
+          "api/skus",
+          "api/errors"
+        ]
+      },
+      {
+        "group": "Konzepte",
+        "pages": [
+          "api/concepts/part-id",
+          "api/concepts/resolve-vs-lookup",
+          "api/concepts/offers-observed-market",
+          "api/concepts/brand-boundary"
+        ]
+      },
+      {
+        "group": "Anleitungen",
+        "pages": [
+          "api/guides/batch-lookup",
+          "api/guides/bom-analyze",
+          "api/guides/alternatives-objectives",
+          "api/guides/evidence",
+          "api/guides/mcp"
+        ]
+      }
+    ],
+    "ja": [
+      {
+        "group": "スタート",
+        "pages": [
+          "api/introduction",
+          "api/quickstart",
+          "api/authentication",
+          "api/oauth",
+          "api/pricing",
+          "api/skus",
+          "api/errors"
+        ]
+      },
+      {
+        "group": "コンセプト",
+        "pages": [
+          "api/concepts/part-id",
+          "api/concepts/resolve-vs-lookup",
+          "api/concepts/offers-observed-market",
+          "api/concepts/brand-boundary"
+        ]
+      },
+      {
+        "group": "ガイド",
+        "pages": [
+          "api/guides/batch-lookup",
+          "api/guides/bom-analyze",
+          "api/guides/alternatives-objectives",
+          "api/guides/evidence",
+          "api/guides/mcp"
+        ]
+      }
+    ],
+    "ko": [
+      {
+        "group": "시작",
+        "pages": [
+          "api/introduction",
+          "api/quickstart",
+          "api/authentication",
+          "api/oauth",
+          "api/pricing",
+          "api/skus",
+          "api/errors"
+        ]
+      },
+      {
+        "group": "개념",
+        "pages": [
+          "api/concepts/part-id",
+          "api/concepts/resolve-vs-lookup",
+          "api/concepts/offers-observed-market",
+          "api/concepts/brand-boundary"
+        ]
+      },
+      {
+        "group": "가이드",
+        "pages": [
+          "api/guides/batch-lookup",
+          "api/guides/bom-analyze",
+          "api/guides/alternatives-objectives",
+          "api/guides/evidence",
+          "api/guides/mcp"
+        ]
+      }
+    ],
+    "fr": [
+      {
+        "group": "Démarrage",
+        "pages": [
+          "api/introduction",
+          "api/quickstart",
+          "api/authentication",
+          "api/oauth",
+          "api/pricing",
+          "api/skus",
+          "api/errors"
+        ]
+      },
+      {
+        "group": "Concepts",
+        "pages": [
+          "api/concepts/part-id",
+          "api/concepts/resolve-vs-lookup",
+          "api/concepts/offers-observed-market",
+          "api/concepts/brand-boundary"
+        ]
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "api/guides/batch-lookup",
+          "api/guides/bom-analyze",
+          "api/guides/alternatives-objectives",
+          "api/guides/evidence",
+          "api/guides/mcp"
+        ]
+      }
+    ],
+    "es-MX": [
+      {
+        "group": "Inicio",
+        "pages": [
+          "api/introduction",
+          "api/quickstart",
+          "api/authentication",
+          "api/oauth",
+          "api/pricing",
+          "api/skus",
+          "api/errors"
+        ]
+      },
+      {
+        "group": "Conceptos",
+        "pages": [
+          "api/concepts/part-id",
+          "api/concepts/resolve-vs-lookup",
+          "api/concepts/offers-observed-market",
+          "api/concepts/brand-boundary"
+        ]
+      },
+      {
+        "group": "Guías",
+        "pages": [
+          "api/guides/batch-lookup",
+          "api/guides/bom-analyze",
+          "api/guides/alternatives-objectives",
+          "api/guides/evidence",
+          "api/guides/mcp"
+        ]
+      }
     ]
   }
 }

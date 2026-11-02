@@ -1,0 +1,11 @@
+---
+title: Part ID
+---
+
+# Part ID
+
+Opaque id: `pg_` + urlsafe base64 of `v1:{code}|{manufacturer_id}`.
+
+Also returned: `catalog_hash` = sha256(`code|manufacturer_id`) aligned with PartGenie ES identity.
+
+Decode is server-side only for `GET /v1/parts/{part_id}`. Treat ids as opaque in clients.

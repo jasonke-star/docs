@@ -20,23 +20,40 @@ const write = process.argv.includes('--write')
 const manifest = JSON.parse(fs.readFileSync(localesPath, 'utf8'))
 const docs = JSON.parse(fs.readFileSync(docsPath, 'utf8'))
 
+function mapGroups(groups, dir) {
+  return (groups || []).map((g) => {
+    const out = { group: g.group }
+    if (g.openapi) out.openapi = g.openapi
+    if (g.pages) out.pages = g.pages.map((slug) => `${dir}/${slug}`)
+    return out
+  })
+}
+
 function buildLanguageBlock(locale) {
   const navKey = locale.mintlifyLanguage === 'zh-Hans' ? 'zh-Hans' : locale.mintlifyLanguage
-  const groups = manifest.navGroups[navKey] || manifest.navGroups.en
   const dir = locale.contentDir
-
-  const mappedGroups = groups.map((g) => ({
-    group: g.group,
-    pages: g.pages.map((slug) => `${dir}/${slug}`),
-  }))
+  const helpGroups = mapGroups(manifest.navGroups[navKey] || manifest.navGroups.en, dir)
+  const apiGroups = mapGroups(manifest.apiNavGroups?.[navKey] || manifest.apiNavGroups?.en || [], dir)
+  const tabLabels = manifest.tabLabels?.[navKey] || manifest.tabLabels?.en || {
+    help: 'Help',
+    api: 'API',
+    apiReference: 'API reference',
+  }
+  const openapi = manifest.apiOpenapi || 'openapi.json'
 
   const navLabels = manifest.navbar[navKey] || manifest.navbar.en
   const anchors =
     manifest.globalAnchors[navKey] || manifest.globalAnchors.default
 
+  const tabs = [{ tab: tabLabels.help, groups: helpGroups }]
+  if (apiGroups.length) {
+    tabs.push({ tab: tabLabels.api, groups: apiGroups })
+    tabs.push({ tab: tabLabels.apiReference, openapi })
+  }
+
   return {
     language: locale.mintlifyLanguage,
-    groups: mappedGroups,
+    tabs,
     global: { anchors },
     navbar: {
       links: [{ label: navLabels.support, href: 'mailto:support@partgenie.ai' }],
@@ -56,7 +73,7 @@ const out = `${JSON.stringify(docs, null, 2)}\n`
 
 if (write) {
   fs.writeFileSync(docsPath, out)
-  console.log(`Wrote ${docsPath} (${published.length} languages)`)
+  console.log(`Wrote ${docsPath} (${published.length} languages, tabs=help+api)`)
 } else {
   console.log(out)
 }

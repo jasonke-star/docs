@@ -1,0 +1,28 @@
+---
+title: Quickstart
+---
+
+# Quickstart
+
+1. Sign up at [developers.partgenie.ai](https://developers.partgenie.ai) → create Org / App → issue `pg_test_` key (or OAuth client).
+2. Catalog lookup:
+
+```bash
+curl -s -X POST "$BASE/v1/parts/lookup" \
+  -H "Authorization: Bearer $PG_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"mpn":"STM32F103C8T6"}'
+```
+
+3. Observed offers (prefer cache when possible):
+
+```bash
+curl -s -X POST "$BASE/v1/parts/offers/cached" \
+  -H "Authorization: Bearer $PG_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"mpn":"STM32F103C8T6","quantity":1000,"ship_to":"US"}'
+```
+
+4. Intelligence (requires plan): `resolve`, `alternatives`, `bom/analyze` (up to **5,000** lines), `claims`, `engineering-profile`.
+
+5. Check usage: `GET /v1/account/usage`.

@@ -1,0 +1,20 @@
+---
+title: Batch lookup
+description: Up to 50 MPNs per request
+---
+
+# Batch lookup
+
+```bash
+curl -X POST https://api.partgenie.ai/v1/parts/batch-lookup \
+  -H "Authorization: Bearer $PG_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "items": [
+      { "mpn": "STM32F103C8T6" },
+      { "mpn": "BQ24195RGER", "manufacturer": "Texas Instruments" }
+    ]
+  }'
+```
+
+Each **found** part counts toward monthly **part-return**. Max 50 items / request.

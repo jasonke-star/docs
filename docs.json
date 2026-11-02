@@ -12,81 +12,126 @@
     "languages": [
       {
         "language": "en",
-        "groups": [
+        "tabs": [
           {
-            "group": "Getting Started",
-            "pages": [
-              "en-US/index",
-              "en-US/getting-started",
-              "en-US/faq",
-              "en-US/changelog",
-              "en-US/contact-us"
+            "tab": "Help",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "en-US/index",
+                  "en-US/getting-started",
+                  "en-US/faq",
+                  "en-US/changelog",
+                  "en-US/contact-us"
+                ]
+              },
+              {
+                "group": "Search & Answers",
+                "pages": [
+                  "en-US/ai-search",
+                  "en-US/engineering-calculator",
+                  "en-US/alternatives",
+                  "en-US/product-comparison",
+                  "en-US/datasheet-citations",
+                  "en-US/specification-chat"
+                ]
+              },
+              {
+                "group": "Projects & BOM",
+                "pages": [
+                  "en-US/partgenie-work",
+                  "en-US/bom-management",
+                  "en-US/design-mode",
+                  "en-US/kicad-library",
+                  "en-US/ecad-models",
+                  "en-US/knowledge"
+                ]
+              },
+              {
+                "group": "Sourcing & Compliance",
+                "pages": [
+                  "en-US/live-sourcing",
+                  "en-US/tariff-lookup",
+                  "en-US/openelab-modules"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "pages": [
+                  "en-US/integrations",
+                  "en-US/chrome-extension",
+                  "en-US/eda-integration",
+                  "en-US/kicad-plugin"
+                ]
+              },
+              {
+                "group": "Collaboration & Apps",
+                "pages": [
+                  "en-US/share",
+                  "en-US/favorites",
+                  "en-US/mobile-app"
+                ]
+              },
+              {
+                "group": "Account & Membership",
+                "pages": [
+                  "en-US/account-management",
+                  "en-US/membership-pricing",
+                  "en-US/account-troubleshooting"
+                ]
+              },
+              {
+                "group": "Best Practices",
+                "pages": [
+                  "en-US/feature-examples",
+                  "en-US/ai-query-writing",
+                  "en-US/fuzzy-to-precise",
+                  "en-US/search-optimization",
+                  "en-US/effective-bom-management"
+                ]
+              }
             ]
           },
           {
-            "group": "Search & Answers",
-            "pages": [
-              "en-US/ai-search",
-              "en-US/engineering-calculator",
-              "en-US/alternatives",
-              "en-US/product-comparison",
-              "en-US/datasheet-citations",
-              "en-US/specification-chat"
+            "tab": "API",
+            "groups": [
+              {
+                "group": "Start",
+                "pages": [
+                  "en-US/api/introduction",
+                  "en-US/api/quickstart",
+                  "en-US/api/authentication",
+                  "en-US/api/oauth",
+                  "en-US/api/pricing",
+                  "en-US/api/skus",
+                  "en-US/api/errors"
+                ]
+              },
+              {
+                "group": "Concepts",
+                "pages": [
+                  "en-US/api/concepts/part-id",
+                  "en-US/api/concepts/resolve-vs-lookup",
+                  "en-US/api/concepts/offers-observed-market",
+                  "en-US/api/concepts/brand-boundary"
+                ]
+              },
+              {
+                "group": "Guides",
+                "pages": [
+                  "en-US/api/guides/batch-lookup",
+                  "en-US/api/guides/bom-analyze",
+                  "en-US/api/guides/alternatives-objectives",
+                  "en-US/api/guides/evidence",
+                  "en-US/api/guides/mcp"
+                ]
+              }
             ]
           },
           {
-            "group": "Projects & BOM",
-            "pages": [
-              "en-US/partgenie-work",
-              "en-US/bom-management",
-              "en-US/design-mode",
-              "en-US/kicad-library",
-              "en-US/ecad-models",
-              "en-US/knowledge"
-            ]
-          },
-          {
-            "group": "Sourcing & Compliance",
-            "pages": [
-              "en-US/live-sourcing",
-              "en-US/tariff-lookup",
-              "en-US/openelab-modules"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "pages": [
-              "en-US/integrations",
-              "en-US/chrome-extension",
-              "en-US/eda-integration",
-              "en-US/kicad-plugin"
-            ]
-          },
-          {
-            "group": "Collaboration & Apps",
-            "pages": [
-              "en-US/share",
-              "en-US/favorites",
-              "en-US/mobile-app"
-            ]
-          },
-          {
-            "group": "Account & Membership",
-            "pages": [
-              "en-US/account-management",
-              "en-US/membership-pricing",
-              "en-US/account-troubleshooting"
-            ]
-          },
-          {
-            "group": "Best Practices",
-            "pages": [
-              "en-US/feature-examples",
-              "en-US/ai-query-writing",
-              "en-US/fuzzy-to-precise",
-              "en-US/search-optimization",
-              "en-US/effective-bom-management"
-            ]
+            "tab": "API reference",
+            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -119,81 +164,126 @@
       },
       {
         "language": "zh-Hans",
-        "groups": [
+        "tabs": [
           {
-            "group": "快速入门",
-            "pages": [
-              "zh-Hans/what-is-partgenie",
-              "zh-Hans/getting-started",
-              "zh-Hans/faq",
-              "zh-Hans/changelog",
-              "zh-Hans/contact-us"
+            "tab": "帮助",
+            "groups": [
+              {
+                "group": "快速入门",
+                "pages": [
+                  "zh-Hans/what-is-partgenie",
+                  "zh-Hans/getting-started",
+                  "zh-Hans/faq",
+                  "zh-Hans/changelog",
+                  "zh-Hans/contact-us"
+                ]
+              },
+              {
+                "group": "搜索与回答",
+                "pages": [
+                  "zh-Hans/ai-search",
+                  "zh-Hans/engineering-calculator",
+                  "zh-Hans/alternatives",
+                  "zh-Hans/product-comparison",
+                  "zh-Hans/datasheet-citations",
+                  "zh-Hans/specification-chat"
+                ]
+              },
+              {
+                "group": "项目与 BOM",
+                "pages": [
+                  "zh-Hans/partgenie-work",
+                  "zh-Hans/bom-management",
+                  "zh-Hans/design-mode",
+                  "zh-Hans/kicad-library",
+                  "zh-Hans/ecad-models",
+                  "zh-Hans/knowledge"
+                ]
+              },
+              {
+                "group": "采购与合规",
+                "pages": [
+                  "zh-Hans/live-sourcing",
+                  "zh-Hans/tariff-lookup",
+                  "zh-Hans/openelab-modules"
+                ]
+              },
+              {
+                "group": "集成",
+                "pages": [
+                  "zh-Hans/integrations",
+                  "zh-Hans/chrome-extension",
+                  "zh-Hans/eda-integration",
+                  "zh-Hans/kicad-plugin"
+                ]
+              },
+              {
+                "group": "协作与 App",
+                "pages": [
+                  "zh-Hans/share",
+                  "zh-Hans/favorites",
+                  "zh-Hans/mobile-app"
+                ]
+              },
+              {
+                "group": "账户与订阅",
+                "pages": [
+                  "zh-Hans/membership-pricing",
+                  "zh-Hans/account-management",
+                  "zh-Hans/account-troubleshooting"
+                ]
+              },
+              {
+                "group": "最佳实践",
+                "pages": [
+                  "zh-Hans/feature-examples",
+                  "zh-Hans/ai-query-writing",
+                  "zh-Hans/fuzzy-to-precise",
+                  "zh-Hans/search-optimization",
+                  "zh-Hans/effective-bom-management"
+                ]
+              }
             ]
           },
           {
-            "group": "搜索与回答",
-            "pages": [
-              "zh-Hans/ai-search",
-              "zh-Hans/engineering-calculator",
-              "zh-Hans/alternatives",
-              "zh-Hans/product-comparison",
-              "zh-Hans/datasheet-citations",
-              "zh-Hans/specification-chat"
+            "tab": "API",
+            "groups": [
+              {
+                "group": "开始",
+                "pages": [
+                  "zh-Hans/api/introduction",
+                  "zh-Hans/api/quickstart",
+                  "zh-Hans/api/authentication",
+                  "zh-Hans/api/oauth",
+                  "zh-Hans/api/pricing",
+                  "zh-Hans/api/skus",
+                  "zh-Hans/api/errors"
+                ]
+              },
+              {
+                "group": "概念",
+                "pages": [
+                  "zh-Hans/api/concepts/part-id",
+                  "zh-Hans/api/concepts/resolve-vs-lookup",
+                  "zh-Hans/api/concepts/offers-observed-market",
+                  "zh-Hans/api/concepts/brand-boundary"
+                ]
+              },
+              {
+                "group": "指南",
+                "pages": [
+                  "zh-Hans/api/guides/batch-lookup",
+                  "zh-Hans/api/guides/bom-analyze",
+                  "zh-Hans/api/guides/alternatives-objectives",
+                  "zh-Hans/api/guides/evidence",
+                  "zh-Hans/api/guides/mcp"
+                ]
+              }
             ]
           },
           {
-            "group": "项目与 BOM",
-            "pages": [
-              "zh-Hans/partgenie-work",
-              "zh-Hans/bom-management",
-              "zh-Hans/design-mode",
-              "zh-Hans/kicad-library",
-              "zh-Hans/ecad-models",
-              "zh-Hans/knowledge"
-            ]
-          },
-          {
-            "group": "采购与合规",
-            "pages": [
-              "zh-Hans/live-sourcing",
-              "zh-Hans/tariff-lookup",
-              "zh-Hans/openelab-modules"
-            ]
-          },
-          {
-            "group": "集成",
-            "pages": [
-              "zh-Hans/integrations",
-              "zh-Hans/chrome-extension",
-              "zh-Hans/eda-integration",
-              "zh-Hans/kicad-plugin"
-            ]
-          },
-          {
-            "group": "协作与 App",
-            "pages": [
-              "zh-Hans/share",
-              "zh-Hans/favorites",
-              "zh-Hans/mobile-app"
-            ]
-          },
-          {
-            "group": "账户与订阅",
-            "pages": [
-              "zh-Hans/membership-pricing",
-              "zh-Hans/account-management",
-              "zh-Hans/account-troubleshooting"
-            ]
-          },
-          {
-            "group": "最佳实践",
-            "pages": [
-              "zh-Hans/feature-examples",
-              "zh-Hans/ai-query-writing",
-              "zh-Hans/fuzzy-to-precise",
-              "zh-Hans/search-optimization",
-              "zh-Hans/effective-bom-management"
-            ]
+            "tab": "API 参考",
+            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -226,81 +316,126 @@
       },
       {
         "language": "zh-Hant",
-        "groups": [
+        "tabs": [
           {
-            "group": "快速入門",
-            "pages": [
-              "zh-Hant/index",
-              "zh-Hant/getting-started",
-              "zh-Hant/faq",
-              "zh-Hant/changelog",
-              "zh-Hant/contact-us"
+            "tab": "說明",
+            "groups": [
+              {
+                "group": "快速入門",
+                "pages": [
+                  "zh-Hant/index",
+                  "zh-Hant/getting-started",
+                  "zh-Hant/faq",
+                  "zh-Hant/changelog",
+                  "zh-Hant/contact-us"
+                ]
+              },
+              {
+                "group": "搜尋與回答",
+                "pages": [
+                  "zh-Hant/ai-search",
+                  "zh-Hant/engineering-calculator",
+                  "zh-Hant/alternatives",
+                  "zh-Hant/product-comparison",
+                  "zh-Hant/datasheet-citations",
+                  "zh-Hant/specification-chat"
+                ]
+              },
+              {
+                "group": "專案與 BOM",
+                "pages": [
+                  "zh-Hant/partgenie-work",
+                  "zh-Hant/bom-management",
+                  "zh-Hant/design-mode",
+                  "zh-Hant/kicad-library",
+                  "zh-Hant/ecad-models",
+                  "zh-Hant/knowledge"
+                ]
+              },
+              {
+                "group": "採購與合規",
+                "pages": [
+                  "zh-Hant/live-sourcing",
+                  "zh-Hant/tariff-lookup",
+                  "zh-Hant/openelab-modules"
+                ]
+              },
+              {
+                "group": "整合",
+                "pages": [
+                  "zh-Hant/integrations",
+                  "zh-Hant/chrome-extension",
+                  "zh-Hant/eda-integration",
+                  "zh-Hant/kicad-plugin"
+                ]
+              },
+              {
+                "group": "協作與 App",
+                "pages": [
+                  "zh-Hant/share",
+                  "zh-Hant/favorites",
+                  "zh-Hant/mobile-app"
+                ]
+              },
+              {
+                "group": "帳戶與訂閱",
+                "pages": [
+                  "zh-Hant/account-management",
+                  "zh-Hant/membership-pricing",
+                  "zh-Hant/account-troubleshooting"
+                ]
+              },
+              {
+                "group": "最佳實務",
+                "pages": [
+                  "zh-Hant/feature-examples",
+                  "zh-Hant/ai-query-writing",
+                  "zh-Hant/fuzzy-to-precise",
+                  "zh-Hant/search-optimization",
+                  "zh-Hant/effective-bom-management"
+                ]
+              }
             ]
           },
           {
-            "group": "搜尋與回答",
-            "pages": [
-              "zh-Hant/ai-search",
-              "zh-Hant/engineering-calculator",
-              "zh-Hant/alternatives",
-              "zh-Hant/product-comparison",
-              "zh-Hant/datasheet-citations",
-              "zh-Hant/specification-chat"
+            "tab": "API",
+            "groups": [
+              {
+                "group": "開始",
+                "pages": [
+                  "zh-Hant/api/introduction",
+                  "zh-Hant/api/quickstart",
+                  "zh-Hant/api/authentication",
+                  "zh-Hant/api/oauth",
+                  "zh-Hant/api/pricing",
+                  "zh-Hant/api/skus",
+                  "zh-Hant/api/errors"
+                ]
+              },
+              {
+                "group": "概念",
+                "pages": [
+                  "zh-Hant/api/concepts/part-id",
+                  "zh-Hant/api/concepts/resolve-vs-lookup",
+                  "zh-Hant/api/concepts/offers-observed-market",
+                  "zh-Hant/api/concepts/brand-boundary"
+                ]
+              },
+              {
+                "group": "指南",
+                "pages": [
+                  "zh-Hant/api/guides/batch-lookup",
+                  "zh-Hant/api/guides/bom-analyze",
+                  "zh-Hant/api/guides/alternatives-objectives",
+                  "zh-Hant/api/guides/evidence",
+                  "zh-Hant/api/guides/mcp"
+                ]
+              }
             ]
           },
           {
-            "group": "專案與 BOM",
-            "pages": [
-              "zh-Hant/partgenie-work",
-              "zh-Hant/bom-management",
-              "zh-Hant/design-mode",
-              "zh-Hant/kicad-library",
-              "zh-Hant/ecad-models",
-              "zh-Hant/knowledge"
-            ]
-          },
-          {
-            "group": "採購與合規",
-            "pages": [
-              "zh-Hant/live-sourcing",
-              "zh-Hant/tariff-lookup",
-              "zh-Hant/openelab-modules"
-            ]
-          },
-          {
-            "group": "整合",
-            "pages": [
-              "zh-Hant/integrations",
-              "zh-Hant/chrome-extension",
-              "zh-Hant/eda-integration",
-              "zh-Hant/kicad-plugin"
-            ]
-          },
-          {
-            "group": "協作與 App",
-            "pages": [
-              "zh-Hant/share",
-              "zh-Hant/favorites",
-              "zh-Hant/mobile-app"
-            ]
-          },
-          {
-            "group": "帳戶與訂閱",
-            "pages": [
-              "zh-Hant/account-management",
-              "zh-Hant/membership-pricing",
-              "zh-Hant/account-troubleshooting"
-            ]
-          },
-          {
-            "group": "最佳實務",
-            "pages": [
-              "zh-Hant/feature-examples",
-              "zh-Hant/ai-query-writing",
-              "zh-Hant/fuzzy-to-precise",
-              "zh-Hant/search-optimization",
-              "zh-Hant/effective-bom-management"
-            ]
+            "tab": "API 參考",
+            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -333,81 +468,126 @@
       },
       {
         "language": "de",
-        "groups": [
+        "tabs": [
           {
-            "group": "Erste Schritte",
-            "pages": [
-              "de-DE/index",
-              "de-DE/getting-started",
-              "de-DE/faq",
-              "de-DE/changelog",
-              "de-DE/contact-us"
+            "tab": "Hilfe",
+            "groups": [
+              {
+                "group": "Erste Schritte",
+                "pages": [
+                  "de-DE/index",
+                  "de-DE/getting-started",
+                  "de-DE/faq",
+                  "de-DE/changelog",
+                  "de-DE/contact-us"
+                ]
+              },
+              {
+                "group": "Suche & Antworten",
+                "pages": [
+                  "de-DE/ai-search",
+                  "de-DE/engineering-calculator",
+                  "de-DE/alternatives",
+                  "de-DE/product-comparison",
+                  "de-DE/datasheet-citations",
+                  "de-DE/specification-chat"
+                ]
+              },
+              {
+                "group": "Projekte & BOM",
+                "pages": [
+                  "de-DE/partgenie-work",
+                  "de-DE/bom-management",
+                  "de-DE/design-mode",
+                  "de-DE/kicad-library",
+                  "de-DE/ecad-models",
+                  "de-DE/knowledge"
+                ]
+              },
+              {
+                "group": "Beschaffung & Compliance",
+                "pages": [
+                  "de-DE/live-sourcing",
+                  "de-DE/tariff-lookup",
+                  "de-DE/openelab-modules"
+                ]
+              },
+              {
+                "group": "Integrationen",
+                "pages": [
+                  "de-DE/integrations",
+                  "de-DE/chrome-extension",
+                  "de-DE/eda-integration",
+                  "de-DE/kicad-plugin"
+                ]
+              },
+              {
+                "group": "Zusammenarbeit & Apps",
+                "pages": [
+                  "de-DE/share",
+                  "de-DE/favorites",
+                  "de-DE/mobile-app"
+                ]
+              },
+              {
+                "group": "Konto & Mitgliedschaft",
+                "pages": [
+                  "de-DE/account-management",
+                  "de-DE/membership-pricing",
+                  "de-DE/account-troubleshooting"
+                ]
+              },
+              {
+                "group": "Best Practices",
+                "pages": [
+                  "de-DE/feature-examples",
+                  "de-DE/ai-query-writing",
+                  "de-DE/fuzzy-to-precise",
+                  "de-DE/search-optimization",
+                  "de-DE/effective-bom-management"
+                ]
+              }
             ]
           },
           {
-            "group": "Suche & Antworten",
-            "pages": [
-              "de-DE/ai-search",
-              "de-DE/engineering-calculator",
-              "de-DE/alternatives",
-              "de-DE/product-comparison",
-              "de-DE/datasheet-citations",
-              "de-DE/specification-chat"
+            "tab": "API",
+            "groups": [
+              {
+                "group": "Start",
+                "pages": [
+                  "de-DE/api/introduction",
+                  "de-DE/api/quickstart",
+                  "de-DE/api/authentication",
+                  "de-DE/api/oauth",
+                  "de-DE/api/pricing",
+                  "de-DE/api/skus",
+                  "de-DE/api/errors"
+                ]
+              },
+              {
+                "group": "Konzepte",
+                "pages": [
+                  "de-DE/api/concepts/part-id",
+                  "de-DE/api/concepts/resolve-vs-lookup",
+                  "de-DE/api/concepts/offers-observed-market",
+                  "de-DE/api/concepts/brand-boundary"
+                ]
+              },
+              {
+                "group": "Anleitungen",
+                "pages": [
+                  "de-DE/api/guides/batch-lookup",
+                  "de-DE/api/guides/bom-analyze",
+                  "de-DE/api/guides/alternatives-objectives",
+                  "de-DE/api/guides/evidence",
+                  "de-DE/api/guides/mcp"
+                ]
+              }
             ]
           },
           {
-            "group": "Projekte & BOM",
-            "pages": [
-              "de-DE/partgenie-work",
-              "de-DE/bom-management",
-              "de-DE/design-mode",
-              "de-DE/kicad-library",
-              "de-DE/ecad-models",
-              "de-DE/knowledge"
-            ]
-          },
-          {
-            "group": "Beschaffung & Compliance",
-            "pages": [
-              "de-DE/live-sourcing",
-              "de-DE/tariff-lookup",
-              "de-DE/openelab-modules"
-            ]
-          },
-          {
-            "group": "Integrationen",
-            "pages": [
-              "de-DE/integrations",
-              "de-DE/chrome-extension",
-              "de-DE/eda-integration",
-              "de-DE/kicad-plugin"
-            ]
-          },
-          {
-            "group": "Zusammenarbeit & Apps",
-            "pages": [
-              "de-DE/share",
-              "de-DE/favorites",
-              "de-DE/mobile-app"
-            ]
-          },
-          {
-            "group": "Konto & Mitgliedschaft",
-            "pages": [
-              "de-DE/account-management",
-              "de-DE/membership-pricing",
-              "de-DE/account-troubleshooting"
-            ]
-          },
-          {
-            "group": "Best Practices",
-            "pages": [
-              "de-DE/feature-examples",
-              "de-DE/ai-query-writing",
-              "de-DE/fuzzy-to-precise",
-              "de-DE/search-optimization",
-              "de-DE/effective-bom-management"
-            ]
+            "tab": "API-Referenz",
+            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -440,81 +620,126 @@
       },
       {
         "language": "ja",
-        "groups": [
+        "tabs": [
           {
-            "group": "はじめに",
-            "pages": [
-              "ja-JP/index",
-              "ja-JP/getting-started",
-              "ja-JP/faq",
-              "ja-JP/changelog",
-              "ja-JP/contact-us"
+            "tab": "ヘルプ",
+            "groups": [
+              {
+                "group": "はじめに",
+                "pages": [
+                  "ja-JP/index",
+                  "ja-JP/getting-started",
+                  "ja-JP/faq",
+                  "ja-JP/changelog",
+                  "ja-JP/contact-us"
+                ]
+              },
+              {
+                "group": "検索と回答",
+                "pages": [
+                  "ja-JP/ai-search",
+                  "ja-JP/engineering-calculator",
+                  "ja-JP/alternatives",
+                  "ja-JP/product-comparison",
+                  "ja-JP/datasheet-citations",
+                  "ja-JP/specification-chat"
+                ]
+              },
+              {
+                "group": "プロジェクトと BOM",
+                "pages": [
+                  "ja-JP/partgenie-work",
+                  "ja-JP/bom-management",
+                  "ja-JP/design-mode",
+                  "ja-JP/kicad-library",
+                  "ja-JP/ecad-models",
+                  "ja-JP/knowledge"
+                ]
+              },
+              {
+                "group": "調達とコンプライアンス",
+                "pages": [
+                  "ja-JP/live-sourcing",
+                  "ja-JP/tariff-lookup",
+                  "ja-JP/openelab-modules"
+                ]
+              },
+              {
+                "group": "連携",
+                "pages": [
+                  "ja-JP/integrations",
+                  "ja-JP/chrome-extension",
+                  "ja-JP/eda-integration",
+                  "ja-JP/kicad-plugin"
+                ]
+              },
+              {
+                "group": "コラボレーションとアプリ",
+                "pages": [
+                  "ja-JP/share",
+                  "ja-JP/favorites",
+                  "ja-JP/mobile-app"
+                ]
+              },
+              {
+                "group": "アカウントとメンバーシップ",
+                "pages": [
+                  "ja-JP/account-management",
+                  "ja-JP/membership-pricing",
+                  "ja-JP/account-troubleshooting"
+                ]
+              },
+              {
+                "group": "ベストプラクティス",
+                "pages": [
+                  "ja-JP/feature-examples",
+                  "ja-JP/ai-query-writing",
+                  "ja-JP/fuzzy-to-precise",
+                  "ja-JP/search-optimization",
+                  "ja-JP/effective-bom-management"
+                ]
+              }
             ]
           },
           {
-            "group": "検索と回答",
-            "pages": [
-              "ja-JP/ai-search",
-              "ja-JP/engineering-calculator",
-              "ja-JP/alternatives",
-              "ja-JP/product-comparison",
-              "ja-JP/datasheet-citations",
-              "ja-JP/specification-chat"
+            "tab": "API",
+            "groups": [
+              {
+                "group": "スタート",
+                "pages": [
+                  "ja-JP/api/introduction",
+                  "ja-JP/api/quickstart",
+                  "ja-JP/api/authentication",
+                  "ja-JP/api/oauth",
+                  "ja-JP/api/pricing",
+                  "ja-JP/api/skus",
+                  "ja-JP/api/errors"
+                ]
+              },
+              {
+                "group": "コンセプト",
+                "pages": [
+                  "ja-JP/api/concepts/part-id",
+                  "ja-JP/api/concepts/resolve-vs-lookup",
+                  "ja-JP/api/concepts/offers-observed-market",
+                  "ja-JP/api/concepts/brand-boundary"
+                ]
+              },
+              {
+                "group": "ガイド",
+                "pages": [
+                  "ja-JP/api/guides/batch-lookup",
+                  "ja-JP/api/guides/bom-analyze",
+                  "ja-JP/api/guides/alternatives-objectives",
+                  "ja-JP/api/guides/evidence",
+                  "ja-JP/api/guides/mcp"
+                ]
+              }
             ]
           },
           {
-            "group": "プロジェクトと BOM",
-            "pages": [
-              "ja-JP/partgenie-work",
-              "ja-JP/bom-management",
-              "ja-JP/design-mode",
-              "ja-JP/kicad-library",
-              "ja-JP/ecad-models",
-              "ja-JP/knowledge"
-            ]
-          },
-          {
-            "group": "調達とコンプライアンス",
-            "pages": [
-              "ja-JP/live-sourcing",
-              "ja-JP/tariff-lookup",
-              "ja-JP/openelab-modules"
-            ]
-          },
-          {
-            "group": "連携",
-            "pages": [
-              "ja-JP/integrations",
-              "ja-JP/chrome-extension",
-              "ja-JP/eda-integration",
-              "ja-JP/kicad-plugin"
-            ]
-          },
-          {
-            "group": "コラボレーションとアプリ",
-            "pages": [
-              "ja-JP/share",
-              "ja-JP/favorites",
-              "ja-JP/mobile-app"
-            ]
-          },
-          {
-            "group": "アカウントとメンバーシップ",
-            "pages": [
-              "ja-JP/account-management",
-              "ja-JP/membership-pricing",
-              "ja-JP/account-troubleshooting"
-            ]
-          },
-          {
-            "group": "ベストプラクティス",
-            "pages": [
-              "ja-JP/feature-examples",
-              "ja-JP/ai-query-writing",
-              "ja-JP/fuzzy-to-precise",
-              "ja-JP/search-optimization",
-              "ja-JP/effective-bom-management"
-            ]
+            "tab": "API リファレンス",
+            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -547,81 +772,126 @@
       },
       {
         "language": "ko",
-        "groups": [
+        "tabs": [
           {
-            "group": "시작하기",
-            "pages": [
-              "ko-KR/index",
-              "ko-KR/getting-started",
-              "ko-KR/faq",
-              "ko-KR/changelog",
-              "ko-KR/contact-us"
+            "tab": "도움말",
+            "groups": [
+              {
+                "group": "시작하기",
+                "pages": [
+                  "ko-KR/index",
+                  "ko-KR/getting-started",
+                  "ko-KR/faq",
+                  "ko-KR/changelog",
+                  "ko-KR/contact-us"
+                ]
+              },
+              {
+                "group": "검색 및 답변",
+                "pages": [
+                  "ko-KR/ai-search",
+                  "ko-KR/engineering-calculator",
+                  "ko-KR/alternatives",
+                  "ko-KR/product-comparison",
+                  "ko-KR/datasheet-citations",
+                  "ko-KR/specification-chat"
+                ]
+              },
+              {
+                "group": "프로젝트 및 BOM",
+                "pages": [
+                  "ko-KR/partgenie-work",
+                  "ko-KR/bom-management",
+                  "ko-KR/design-mode",
+                  "ko-KR/kicad-library",
+                  "ko-KR/ecad-models",
+                  "ko-KR/knowledge"
+                ]
+              },
+              {
+                "group": "소싱 및 규정 준수",
+                "pages": [
+                  "ko-KR/live-sourcing",
+                  "ko-KR/tariff-lookup",
+                  "ko-KR/openelab-modules"
+                ]
+              },
+              {
+                "group": "통합",
+                "pages": [
+                  "ko-KR/integrations",
+                  "ko-KR/chrome-extension",
+                  "ko-KR/eda-integration",
+                  "ko-KR/kicad-plugin"
+                ]
+              },
+              {
+                "group": "협업 및 앱",
+                "pages": [
+                  "ko-KR/share",
+                  "ko-KR/favorites",
+                  "ko-KR/mobile-app"
+                ]
+              },
+              {
+                "group": "계정 및 멤버십",
+                "pages": [
+                  "ko-KR/account-management",
+                  "ko-KR/membership-pricing",
+                  "ko-KR/account-troubleshooting"
+                ]
+              },
+              {
+                "group": "모범 사례",
+                "pages": [
+                  "ko-KR/feature-examples",
+                  "ko-KR/ai-query-writing",
+                  "ko-KR/fuzzy-to-precise",
+                  "ko-KR/search-optimization",
+                  "ko-KR/effective-bom-management"
+                ]
+              }
             ]
           },
           {
-            "group": "검색 및 답변",
-            "pages": [
-              "ko-KR/ai-search",
-              "ko-KR/engineering-calculator",
-              "ko-KR/alternatives",
-              "ko-KR/product-comparison",
-              "ko-KR/datasheet-citations",
-              "ko-KR/specification-chat"
+            "tab": "API",
+            "groups": [
+              {
+                "group": "시작",
+                "pages": [
+                  "ko-KR/api/introduction",
+                  "ko-KR/api/quickstart",
+                  "ko-KR/api/authentication",
+                  "ko-KR/api/oauth",
+                  "ko-KR/api/pricing",
+                  "ko-KR/api/skus",
+                  "ko-KR/api/errors"
+                ]
+              },
+              {
+                "group": "개념",
+                "pages": [
+                  "ko-KR/api/concepts/part-id",
+                  "ko-KR/api/concepts/resolve-vs-lookup",
+                  "ko-KR/api/concepts/offers-observed-market",
+                  "ko-KR/api/concepts/brand-boundary"
+                ]
+              },
+              {
+                "group": "가이드",
+                "pages": [
+                  "ko-KR/api/guides/batch-lookup",
+                  "ko-KR/api/guides/bom-analyze",
+                  "ko-KR/api/guides/alternatives-objectives",
+                  "ko-KR/api/guides/evidence",
+                  "ko-KR/api/guides/mcp"
+                ]
+              }
             ]
           },
           {
-            "group": "프로젝트 및 BOM",
-            "pages": [
-              "ko-KR/partgenie-work",
-              "ko-KR/bom-management",
-              "ko-KR/design-mode",
-              "ko-KR/kicad-library",
-              "ko-KR/ecad-models",
-              "ko-KR/knowledge"
-            ]
-          },
-          {
-            "group": "소싱 및 규정 준수",
-            "pages": [
-              "ko-KR/live-sourcing",
-              "ko-KR/tariff-lookup",
-              "ko-KR/openelab-modules"
-            ]
-          },
-          {
-            "group": "통합",
-            "pages": [
-              "ko-KR/integrations",
-              "ko-KR/chrome-extension",
-              "ko-KR/eda-integration",
-              "ko-KR/kicad-plugin"
-            ]
-          },
-          {
-            "group": "협업 및 앱",
-            "pages": [
-              "ko-KR/share",
-              "ko-KR/favorites",
-              "ko-KR/mobile-app"
-            ]
-          },
-          {
-            "group": "계정 및 멤버십",
-            "pages": [
-              "ko-KR/account-management",
-              "ko-KR/membership-pricing",
-              "ko-KR/account-troubleshooting"
-            ]
-          },
-          {
-            "group": "모범 사례",
-            "pages": [
-              "ko-KR/feature-examples",
-              "ko-KR/ai-query-writing",
-              "ko-KR/fuzzy-to-precise",
-              "ko-KR/search-optimization",
-              "ko-KR/effective-bom-management"
-            ]
+            "tab": "API 레퍼런스",
+            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -654,81 +924,126 @@
       },
       {
         "language": "fr",
-        "groups": [
+        "tabs": [
           {
-            "group": "Premiers pas",
-            "pages": [
-              "fr-FR/index",
-              "fr-FR/getting-started",
-              "fr-FR/faq",
-              "fr-FR/changelog",
-              "fr-FR/contact-us"
+            "tab": "Aide",
+            "groups": [
+              {
+                "group": "Premiers pas",
+                "pages": [
+                  "fr-FR/index",
+                  "fr-FR/getting-started",
+                  "fr-FR/faq",
+                  "fr-FR/changelog",
+                  "fr-FR/contact-us"
+                ]
+              },
+              {
+                "group": "Recherche et réponses",
+                "pages": [
+                  "fr-FR/ai-search",
+                  "fr-FR/engineering-calculator",
+                  "fr-FR/alternatives",
+                  "fr-FR/product-comparison",
+                  "fr-FR/datasheet-citations",
+                  "fr-FR/specification-chat"
+                ]
+              },
+              {
+                "group": "Projets et BOM",
+                "pages": [
+                  "fr-FR/partgenie-work",
+                  "fr-FR/bom-management",
+                  "fr-FR/design-mode",
+                  "fr-FR/kicad-library",
+                  "fr-FR/ecad-models",
+                  "fr-FR/knowledge"
+                ]
+              },
+              {
+                "group": "Approvisionnement et conformité",
+                "pages": [
+                  "fr-FR/live-sourcing",
+                  "fr-FR/tariff-lookup",
+                  "fr-FR/openelab-modules"
+                ]
+              },
+              {
+                "group": "Intégrations",
+                "pages": [
+                  "fr-FR/integrations",
+                  "fr-FR/chrome-extension",
+                  "fr-FR/eda-integration",
+                  "fr-FR/kicad-plugin"
+                ]
+              },
+              {
+                "group": "Collaboration et apps",
+                "pages": [
+                  "fr-FR/share",
+                  "fr-FR/favorites",
+                  "fr-FR/mobile-app"
+                ]
+              },
+              {
+                "group": "Compte et abonnement",
+                "pages": [
+                  "fr-FR/account-management",
+                  "fr-FR/membership-pricing",
+                  "fr-FR/account-troubleshooting"
+                ]
+              },
+              {
+                "group": "Bonnes pratiques",
+                "pages": [
+                  "fr-FR/feature-examples",
+                  "fr-FR/ai-query-writing",
+                  "fr-FR/fuzzy-to-precise",
+                  "fr-FR/search-optimization",
+                  "fr-FR/effective-bom-management"
+                ]
+              }
             ]
           },
           {
-            "group": "Recherche et réponses",
-            "pages": [
-              "fr-FR/ai-search",
-              "fr-FR/engineering-calculator",
-              "fr-FR/alternatives",
-              "fr-FR/product-comparison",
-              "fr-FR/datasheet-citations",
-              "fr-FR/specification-chat"
+            "tab": "API",
+            "groups": [
+              {
+                "group": "Démarrage",
+                "pages": [
+                  "fr-FR/api/introduction",
+                  "fr-FR/api/quickstart",
+                  "fr-FR/api/authentication",
+                  "fr-FR/api/oauth",
+                  "fr-FR/api/pricing",
+                  "fr-FR/api/skus",
+                  "fr-FR/api/errors"
+                ]
+              },
+              {
+                "group": "Concepts",
+                "pages": [
+                  "fr-FR/api/concepts/part-id",
+                  "fr-FR/api/concepts/resolve-vs-lookup",
+                  "fr-FR/api/concepts/offers-observed-market",
+                  "fr-FR/api/concepts/brand-boundary"
+                ]
+              },
+              {
+                "group": "Guides",
+                "pages": [
+                  "fr-FR/api/guides/batch-lookup",
+                  "fr-FR/api/guides/bom-analyze",
+                  "fr-FR/api/guides/alternatives-objectives",
+                  "fr-FR/api/guides/evidence",
+                  "fr-FR/api/guides/mcp"
+                ]
+              }
             ]
           },
           {
-            "group": "Projets et BOM",
-            "pages": [
-              "fr-FR/partgenie-work",
-              "fr-FR/bom-management",
-              "fr-FR/design-mode",
-              "fr-FR/kicad-library",
-              "fr-FR/ecad-models",
-              "fr-FR/knowledge"
-            ]
-          },
-          {
-            "group": "Approvisionnement et conformité",
-            "pages": [
-              "fr-FR/live-sourcing",
-              "fr-FR/tariff-lookup",
-              "fr-FR/openelab-modules"
-            ]
-          },
-          {
-            "group": "Intégrations",
-            "pages": [
-              "fr-FR/integrations",
-              "fr-FR/chrome-extension",
-              "fr-FR/eda-integration",
-              "fr-FR/kicad-plugin"
-            ]
-          },
-          {
-            "group": "Collaboration et apps",
-            "pages": [
-              "fr-FR/share",
-              "fr-FR/favorites",
-              "fr-FR/mobile-app"
-            ]
-          },
-          {
-            "group": "Compte et abonnement",
-            "pages": [
-              "fr-FR/account-management",
-              "fr-FR/membership-pricing",
-              "fr-FR/account-troubleshooting"
-            ]
-          },
-          {
-            "group": "Bonnes pratiques",
-            "pages": [
-              "fr-FR/feature-examples",
-              "fr-FR/ai-query-writing",
-              "fr-FR/fuzzy-to-precise",
-              "fr-FR/search-optimization",
-              "fr-FR/effective-bom-management"
-            ]
+            "tab": "Référence API",
+            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -761,81 +1076,126 @@
       },
       {
         "language": "es-MX",
-        "groups": [
+        "tabs": [
           {
-            "group": "Primeros pasos",
-            "pages": [
-              "es-MX/index",
-              "es-MX/getting-started",
-              "es-MX/faq",
-              "es-MX/changelog",
-              "es-MX/contact-us"
+            "tab": "Ayuda",
+            "groups": [
+              {
+                "group": "Primeros pasos",
+                "pages": [
+                  "es-MX/index",
+                  "es-MX/getting-started",
+                  "es-MX/faq",
+                  "es-MX/changelog",
+                  "es-MX/contact-us"
+                ]
+              },
+              {
+                "group": "Búsqueda y respuestas",
+                "pages": [
+                  "es-MX/ai-search",
+                  "es-MX/engineering-calculator",
+                  "es-MX/alternatives",
+                  "es-MX/product-comparison",
+                  "es-MX/datasheet-citations",
+                  "es-MX/specification-chat"
+                ]
+              },
+              {
+                "group": "Proyectos y BOM",
+                "pages": [
+                  "es-MX/partgenie-work",
+                  "es-MX/bom-management",
+                  "es-MX/design-mode",
+                  "es-MX/kicad-library",
+                  "es-MX/ecad-models",
+                  "es-MX/knowledge"
+                ]
+              },
+              {
+                "group": "Abastecimiento y cumplimiento",
+                "pages": [
+                  "es-MX/live-sourcing",
+                  "es-MX/tariff-lookup",
+                  "es-MX/openelab-modules"
+                ]
+              },
+              {
+                "group": "Integraciones",
+                "pages": [
+                  "es-MX/integrations",
+                  "es-MX/chrome-extension",
+                  "es-MX/eda-integration",
+                  "es-MX/kicad-plugin"
+                ]
+              },
+              {
+                "group": "Colaboración y apps",
+                "pages": [
+                  "es-MX/share",
+                  "es-MX/favorites",
+                  "es-MX/mobile-app"
+                ]
+              },
+              {
+                "group": "Cuenta y membresía",
+                "pages": [
+                  "es-MX/account-management",
+                  "es-MX/membership-pricing",
+                  "es-MX/account-troubleshooting"
+                ]
+              },
+              {
+                "group": "Mejores prácticas",
+                "pages": [
+                  "es-MX/feature-examples",
+                  "es-MX/ai-query-writing",
+                  "es-MX/fuzzy-to-precise",
+                  "es-MX/search-optimization",
+                  "es-MX/effective-bom-management"
+                ]
+              }
             ]
           },
           {
-            "group": "Búsqueda y respuestas",
-            "pages": [
-              "es-MX/ai-search",
-              "es-MX/engineering-calculator",
-              "es-MX/alternatives",
-              "es-MX/product-comparison",
-              "es-MX/datasheet-citations",
-              "es-MX/specification-chat"
+            "tab": "API",
+            "groups": [
+              {
+                "group": "Inicio",
+                "pages": [
+                  "es-MX/api/introduction",
+                  "es-MX/api/quickstart",
+                  "es-MX/api/authentication",
+                  "es-MX/api/oauth",
+                  "es-MX/api/pricing",
+                  "es-MX/api/skus",
+                  "es-MX/api/errors"
+                ]
+              },
+              {
+                "group": "Conceptos",
+                "pages": [
+                  "es-MX/api/concepts/part-id",
+                  "es-MX/api/concepts/resolve-vs-lookup",
+                  "es-MX/api/concepts/offers-observed-market",
+                  "es-MX/api/concepts/brand-boundary"
+                ]
+              },
+              {
+                "group": "Guías",
+                "pages": [
+                  "es-MX/api/guides/batch-lookup",
+                  "es-MX/api/guides/bom-analyze",
+                  "es-MX/api/guides/alternatives-objectives",
+                  "es-MX/api/guides/evidence",
+                  "es-MX/api/guides/mcp"
+                ]
+              }
             ]
           },
           {
-            "group": "Proyectos y BOM",
-            "pages": [
-              "es-MX/partgenie-work",
-              "es-MX/bom-management",
-              "es-MX/design-mode",
-              "es-MX/kicad-library",
-              "es-MX/ecad-models",
-              "es-MX/knowledge"
-            ]
-          },
-          {
-            "group": "Abastecimiento y cumplimiento",
-            "pages": [
-              "es-MX/live-sourcing",
-              "es-MX/tariff-lookup",
-              "es-MX/openelab-modules"
-            ]
-          },
-          {
-            "group": "Integraciones",
-            "pages": [
-              "es-MX/integrations",
-              "es-MX/chrome-extension",
-              "es-MX/eda-integration",
-              "es-MX/kicad-plugin"
-            ]
-          },
-          {
-            "group": "Colaboración y apps",
-            "pages": [
-              "es-MX/share",
-              "es-MX/favorites",
-              "es-MX/mobile-app"
-            ]
-          },
-          {
-            "group": "Cuenta y membresía",
-            "pages": [
-              "es-MX/account-management",
-              "es-MX/membership-pricing",
-              "es-MX/account-troubleshooting"
-            ]
-          },
-          {
-            "group": "Mejores prácticas",
-            "pages": [
-              "es-MX/feature-examples",
-              "es-MX/ai-query-writing",
-              "es-MX/fuzzy-to-precise",
-              "es-MX/search-optimization",
-              "es-MX/effective-bom-management"
-            ]
+            "tab": "Referencia API",
+            "openapi": "openapi.json"
           }
         ],
         "global": {

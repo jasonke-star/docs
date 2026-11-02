@@ -1,0 +1,779 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PartGenie Catalog & Intelligence API",
+    "version": "1.0.0",
+    "description": "REST API for Catalog (SKU A) and Intelligence (SKU B).\nObserved market data only — not landed quotes or order execution.\nAuth: OAuth2 client_credentials or Bearer `pg_test_` / `pg_live_` keys.\nMetering: part-return + live-offer monthly quotas; 429 when exceeded.\n",
+    "contact": {
+      "url": "https://developers.partgenie.ai"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://api.partgenie.ai",
+      "description": "Production"
+    },
+    {
+      "url": "http://127.0.0.1:8000",
+      "description": "Local AiService"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Catalog",
+      "description": "SKU A — lookup, search, batch, part, offers"
+    },
+    {
+      "name": "Intelligence",
+      "description": "SKU B — resolve, alternatives, BOM, evidence"
+    },
+    {
+      "name": "Account"
+    }
+  ],
+  "paths": {
+    "/v1/account/usage": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Current period quota usage",
+        "operationId": "getUsage",
+        "responses": {
+          "200": {
+            "description": "Usage snapshot"
+          }
+        }
+      }
+    },
+    "/v1/parts/lookup": {
+      "post": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Deterministic catalog (ES) lookup",
+        "operationId": "lookupPart",
+        "x-sku": "catalog",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LookupRequest"
+              },
+              "example": {
+                "mpn": "STM32F103C8T6"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Part or empty"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "429": {
+            "description": "Quota exceeded"
+          }
+        }
+      }
+    },
+    "/v1/parts/batch-lookup": {
+      "post": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Batch MPN lookup (max 50)",
+        "description": "Nexar supMultiMatch analogue. Counts each found part toward part-return.",
+        "operationId": "batchLookupParts",
+        "x-sku": "catalog",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchLookupRequest"
+              },
+              "example": {
+                "items": [
+                  {
+                    "mpn": "STM32F103C8T6"
+                  },
+                  {
+                    "mpn": "BQ24195RGER",
+                    "manufacturer": "Texas Instruments"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Per-item results"
+          },
+          "429": {
+            "description": "Quota exceeded"
+          }
+        }
+      }
+    },
+    "/v1/parts/search": {
+      "post": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Keyword / dirty search (resolve alias)",
+        "operationId": "searchParts",
+        "x-sku": "catalog",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Hits"
+          }
+        }
+      }
+    },
+    "/v1/parts/{part_id}": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Get part (Catalog whitelist + evidence flags)",
+        "description": "Returns Catalog fields. May include `has_claims` / `has_engineering_profile`\nand `evidence_links` (deep links). Claim/profile **bodies** require Intelligence.\n",
+        "operationId": "getPart",
+        "x-sku": "catalog",
+        "parameters": [
+          {
+            "name": "part_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Part DTO",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PartResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/v1/parts/offers": {
+      "post": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Observed market offers (live gateway)",
+        "description": "Live distributor quotes via LiveQuote. Consumes live-offer when force_live.",
+        "operationId": "getOffers",
+        "x-sku": "catalog",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OffersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "market + offers[]"
+          },
+          "429": {
+            "description": "Quota exceeded"
+          }
+        }
+      }
+    },
+    "/v1/parts/offers/cached": {
+      "post": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Cached PG/ES offers only",
+        "operationId": "getCachedOffers",
+        "x-sku": "catalog",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OffersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Cached offers"
+          }
+        }
+      }
+    },
+    "/v1/parts/resolve": {
+      "post": {
+        "tags": [
+          "Intelligence"
+        ],
+        "summary": "Resolve dirty MPN or short NL query",
+        "operationId": "resolvePart",
+        "x-sku": "intelligence",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResolveRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Candidates"
+          },
+          "403": {
+            "description": "Intelligence plan required"
+          }
+        }
+      }
+    },
+    "/v1/parts/alternatives": {
+      "post": {
+        "tags": [
+          "Intelligence"
+        ],
+        "summary": "Alternatives by procurement objective",
+        "description": "Set include_evidence=true for audit evidence (Intelligence).",
+        "operationId": "findAlternatives",
+        "x-sku": "intelligence",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlternativesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Alternatives list"
+          },
+          "403": {
+            "description": "Intelligence plan required"
+          }
+        }
+      }
+    },
+    "/v1/parts/{part_id}/claims": {
+      "get": {
+        "tags": [
+          "Intelligence"
+        ],
+        "summary": "L1 datasheet claims",
+        "operationId": "getPartClaims",
+        "x-sku": "intelligence",
+        "parameters": [
+          {
+            "name": "part_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "kind_prefix",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Claims package"
+          },
+          "403": {
+            "description": "Intelligence plan required"
+          }
+        }
+      }
+    },
+    "/v1/parts/claims": {
+      "post": {
+        "tags": [
+          "Intelligence"
+        ],
+        "summary": "L1 datasheet claims by MPN",
+        "operationId": "postPartClaims",
+        "x-sku": "intelligence",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClaimsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Claims package"
+          }
+        }
+      }
+    },
+    "/v1/parts/{part_id}/engineering-profile": {
+      "get": {
+        "tags": [
+          "Intelligence"
+        ],
+        "summary": "L2 engineering profile",
+        "operationId": "getEngineeringProfile",
+        "x-sku": "intelligence",
+        "parameters": [
+          {
+            "name": "part_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sections",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Comma-separated section keys"
+          },
+          {
+            "name": "package_code",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Profile (synthesis_status may be pending/missing)"
+          }
+        }
+      }
+    },
+    "/v1/bom/analyze": {
+      "post": {
+        "tags": [
+          "Intelligence"
+        ],
+        "summary": "Start BOM analysis job (up to 5000 lines)",
+        "operationId": "analyzeBom",
+        "x-sku": "intelligence",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BomAnalyzeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Job accepted"
+          },
+          "403": {
+            "description": "Intelligence plan required"
+          }
+        }
+      }
+    },
+    "/v1/bom/jobs/{job_id}": {
+      "get": {
+        "tags": [
+          "Intelligence"
+        ],
+        "summary": "Poll BOM analysis job",
+        "operationId": "getBomJob",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Job result"
+          },
+          "404": {
+            "description": "Missing or expired"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "pg_test_… / pg_live_… or OAuth access token (pg_at_…)"
+      },
+      "OAuth2ClientCredentials": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "https://developers.partgenie.ai/oauth/token",
+            "scopes": {}
+          }
+        }
+      }
+    },
+    "schemas": {
+      "CatalogPartWhitelist": {
+        "type": "object",
+        "description": "Contract appendix field whitelist for Catalog SKU",
+        "properties": {
+          "part_id": {
+            "type": "string"
+          },
+          "mpn": {
+            "type": "string"
+          },
+          "manufacturer": {
+            "type": "object"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "image_url": {
+            "type": "string",
+            "nullable": true
+          },
+          "datasheet_url": {
+            "type": "string",
+            "nullable": true
+          },
+          "lifecycle": {
+            "type": "object",
+            "nullable": true
+          },
+          "specs": {
+            "type": "object"
+          },
+          "has_claims": {
+            "type": "boolean"
+          },
+          "has_engineering_profile": {
+            "type": "boolean"
+          },
+          "evidence_links": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+              "claims": {
+                "type": "string"
+              },
+              "engineering_profile": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "PartResponse": {
+        "type": "object",
+        "properties": {
+          "found": {
+            "type": "boolean"
+          },
+          "source": {
+            "type": "string"
+          },
+          "part": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CatalogPartWhitelist"
+              }
+            ]
+          }
+        }
+      },
+      "LookupRequest": {
+        "type": "object",
+        "required": [
+          "mpn"
+        ],
+        "properties": {
+          "mpn": {
+            "type": "string"
+          },
+          "manufacturer": {
+            "type": "string"
+          }
+        }
+      },
+      "BatchLookupRequest": {
+        "type": "object",
+        "required": [
+          "items"
+        ],
+        "properties": {
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 50,
+            "items": {
+              "type": "object",
+              "required": [
+                "mpn"
+              ],
+              "properties": {
+                "mpn": {
+                  "type": "string"
+                },
+                "manufacturer": {
+                  "type": "string"
+                },
+                "limit": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 3,
+                  "default": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "SearchRequest": {
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "locale": {
+            "type": "string",
+            "default": "en"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20,
+            "default": 8
+          }
+        }
+      },
+      "ResolveRequest": {
+        "type": "object",
+        "required": [
+          "query"
+        ],
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "manufacturer": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20,
+            "default": 8
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "auto",
+              "mpn",
+              "nl"
+            ],
+            "default": "auto"
+          }
+        }
+      },
+      "OffersRequest": {
+        "type": "object",
+        "properties": {
+          "mpn": {
+            "type": "string"
+          },
+          "part_id": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "ship_to": {
+            "type": "string"
+          },
+          "force_live": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      },
+      "AlternativesRequest": {
+        "type": "object",
+        "properties": {
+          "mpn": {
+            "type": "string"
+          },
+          "part_id": {
+            "type": "string"
+          },
+          "objective": {
+            "type": "string",
+            "enum": [
+              "drop_in",
+              "functional",
+              "cost_down",
+              "availability",
+              "domestic_replacement",
+              "lifecycle"
+            ]
+          },
+          "constraints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20,
+            "default": 8
+          },
+          "include_evidence": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      },
+      "ClaimsRequest": {
+        "type": "object",
+        "properties": {
+          "mpn": {
+            "type": "string"
+          },
+          "part_id": {
+            "type": "string"
+          },
+          "kind_prefix": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer",
+            "default": 50
+          }
+        }
+      },
+      "BomAnalyzeRequest": {
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string"
+          },
+          "locale": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "fast",
+              "full"
+            ],
+            "default": "full"
+          },
+          "include_offers": {
+            "type": "boolean"
+          },
+          "lines": {
+            "type": "array",
+            "maxItems": 5000,
+            "items": {
+              "type": "object",
+              "properties": {
+                "mpn": {
+                  "type": "string"
+                },
+                "manufacturer": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "number"
+                },
+                "inputText": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    },
+    {
+      "OAuth2ClientCredentials": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+---
+title: Errors & rate limits
+---
+
+# Errors & rate limits
+
+| Status | Meaning |
+|---|---|
+| 401 | Missing/invalid HMAC or API key |
+| 404 | Unknown `part_id` or expired BOM job |
+| 422 | Invalid payload |
+| 503 | Auth not configured in production |
+
+Jobs live in process memory (~1h TTL). Multi-replica durability is not guaranteed in Private Beta.
+
+Rate limits / monthly quotas: TBD with `api_usage` tables.

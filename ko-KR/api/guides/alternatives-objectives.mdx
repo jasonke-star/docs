@@ -1,0 +1,18 @@
+---
+title: Alternatives by objective
+---
+
+# Alternatives objectives
+
+`POST /parts/alternatives` accepts:
+
+- `drop_in`
+- `functional`
+- `cost_down`
+- `availability`
+- `domestic_replacement`
+- `lifecycle`
+
+MVP ranks catalog substitute edges with heuristic compatibility scores. Rich FAE/LLM substitute plan is opt-in later.
+
+Set `include_evidence: true` (Intelligence) to attach an `evidence` object per alternative (`quality`, `summary`, `evidence_refs`). Default omits `evidence`.

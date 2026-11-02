@@ -1,0 +1,23 @@
+---
+title: OAuth client_credentials
+description: Machine auth for /v1
+---
+
+# OAuth2 client_credentials
+
+1. In the [developer portal](https://developers.partgenie.ai), create an App → **Issue OAuth client**.
+2. Exchange:
+
+```bash
+curl -X POST https://api.partgenie.ai/developer/oauth/token \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "grant_type": "client_credentials",
+    "client_id": "pg_cid_…",
+    "client_secret": "…"
+  }'
+```
+
+3. Call API with `Authorization: Bearer pg_at_…`.
+
+API keys (`pg_test_` / `pg_live_`) remain supported on the same App.
