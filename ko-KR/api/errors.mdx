@@ -6,11 +6,12 @@ title: Errors & rate limits
 
 | Status | Meaning |
 |---|---|
-| 401 | Missing/invalid HMAC or API key |
+| 401 | Missing or invalid API key / OAuth token |
 | 404 | Unknown `part_id` or expired BOM job |
 | 422 | Invalid payload |
-| 503 | Auth not configured in production |
+| 429 | Quota exceeded |
+| 503 | Temporary unavailability |
 
-Jobs live in process memory (~1h TTL). Multi-replica durability is not guaranteed in Private Beta.
+BOM analysis jobs expire after about one hour in Private Beta. Re-submit if a job is no longer found.
 
-Rate limits / monthly quotas: TBD with `api_usage` tables.
+Monthly quotas and response headers are documented under [Authentication](/ko-KR/api/authentication).

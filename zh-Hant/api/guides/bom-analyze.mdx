@@ -11,6 +11,4 @@ Intelligence SKU. Single job accepts up to **5,000** lines (`lines` / `items`).
 
 Metering: submitted line count → **part-return**; `mode=full` + offers may consume **live-offer** units.
 
-Result includes `normalizedLines`, risks, alternatives, optional `marketOffers` (when `YUANQI_SERVICE_BASE` is set), and a `summary` block (resolved / unresolved / risk counts).
-
-Set `PARTGENIE_BOM_USE_PIPELINE=1` on AiService for the heavier `run_analyze_pipeline` path.
+Result includes `normalizedLines`, risks, alternatives, optional `marketOffers`, and a `summary` block (resolved / unresolved / risk counts).

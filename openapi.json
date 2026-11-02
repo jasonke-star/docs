@@ -12,10 +12,6 @@
     {
       "url": "https://api.partgenie.ai",
       "description": "Production"
-    },
-    {
-      "url": "http://127.0.0.1:8000",
-      "description": "Local AiService"
     }
   ],
   "tags": [
@@ -51,7 +47,7 @@
         "tags": [
           "Catalog"
         ],
-        "summary": "Deterministic catalog (ES) lookup",
+        "summary": "Catalog lookup by MPN",
         "operationId": "lookupPart",
         "x-sku": "catalog",
         "requestBody": {
@@ -150,7 +146,7 @@
         "tags": [
           "Catalog"
         ],
-        "summary": "Get part (Catalog whitelist + evidence flags)",
+        "summary": "Get part (Catalog fields + evidence flags)",
         "description": "Returns Catalog fields. May include `has_claims` / `has_engineering_profile`\nand `evidence_links` (deep links). Claim/profile **bodies** require Intelligence.\n",
         "operationId": "getPart",
         "x-sku": "catalog",
@@ -186,8 +182,8 @@
         "tags": [
           "Catalog"
         ],
-        "summary": "Observed market offers (live gateway)",
-        "description": "Live distributor quotes via LiveQuote. Consumes live-offer when force_live.",
+        "summary": "Observed market offers (live)",
+        "description": "Live distributor observations. Consumes live-offer quota when force_live.",
         "operationId": "getOffers",
         "x-sku": "catalog",
         "requestBody": {
@@ -215,7 +211,7 @@
         "tags": [
           "Catalog"
         ],
-        "summary": "Cached PG/ES offers only",
+        "summary": "Cached observed market offers",
         "operationId": "getCachedOffers",
         "x-sku": "catalog",
         "requestBody": {
@@ -476,7 +472,7 @@
     "schemas": {
       "CatalogPartWhitelist": {
         "type": "object",
-        "description": "Contract appendix field whitelist for Catalog SKU",
+        "description": "Catalog response fields for the Catalog SKU",
         "properties": {
           "part_id": {
             "type": "string"

@@ -8,6 +8,6 @@ title: Resolve vs Lookup
 |---|---|---|
 | Input | Dirty MPN, NL, ambiguous | Known MPN |
 | Output | candidates + confidence (+ rationale / match_hints for NL) | Single part + `part_id` |
-| ES | Search / lookup helpers | Deterministic catalog lookup only |
+| Best for | Messy or natural-language input | Exact catalog match |
 
-Clients should use these endpoints only — do not call Elasticsearch directly.
+Use these endpoints for identity — do not scrape or reverse-engineer catalog storage.

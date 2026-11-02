@@ -4,8 +4,6 @@ title: Part ID
 
 # Part ID
 
-Opaque id: `pg_` + urlsafe base64 of `v1:{code}|{manufacturer_id}`.
+`part_id` values are opaque identifiers (`pg_…`). Treat them as opaque in clients — do not parse or reconstruct them.
 
-Also returned: `catalog_hash` = sha256(`code|manufacturer_id`) aligned with PartGenie ES identity.
-
-Decode is server-side only for `GET /v1/parts/{part_id}`. Treat ids as opaque in clients.
+Also returned on some responses: `catalog_hash`, a stable fingerprint for the catalog identity. Prefer `part_id` for subsequent API calls.
