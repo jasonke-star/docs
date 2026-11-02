@@ -112,6 +112,7 @@
                 "group": "Concepts",
                 "pages": [
                   "en-US/api/concepts/part-id",
+                  "en-US/api/concepts/claims-and-profiles",
                   "en-US/api/concepts/resolve-vs-lookup",
                   "en-US/api/concepts/offers-observed-market",
                   "en-US/api/concepts/brand-boundary"
@@ -126,12 +127,12 @@
                   "en-US/api/guides/evidence",
                   "en-US/api/guides/mcp"
                 ]
+              },
+              {
+                "group": "API reference",
+                "openapi": "openapi.json"
               }
             ]
-          },
-          {
-            "tab": "API reference",
-            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -264,6 +265,7 @@
                 "group": "概念",
                 "pages": [
                   "zh-Hans/api/concepts/part-id",
+                  "zh-Hans/api/concepts/claims-and-profiles",
                   "zh-Hans/api/concepts/resolve-vs-lookup",
                   "zh-Hans/api/concepts/offers-observed-market",
                   "zh-Hans/api/concepts/brand-boundary"
@@ -278,12 +280,12 @@
                   "zh-Hans/api/guides/evidence",
                   "zh-Hans/api/guides/mcp"
                 ]
+              },
+              {
+                "group": "API 参考",
+                "openapi": "openapi.json"
               }
             ]
-          },
-          {
-            "tab": "API 参考",
-            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -416,6 +418,7 @@
                 "group": "概念",
                 "pages": [
                   "zh-Hant/api/concepts/part-id",
+                  "zh-Hant/api/concepts/claims-and-profiles",
                   "zh-Hant/api/concepts/resolve-vs-lookup",
                   "zh-Hant/api/concepts/offers-observed-market",
                   "zh-Hant/api/concepts/brand-boundary"
@@ -430,12 +433,12 @@
                   "zh-Hant/api/guides/evidence",
                   "zh-Hant/api/guides/mcp"
                 ]
+              },
+              {
+                "group": "API 參考",
+                "openapi": "openapi.json"
               }
             ]
-          },
-          {
-            "tab": "API 參考",
-            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -568,6 +571,7 @@
                 "group": "Konzepte",
                 "pages": [
                   "de-DE/api/concepts/part-id",
+                  "de-DE/api/concepts/claims-and-profiles",
                   "de-DE/api/concepts/resolve-vs-lookup",
                   "de-DE/api/concepts/offers-observed-market",
                   "de-DE/api/concepts/brand-boundary"
@@ -582,12 +586,12 @@
                   "de-DE/api/guides/evidence",
                   "de-DE/api/guides/mcp"
                 ]
+              },
+              {
+                "group": "API-Referenz",
+                "openapi": "openapi.json"
               }
             ]
-          },
-          {
-            "tab": "API-Referenz",
-            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -720,6 +724,7 @@
                 "group": "コンセプト",
                 "pages": [
                   "ja-JP/api/concepts/part-id",
+                  "ja-JP/api/concepts/claims-and-profiles",
                   "ja-JP/api/concepts/resolve-vs-lookup",
                   "ja-JP/api/concepts/offers-observed-market",
                   "ja-JP/api/concepts/brand-boundary"
@@ -734,12 +739,12 @@
                   "ja-JP/api/guides/evidence",
                   "ja-JP/api/guides/mcp"
                 ]
+              },
+              {
+                "group": "API リファレンス",
+                "openapi": "openapi.json"
               }
             ]
-          },
-          {
-            "tab": "API リファレンス",
-            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -872,6 +877,7 @@
                 "group": "개념",
                 "pages": [
                   "ko-KR/api/concepts/part-id",
+                  "ko-KR/api/concepts/claims-and-profiles",
                   "ko-KR/api/concepts/resolve-vs-lookup",
                   "ko-KR/api/concepts/offers-observed-market",
                   "ko-KR/api/concepts/brand-boundary"
@@ -886,12 +892,12 @@
                   "ko-KR/api/guides/evidence",
                   "ko-KR/api/guides/mcp"
                 ]
+              },
+              {
+                "group": "API 레퍼런스",
+                "openapi": "openapi.json"
               }
             ]
-          },
-          {
-            "tab": "API 레퍼런스",
-            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -1024,6 +1030,7 @@
                 "group": "Concepts",
                 "pages": [
                   "fr-FR/api/concepts/part-id",
+                  "fr-FR/api/concepts/claims-and-profiles",
                   "fr-FR/api/concepts/resolve-vs-lookup",
                   "fr-FR/api/concepts/offers-observed-market",
                   "fr-FR/api/concepts/brand-boundary"
@@ -1038,12 +1045,12 @@
                   "fr-FR/api/guides/evidence",
                   "fr-FR/api/guides/mcp"
                 ]
+              },
+              {
+                "group": "Référence API",
+                "openapi": "openapi.json"
               }
             ]
-          },
-          {
-            "tab": "Référence API",
-            "openapi": "openapi.json"
           }
         ],
         "global": {
@@ -1176,6 +1183,7 @@
                 "group": "Conceptos",
                 "pages": [
                   "es-MX/api/concepts/part-id",
+                  "es-MX/api/concepts/claims-and-profiles",
                   "es-MX/api/concepts/resolve-vs-lookup",
                   "es-MX/api/concepts/offers-observed-market",
                   "es-MX/api/concepts/brand-boundary"
@@ -1190,12 +1198,12 @@
                   "es-MX/api/guides/evidence",
                   "es-MX/api/guides/mcp"
                 ]
+              },
+              {
+                "group": "Referencia API",
+                "openapi": "openapi.json"
               }
             ]
-          },
-          {
-            "tab": "Referencia API",
-            "openapi": "openapi.json"
           }
         ],
         "global": {

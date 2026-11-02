@@ -774,43 +774,35 @@
   "tabLabels": {
     "en": {
       "help": "Help",
-      "api": "API",
-      "apiReference": "API reference"
+      "api": "API"
     },
     "zh-Hans": {
       "help": "帮助",
-      "api": "API",
-      "apiReference": "API 参考"
+      "api": "API"
     },
     "zh-Hant": {
       "help": "說明",
-      "api": "API",
-      "apiReference": "API 參考"
+      "api": "API"
     },
     "de": {
       "help": "Hilfe",
-      "api": "API",
-      "apiReference": "API-Referenz"
+      "api": "API"
     },
     "ja": {
       "help": "ヘルプ",
-      "api": "API",
-      "apiReference": "API リファレンス"
+      "api": "API"
     },
     "ko": {
       "help": "도움말",
-      "api": "API",
-      "apiReference": "API 레퍼런스"
+      "api": "API"
     },
     "fr": {
       "help": "Aide",
-      "api": "API",
-      "apiReference": "Référence API"
+      "api": "API"
     },
     "es-MX": {
       "help": "Ayuda",
-      "api": "API",
-      "apiReference": "Referencia API"
+      "api": "API"
     }
   },
   "apiNavGroups": {
@@ -831,6 +823,7 @@
         "group": "Concepts",
         "pages": [
           "api/concepts/part-id",
+          "api/concepts/claims-and-profiles",
           "api/concepts/resolve-vs-lookup",
           "api/concepts/offers-observed-market",
           "api/concepts/brand-boundary"
@@ -864,6 +857,7 @@
         "group": "概念",
         "pages": [
           "api/concepts/part-id",
+          "api/concepts/claims-and-profiles",
           "api/concepts/resolve-vs-lookup",
           "api/concepts/offers-observed-market",
           "api/concepts/brand-boundary"
@@ -897,6 +891,7 @@
         "group": "概念",
         "pages": [
           "api/concepts/part-id",
+          "api/concepts/claims-and-profiles",
           "api/concepts/resolve-vs-lookup",
           "api/concepts/offers-observed-market",
           "api/concepts/brand-boundary"
@@ -930,6 +925,7 @@
         "group": "Konzepte",
         "pages": [
           "api/concepts/part-id",
+          "api/concepts/claims-and-profiles",
           "api/concepts/resolve-vs-lookup",
           "api/concepts/offers-observed-market",
           "api/concepts/brand-boundary"
@@ -963,6 +959,7 @@
         "group": "コンセプト",
         "pages": [
           "api/concepts/part-id",
+          "api/concepts/claims-and-profiles",
           "api/concepts/resolve-vs-lookup",
           "api/concepts/offers-observed-market",
           "api/concepts/brand-boundary"
@@ -996,6 +993,7 @@
         "group": "개념",
         "pages": [
           "api/concepts/part-id",
+          "api/concepts/claims-and-profiles",
           "api/concepts/resolve-vs-lookup",
           "api/concepts/offers-observed-market",
           "api/concepts/brand-boundary"
@@ -1029,6 +1027,7 @@
         "group": "Concepts",
         "pages": [
           "api/concepts/part-id",
+          "api/concepts/claims-and-profiles",
           "api/concepts/resolve-vs-lookup",
           "api/concepts/offers-observed-market",
           "api/concepts/brand-boundary"
@@ -1062,6 +1061,7 @@
         "group": "Conceptos",
         "pages": [
           "api/concepts/part-id",
+          "api/concepts/claims-and-profiles",
           "api/concepts/resolve-vs-lookup",
           "api/concepts/offers-observed-market",
           "api/concepts/brand-boundary"
@@ -1078,5 +1078,15 @@
         ]
       }
     ]
+  },
+  "apiReferenceGroup": {
+    "en": "API reference",
+    "zh-Hans": "API 参考",
+    "zh-Hant": "API 參考",
+    "de": "API-Referenz",
+    "ja": "API リファレンス",
+    "ko": "API 레퍼런스",
+    "fr": "Référence API",
+    "es-MX": "Referencia API"
   }
 }

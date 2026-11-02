@@ -37,9 +37,12 @@ function buildLanguageBlock(locale) {
   const tabLabels = manifest.tabLabels?.[navKey] || manifest.tabLabels?.en || {
     help: 'Help',
     api: 'API',
-    apiReference: 'API reference',
   }
   const openapi = manifest.apiOpenapi || 'openapi.json'
+  const apiRefLabel =
+    manifest.apiReferenceGroup?.[navKey] ||
+    manifest.apiReferenceGroup?.en ||
+    'API reference'
 
   const navLabels = manifest.navbar[navKey] || manifest.navbar.en
   const anchors =
@@ -47,8 +50,11 @@ function buildLanguageBlock(locale) {
 
   const tabs = [{ tab: tabLabels.help, groups: helpGroups }]
   if (apiGroups.length) {
-    tabs.push({ tab: tabLabels.api, groups: apiGroups })
-    tabs.push({ tab: tabLabels.apiReference, openapi })
+    // Single API tab: guides/concepts + OpenAPI endpoints in one sidebar
+    tabs.push({
+      tab: tabLabels.api,
+      groups: [...apiGroups, { group: apiRefLabel, openapi }],
+    })
   }
 
   return {

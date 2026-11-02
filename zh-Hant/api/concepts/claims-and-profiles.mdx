@@ -1,0 +1,37 @@
+---
+title: Claims & engineering profiles
+description: L1 datasheet claims vs L2 engineering profiles — what they are and which SKU unlocks bodies
+---
+
+# Claims & engineering profiles
+
+Two layers of **datasheet-backed evidence** sit behind Catalog flags and Intelligence bodies.
+
+| | **L1 — Datasheet claims** | **L2 — Engineering profile** |
+|---|---|---|
+| **What** | Atomic assertions extracted from the PDF (limits, ratings, features) with page-level source | Structured engineering summary synthesized for agents (pins, electrical sections, …) |
+| **Shape** | `claims[]` with `kind`, `text`, `source.page`, `claim_id` | Sectioned object (`pin_model`, `electrical_profile`, …) |
+| **Typical use** | Cite a specific limit or feature in UI / RAG | Feed resolve / alternatives / BOM agents without re-parsing the PDF |
+| **Catalog** | `has_claims` + `evidence_links.claims` | `has_engineering_profile` + `evidence_links.engineering_profile` |
+| **Intelligence** | `GET …/claims` or `POST /v1/parts/claims` | `GET …/engineering-profile` |
+
+## Mental model
+
+```
+Datasheet PDF
+    → L1 claims     (quoteable facts + page)
+    → L2 profile    (normalized sections for tools)
+```
+
+- **Catalog** answers “does evidence exist?” (booleans + deep links).
+- **Intelligence** returns the **bodies**. Without Intelligence → `403` on claim/profile endpoints.
+- Missing / still-running L2 synthesis can return HTTP **200** with `synthesis_status: "missing"|"pending"`.
+
+## Kind prefixes (claims)
+
+Filter with `kind_prefix` (example: `limit.`). Treat `kind` as a stable taxonomy string, not free-form UI copy.
+
+## See also
+
+- Guide: [Evidence (claims & profiles)](/zh-Hant/api/guides/evidence)
+- SKU boundary: [SKUs](/zh-Hant/api/skus)
