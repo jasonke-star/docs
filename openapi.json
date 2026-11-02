@@ -463,7 +463,7 @@
         "type": "oauth2",
         "flows": {
           "clientCredentials": {
-            "tokenUrl": "https://developers.partgenie.ai/oauth/token",
+            "tokenUrl": "https://api.partgenie.ai/developer/oauth/token",
             "scopes": {}
           }
         }
