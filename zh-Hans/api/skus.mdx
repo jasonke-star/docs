@@ -1,17 +1,16 @@
 ---
 title: SKUs
-description: Catalog, Intelligence, and Partner Availability
+description: Catalog and Intelligence
 ---
 
 # Product SKUs
 
 | SKU | Who | Endpoints |
 |---|---|---|
-| **A Catalog** | ERP / PLM / EMS integrations | `lookup`, `batch-lookup`, `search`, `GET part`, `offers`, `offers/cached` |
+| **A Catalog** | ERP / PLM / EMS / partner embeds | `lookup`, `batch-lookup`, `search`, `GET part`, `offers`, `offers/cached`, partner availability |
 | **B Intelligence** | Decision / agent / BOM workflows | `resolve`, `alternatives`, `bom/analyze`, `claims`, `engineering-profile` |
-| **C Availability** | CAD / partner PDP embeds | `GET /api/v1/partner/availability` (YuanQiService) |
 
-ECAD API is **deferred** (not in current docs or pricing).
+Availability signals ship **inside Catalog** (not a separate paid SKU). ECAD API is **deferred** (not in current docs or pricing).
 
 ## Evidence packaging
 
