@@ -1,11 +1,16 @@
 ---
-title: Brand boundary
+title: API scope
+description: What this API covers vs what stays in your product
 ---
 
-# PartGenie vs Sourcing brand
+# API scope
 
-**PartGenie Intelligence:** What is it? Is it correct? Compatible? Market observed? Risks?
+This API is **PartGenie Catalog & Intelligence** — identity, observed market data, resolve / alternatives / BOM risk, and datasheet evidence.
 
-**Sourcing brand:** What can we supply? Landed price? Delivery? Place order?
+| In scope | Out of scope |
+|---|---|
+| What is this part? Correct / compatible? | Your sell price or landed quote |
+| Observed distributor stock / price | PO, payment, logistics, checkout |
+| Claims, engineering profiles, BOM analyze | Full PartGenie Chat transcript / ECAD download API |
 
-Do not send org PII, sell price, or PO terms into Intelligence APIs.
+Do not send end-customer PII, your sell price, or PO terms into Intelligence APIs.

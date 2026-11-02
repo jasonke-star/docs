@@ -10,4 +10,4 @@ title: Resolve vs Lookup
 | Output | candidates + confidence (+ rationale / match_hints for NL) | Single part + `part_id` |
 | ES | Search / lookup helpers | Deterministic catalog lookup only |
 
-Never call Elasticsearch from the sourcing brand — only these endpoints.
+Clients should use these endpoints only — do not call Elasticsearch directly.
