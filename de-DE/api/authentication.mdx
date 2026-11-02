@@ -14,7 +14,7 @@ Authorization: Bearer pg_at_…   # OAuth access token
 
 Issue credentials in the [developer portal](https://developers.partgenie.ai). Legacy env allow-list `PARTGENIE_API_KEYS` still works for Pilot.
 
-See also [OAuth client_credentials](/oauth).
+See also [OAuth client_credentials](/de-DE/api/oauth).
 
 Quota headers on responses:
 
@@ -23,14 +23,3 @@ Quota headers on responses:
 - `X-RateLimit-Period` (`YYYY-MM`)
 
 HTTP **429** when exceeded (no silent truncation).
-
-## Internal `/internal/v1` (HSP)
-
-HMAC-SHA256 over `timestamp.body` with headers:
-
-- `x-request-timestamp`
-- `x-request-signature`
-- `x-correlation-id`
-- `idempotency-key`
-
-Shared secret: AiService `SOURCING_SERVICE_SECRET` ↔ HSP `PARTGENIE_SERVICE_SECRET`.
