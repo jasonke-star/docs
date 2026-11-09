@@ -3,6 +3,44 @@ title: "체인지로그"
 description: "PartGenie 의 최신 기능 업데이트 및 버전 릴리스 정보 보기"
 ---
 
+<Update label="2026-11-09" tags={["Team", "Workspace", "Sourcing", "RFQ"]} description="팀 워크스페이스 소싱 — 견적， AVL 공급업체 및 회사 부품 라이브러리 확인"><Frame>
+    <img
+      alt="BOM toolbar with Get quotes and lines tagged Not in Company Library for team risk visibility"
+      src="/images/team-bom-get-quotes.png"
+    />
+  </Frame>
+
+<Frame>
+    <img
+      alt="Request BOM quotes step 2: build quantity, ship-to, currency, substitution policy, and choose suppliers"
+      src="/images/team-rfq-choose-suppliers.png"
+    />
+  </Frame>
+
+**Team Workspace** on the [**Team plan**](/ko-KR/membership-pricing) 는 이제 공유 BOM 작업 위에 더 완전한 ** 소스 루프 ** 를 실행합니다. 내보내기가 줄어들고， 받은 편지함 스레드가 줄어들며， 동일한 RFQ 에 반환되는 인용문이 줄어듭니다。
+
+모든 Team BOM 에서 프로젝트 헤더 (상태， 예상 가격， 수출 및 공유 옆) 에 Get Quotes 를 사용합니다. PartGenie 는 양， 배송， 통화， 교체 정책 및 배송 기대치를 안내한 다음， 작업 공간 목록에서 공급업체를 선택하거나 초안을 저장하고 나중에 공급업체를 추가합니다. 제출할 때 PartGenie 는 요청을 공급업체에 이메일로 보내고， 수신되는 견적 파일과 응답을 분석하며， 라인 가격을 RFQ 비교 뷰로 롤링하여 스프레드시트를 다시 키링하지 않고도 승자를 선택할 수 있습니다。
+
+<Frame>
+    <img
+      alt="Suppliers page: workspace AVL with company, email, approval status, and last project"
+      src="/images/team-workspace-suppliers-avl.png"
+    />
+  </Frame>
+
+공급업체 (AVL) 는 워크스페이스의 여러 프로젝트에서 공유되는 소싱 아래에 있습니다. 연락처를 개별적으로 추가하거나 대량으로 가져오고， 승인됨/보류 중 상태를 추적하며， 견적을 받을 때마다 동일한 목록을 재사용합니다. 팀은 프로젝트별 스프레드시트 대신 승인된 공급업체 목록 하나를 봅니다。
+
+<Frame>
+    <img
+      alt="Workspace settings Library tab: shared company parts library with internal PN, MPN, approval status, and filters"
+      src="/images/team-workspace-shared-library.png"
+    />
+  </Frame>
+
+** 회사 부품 라이브러리 ** 는 ** 설정 → 작업 공간 → 라이브러리 **(팀) 에 중앙 집중화되어 있습니다. 내부 부품 번호， 제조업체 MPN, 범주 및 승인 상태를 검색합니다. 엔지니어링에서 새로운 MPN 을 발견하면 Search** 에서 부품 ** 을 추가합니다. **BOM**, **Search** 및 **Design** 에서 회사 라이브러리 ** 에 없는 행은 인라인 ** 회사 라이브러리 ** 에 있지 않음 ** 신호를 표시하며， 구매 및 EE 가 [팀 규칙](/ko-KR/changelog#2026-10-21) 및 AVL 정책에 따라 동일한 위험 그림을 공유할 수 있도록 격차의 ** 글로벌 보기 ** 를 제공합니다。
+
+팀 워크스페이스는 10 월 탐색 및 [하드웨어 프로젝트] 워크벤치 (/ko-KR/changelog#2026-10-28) 를 기반으로 구축됩니다. 가이드: [BOM 관리](/ko-KR/bom-management) · [멤버십](/ko-KR/membership-pricing) · [시작하기](/ko-KR/getting-started).</Update>
+
 <Update label="2026-10-28" tags={["Workspace", "Home", "Sidebar", "Navigation"]} description="홈 작업대와 화려한 사이드바 탐색 — 시계， 프로젝트， 컬렉션， 라이브러리"><Frame>
     <img
       alt="Signed-in home workbench: greeting, Search and Work input, Projects and Tasks columns, Set up a watch guide card, and Explore PartGenie shortcuts"

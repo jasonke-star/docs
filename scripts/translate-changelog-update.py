@@ -26,10 +26,16 @@ path = ROOT / dest_name / "changelog.mdx"
 text = path.read_text(encoding="utf-8")
 pattern = re.compile(rf'(<Update label="{re.escape(label)}"[\s\S]*?</Update>)')
 
+en_path = ROOT / "en-US" / "changelog.mdx"
+en_block_m = pattern.search(en_path.read_text(encoding="utf-8"))
+if not en_block_m:
+    print(f"Update {label} not found in en-US/changelog.mdx", file=sys.stderr)
+    sys.exit(1)
+source_block = en_block_m.group(1).replace("/en-US/", f"/{dest_name}/")
+
 
 def repl(m: re.Match) -> str:
-    block = m.group(1).replace("/en-US/", f"/{dest_name}/")
-    out = tlf.translate_one_update_block(block, lang)
+    out = tlf.translate_one_update_block(source_block, lang)
     return tlf.fix_mdx_component_tags(out)
 
 

@@ -3,6 +3,44 @@ title: "チェンジログ"
 description: "PartGenie の最新の機能更新とバージョンリリース情報を表示する"
 ---
 
+<Update label="2026-11-09" tags={["Team", "Workspace", "Sourcing", "RFQ"]} description="チームワークスペースソーシング—見積もり、AVL サプライヤー、および会社部品ライブラリを入手する"><Frame>
+    <img
+      alt="BOM toolbar with Get quotes and lines tagged Not in Company Library for team risk visibility"
+      src="/images/team-bom-get-quotes.png"
+    />
+  </Frame>
+
+<Frame>
+    <img
+      alt="Request BOM quotes step 2: build quantity, ship-to, currency, substitution policy, and choose suppliers"
+      src="/images/team-rfq-choose-suppliers.png"
+    />
+  </Frame>
+
+  [**Team プラン**](/ja-JP/membership-pricing) の **Team Workspace** は、共有 BOM ワークの上に **ソーシングの一連の流れ**を回せます。エクスポートやメール往復を減らし、見積は同じ RFQ に戻ります。
+
+  任意の **Team** BOM から、プロジェクトヘッダー(健全性、見積もり価格、輸出、共有の横) で ** 見積もりを取得 ** を使用します。PartGenie は、数量、配送先、通貨、交換ポリシー、配送期待値について説明した後、ワークスペースリストからサプライヤーを選択 ** します。または、下書きを保存して後でサプライヤーを追加することもできます。提出すると、PartGenie はサプライヤーにリクエストをメールで送信し、受信した見積もりファイルと応答を解析 ** し、RFQ 比較ビューに行価格をロールアップ ** します。これにより、スプレッドシートを再キーイングせずに優勝者を選択できます。
+
+<Frame>
+    <img
+      alt="Suppliers page: workspace AVL with company, email, approval status, and last project"
+      src="/images/team-workspace-suppliers-avl.png"
+    />
+  </Frame>
+
+サプライヤー(AVL) は、ワークスペース内のプロジェクト間で共有されるソーシングの下に存在します。連絡先を 1 つずつ追加するか、一括インポートし、承認済み/保留中のステータスを追跡し、見積もりを取得するたびに同じリストを再利用します。チームには、プロジェクトごとのスプレッドシートではなく、承認済みのサプライヤーのリストが 1 つ表示されます。
+
+<Frame>
+    <img
+      alt="Workspace settings Library tab: shared company parts library with internal PN, MPN, approval status, and filters"
+      src="/images/team-workspace-shared-library.png"
+    />
+  </Frame>
+
+** 企業部品ライブラリ ** は、** 設定→ワークスペース→ライブラリ **(チーム) に一元化されています。内部部品番号、製造元の MPN、カテゴリ、および承認ステータスを検索します。エンジニアリングが新しい MPN を見つけた場合は、検索 ** から部品 ** を追加します。**BOM**、**Search**、および **Design** では、企業ライブラリ ** に ** 存在しない行にはインライン ** 企業ライブラリ ** に存在しない ** キューが表示され、ギャップの ** グローバルビュー** が表示されるため、調達と EE は [チームルール](/ja-JP/changelog#2026-10-21) および AVL ポリシーに沿って同じリスク図を共有します。
+
+チームワークスペースは、10 月のナビゲーションと [ハードウェアプロジェクト](/ja-JP/changelog#2026-10-28) ワークベンチに基づいて構築されています。ガイド:[BOM 管理](/ja-JP/bom-management) ·[メンバーシップ](/ja-JP/membership-pricing) ·[始める](/ja-JP/getting-started)</Update>
+
 <Update label="2026-10-28" tags={["Workspace", "Home", "Sidebar", "Navigation"]} description="ホームワークベンチと輝くサイドバーナビゲーション—Watch、Projects、Collection、Library"><Frame>
     <img
       alt="Signed-in home workbench: greeting, Search and Work input, Projects and Tasks columns, Set up a watch guide card, and Explore PartGenie shortcuts"

@@ -3,6 +3,46 @@ title: 更新日志
 description: 查看 PartGenie 的最新功能更新和版本发布信息
 ---
 
+<Update label="2026-11-09" tags={["团队", "Workspace", "采购", "RFQ"]} description="Team Workspace 采购闭环—BOM 一键询价、AVL 供应商与公司器件库">
+  <Frame>
+    <img
+      alt="BOM 工具栏 Get quotes，行上标注 Not in Company Library 提示团队风险"
+      src="/images/team-bom-get-quotes.png"
+    />
+  </Frame>
+
+  <Frame>
+    <img
+      alt="Request BOM quotes 第二步：组装数量、目的地、币种、替代策略与选择供应商"
+      src="/images/team-rfq-choose-suppliers.png"
+    />
+  </Frame>
+
+  在 [**Team 套餐**](/zh-Hans/membership-pricing) 下的 **Team Workspace**，把共享 BOM 与 **采购流程**串成闭环：少导出表格、少邮件来回，报价直接回到同一条 RFQ 里比价。
+
+  任意 **Team** 项目 BOM 顶栏可点 **Get quotes**（与 health、估价、Export、Share 并列）。向导会收集数量、ship-to、币种、替代料策略与交期期望，再在 **Choose suppliers** 里从工作区供应商列表勾选——也可先存草稿、稍后再加厂商。提交后 PartGenie 会 **向供应商发送询价邮件**，**自动解析** 回传的报价文件与邮件正文，并把行价写入 **RFQ 比价**视图，无需手工录入 Excel。
+
+  <Frame>
+    <img
+      alt="Suppliers 页：工作区 AVL，含公司、邮箱、审批状态与最近项目"
+      src="/images/team-workspace-suppliers-avl.png"
+    />
+  </Frame>
+
+  **Suppliers（AVL）** 在侧栏 **Sourcing** 下维护，**跨项目共享**。支持逐条添加或 **批量导入**，标记 **Approved** 等待审状态；每次 **Get quotes** 复用同一份名单，避免各项目各维护一份表格。
+
+  <Frame>
+    <img
+      alt="Workspace 设置 Library：公司共享器件库，含内部料号、MPN、审批状态与筛选"
+      src="/images/team-workspace-shared-library.png"
+    />
+  </Frame>
+
+  **公司器件库（Company parts library）** 集中在 **设置 → Workspace → Library**（Team）。可检索内部料号、制造商 MPN、类别与审批状态；在 Search 里找到新料时用 **Add from Search** 入库。 **BOM**、**Search**、**Design** 中出现 **不在公司库** 的器件会显示 **Not in Company Library** 提示，并提供 **全局查看**缺口，方便采购与 EE 统一风险管理，并与 [Team rules](/zh-Hans/changelog#2026-10-21)、AVL 策略一致。
+
+  本条建立在十月 [侧栏与项目工作台](/zh-Hans/changelog#2026-10-28) 之上。参见 [BOM 管理](/zh-Hans/bom-management) · [会员与定价](/zh-Hans/membership-pricing) · [快速开始](/zh-Hans/getting-started)。
+</Update>
+
 <Update label="2026-10-28" tags={["Workspace", "首页", "侧栏", "导航"]} description="首页工作台 + 侧栏一级导航重排（Watch、Projects、Collection、Library）">
   <Frame>
     <img
