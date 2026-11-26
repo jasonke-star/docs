@@ -8,7 +8,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="PartGenie Wholesale 首页：元器件与烙铁维修耗材、分类入口、订单与购物车"
       src="/images/partgenie-wholesale-home.png"
-  />
+    />
+
   </Frame>
 
   **PartGenie Wholesale** 已上线——面向团队的 **工厂直供** 采购：**电子元器件**、**焊接与返修**、**线缆连接器**、**ESD 与包装**，以及产线/实验室常用的 **测试测量、精密工具、工作台与检测、组装原型** 等分类，一页逛齐。
@@ -25,7 +26,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="PartGenie 与 WhatsApp 标识，表示 WhatsApp Agent 已上线"
       src="/images/partgenie-whatsapp-agent.png"
-  />
+    />
+
   </Frame>
 
   **PartGenie WhatsApp Agent** 已上线：在 WhatsApp 里用对话方式使用同一套器件 Copilot，不必先打开电脑。
@@ -49,14 +51,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="BOM 工具栏 Get quotes，行上标注 Not in Company Library 提示团队风险"
       src="/images/team-bom-get-quotes.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Request BOM quotes 第二步：组装数量、目的地、币种、替代策略与选择供应商"
       src="/images/team-rfq-choose-suppliers.png"
-  />
+    />
+
   </Frame>
 
   在 [**Team 套餐**](/zh-Hans/membership-pricing) 下的 **Team Workspace**，把共享 BOM 与 **采购流程**串成闭环：少导出表格、少邮件来回，报价直接回到同一条 RFQ 里比价。
@@ -67,7 +71,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Suppliers 页：工作区 AVL，含公司、邮箱、审批状态与最近项目"
       src="/images/team-workspace-suppliers-avl.png"
-  />
+    />
+
   </Frame>
 
   **Suppliers（AVL）** 在侧栏 **Sourcing** 下维护，**跨项目共享**。支持逐条添加或 **批量导入**，标记 **Approved** 等待审状态；每次 **Get quotes** 复用同一份名单，避免各项目各维护一份表格。
@@ -76,7 +81,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Workspace 设置 Library：公司共享器件库，含内部料号、MPN、审批状态与筛选"
       src="/images/team-workspace-shared-library.png"
-  />
+    />
+
   </Frame>
 
   **公司器件库（Company parts library）** 集中在 **设置 → Workspace → Library**（Team）。可检索内部料号、制造商 MPN、类别与审批状态；在 Search 里找到新料时用 **Add from Search** 入库。 **BOM**、**Search**、**Design** 中出现 **不在公司库** 的器件会显示 **Not in Company Library** 提示，并提供 **全局查看**缺口，方便采购与 EE 统一风险管理，并与 [Team rules](/zh-Hans/changelog#2026-10-21)、AVL 策略一致。
@@ -89,7 +95,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="登录后首页工作台：问候语、Search/Work 输入框、Projects 与 Tasks 三列卡片、Watch 引导卡与 Explore PartGenie 快捷入口"
       src="/images/home-workbench.png"
-  />
+    />
+
   </Frame>
 
   **登录后的首页改为「工作台」，不再只有居中搜索框。** 在 [app.partgenie.ai](https://app.partgenie.ai) 登录后会看到时段问候、**三列卡片**和底部 **Explore PartGenie** 轮播（BOM、Design、替代料、关税查询、演示等入口）。某一列还没有数据时，会显示**引导卡片**，一键进入 Search、新建 BOM、[AI Watch](/zh-Hans/changelog#2026-10-27) 或 RFQ；有活动后同一位置切换为**数据卡片**——最近的 **Projects**、**Tasks**（Search / Work / BOM / Design / Watch 会话）、**Watch 命中**与**进行中的 RFQ**，每列最多五行并可快速续聊。列表加载时使用骨架屏占位。
@@ -97,13 +104,13 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
   **左侧栏一级导航重排。** 固定顺序为 **Search → Watch → Collection → Projects → Library**（团队工作区在 Library 上方还有 **Sourcing / RFQs**）。每条对应一类工作：检索、监控、收藏、硬件项目、文件与连接器——[AI Watch](/zh-Hans/changelog#2026-10-27) 不再和 Collection 挤在一起，BOM/Design 也不再散落在无关菜单里。
 
   | 一级入口 | 变化 |
-  | --- | --- |
-  | **Search** | 仍是默认入口；**⌘K** 可跨对话、Knowledge 与 Projects 跳转。 |
-  | **Watch** | **独立一级入口**与专属页面——**Findings** 看告警，**Watch** 管理任务、暂停与编辑（不再与收藏器件混页）。 |
-  | **Collection** | **与 Watch 拆分**——只放收藏的器件、品牌与书签；列表与详情并排。 |
-  | **Projects** | **项目中心改版**——点 **Projects** 进入硬件项目工作台（筛选、卡片/列表、Architecture、BOM 健康），而不只是会话列表；侧栏可展开**最近项目**，支持置顶、排序、重命名、复制或删除。 |
-  | **Library** | Knowledge 上传与对话附件；团队工作区下为 **Parts library** 与审批；**Launch**（KiCad、Chrome 等连接器）收进 **Library** 下，不再单独占一级。 |
-  | **Sourcing** | 团队工作区启用采购时，**RFQ / 寻源**在 Library 上方。 |
+| --- | --- |
+| **Search** | 仍是默认入口；**⌘K** 可跨对话、Knowledge 与 Projects 跳转。 |
+| **Watch** | **独立一级入口**与专属页面——**Findings** 看告警，**Watch** 管理任务、暂停与编辑（不再与收藏器件混页）。 |
+| **Collection** | **与 Watch 拆分**——只放收藏的器件、品牌与书签；列表与详情并排。 |
+| **Projects** | **项目中心改版**——点 **Projects** 进入硬件项目工作台（筛选、卡片/列表、Architecture、BOM 健康），而不只是会话列表；侧栏可展开**最近项目**，支持置顶、排序、重命名、复制或删除。 |
+| **Library** | Knowledge 上传与对话附件；团队工作区下为 **Parts library** 与审批；**Launch**（KiCad、Chrome 等连接器）收进 **Library** 下，不再单独占一级。 |
+| **Sourcing** | 团队工作区启用采购时，**RFQ / 寻源**在 Library 上方。 |
 
   **硬件项目（Hardware projects）** 将 **Design 与 BOM 收进同一项目壳**：在项目页可筛选排序、切换**卡片/列表**、查看 **Architecture** 与设计图、阅读 **BOM health findings**、查看 **BOM 估价趋势**，并**发起或继续 RFQ**。无论 BOM 来自 CSV、对话还是 design sync，导入都会保留位号。
 
@@ -115,14 +122,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="在 Search 器件结果页创建监控：填写监控范围、每日频率与通知时间"
       src="/images/ai-watch-start-modal.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Watch 列表：查看进行中的监控任务，支持暂停与编辑"
       src="/images/ai-watch-dashboard.png"
-  />
+    />
+
   </Frame>
 
   **AI Watch** 把某个 **器件** 或 **厂商** 变成一条 **监控任务**——由 PartGenie 在后台跟踪关键变化，不必每天手动刷分销页。
@@ -137,14 +146,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="CAD Models KiCad Beta 预览：原理图 symbol 与 PCB footprint 可缩放平移，再 Download KiCad"
       src="/images/ecad-preview-kicad-beta.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="CAD Models Altium 18 预览：symbol 与 footprint，Request 申请，Powered by FootprintKu"
       src="/images/ecad-preview-altium-footprintku.png"
-  />
+    />
+
   </Frame>
 
   **CAD Models 支持 ECAD 预览**——在器件抽屉里先看 schematic symbol 与 PCB footprint，再决定是否下载。
@@ -159,14 +170,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Workspace 设置 Team rules：Component、Supplier、Risk 预设采购规则，每次 BOM 分析自动生效"
       src="/images/workspace-team-rules.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Workspace analytics：活跃用户、消息数、积分消耗（团队池与个人拆分）及成员用量表"
       src="/images/workspace-team-analytics.png"
-  />
+    />
+
   </Frame>
 
   **团队版**为硬件与采购团队提供共享 **Workspace**——统一器件库、公司级 sourcing 规则，以及集中计费。
@@ -181,14 +194,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="PartGenie 与 footprintku AI 合作"
       src="/images/partgenie-footprintku-partnership.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="CAD Models 页签：Altium 18 等格式，申请 schematic symbol、PCB footprint、STEP 3D；支持 Cadence、OrCAD、PADS"
       src="/images/footprintku-ecad-cad-models.png"
-  />
+    />
+
   </Frame>
 
   **PartGenie 与 FootprintKu 正式合作**，为指定 MPN 提供**专业级 ECAD**——面向量产 CAD 流程的 schematic symbol、PCB footprint 与 3D STEP，而不是通用占位封装。
@@ -203,14 +218,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="KiCad 插件 part inspect：JST 连接器 Product 参数、Add to BOM、View on PartGenie"
       src="/images/kicad-plugin-part-inspect.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="KiCad 插件 CAD Models：Generate KiCad、符号与封装 Request"
       src="/images/kicad-plugin-cad-models.png"
-  />
+    />
+
   </Frame>
 
   **Part inspect（器件检视）。** 在 KiCad 里选中封装，PartGenie 面板在板子旁边打开——**Product** 参数、**Alternatives**、**Procurement**（市场价与库存）、**CAD Models**，以及跳转网页完整器件页与规格书能力。可在 PCB 编辑器内申请或生成 KiCad symbol / footprint。
@@ -219,14 +236,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="KiCad 插件 Work：Sync project BOM，原理图同步 93 行"
       src="/images/kicad-plugin-work-bom-sync.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="KiCad 插件 BOM health：综合分、匹配行、预估价格、风险"
       src="/images/kicad-plugin-bom-health.png"
-  />
+    />
+
   </Frame>
 
   **Work — BOM 同步与健康度。** **Sync project BOM** 一键把原理图行同步到 PartGenie，再打开 **BOM health** 看匹配率、预估成本、未匹配 MPN 与风险——与网页 BOM 能力一致。
@@ -241,21 +260,24 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="电阻功率校核：公式与电压、阻值、额定功率滑条，本地重算 margin"
       src="/images/engineering-calc-resistor-sliders.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="LDO 功耗回答：Electrical Pass、Thermal Fail 检查与公式推导"
       src="/images/engineering-calc-ldo-checks.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Intelligent UI：功耗与结温面板，预测 Tj 与上限对比"
       src="/images/engineering-calc-thermal-panel.png"
-  />
+    />
+
   </Frame>
 
   **Search 现已内置工程计算器。** PartGenie 会根据问题匹配 Audit 面板、展示公式，并在有明确极限时给出 **Pass / Fail** 检查。
@@ -263,9 +285,9 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
   **当前已上线的计算器：**
 
   | 面板 | 用途 |
-  | --- | --- |
-  | **Resistor power rating audit** | P = V²/R（或 VI | I²R），相对额定功率的 margin |
-  | **Power dissipation & junction temperature** | LDO Pd、Tj = Ta + Pd × θJA 对比上限——**Electrical** | **Thermal** 检查 |
+| --- | --- |
+| **Resistor power rating audit** | P = V²/R（或 VI | I²R），相对额定功率的 margin |
+| **Power dissipation & junction temperature** | LDO Pd、Tj = Ta + Pd × θJA 对比上限——**Electrical** | **Thermal** 检查 |
 
   **示例 query：** `100Ω resistor at 12V — is 0.25W rating enough?` · `Rough estimate: how much heat does a 3.3V LDO drop from 12V at 200mA?` · `12V 转 3.3V 400mA，θJA 50°C/W，热校核过不过？`
 
@@ -279,14 +301,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="规格书 PDF 翻译前正在解析版式"
       src="/images/datasheet-translate-layout-parsing.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="规格书阅读器：原文与繁体中文切换，以及翻譯規格書入口"
       src="/images/datasheet-translate-original-vs-translated.png"
-  />
+    />
+
   </Frame>
 
   **规格书翻译现已开放 Beta。** 在 PDF 阅读器里，可把规格书译成你在 **设置 → Language** 里选择的界面语言——跟账号语言一致，不用每次单独选。
@@ -306,7 +330,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="PartGenie Chrome 扩展在 DigiKey AO3400A 商品页：替代料对比、CAD models、Find alternatives、Compare prices、Ask about this part"
       src="/images/chrome-extension-digikey-sidebar.png"
-  />
+    />
+
   </Frame>
 
   **PartGenie for Chrome 正式上线。** 在支持的分销商或原厂商品页，扩展会自动识别当前 MPN——不用反复复制料号、开新标签、在多个网站之间搜。对话、替代料、ECAD 和比价都在商品页旁边完成。
@@ -328,7 +353,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Search 回答中的 ESP32-S3-WROOM-1 器件卡片，右侧打开 ESP32-S3-WROOM-1-N4 详情"
       src="/images/component-detail-beside-answer.png"
-  />
+    />
+
   </Frame>
 
   **器件详情窗口已优化，可以直接在回答旁边查看。** 在 Search 回答里点击器件卡片（图片、厂商、型号），详情会留在回答右侧。参数、封装和简介都不用离开当前对话，也可以 **Add to BOM**，或切到 **CAD Models**。
@@ -341,14 +367,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Search 回答 STM32F103RET6，回复中附带规格书 PDF 卡片"
       src="/images/datasheet-search-pdf-card.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="规格书 PDF 在搜索回答旁打开，阅读器底部有 Chat with datasheet"
       src="/images/datasheet-search-viewer.png"
-  />
+    />
+
   </Frame>
 
   **Search 里可以直接搜索规格书并打开查看。** 在 Search 里提问，例如 “datasheet for STM32F103RET6”，回答里会附上 PDF。点击文件卡片，规格书会在对话旁边打开，可以逐页阅读。
@@ -361,7 +389,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="PartGenie 移动端 App：AI Electronics Copilot in your pocket，支持拍照识件、扫 PCB、找替代料"
       src="/images/partgenie-android-app.png"
-  />
+    />
+
   </Frame>
 
   **PartGenie iOS App 正式上线。** 与 Android 同一套口袋工作流——识别芯片、扫描 PCB、读取 marking、查询 SMD code、查找规格书与可验证替代料——现在 iPhone 也能用。
@@ -374,14 +403,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="PartGenie Memory 个性化指令宣传图"
       src="/images/memory-banner.jpg"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="个人资料设置：角色、关注行业，以及自定义回答风格的 Custom instructions"
       src="/images/custom-instructions.png"
-  />
+    />
+
   </Frame>
 
   现在可以为 **Search、BOM、Design** 设置**个性化指令**——角色、行业，以及回答偏好（例如先给结论、强调交期与替代料），让输出更贴近你的工作方式。
@@ -394,21 +425,24 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Design 流程步骤：Brief、Plan、Architecture、BOM、Image 均已完成"
       src="/images/design-plan-steps.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Plan 评审：目标、指标、约束，以及可选择的架构方案"
       src="/images/design-plan-review.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="生成图片支持多视图：Hero 主视角与其他角度缩略图"
       src="/images/design-image-multiview.jpg"
-  />
+    />
+
   </Frame>
 
   **Design 现已支持方案评审。** Brief 之后，PartGenie 会给出多种架构方案（含目标、指标与约束）。选定方向（也可在对话里要求调整选项），再继续 Architecture、BOM 与 Image。
@@ -421,14 +455,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="侧边栏 Search 入口，显示快捷键 ⌘K"
       src="/images/quick-search-sidebar.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="快速搜索面板：可搜索对话、Knowledge、Projects，并支持 New Chat"
       src="/images/quick-search-palette.png"
-  />
+    />
+
   </Frame>
 
   用 **⌘K**（侧边栏 Search）更快跳转。打开快速搜索面板，在同一处查找**对话、Knowledge、Projects**——也可以直接 **New Chat**，无需离开当前页面。
@@ -439,14 +475,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="为 RC0603FR-071KL 生成 KiCad 库：Symbol、Footprint、3D 预览及 Download"
       src="/images/kicad-library-generate.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="生成结果的 Evidence summary：引脚映射、封装尺寸等来自规格书的多维度校验"
       src="/images/kicad-library-evidence.png"
-  />
+    />
+
   </Frame>
 
   **KiCad 库生成现已开放 Beta。** 输入 MPN 即可生成 **Symbol、Footprint、STEP 3D**，并支持工程级 KiCad 文件导出，直接用于你的设计工程。
@@ -459,7 +497,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="25M Data Added — PartGenie 器件库扩容，覆盖多家主流半导体与元器件厂商"
       src="/images/data-25m-added.png"
-  />
+    />
+
   </Frame>
 
   PartGenie 器件库本次新增约 **2500 万条**器件数据，覆盖 TI、ST、NXP、Infineon、onsemi、Microchip、Renesas、Samsung、SK hynix、NVIDIA 等主流厂商——搜索、替代料、BOM 匹配与采购查询能命中更多你真正会用到的料号。
@@ -470,7 +509,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Share 对话框：邮箱邀请、Can view 权限、仅受邀可见，以及 Copy link"
       src="/images/share-chat-bom.png"
-  />
+    />
+
   </Frame>
 
   Chat 回答与 BOM 现已支持**分享**。通过邮箱邀请同事（对方会收到邮件通知），设置查看权限，或复制链接。可限制为仅受邀人可见，也可开启公开访问，让持有链接的人直接查看对话或 BOM。
@@ -481,14 +521,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="器件 Alternative Parts 区域：View report 与 Export 操作入口"
       src="/images/alt-report-entry.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Alternative report 报告页：目标器件、摘要、设计/采购建议、候选料列表，支持导出 PDF 与 Word"
       src="/images/alt-report-export.png"
-  />
+    />
+
   </Frame>
 
   器件的 Alternative Parts 区域现已支持**生成并导出 Alternative Report**。点击 **View report** 即可查看结构化短名单——目标器件、执行摘要、面向设计工程师与采购的建议，以及候选料差异、pin-to-pin 匹配、风险与置信度。需要同步给 FAE、采购或设计评审时，可直接导出为 **PDF** 或 **Word**。
@@ -499,7 +541,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="BOM 工具栏：Changes 查看工程 Diff 与版本记录，Health 健康度，以及预估价格区间 Est. $62.42 – $366"
       src="/images/bom-diff-estimate.png"
-  />
+    />
+
   </Frame>
 
   BOM 是一份会持续变化的工程文档。PartGenie 现已支持**工程 Diff**——不只看到最新行清单，还能看清改了什么、何时改、为什么改。
@@ -516,7 +559,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="语言设置下拉：Auto、English、Deutsch、日本語、한국어、繁體中文、Français、Español"
       src="/images/web-multilingual.png"
-  />
+    />
+
   </Frame>
 
   **PartGenie 网页端现已支持多语言。** 可在 **设置 → Language** 中切换界面语言，或选择 **Auto** 跟随浏览器。目前支持 English、Deutsch、日本語、한국어、繁體中文、Français、Español (México)——不同地区的团队都能用熟悉的语言使用 PartGenie。
@@ -527,14 +571,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="搜索 ReCamera 时出现 Seeed Studio 模组与镜头的 PARTS 推荐结果"
       src="/images/openelab-search.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Seeed Studio M12 长焦镜头产品抽屉：可加入 BOM 并通过 PartGenie 采购"
       src="/images/openelab-product.png"
-  />
+    />
+
   </Frame>
 
   **现在可以搜索模块与套件了。** PartGenie 与 **OpenELAB** 正式合作——OpenELAB 是面向 AIoT、机器人与创客硬件的一站式创新平台——把平台品类从分立器件扩展到可直接用于搭建与原型的模组与套件。
@@ -552,21 +598,24 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="首页切换至 Work 模式，已附加 BOM，正在分析风险"
       src="/images/partgenie-work-input.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Work 对话分析 BOM 风险：NRND 生命周期与分销商库存缺失"
       src="/images/partgenie-work-risks.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="BOM 概览：器件分布、风险列表，以及替代料 Adopt 一键替换"
       src="/images/partgenie-work-adopt.png"
-  />
+    />
+
   </Frame>
 
   **PartGenie Work** 正式上线——把你的项目带进主对话，从分析到执行一气呵成，无需切换页面。
@@ -584,7 +633,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="PartGenie Android App 宣传图：AI Electronics Copilot in your pocket，支持拍照识件、扫 PCB、找替代料等"
       src="/images/partgenie-android-app.png"
-  />
+    />
+
   </Frame>
 
   **PartGenie Android App 正式上线。** 识别芯片、扫描 PCB、读取 marking、查询 SMD code、查找规格书与可验证替代料——与 Web 端一致的 AI 工作流，现在装进你的口袋。
@@ -603,7 +653,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="宣传图：Available on the Monthly Pro plan — Try Pro free for 7 days"
       src="/images/pro-free-trial.png"
-  />
+    />
+
   </Frame>
 
   **Pro 现支持 7 天免费试用**——适用于 **Monthly Pro（月付）** 套餐。试用期内可完整体验搜索、BOM 分析、Design、实时采购、表格导出等 Pro 能力。可在账单设置中开启试用，试用期内可随时取消。
@@ -614,7 +665,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="DigiKey 采购面板：实时价格阶梯与 Purchase 跳转链接"
       src="/images/procurement-purchase-jump.png"
-  />
+    />
+
   </Frame>
 
   实时采购数据现已支持**一键跳转采购**。在器件的 Procurement 页签中，点击 **Purchase** 即可直达对应分销商的产品页面——DigiKey、LCSC、Arrow、TME 等均已支持。在 PartGenie 核对价格与库存，在分销商平台直接下单。
@@ -625,7 +677,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Distributor 设置：DigiKey、LCSC、TME、Unikeyic、OnlineComponents、WinSource、Arrow 均显示 Live pricing"
       src="/images/sourcing-lcsc-arrow.png"
-  />
+    />
+
   </Frame>
 
   **LCSC** 与 **Arrow** 正式加入实时数据行列——与 DigiKey、TME、Unikeyic、OnlineComponents、WinSource 一并，在器件详情、BOM 及对比视图中提供实时价格与库存。可在 **设置 → Distributors** 中按需开关。七家分销商，一个视图。
@@ -636,7 +689,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Credits 面板：Free 套餐本月剩余 9.5/10 Credits，支持 Top up 充值"
       src="/images/usage-credits.png"
-  />
+    />
+
   </Frame>
 
   用量计量方式升级为 **Credits**，不再是单一的搜索次数。器件查询、替代料查找、BOM 分析、硬件设计等不同链路按各自消耗比例计费，让你清晰掌握每项功能的实际用量。
@@ -649,7 +703,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="替代料搜索结果：每个候选器件直接显示库存、含 MOQ 的价格、交期、置信度评级与数据来源"
       src="/images/search-live-sourcing.png"
-  />
+    />
+
   </Frame>
 
   器件查询和替代料结果现已内嵌**实时采购数据**——来自五家分销商的库存、含 MOQ 的价格、交期、置信度与来源，与推荐结果一并呈现。无需切换页面或单独打开采购视图，采购决策信息直接在回答中一目了然。
@@ -660,14 +715,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="AI 回答 STM32F103C8T6 规格参数，每条数据旁标注对应的规格书页码角标"
       src="/images/datasheet-citation-answer.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="点击页码角标后直接跳转至规格书第 38 页，显示对应的工作条件参数表"
       src="/images/datasheet-citation-pdf.png"
-  />
+    />
+
   </Frame>
 
   AI 回答现在会**明确标注每条数据的来源页码**。规格参数、电气特性等数值旁会出现规格书页码角标，点击后直接跳转至对应 PDF 页面——核对原文、确认数据、继续追问，全程无需离开 PartGenie。
@@ -680,7 +737,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Distributor 设置：DigiKey、TME、Unikeyic、OnlineComponents、WinSource 均显示 Live pricing"
       src="/images/sourcing-onlinecomponents-winsource.png"
-  />
+    />
+
   </Frame>
 
   **OnlineComponents** 与 **WinSource** 正式加入实时数据行列——现已有五家分销商提供实时价格与库存，覆盖器件详情、BOM 及对比视图。可在 **设置 → Distributors** 中按需开关。更多分销商持续接入，欢迎告诉我们你最需要哪家。
@@ -691,7 +749,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="搜索回答中的表格，鼠标悬停右上角显示下载图标，可导出表格"
       src="/images/search-table-export.png"
-  />
+    />
+
   </Frame>
 
   搜索回答中的表格现已支持**导出**。鼠标悬停表格右上角即可看到下载按钮——将对比结果、替代料列表或规格摘要导出到你的工作流中。此功能为 **Pro 会员**专属。
@@ -702,14 +761,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="寻找 BQ24195 替代料时，系统询问功耗、散热与封装等应用约束"
       src="/images/alt-search-clarify.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="BQ24195 替代料结果：结合已确认的应用约束，给出升级路径与功能替代方案"
       src="/images/alt-search-results.png"
-  />
+    />
+
   </Frame>
 
   替代料搜索变得更强了。PartGenie 本来就不止于规格比对——现在还会**主动追问项目上下文**（功耗限制、散热要求、封装兼容性、应用场景），再给出更合适的推荐。
@@ -722,14 +783,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="首页搜索框中的麦克风图标，可点击进行语音输入"
       src="/images/search-voice-mic.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="语音录制中：搜索框内显示波形与录音时长"
       src="/images/search-voice-recording.png"
-  />
+    />
+
   </Frame>
 
   搜索现已支持**语音输入**。点击搜索框中的麦克风，直接说出你的查询——查型号、找替代料、问应用场景——PartGenie 会实时转写。在工位上翻规格书时，也能解放双手快速提问。
@@ -740,21 +803,24 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Knowledge 文件库：按日期展示上传的规格书、参考设计与压缩包，附文件类型标签"
       src="/images/knowledge-library.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Knowledge 文件卡片的操作菜单：与此文件对话、下载、删除"
       src="/images/knowledge-actions.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="首页对话框中已附加 Knowledge 文件，可直接提问并结合文件内容获取回答"
       src="/images/knowledge-chat.png"
-  />
+    />
+
   </Frame>
 
   **Knowledge** 是 PartGenie 内置的个人硬件工程知识库。上传你自己的文件，AI 在回答时会同时参考你的工程资料与平台数据库——让结论真正基于你的项目上下文，而不只是通用知识。
@@ -771,17 +837,18 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="AI 回答中的引用角标：灰色为 MPN 与普通网页，绿色为原厂官网，橙色为分销平台，紫色为行业社区"
       src="/images/citation-badges.png"
-  />
+    />
+
   </Frame>
 
   AI 回答中的引用角标现已支持颜色分类，让你一眼判断信息来源的类型与可信度：
 
   | 角标颜色 | 来源类型 | 典型示例 |
-  |---|---|---|
-  | **灰色** | MPN（点击打开器件抽屉）/ 普通网页 | 新闻、博客、聚合页等 |
-  | **绿色** | OEM — 芯片/器件原厂官方站点 | ti.com、infineon.com、st.com、nxp.com |
-  | **橙色** | Distributor — 元器件分销平台 | digikey.com、mouser.com、lcsc.com、arrow.com |
-  | **紫色** | Community — 论坛与技术问答社区 | reddit.com、stackoverflow.com、csdn.net、edaboard.com |
+|---|---|---|
+| **灰色** | MPN（点击打开器件抽屉）/ 普通网页 | 新闻、博客、聚合页等 |
+| **绿色** | OEM — 芯片/器件原厂官方站点 | ti.com、infineon.com、st.com、nxp.com |
+| **橙色** | Distributor — 元器件分销平台 | digikey.com、mouser.com、lcsc.com、arrow.com |
+| **紫色** | Community — 论坛与技术问答社区 | reddit.com、stackoverflow.com、csdn.net、edaboard.com |
 
   MPN 角标支持点击——直接从回答中打开器件抽屉查看结构化数据。
 </Update>
@@ -791,7 +858,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Distributors 设置页面：DigiKey、TME 与 Unikeyic 均已显示 Live pricing"
       src="/images/sourcing-unikeyic.png"
-  />
+    />
+
   </Frame>
 
   **Unikeyic** 正式加入实时数据行列——与 DigiKey、TME 并列，在器件详情、BOM 及对比视图中提供实时价格与库存。可在 **设置 → Distributors** 中按需开关。更多分销商持续接入，欢迎告诉我们你最需要哪家。
@@ -802,14 +870,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="BOM 器件分布环形图，按类别显示数量占比及各类风险数量"
       src="/images/bom-health-distribution.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="BOM 风险拆解：NRND、零库存、无采购数据、缺失厂商，及 9 条有替代料建议的 BOM 行"
       src="/images/bom-health-risks.png"
-  />
+    />
+
   </Frame>
 
   BOM 健康报告全面升级，上传 BOM 后即可获得：
@@ -824,14 +894,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="关税查询首页：输入 MPN，选择原产国（中国、台湾、越南等），查询进口美国关税"
       src="/images/tariff-country-select.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="关税查询结果：74HC595 中国产进口美国，HTS 8542，基础税率 0%，301 芯片关税 50%，强迫劳动法附加税 12.5%，合计约 62.5%"
       src="/images/tariff-result.png"
-  />
+    />
+
   </Frame>
 
   **关税查询功能现已开放 Beta 测试。**
@@ -850,7 +922,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="AI 搜索回答中，替代料 MPN 以可点击角标内联展示，点击后打开器件详情抽屉"
       src="/images/search-mpn-cite.png"
-  />
+    />
+
   </Frame>
 
   大多数 AI 给你的是文字，PartGenie 给你的是**可验证的结论**。器件推荐、替代料、对比分析的回答现在会直接在正文中引用具体 MPN——点击任意角标，即可打开器件抽屉，用实时数据对规格、价格、库存逐一核验。不需要盲目相信，数据说话。
@@ -861,7 +934,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="AI 搜索回答中展示 digikey.com、mouser.com、lcsc.com 等分销商链接作为信息来源"
       src="/images/search-web-sources.png"
-  />
+    />
+
   </Frame>
 
   PartGenie 的回答有据可查，不靠猜测。当查询超出内置数据库范围时——例如尚未直接接入的分销平台采购数据——引擎会**联网搜索并附上引用来源**。每条结论都链接到原始页面，下单前自己验证，放心决策。
@@ -872,14 +946,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="BOM 表格中选中多行 MPN 后出现 Compare 按钮"
       src="/images/bom-compare-select.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Compare Products 面板：多个 MPN 的价格、库存、MOQ、交期、封装及分销商平台并排对比"
       src="/images/bom-compare-panel.png"
-  />
+    />
+
   </Frame>
 
   在 BOM 中选中多个 MPN，点击 **Compare** 即可横向对比价格、库存、MOQ、交期与分销商信息。同时，在 BOM Agent 对话中也可以引用指定的 BOM 行——多选后向 AI 提问，让 Agent 在更完整的供应链上下文中为你提供选料建议、风险分析或替代方案。
@@ -890,7 +966,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="AI 对话追问建议中包含一键触发硬件设计选项，例如基于 74HC595 设计 LED 点阵驱动板"
       src="/images/chat-design-followup.png"
-  />
+    />
+
   </Frame>
 
   在 AI 对话中查询某个型号后，追问建议里现在包含 **Design（硬件设计）** 快捷入口。点击即可以当前器件为基础一键启动硬件设计，无需重新配置。支持从器件搜索、AI 回答、器件详情页触发。
@@ -901,14 +978,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="器件详情与 BOM 中显示 DigiKey 与 TME 实时价格、库存与 MOQ"
       src="/images/procurement-tme-digikey.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Sourcing 设置：DigiKey 与 TME 为实时价格，Mouser 与 LCSC 为 Catalog snapshot"
       src="/images/sourcing-settings.png"
-  />
+    />
+
   </Frame>
 
   **TME 实时数据**已上线——在器件详情与 BOM 中可查看 **DigiKey** 和 **TME** 的实时价格与库存。在 **设置 → Distributors** 中可自由开关偏好的分销商来源，设置在所有视图中同步生效。Mouser 与 LCSC 目前提供 Catalog snapshot，实时数据即将上线。
@@ -921,14 +1000,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="通知设置：邮件与站内信开关，完成提示音与音色选择"
       src="/images/notifications-settings.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="通知 Activity：替代料分析等 enrichment 任务进度"
       src="/images/notifications-activity.png"
-  />
+    />
+
   </Frame>
 
   **通知中心重构：**
@@ -943,7 +1024,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="元器件详情抽屉：Copy link，详细参数含缩写与全称"
       src="/images/component-detail-share.png"
-  />
+    />
+
   </Frame>
 
   **元器件详情页**数据呈现已优化，可读性更好——参数支持更清晰的标注与**英文缩写**（如 **VCEO**、**VCBO** 等，与全称一并展示）。同时支持通过 **Copy link** **与同事分享器件详情页**，一站包含完整器件信息、**替代料**与**规格书**等相关内容。
@@ -954,7 +1036,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="采购信息页：DigiKey 实时价格阶梯与更新时间"
       src="/images/procurement-realtime-digikey.png"
-  />
+    />
+
   </Frame>
 
   **采购数据已接入实时价格与库存**——目前支持 **DigiKey**，可在 **component drawer** 与 **BOM** 中实时查看。其他分销商接入中；若你有需要的渠道，欢迎回复告诉我们，我们会优先安排。
@@ -965,7 +1048,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="搜索更快：中位数耗时从 81 秒降至 29 秒"
       src="/images/search-faster.png"
-  />
+    />
+
   </Frame>
 
   **搜索中位数速度提升约 64%。** 中位耗时从 **81s → 29s**；30 秒内完成的搜索占比从约 **22% → 57%**。MPN 类查询更快——中位数约 **147s → 16s**。
@@ -976,7 +1060,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="BOM Agent：首页 Optimize BOM，粘贴/上传、健康度报告与对话"
       src="/images/bom-agent.gif"
-  />
+    />
+
   </Frame>
 
   **BOM Agent** 已上线——把物料清单带进 PartGenie，端到端处理：
@@ -996,7 +1081,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="首页输入：Optimize BOM、Design Hardware 与上传入口"
       src="/images/homepage-input-bom-design.png"
-  />
+    />
+
   </Frame>
 
   **首页输入**已调整：可直接在首页**上传 BOM**，进入 **BOM agent** 做**风险分析**、**批量替代料推荐**等；点下方 **Design Hardware** 进入**设计模式**；日常搜料、参数与替代问题仍用普通输入即可。
@@ -1007,7 +1093,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Projects 面板：BOM 与 Design 筛选，作为硬件项目工作区"
       src="/images/projects-workspace.png"
-  />
+    />
+
   </Frame>
 
   **BOM** 与 **Design** 已归入 **Projects**，后续将作为统一的**硬件项目工作区**。无论是单独**上传 BOM** 做 review，还是**从零设计硬件**，都能在同一处按类型、来源与收藏快速定位查找。
@@ -1018,7 +1105,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="输入 MPN 时展示 Exact、Near 联想与器件描述"
       src="/images/search-suggestions-mpn.png"
-  />
+    />
+
   </Frame>
 
   搜索框支持**输入联想**：**MPN** 精准匹配（**Exact** / **Near**）与**厂商**推荐。点击结果直达**元器件**或**厂商详情**，更快打开**规格书对话**并查看**采购数据**，无需先发起完整搜索。
@@ -1029,14 +1117,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Design 模式首页：自然语言输入与我的项目"
       src="/images/design-mode-home.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="Design 架构图：BOM、技术方案、搭建指南与参考图视图"
       src="/images/design-mode-architecture.png"
-  />
+    />
+
   </Frame>
 
   **Design mode（Beta）** 已上线——用自然语言描述产品，即可生成 **initial hardware pack**，包含：
@@ -1057,7 +1147,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="PartGenie 教育计划：高校硬件与 EE 学生免费 12 个月 Pro"
       src="/images/education-program.png"
-  />
+    />
+
   </Frame>
 
   **PartGenie 教育计划**已上线：[partgenie.ai/education](https://www.partgenie.ai/education)。认证高校**硬件与 EE 专业学生**可领取 **12 个月 Pro 免费**（价值 **$299**）——搜料、管理**课程与毕设 BOM**、查找 **MCU 替代料**、**规格书问答**助力实验与项目。学生可 **Get free Pro**，社团负责人可 **Apply for your club**。
@@ -1068,7 +1159,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="元器件详情页：应用场景与替代料（Pin compatible、Parametric 等）"
       src="/images/component-detail-enriched.png"
-  />
+    />
+
   </Frame>
 
   搜索进入的**元器件详情页**正在进行**数据 enrich**：可查看**应用场景**与**替代料**（如有，含 Pin compatible、Parametric 等类型），并支持导出。**数据覆盖正逐步 rollout**，更多料号将持续补齐。
@@ -1079,7 +1171,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="AI 回答展示 Thinking 思考时长与计时"
       src="/images/ai-thinking-duration.png"
-  />
+    />
+
   </Frame>
 
   **AI 回答**现展示**思考时长**（如 **Thinking · 6s**），生成过程更透明、不再「干等」。我们也在持续**优化响应速度**，减少等待时间。
@@ -1090,7 +1183,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="全新首页 Your AI Hardware Companion，导航含 Insights 洞察"
       src="/images/homepage-redesign.png"
-  />
+    />
+
   </Frame>
 
   **全新首页**——**Your AI Hardware Companion**，搜索、工具与目录入口更清晰。顶部导航新增 **Insights（洞察）**（原 **Discover**），集中半导体与 EE **资讯**、热搜型号与市场上下文，与 **Tools**、**Compare**、**Resources** 并列。
@@ -1101,7 +1195,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="厂商智能目录：按品类与 A-Z 浏览、厂商卡片与 AI 搜索"
       src="/images/manufacturer-directory.png"
-  />
+    />
+
   </Frame>
 
   新增 **Manufacturer Directory（厂商目录）**——**7,112+** 厂商一站浏览。支持按**品类**与 **A–Z** 检索，查看厂商简介与目录上下文；搜索框可询问**厂商**、**替代料**或 **BOM** 相关问题，面向采购与工程选型，而非静态厂商列表。
@@ -1112,7 +1207,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="元器件品类目录：A-Z 浏览、品类卡片与 AI 搜索"
       src="/images/category-directory.png"
-  />
+    />
+
   </Frame>
 
   新增 **Category Directory（品类目录）**——**53+** 元器件品类一站浏览。支持 **A–Z** 检索与品类标签跳转，卡片展示**子品类数量**、**料号规模**与选型说明；搜索框可询问**品类**、**选型指南**或**替代料**上下文，面向工程师与采购，而非传统静态目录。
@@ -1123,7 +1219,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Discover：半导体资讯、品类筛选、平台热搜与涨幅型号"
       src="/images/discover-tab.png"
-  />
+    />
+
   </Frame>
 
   新增 **Discover** 页签（与 **Chat** 并列）：聚合优质**半导体与 EE 领域信源**，支持 AI & 算力、存储、MCU、电源等品类筛选；可查看平台**热搜型号**与**涨幅最快**器件。信源内容经 **AI 分析**关联的**型号、厂商与供应链影响**，辅助趋势判断与选型决策。
@@ -1134,7 +1231,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="PartGenie 由 GPT-5.5、Gemini、Claude 等先进模型驱动，并配备更丰富的元器件数据库"
       src="/images/ai-models-and-database.png"
-  />
+    />
+
   </Frame>
 
   **更聪明的 AI，更高的额度。** 免费版 **5 次**，Pro **500 次**；由 **OpenAI GPT‑5.5**、**Google Gemini**、**Anthropic Claude** 等先进模型驱动，并配套**更丰富的元器件数据库**，搜索、替代料与厂商查询更准确。
@@ -1145,7 +1243,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="厂商对比：NXP 与意法半导体 MCU 画像、目录统计与 AI 分析"
       src="/images/vendor-compare.png"
-  />
+    />
+
   </Frame>
 
   支持**厂商查询**，同一对话内三种能力：
@@ -1162,7 +1261,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="首页 Tools 入口：六种场景链路，统一对话体验"
       src="/images/partgenie-tools.png"
-  />
+    />
+
   </Frame>
 
   **六种场景，一个对话入口。** PartGenie 仍是**统一对话**，系统会按任务走对应链路。在**首页 Tools** 可一键进入各场景：
@@ -1182,7 +1282,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="通知中心：Updates 产品动态与 Activity 账户活动"
       src="/images/notifications-center.png"
-  />
+    />
+
   </Frame>
 
   **通知中心**体验优化：**Updates** 集中展示新功能与产品动态，**Activity** 查看与你相关的账户活动，重要更新不再错过，也无需翻找邮件。
@@ -1193,7 +1294,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="设置中的 Usage 页面：查看 AI 搜索、规格书对话、文件上传、BOM 等用量"
       src="/images/settings-usage.png"
-  />
+    />
+
   </Frame>
 
   在 **设置 → Usage** 中查看本计费周期的**套餐额度与消耗**：**AI 搜索**、**规格书对话**、**文件上传**、**BOM** 等功能一目了然，并显示重置时间与使用进度。
@@ -1204,7 +1306,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Getting started 新人引导：首次提问、规格书对话、上传首个 BOM"
       src="/images/onboarding-getting-started.png"
-  />
+    />
+
   </Frame>
 
   新增 **Onboarding 新人引导**：侧栏 **Getting started** 清单引导你完成**首次提问**、**与规格书对话**、**上传首个 BOM**，按步骤熟悉核心功能。
@@ -1215,7 +1318,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="选中产品后，在 Compare 旁一键 Export 导出"
       src="/images/product-export.png"
-  />
+    />
+
   </Frame>
 
   **产品导出**流程更简洁：在搜索结果中勾选器件，与 **Compare** 同处一行的 **Export** 即可导出，便于核对、分享或继续在外部工具中使用。
@@ -1226,7 +1330,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="AI 回答对比表中点击 Candidate MPN 打开元器件详情"
       src="/images/ai-answer-mpn-click-through.png"
-  />
+    />
+
   </Frame>
 
   在 **AI 回答**中可直接**点击料号**（Target / Candidate MPN）打开**元器件详情**——确认参数、查看规格，并进入**规格书对话**，无需离开当前会话。
@@ -1237,7 +1342,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="Overview 中选择 Target 与 Candidate 物料并并排对比"
       src="/images/overview-target-candidate-compare.png"
-  />
+    />
+
   </Frame>
 
   在 **Overview** 中可直接选定 **Target（目标料）** 与 **Candidate（候选料）**，一键 **Compare** 进行**并排对比**，替代料选型更高效，无需离开回答页。
@@ -1248,14 +1354,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="AI 回答 Overview：推荐器件卡片与步骤完成状态"
       src="/images/ai-answer-overview.png"
-  />
+    />
+
   </Frame>
 
   <Frame>
     <img
       alt="AI Task：分步展示思考过程（分析、规划、检索等）"
       src="/images/ai-answer-ai-task.png"
-  />
+    />
+
   </Frame>
 
   **AI 回答页**体验优化：**Overview** 推荐结果采用更简洁清晰的浏览结构；**AI Task** 可查看完整**思考过程**（意图分析、替代方案规划、数据检索等），便于理解 PartGenie 如何得出每一条推荐。
@@ -1266,7 +1374,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="厂商品牌页：查看关联产品、按品类筛选与产品列表"
       src="/images/manufacturer-brand-products.png"
-  />
+    />
+
   </Frame>
 
   **厂商品牌页**现支持查看**关联产品**：可按品类筛选，浏览料号、描述与封装等信息，并在一页内浏览该品牌下的完整产品目录（如有官方站点亦可一键访问）。
@@ -1277,7 +1386,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="支持 CSV 或 Excel 上传 BOM 并由 AI 解析字段"
       src="/images/bom-upload.png"
-  />
+    />
+
   </Frame>
 
   现可上传 **BOM 清单**，支持 **CSV 或 Excel**（.xlsx、.xls）。AI 自动识别序号、数量、位号、封装、参数、厂商料号、品牌与供应商等字段，生成可编辑、可继续分析的 BOM 表格。
@@ -1288,7 +1398,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="BOM 智能助手：在表格旁对话，查询关键器件与匹配状态"
       src="/images/bom-chat.png"
-  />
+    />
+
   </Frame>
 
   在 **BOM 智能助手** 中与当前清单对话：可询问关键器件、匹配结果、品牌与型号等，回答以结构化摘要呈现在表格旁，便于快速核对与决策。
@@ -1299,7 +1410,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="回答中的页内引用可点击，跳转到已上传规格书的对应页面"
       src="/images/datasheet-in-page-citation.png"
-  />
+    />
+
   </Frame>
 
   上传 **PDF 规格书** 等文档后，回答会附带 **页内引用** 标记，点击即可在规格书对话中打开对应页面或段落，快速核对 pin layout、参数表等内容。
@@ -1310,7 +1422,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="最近搜索侧栏：搜索、BOM、规格书三类会话图标"
       src="/images/chat-history-types.png"
-  />
+    />
+
   </Frame>
 
   **最近搜索** 更清晰：支持置顶与「近 7 天」分组，每条记录用图标区分 **搜索**、**BOM**、**规格书** 三类会话，便于快速回到对应类型的历史记录。
@@ -1321,7 +1434,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       alt="更智能的替代料查找：AI Task 时间线与替代方案规划"
       src="/images/ai-fae-alternative-search.png"
-  />
+    />
+
   </Frame>
 
   更智能的替代料查找引擎已上线：由 **AI FAE** 引导，从意图识别、替代方案规划到数据检索全程可追溯；在 **AI Task** 时间线中可查看每一步推理与结果，而不仅是平铺的料号列表。
@@ -1334,7 +1448,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
       lightAlt="联网搜索"
       darkAlt="联网搜索"
       src="/images/websearch.png"
-  />
+    />
+
   </Frame>
 
   联网搜索已默认开启，用于获取实时市场与行业数据；每条 AI 回答均附带可点击的引用，便于核对信息来源。
@@ -1347,7 +1462,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
       lightAlt="页码定位"
       darkAlt="页码定位"
       src="/images/datasheet-source.png"
-  />
+    />
+
   </Frame>
 
   与规格书或文件对话时，每条回答都会标明答案所在的具体页码，即便文档长达 500+ 页也能快速跳转核对。
@@ -1361,14 +1477,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
       darkAlt="LaTeX 渲染"
       src="/images/LaTeX.png"
       className="dark:hidden"
-  />
+    />
+
     <img
       alt="LaTeX 渲染效果"
       lightAlt="LaTeX 渲染"
       darkAlt="LaTeX 渲染"
       src="/images/LaTeX.png"
       className="hidden dark:block"
-  />
+    />
+
   </Frame>
 
   现在在 AI 回答中可以更清晰地渲染 LaTeX 公式与电气符号。
@@ -1382,14 +1500,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
       darkAlt="追问功能"
       src="/images/PartGenie-Follow-up.png"
       className="dark:hidden"
-  />
+    />
+
     <img
       alt="追问功能示意"
       lightAlt="追问功能"
       darkAlt="追问功能"
       src="/images/zh-Hans/follow-up.png"
       className="hidden dark:block"
-  />
+    />
+
   </Frame>
 
   在答案页获得查询摘要后，会展示 3 个后续追问，便于继续探索。
@@ -1403,14 +1523,16 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
       darkAlt="移动端"
       src="/images/mobile.png"
       className="dark:hidden"
-  />
+    />
+
     <img
       alt="移动端搜索"
       lightAlt="移动端"
       darkAlt="移动端"
       src="/images/mobile.png"
       className="hidden dark:block"
-  />
+    />
+
   </Frame>
 
   现可在移动端访问 partgenie.ai 进行搜索。
@@ -1425,7 +1547,8 @@ description: 查看 PartGenie 的最新功能更新和版本发布信息
     <img
       src="/images/zh-Hans/partgenie-overview.png"
       alt="PartGenie Beta 版本概览"
-  />
+    />
+
   </Frame>
 
   PartGenie 正式进入 Beta 测试阶段！我们推出了核心的 AI 智能搜索和 BOM
