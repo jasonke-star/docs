@@ -67,19 +67,17 @@ function fixMarkdownTableRows(text) {
     .split('\n')
     .map((line) => {
       const t = line.trimEnd()
-      if (!/\|\s*$/.test(t) && !/^\s*\//.test(t)) return line
-      let l = line
-      if (/^\s*\//.test(l)) l = l.replace(/^\s*\//, '|')
-      if (/\s+\/\s+/.test(l) && (l.includes('**') || /^\s*\|/.test(l))) {
-        l = l.replace(/\s+\/\s+(?=[^|\n]+)/g, (m, offset, str) => {
-          const before = str.slice(0, offset)
-          if (before.includes('http') || before.includes('](#')) return m
-          return ' | '
-        })
-      }
-      return l
+      if (/^\s*\|>\s*$/.test(t)) return line.replace(/^\s*\|>\s*$/, '  />')
+      if (/^\s*\/>\s*$/.test(t)) return line
+      if (!/\|\s*$/.test(t)) return line
+      if (!/^\s*\/\s+[^/|]+\s+\/\s+.+/.test(t)) return line
+      return line.replace(/^\s*\/\s+/, '| ').replace(/\s+\/\s+(?=[^|\n]+)/, ' | ')
     })
     .join('\n')
+}
+
+function fixBrokenImgClosers(text) {
+  return text.replace(/^\s*\|>\s*$/gm, '  />')
 }
 
 function fixSpacedLocaleLinks(text) {
@@ -106,6 +104,7 @@ function repair(text) {
   out = out.replace(/\*\s+\*([^*\n]+?)\*\s+\*/g, '**$1**')
   out = out.replace(/\*\s+\*([^*\n]+?)\*\*/g, '**$1**')
   out = out.replace(/<\/Update>(?!\n)/g, '</Update>\n')
+  out = fixBrokenImgClosers(out)
   out = fixMarkdownTableRows(out)
   out = fixSpacedLocaleLinks(out)
   return out

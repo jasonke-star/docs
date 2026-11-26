@@ -9,7 +9,7 @@ Search 可以在回答里直接做**工程计算**，不用切到单独的计算
   <img
     alt="电阻功率校核：电压、阻值、额定功率滑条"
     src="/images/engineering-calc-resistor-sliders.png"
-|>
+  />
 </Frame>
 
 ## 目前有哪些计算器
@@ -18,8 +18,8 @@ Search 可以在回答里直接做**工程计算**，不用切到单独的计算
 
 | 面板 | 算什么 | 常见检查 | 主要输入 |
 | --- | --- | --- | --- |
-| **Resistor power rating**（电阻功率校核） | 功耗 **P = V²/R**、**P = VI**、**P = I²R** 及相对额定功率的 **margin** | 电气 — 额定功率是否够用 | 电压、阻值（或电流）、额定功率 (W) |
-| **Power dissipation & junction temperature**（LDO 功耗与结温） | 压差功耗 **Pd ≈ (Vin − Vout) × Iout**（必要时含静态电流），**Tj = Ta + Pd × θJA** 对比 Tj(max) | **Electrical** · Pass/Fail，**Thermal** · Pass/Fail | Vin、Vout、Iout、Ta、θJA、结温上限 |
+| **Resistor power rating**（电阻功率校核） / 功耗 **P = V²/R**、**P = VI**、**P = I²R** 及相对额定功率的 **margin** | 电气 — 额定功率是否够用 | 电压、阻值（或电流）、额定功率 (W) |
+| **Power dissipation & junction temperature**（LDO 功耗与结温） / 压差功耗 **Pd ≈ (Vin − Vout) × Iout**（必要时含静态电流），**Tj = Ta + Pd × θJA** 对比 Tj(max) | **Electrical** · Pass/Fail，**Thermal** · Pass/Fail | Vin、Vout、Iout、Ta、θJA、结温上限 |
 
 若问题里缺参数，PartGenie 可能采用**合理默认值**（例如 Ta=25°C 或典型 θJA）并在回答中说明；也可能在标称负载之上做**应力估算**（例如问 200mA 却按 400mA 算），方便看到最坏情况。
 
@@ -77,14 +77,14 @@ TPS7A3301 SOT-23，5V 转 3.3V 300mA，估算 Pd 和 Tj
   <img
     alt="LDO 回答：Electrical Pass、Thermal Fail"
     src="/images/engineering-calc-ldo-checks.png"
-|>
+  />
 </Frame>
 
 <Frame>
   <img
     alt="结温面板：预测 Tj 与上限"
     src="/images/engineering-calc-thermal-panel.png"
-|>
+  />
 </Frame>
 
 文字回答下方：
