@@ -8,17 +8,17 @@ description: "ローカルwhat-ifチューニングのためのインテリジ�
   <img
     alt="Resistor power rating audit with sliders for voltage, resistance, and watt rating"
     src="/images/engineering-calc-resistor-sliders.png"
-  />
+|>
 </Frame>
 
 ##今日表示される電卓はどれですか
 
 PartGenieはあなたの質問を監査パネルにマッピングします。 これらは現在出荷されている主なものです:
 
-/監査パネル|それが計算するもの|典型的なチェック|キー入力|
+|監査パネル|それが計算するもの|典型的なチェック|キー入力|
 | --- | --- | --- | --- |
-/**抵抗定格電力**/散逸**P=V2/R**、**P=VI**、または**P=I2R**および**マージン**対定格ワット数/電気-定格電力は十分ですか？ /電圧、抵抗（または電流）、抵抗定格（W）|
-/**LDO消費電力とジャンクション温度**|ドロップ電力**Pd≤(Vin−Vout)×Iout**(関連する場合は静止電流をプラス),**Tj=Ta+Pd×θ ja**対Tj(max)|**電気的**·パス/フェイル,**熱的**·パス/フェイル|Vin,Vout,Iout,Ta,θ ja,ジャンクション制限|
+|**抵抗定格電力**/散逸**P=V2/R**、**P=VI**、または**P=I2R**および**マージン**対定格ワット数/電気-定格電力は十分ですか？ /電圧、抵抗（または電流）、抵抗定格（W）|
+|**LDO消費電力とジャンクション温度**|ドロップ電力**Pd≤(Vin−Vout)×Iout**(関連する場合は静止電流をプラス),**Tj=Ta+Pd×θ ja**対Tj(max)|**電気的**·パス/フェイル,**熱的**·パス/フェイル|Vin,Vout,Iout,Ta,θ ja,ジャンクション制限|
 
 限界がない場合、PartGenieは**合理的なデフォルト**（例えば、周囲25℃または典型的なθ ja）を仮定し、答えでそう言うかもしれません—または**あなたの述べた負荷**（例えば、400maを尋ねたときに200ma）ので、公称だけでなく、ヘッドルームを見ることができます。
 
@@ -76,14 +76,14 @@ Compare 0.25W vs 0.5W for this divider: 12V, Rtop 10k, Rbot 3.3k
   <img
     alt="LDO answer with Electrical Pass and Thermal Fail checks"
     src="/images/engineering-calc-ldo-checks.png"
-  />
+|>
 </Frame>
 
 <Frame>
   <img
     alt="Expanded thermal panel with predicted Tj versus limit"
     src="/images/engineering-calc-thermal-panel.png"
-  />
+|>
 </Frame>
 
 書かれた答えの後:

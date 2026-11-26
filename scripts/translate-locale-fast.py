@@ -242,6 +242,13 @@ def fix_mdx_component_tags(text: str) -> str:
         (r"⟦/SCHRITT⟧", "</Step>"),
         (r"<Folgendermaßen>", "<Steps>"),
         (r"</Folgendermaßen>", "</Steps>"),
+        (r"<Kartengruppe\b", "<CardGroup"),
+        (r"</Kartengruppe>", "</CardGroup>"),
+        (r"<Akkordeongruppe>", "<AccordionGroup>"),
+        (r"</Akkordeongruppe>", "</AccordionGroup>"),
+        (r"</Ziehharmonika>", "</Accordion>"),
+        (r"<Akkordeon\b", "<Accordion"),
+        (r"</Akkordeon>", "</Accordion>"),
         (r"</Étape>", "</Step>"),
         (r"<Étape\b", "<Step"),
         (r"</Pas>", "</Step>"),
@@ -273,7 +280,7 @@ def fix_mdx_component_tags(text: str) -> str:
         text,
         flags=re.MULTILINE,
     )
-    text = re.sub(r"\bMODELL:\s*(<Frame\b)", r"\1", text, flags=re.IGNORECASE)
+    text = re.sub(r"\bMODELL:\s*(<(?:Frame|Steps|Step)\b)", r"\1", text, flags=re.IGNORECASE)
     return text
 
 
